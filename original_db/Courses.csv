@@ -1,4 +1,4 @@
-Id,Name,Type,AttendingYear,Professor
+Id,Name,Type,AttendingYear,ProfessorId
 1,Transfiguration,Core,1,30
 2,Charms,Core,2,37
 3,Potions,Core,1,46
