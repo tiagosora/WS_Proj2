@@ -1,0 +1,185 @@
+﻿Id,Name,Incantation,Type,Effect,Light
+1,Summoning Charm,Accio,Charm,Summons an object,
+2,Water-Making Spell,Aguamenti,Charm, Conjuration,Conjures water,Icy blue
+3,Launch an object up into the air,Alarte Ascendare,Charm,Rockets target upward,Red
+4,Unlocking Charm,Alohomora,Charm,Unlocks target,Invisible, blue, yellow, or purple
+5,Healing Spell,Anapneo,Healing spell, Vanishment,Clears airway,
+6,Hex that grows antlers on the head,Anteoculatia,Hex,Grows antlers on head,Red
+7,Revealing Charm,Aparecium,Charm,Reveals hidden writing,
+8,Tracking spell,Appare Vestigium,Charm,Reveals traces of magic, including footprints and track marks,Swirl of gold
+9,Apparition,,Transportation,Magically transports the caster,
+10,Aqua Eructo Charm,Aqua Eructo,Charm,Jet of water,Ice Blue
+11,Spider repelling spell,Arania Exumai,Spell,Repels spiders,Blue
+12,Slowing Charm,Arresto Momentum,Charm,Slows or stops target's velocity,
+13,Ascendio,Ascendio,Charm,Lifts caster,
+14,Killing Curse,Avada Kedavra,Curse,Instantaneous death,Green
+15,Avifors Spell,Avifors ,Transfiguration,Transforms the target into a bird.,Blue
+16,Avenseguim,Avenseguim,Charm,Turns object into tracking device,Orange
+17,Bird-Conjuring Charm,Avis,Conjuration, Charm,Conjures birds,Blue
+18,Baubillious,Baubillious,Charm,Jet of white sparks,White
+19,Exploding Charm,Bombarda,Charm,Small explosion,
+20,Exploding Charm 2,Bombarda Maxima,Charm,Powerful explosion,White
+21,Brackium Emendo,Brackium Emendo,Healing spell, Charm,Mends bones,Blue
+22,Hair Loss Curse,Calvorio,Curse,Removes victim's hair,Red or Purple
+23,Cantis,Cantis,Jinx,Makes target sing,Pink
+24,Extension Charm,Capacious extremis,Charm,Increases interior space,
+25,Seize and Pull Charm,Carpe Retractum,Charm,Pull caster towards object, Pull object towards caster,Orange or Purple
+26,Cave inimicum,Cave inimicum,Charm,Concealment,
+27,Circumrota,Circumrota,Charm,Rotates an object,
+28,Cistem Aperio,Cistem Aperio,Charm,Opens chests,White
+29,Locking Spell,Colloportus,Charm,Locks doors,
+30,Stickfast Hex,Colloshoo,Hex,Sticks shoes to floor,
+31,Colour Change Charm,Colovaria,Charm,Changes colour,Red
+32,Blasting Curse,Confringo,Curse,Explosion,Fiery Orange
+33,Confundus Charm,Confundo,Charm,Confuses the target,Pink
+34,Crinus Muto,Crinus Muto,Transfiguration,Transforms hair,White
+35,Cruciatus Curse,Crucio,Curse,Excruciating pain,Red or 
+36,Gouging Spell,Defodio,Charm,Carves through material,
+37,Eradication Spell,Deletrius,Charm, Counter-charm,Erases image from Reverse Spell,
+38,Densaugeo,Densaugeo,Hex ,Elongates teeth,Violet
+39,Deprimo,Deprimo,Charm,Blasts holes in ground,Green
+40,Banishing Charm,Depulso,Charm,Sends target away,White or Red
+41,Descendo,Descendo,Charm,Lowers target,Blue
+42,Severing Charm,Diffindo,Charm,Cuts objects,Light green, pink or red
+43,Diminuendo,Diminuendo,Charm,Shrinks objects,White
+44,Dissendium,Dissendium,Charm,Reveals secret passages,
+45,Draconifors Spell,Draconifors,Transfiguration,Turns object into dragon,Fiery orange
+46,Ducklifors Jinx,Ducklifors,Transfiguration, Jinx,Turns organisms to ducks,Yellow or Purple
+47,Hardening Charm,Duro,Charm,Turns object to stone,
+48,Ebublio Jinx,Ebublio,Jinx,Traps target in giant bubble,Blue
+49,Engorgement Charm,Engorgio,Charm,Causes swelling,Icy blue
+50,Engorgio Skullus,Engorgio Skullus,Hex,Swells head,Red or Purple
+51,Insect Jinx,Entomorphis,Transfiguration Jinx,Turns into insect,Red or Purple
+52,Epoximise,Epoximise,Transfiguration spell,Bonds two objects,
+53,Erecto,Erecto,Charm,Erects a structure,
+54,Evanesce,Evanesce,Transfiguration,Vanishes objects,Bluish-white
+55,Vanishing Spell,Evanesco,Transfiguration,Vanishes things,
+56,Everte Statum,Everte Statum,Charm,Makes opponent stumble, Causes sharp pain,Orange
+57,Patronus Charm,Expecto Patronum,Charm,Conjures a spirit guardian,Silver
+58,Disarming Charm,Expelliarmus,Charm,Disarms an opponent,Scarlet
+59,Expulso Curse,Expulso,Curse,Blows things up,Blue
+60,Bandaging Charm,Ferula,Healing Spell, Charm, Conjuration,Bandages target,
+61,Fianto Duri,Fianto Duri,Charm,Most likely hardens magical shields,Blueish white
+62,Finestra spell,Finestra,Charm,Shatters glass,Blue
+63,General Counter-Spell,Finite,Counter-spell,Terminates all spell effects,Red
+64,Flagrante Curse,Flagrante,Curse,Causes objects to burn on contact,
+65,Flagrate,Flagrate,Charm,Writes in midair,Fiery scarlet
+66,Flintifors,Flintifors,Transfiguration,Turns target into matchboxes,
+67,Knockback Jinx,Flipendo,Jinx,Knocks target back,Blue
+68,Flipendo Tria,Flipendo Tria,Jinx,More powerful version of Flipendo,Blue
+69,Smokescreen Spell,Fumos,Charm,Defensive smokescreen,Grey
+70,Fumos Duo,Fumos Duo,Charm,Multiple concealing smokescreens,Dark Red
+71,Pimple Jinx,Furnunculus,Jinx,Causes pimples to erupt,Gold 
+72,Doubling Charm,Geminio,Charm,Duplicates an object,
+73,Freezing Spell,Glacius,Charm,Freezes target,Blue
+74,Glacius Duo,Glacius Duo,Charm,Freezes the target,Blue
+75,Glacius Tria,Glacius Tria,Charm,Freezes target enemy,Blue
+76,Glisseo,Glisseo,Charm,Turns stairs into a slide,
+77,Harmonia Nectere Passus,Harmonia Nectere Passus,Charm,Repairs Vanishing Cabinets,
+78,Herbifors Spell,Herbifors,Transfiguration,Transforms target into flowers,Red or Purple
+79,Herbivicus Charm,Herbivicus,Charm,Rapidly grows plants,Green
+80,Human Presence Revealing Spell,Homenum Revelio,Charm ,Reveals human presence,
+81,Illegibilus,Illegibilus,Charm,Makes text illegible,
+82,Freezing Charm,Immobulus,Charm,Stops movement and actions of the target,Blue
+83,Impediment Jinx,Impedimenta,Jinx,Hinders movement,Turquoise
+84,Imperius Curse,Imperio,Curse,Total control over the victim,
+85,Impervius Charm,Impervius ,Charm,Waterproofs an object,
+86,Incarcerous Spell,Incarcerous,Conjuration,Binds target in ropes,
+87,Fire-Making Spell,Incendio,Charm,Conjures flames,Orange and Red
+88,Incendio Tria,Incendio Tria,Charm,Conjures blue flames,Blue
+89,Inflating Charm,Inflatus,Charm,Inflates target,Blue
+90,Informous Spell,Informous,Charm,Adds to the Folio Bruti,Blue
+91,Jelly-Legs Curse,Locomotor Wibbly,Curse, Jinx,Legs become wobbly,Orange
+92,Lacarnum Inflamari,Lacarnum Inflamari,Charm,Ignites cloaks,Orange
+93,Langlock,Langlock,Jinx,Sticks tongue to roof of the mouth,
+94,Lapifors Spell,Lapifors,Transfiguration,Turns target into rabbit,Green
+95,Legilimency Spell,Legilimens,Charm,Lets caster see into the mind of another person,Psychadelic transparent wave
+96,Levicorpus,Levicorpus,Jinx,Suspends people by the ankles,Green
+97,Liberacorpus,Liberacorpus,Counter-jinx,Counteracts Levicorpus,
+98,Locomotion Charm,Locomotor,Charm,Moves objects in midair,
+99,Leg-Locker Curse,Locomotor Mortis,Curse,Sticks legs together,Purple
+100,Wand-Lighting Charm,Lumos,Charm,Illuminates the wand tip,White
+101,Wand-Lighting Charm Duo,Lumos Duo,Charm,Focused beam of light,White
+102,Lumos Maxima,Lumos Maxima,Charm,Produces bright light,White
+103,Lumos Solem Spell,Lumos Solem,Charm,Produces sunlight,Bright yellow
+104,Magicus Extremos,Magicus Extremos,Charm,Temporarily increases casters' spell power,Pink
+105,Melofors Jinx,Melofors,Conjuration, Jinx,Encases head in pumpkin,Orange
+106,Meteolojinx Recanto,Meteolojinx Recanto,Counter-charm,Causes weather effects caused by incantations to cease,
+107,Tongue-Tying Curse,Mimblewimble,Curse,Ties tongue in knot,Blue
+108,Mobiliarbus,Mobiliarbus,Charm,Levitates wooden things,Blue
+109,Mobilicorpus,Mobilicorpus,Charm,Moves bodies,
+110,Cushioning Charm,Molliare,Charm,Invisible cushion,
+111,Dark Mark,Morsmordre,Curse,Conjures Dark Mark,Green
+112,Curse of the Bogies,Mucus ad Nauseam,Curse,Nasty cold & runny nose,Green
+113,Muffliato Charm,Muffliato ,Charm,Conceals sound,
+114,Multicorfors Spell,Multicorfors ,Transfiguration,Changes clothes,Red
+115,Mutatio Skullus,Mutatio Skullus,Hex,Grows extra heads,
+116,Wand-Extinguishing Charm,Nox,Charm,Extinguishes wandlight,
+117,Nebulus,Nebulus,Charm,Conjures fog,Grey
+118,Oculus Reparo,Oculus Reparo,Charm,Repairs glasses,
+119,Memory Charm,Obliviate ,Charm,Erases memories,Green
+120,Obscuro,Obscuro,Conjuration,Blindfolds target,
+121,Oppugno Jinx,Oppugno ,Jinx,Assaults target with directed object(s),
+122,Orbis Jinx,Orbis,Jinx,Sucks the target into the ground,Blue
+123,Orchideous,Orchideous,Conjuration,Conjures flowers,Pink
+124,Oscausi,Oscausi,Dark charm,Seals mouth,White
+125,Pack,Pack,Charm,Packs luggage,
+126,Papyrus Reparo,Papyrus Reparo,Charm,Mends torn paper,
+127,Partis Temporus,Partis Temporus,Charm,Parts the target,
+128,Periculum,Periculum,Charm,Burst of red sparks,Red
+129,Peskipiksi Pesternomi,Peskipiksi Pesternomi,Charm,Nothing (supposedly captures pixies),
+130,Full Body-Bind Curse,Petrificus Totalus,Curse,Temporary Paralysis,White
+131,Piertotum Locomotor,Piertotum Locomotor,Charm,Animates target, or Green
+132,Piscifors,Piscifors,Transfiguration,Turns target into fish,Blue
+133,Four-Point Spell,Point Me,Spell,Wand points due north,
+134,Portus,Portus,Charm,Turns object into Portkey,Blue
+135,Reverse Spell,Prior Incantato,Charm,Shows the previous spells cast by a wand,Gold
+136,Shield Charm,Protego,Charm,Reflects spells and blocks physical forces,Invisible on its own, reflects light of spell
+137,Protego Diabolica,Protego Diabolica,Dark Arts,Ring of protective black fire that only burns the caster's enemies whilst leaving their allies unharmed,
+138,Protego horribilis,Protego horribilis,Charm,Summons a powerful protective barrier,
+139,Protego Maxima,Protego Maxima,Charm,Summons a large protective barrier,White
+140,Protego totalum,Protego totalum,Charm,Shields an area,
+141,Quietening Charm,Quietus,Charm,Quietens target,
+142,Head Shrink Spell,Redactum Skullus,Hex, Counter-curse,Shrinks head,Red or Purple
+143,Shrinking Charm,Reducio,Charm,Shrinks target,Purple
+144,Reductor Curse,Reducto,Curse,Destroys solid objects,Blue
+145,Reparifors,Reparifors,Healing spell, Charm,Heals minor magically induced ailments,Purple
+146,Reverte,Reverte,Charm,Returns objects to their original positions or states,
+147,Revulsion Jinx,Relashio,Jinx,Forces target to let go,Purple
+148,Reviving Spell,Rennervate,Charm,Awakens victim,Red
+149,Reparifarge,Reparifarge,Untransfiguration,Reverses the effects of an incomplete Transformation spell,White
+150,Mending Charm,Reparo,Charm,Fixes broken objects,
+151,Muggle-Repelling Charm,Repello Muggletum,Charm,Repels Muggles, (haze)
+152,Repello Inimicum,Repello Inimicum,Charm,Repels enemies. If used with Protego Maxima and Fianto Duri, it disintegrates anything that comes in contact with the barrier.,Blueish white
+153,Revelio Charm,Revelio,Charm,Reveals secrets about a person or object,Blue
+154,Tickling Charm,Rictusempra,Charm,Tickles and weakens,Silver
+155,Boggart-Banishing Spell,Riddikulus,Charm,Turns a Boggart into something amusing,
+156,Salvio hexia,Salvio hexia,Charm,Hex deflection, (haze)
+157,Scouring Charm,Scourgify,Charm,Cleans objects,
+158,Sectumsempra,Sectumsempra,Curse,Lacerates target,White
+159,Snake Summons Spell,Serpensortia,Conjuration,Conjures snake,White
+160,Silencing Charm,Silencio,Charm,Silences target,
+161,Skurge Charm,Skurge,Charm,Cleans ectoplasm, Frightens ghosts and other spirits,Green
+162,Slug-vomiting Charm,Slugulus Eructo,Curse,Victim vomits slugs,Green
+163,Amplifying Charm,Sonorus,Charm,Loudens target,
+164,Specialis Revelio,Specialis Revelio,Charm,Reveals spells cast on objects or potions,
+165,Softening Charm,Spongify,Charm,Softens objects,Purple or Orange
+166,Steleus,Steleus,Hex,Causes target to sneeze,Green
+167,Stunning Spell,Stupefy,Charm,Knocks out target,Red
+168,Surgito,Surgito,Counter-charm,Removes enchantments,
+169,Dancing Feet Spell,Tarantallegra ,Jinx,Sends legs out of control,
+170,Tentaclifors,Tentaclifors,Transfiguration Jinx,Turns victim's head into tentacle,Purple
+171,Tergeo,Tergeo,Charm,Cleans up objects,
+172,Tickling Hex,Titillando,Hex,Tickles and weakens,Purple
+173,Ventus Jinx,Ventus,Jinx,Jet of spiralling wind,Grey
+174,Ventus Duo,Ventus Duo,Jinx,Creates a stronger jet of wind compared to Ventus,
+175,Vera Verto,Vera Verto,Transfiguration,Transforms animals into water goblets,Crystal clear
+176,Verdillious,Verdillious,Charm,Causes the wand tip to burn like a sparkler whilst damaging the foe.,Green
+177,Verdimillious Charm,Verdimillious,Charm,Emits green sparks from the wand that can: Do damage to opponents , Reveal hidden things,Green
+178,Vermiculus Jinx,Vermiculus,Jinx,Turns things into worms,Yellow
+179,Red Sparks,Vermillious,Charm,Jet of red sparks,Red
+180,Snake-Vanishing Spell,Vipera Evanesca,Vanishment,Vanishes snakes,Black smoke
+181,Vulnera Sanentur,Vulnera Sanentur,Healing spell, Counter-curse,Slows blood flow, Clears residue, Knits wounds,
+182,Waddiwasi,Waddiwasi,Jinx,Propels wad at the target,
+183,Levitation Charm,Wingardium Leviosa,Charm,Makes objects fly,
+184,Episkey,Episkey,Healing spell, Charm,Heals minor injuries,
