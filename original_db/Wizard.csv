@@ -7,7 +7,7 @@ Id,Name,Gender,Species,Blood-Type,Eye Color,House,Wand,Patronus
 6,Neville Longbottom,Male,Human,Pure-blood,None,Gryffindor,"13"" Cherry unicorn hair",Non-corporeal
 7,Fred Weasley,Male,Human,Pure-blood,Brown,Gryffindor,None,None
 8,George Weasley,Male,Human,Pure-blood,Brown,Gryffindor,None,None
-9,Ginevra (Ginny) Molly Weasley,Female,Human,Pure-blood,Bright brown,Gryffindor,None,Horse
+9,Ginevra Molly Weasley,Female,Human,Pure-blood,Bright brown,Gryffindor,None,Horse
 10,Dean Thomas,Male,Human,Muggle-born,Brown,Gryffindor,None,None
 11,Seamus Finnigan,Male,Human,Half-blood,None,Gryffindor,None,Fox
 12,Lily J. Potter,Female,Human,Muggle-born,Bright green,Gryffindor,None,Doe
@@ -16,7 +16,7 @@ Id,Name,Gender,Species,Blood-Type,Eye Color,House,Wand,Patronus
 15,Remus John Lupin,Male,Werewolf,Half-blood,Green,Gryffindor,"10¼"" Cypress unicorn hair",Wolf
 16,Peter Pettigrew,Male,Human,Half-blood or pure-blood,Blue,Gryffindor,"9¼"" Chestnut dragon heartstring",None
 17,Percy Ignatius Weasley,Male,Human,Pure-blood,Blue,Gryffindor,None,None
-18,William Arthur Weasley,Male,Human (Werewolf traits),Pure-blood,Blue,Gryffindor,None,None
+18,William Arthur Weasley,Male,Human,Pure-blood,Blue,Gryffindor,None,None
 19,Charles Weasley,Male,Human,Pure-blood,Grey,Gryffindor,"12""  Ash unicorn tail hair",None
 20,Lee Jordan,Male,Human,Pure-blood or half-blood,Brown,Gryffindor,None,None
 21,Oliver Wood,Male,Human,Pure-blood or Half-blood,None,Gryffindor,None,None
@@ -35,7 +35,7 @@ Id,Name,Gender,Species,Blood-Type,Eye Color,House,Wand,Patronus
 34,Cho Chang,Female,Human,Pure-blood or half-blood,Dark,Ravenclaw,None,Swan
 35,Luna Lovegood,Female,Human,Pure-blood or half-blood,Pale silvery,Ravenclaw,None,Hare
 36,Gilderoy Lockhart,Male,Human,Half-blood,Blue,Ravenclaw,"9"" Cherry dragon heartstring",Non-corporeal
-37,Filius Flitwick,Male,Human(goblin ancestry),Part-Goblin,None,Ravenclaw,None,Non-corporeal
+37,Filius Flitwick,Male,Human,Part-Goblin,None,Ravenclaw,None,Non-corporeal
 38,Sybill Patricia Trelawney,Female,Human,Half-blood,None,Ravenclaw,9 ½” hazel unicorn hair core,Non-corporeal
 39,Garrick Ollivander,Male,Human,Half-blood,Silvery,Ravenclaw,"12¾"" Hornbeam dragon heartstring",Non-corporeal
 40,Myrtle Elizabeth Warren (Moaning Myrtle),Female,Ghost,Muggle-born,None,Ravenclaw,None,None
@@ -90,7 +90,7 @@ Id,Name,Gender,Species,Blood-Type,Eye Color,House,Wand,Patronus
 89,Dennis Creevey,Male,Human,Muggle-born,None,Gryffindor,None,None
 90,Albus Severus Potter,Male,Human,Half-blood,Bright green,Slytherin,None,None
 91,Scorpius Hyperion Malfoy,Male,Human,Pure-blood,Grey,Slytherin,None,None
-92,Edward Remus Lupin,Male,Human (Metamorphmagus),Half-blood,Variable,Hufflepuff,None,None
+92,Edward Remus Lupin,Male,Human,Half-blood,Variable,Hufflepuff,None,None
 93,James Sirius Potter,Male,Human,Half-blood,None,Gryffindor,None,None
 94,Rose Granger-Weasley,Female,Human,Half-blood,None,Gryffindor,None,None
 95,Argus Filch,Male,Human,Squib,Pale,None,None,None
