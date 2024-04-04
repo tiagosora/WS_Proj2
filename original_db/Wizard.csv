@@ -1,98 +1,98 @@
-Id,Name,Gender,Species,Blood-Type,Eye Color,House,Wand,Patronus
-1,Harry James Potter,Male,Human,Half-blood,Bright green,Gryffindor,"11""  Holly  phoenix feather",Stag
-2,Ronald Bilius Weasley,Male,Human,Pure-blood,Blue,Gryffindor,"12"" Ash unicorn tail hair",Jack Russell terrier
-3,Hermione Jean Granger,Female,Human,Muggle-born,Brown,Gryffindor,"10¾""  vine wood dragon heartstring",Otter
-4,Albus Percival Wulfric Brian Dumbledore,Male,Human,Half-blood,Blue,Gryffindor,"15"" Elder Thestral tail hair core",Phoenix
-5,Rubeus Hagrid,Male,Half-Human/Half-Giant,Part-Human (Half-giant),Black,Gryffindor,None,None
-6,Neville Longbottom,Male,Human,Pure-blood,None,Gryffindor,"13"" Cherry unicorn hair",Non-corporeal
-7,Fred Weasley,Male,Human,Pure-blood,Brown,Gryffindor,None,None
-8,George Weasley,Male,Human,Pure-blood,Brown,Gryffindor,None,None
-9,Ginevra Molly Weasley,Female,Human,Pure-blood,Bright brown,Gryffindor,None,Horse
-10,Dean Thomas,Male,Human,Muggle-born,Brown,Gryffindor,None,None
-11,Seamus Finnigan,Male,Human,Half-blood,None,Gryffindor,None,Fox
-12,Lily J. Potter,Female,Human,Muggle-born,Bright green,Gryffindor,None,Doe
-13,James Potter,Male,Human,Pure-blood,Hazel,Gryffindor,None,Stag
-14,Sirius Black,Male,Human,Pure-blood,Grey,Gryffindor,None,None
-15,Remus John Lupin,Male,Werewolf,Half-blood,Green,Gryffindor,"10¼"" Cypress unicorn hair",Wolf
-16,Peter Pettigrew,Male,Human,Half-blood or pure-blood,Blue,Gryffindor,"9¼"" Chestnut dragon heartstring",None
-17,Percy Ignatius Weasley,Male,Human,Pure-blood,Blue,Gryffindor,None,None
-18,William Arthur Weasley,Male,Human,Pure-blood,Blue,Gryffindor,None,None
-19,Charles Weasley,Male,Human,Pure-blood,Grey,Gryffindor,"12""  Ash unicorn tail hair",None
-20,Lee Jordan,Male,Human,Pure-blood or half-blood,Brown,Gryffindor,None,None
-21,Oliver Wood,Male,Human,Pure-blood or Half-blood,None,Gryffindor,None,None
-22,Angelina Johnson,Female,Human,None,Brown,Gryffindor,None,None
-23,Katie Bell,Female,Human,Pure-blood or half-blood,Brown,Gryffindor,None,None
-24,Alicia Spinnet,Female,Human,Pure-blood or half-blood,Brown,Gryffindor,None,None
-25,Lavender Brown,Female,Human,Pure-blood,Blue,Gryffindor,None,None
-26,Parvati Patil,Female,Human,Pure-blood or half-blood,Dark,Gryffindor,None,None
-27,Romilda Vane,Female,Human,Pure-blood or half-blood,Dark,Gryffindor,None,None
-28,Colin Creevey,Male,Human,Muggle-born,None,Gryffindor,None,None
-29,Cormac McLaggen,Male,Human,Pure-blood or half-blood,None,Gryffindor,None,None
-30,Minerva McGonagall,Female,Human,Half-blood,Green,Gryffindor,"9½"" Fir dragon heartstring",Cat
-31,Molly Weasley,Female,Human,Pure-blood,Bright brown,Gryffindor,None,None
-32,Arthur Weasley,Male,Human,Pure-blood,Green,Gryffindor,None,Weasel
-33,Quirinus Quirrell,Male,Human,Half-blood,None,Ravenclaw,"9"" Alder unicorn hair bendy",Non-corporeal
-34,Cho Chang,Female,Human,Pure-blood or half-blood,Dark,Ravenclaw,None,Swan
-35,Luna Lovegood,Female,Human,Pure-blood or half-blood,Pale silvery,Ravenclaw,None,Hare
-36,Gilderoy Lockhart,Male,Human,Half-blood,Blue,Ravenclaw,"9"" Cherry dragon heartstring",Non-corporeal
-37,Filius Flitwick,Male,Human,Part-Goblin,None,Ravenclaw,None,Non-corporeal
-38,Sybill Patricia Trelawney,Female,Human,Half-blood,None,Ravenclaw,9 ½” hazel unicorn hair core,Non-corporeal
-39,Garrick Ollivander,Male,Human,Half-blood,Silvery,Ravenclaw,"12¾"" Hornbeam dragon heartstring",Non-corporeal
-40,Myrtle Elizabeth Warren (Moaning Myrtle),Female,Ghost,Muggle-born,None,Ravenclaw,None,None
-41,Padma Patil,Female,Human,Pure-blood or half-blood,Dark,Ravenclaw,None,Non-corporeal
-42,Michael Corner,Male,Human,Half-blood,Brown,Ravenclaw,None,Squirrel
-43,Marietta Edgecombe,Female,Human,Pure-blood or half-blood,Grey,Ravenclaw,None,None
-44,Terry Boot,Male,Human,Pure-blood or half-blood,None,Ravenclaw,None,None
-45,Anthony Goldstein,Male,Human,Half-blood,Grey,Ravenclaw,None,Non-corporeal
-46,Severus Snape,Male,Human,Half-blood,Black,Slytherin,None,Doe
-47,Draco Malfoy,Male,Human,Pure-blood,Grey,Slytherin,"10"" Hawthorn unicorn hair",None
-48,Vincent Crabbe,Male,Human,Pure-blood,Black,Slytherin,None,None
-49,Gregory Goyle,Male,Human,Pure-blood,None,Slytherin,None,None
-50,Bellatrix Lestrange,Female,Human,Pure-blood,None,Slytherin,"12¾"" Walnut dragon heartstring",None
-51,Dolores Jane Umbridge,Female,Human,Half-blood,None,Slytherin,"8"" Birch dragon heartstring",Cat
-52,Horace Eugene Flaccus Slughorn,None,Human,Pure-blood or half-blood,Gooseberry,Slytherin,"10¼"" Cedar dragon heartstring fairly flexible",Non-corporeal
-53,Lucius Malfoy,Male,Human,Pure-blood,Grey,Slytherin,Elm and dragon heartstring,None
-54,Narcissa Malfoy,Female,Human,Pure-blood,Blue,Slytherin,None,None
-55,Regulus Arcturus Black,Male,Human,Pure-blood,None,Slytherin,None,Non-corporeal
-56,Pansy Parkinson,Female,Human,Pure-blood or half-blood,None,Slytherin,None,None
-57,Blaise Zabini,Male,Human,Pure-blood or half-blood,Brown,Slytherin,None,None
-58,Tom Marvolo Riddle,Male,Human,Half-blood,Scarlet,Slytherin,"13½"" Yew phoenix feather core",None
-59,Theodore Nott,Male,Human,Pure-blood,None,Slytherin,None,None
-60,Rodolphus Lestrange,Male,Human,Pure-blood,Dark,Slytherin,None,None
-61,Millicent Bulstrode,Female,Human,Half-blood,None,Slytherin,None,None
-62,Graham Montague,Male,Human,Pure-blood or half-blood,Brown,Slytherin,None,None
-63,Bloody Baron,Male,Ghost,Pure-blood or half-blood,None,Slytherin,None,None
-64,Marcus Flint,Male,Human,Pure-blood or half-blood,None,Slytherin,None,None
-65,Penelope Clearwater,Female,Human,Muggle-born or half-blood[,None,Ravenclaw,None,Non-corporeal
-66,Roger Davies,Male,Human,None,Dark,Ravenclaw,None,None
-67,Marcus Belby,Male,Human,Pure-blood or half-blood,Dark,Ravenclaw,None,None
-68,Salazar Slytherin,Male,Human,Pure-blood,Dark,Slytherin,"snakewood, Basilisk horn",None
-69,Godric Gryffindor,Male,Human,Pure-blood or half-blood,Green,Gryffindor,None,None
-70,Rowena Ravenclaw,Female,Human,Pure-blood or half-blood,Dark,Ravenclaw,None,None
-71,Nicholas de Mimsy-Porpington,Male,Ghost,None,None,Gryffindor,None,None
+Id,Name,Gender,Species,Blood-Type,Eye Color,HouseId,Wand,Patronus
+1,Harry James Potter,Male,Human,Half-blood,Bright green,1,"11""  Holly  phoenix feather",Stag
+2,Ronald Bilius Weasley,Male,Human,Pure-blood,Blue,1,"12"" Ash unicorn tail hair",Jack Russell terrier
+3,Hermione Jean Granger,Female,Human,Muggle-born,Brown,1,"10¾""  vine wood dragon heartstring",Otter
+4,Albus Percival Wulfric Brian Dumbledore,Male,Human,Half-blood,Blue,1,"15"" Elder Thestral tail hair core",Phoenix
+5,Rubeus Hagrid,Male,Half-Human/Half-Giant,Part-Human (Half-giant),Black,1,None,None
+6,Neville Longbottom,Male,Human,Pure-blood,None,1,"13"" Cherry unicorn hair",Non-corporeal
+7,Fred Weasley,Male,Human,Pure-blood,Brown,1,None,None
+8,George Weasley,Male,Human,Pure-blood,Brown,1,None,None
+9,Ginevra Molly Weasley,Female,Human,Pure-blood,Bright brown,1,None,Horse
+10,Dean Thomas,Male,Human,Muggle-born,Brown,1,None,None
+11,Seamus Finnigan,Male,Human,Half-blood,None,1,None,Fox
+12,Lily J. Potter,Female,Human,Muggle-born,Bright green,1,None,Doe
+13,James Potter,Male,Human,Pure-blood,Hazel,1,None,Stag
+14,Sirius Black,Male,Human,Pure-blood,Grey,1,None,None
+15,Remus John Lupin,Male,Werewolf,Half-blood,Green,1,"10¼"" Cypress unicorn hair",Wolf
+16,Peter Pettigrew,Male,Human,Half-blood or pure-blood,Blue,1,"9¼"" Chestnut dragon heartstring",None
+17,Percy Ignatius Weasley,Male,Human,Pure-blood,Blue,1,None,None
+18,William Arthur Weasley,Male,Human,Pure-blood,Blue,1,None,None
+19,Charles Weasley,Male,Human,Pure-blood,Grey,1,"12""  Ash unicorn tail hair",None
+20,Lee Jordan,Male,Human,Pure-blood or half-blood,Brown,1,None,None
+21,Oliver Wood,Male,Human,Pure-blood or Half-blood,None,1,None,None
+22,Angelina Johnson,Female,Human,None,Brown,1,None,None
+23,Katie Bell,Female,Human,Pure-blood or half-blood,Brown,1,None,None
+24,Alicia Spinnet,Female,Human,Pure-blood or half-blood,Brown,1,None,None
+25,Lavender Brown,Female,Human,Pure-blood,Blue,1,None,None
+26,Parvati Patil,Female,Human,Pure-blood or half-blood,Dark,1,None,None
+27,Romilda Vane,Female,Human,Pure-blood or half-blood,Dark,1,None,None
+28,Colin Creevey,Male,Human,Muggle-born,None,1,None,None
+29,Cormac McLaggen,Male,Human,Pure-blood or half-blood,None,1,None,None
+30,Minerva McGonagall,Female,Human,Half-blood,Green,1,"9½"" Fir dragon heartstring",Cat
+31,Molly Weasley,Female,Human,Pure-blood,Bright brown,1,None,None
+32,Arthur Weasley,Male,Human,Pure-blood,Green,1,None,Weasel
+33,Quirinus Quirrell,Male,Human,Half-blood,None,2,"9"" Alder unicorn hair bendy",Non-corporeal
+34,Cho Chang,Female,Human,Pure-blood or half-blood,Dark,2,None,Swan
+35,Luna Lovegood,Female,Human,Pure-blood or half-blood,Pale silvery,2,None,Hare
+36,Gilderoy Lockhart,Male,Human,Half-blood,Blue,2,"9"" Cherry dragon heartstring",Non-corporeal
+37,Filius Flitwick,Male,Human,Part-Goblin,None,2,None,Non-corporeal
+38,Sybill Patricia Trelawney,Female,Human,Half-blood,None,2,9 ½” hazel unicorn hair core,Non-corporeal
+39,Garrick Ollivander,Male,Human,Half-blood,Silvery,2,"12¾"" Hornbeam dragon heartstring",Non-corporeal
+40,Myrtle Elizabeth Warren (Moaning Myrtle),Female,Ghost,Muggle-born,None,2,None,None
+41,Padma Patil,Female,Human,Pure-blood or half-blood,Dark,2,None,Non-corporeal
+42,Michael Corner,Male,Human,Half-blood,Brown,2,None,Squirrel
+43,Marietta Edgecombe,Female,Human,Pure-blood or half-blood,Grey,2,None,None
+44,Terry Boot,Male,Human,Pure-blood or half-blood,None,2,None,None
+45,Anthony Goldstein,Male,Human,Half-blood,Grey,2,None,Non-corporeal
+46,Severus Snape,Male,Human,Half-blood,Black,4,None,Doe
+47,Draco Malfoy,Male,Human,Pure-blood,Grey,4,"10"" Hawthorn unicorn hair",None
+48,Vincent Crabbe,Male,Human,Pure-blood,Black,4,None,None
+49,Gregory Goyle,Male,Human,Pure-blood,None,4,None,None
+50,Bellatrix Lestrange,Female,Human,Pure-blood,None,4,"12¾"" Walnut dragon heartstring",None
+51,Dolores Jane Umbridge,Female,Human,Half-blood,None,4,"8"" Birch dragon heartstring",Cat
+52,Horace Eugene Flaccus Slughorn,None,Human,Pure-blood or half-blood,Gooseberry,4,"10¼"" Cedar dragon heartstring fairly flexible",Non-corporeal
+53,Lucius Malfoy,Male,Human,Pure-blood,Grey,4,Elm and dragon heartstring,None
+54,Narcissa Malfoy,Female,Human,Pure-blood,Blue,4,None,None
+55,Regulus Arcturus Black,Male,Human,Pure-blood,None,4,None,Non-corporeal
+56,Pansy Parkinson,Female,Human,Pure-blood or half-blood,None,4,None,None
+57,Blaise Zabini,Male,Human,Pure-blood or half-blood,Brown,4,None,None
+58,Tom Marvolo Riddle,Male,Human,Half-blood,Scarlet,4,"13½"" Yew phoenix feather core",None
+59,Theodore Nott,Male,Human,Pure-blood,None,4,None,None
+60,Rodolphus Lestrange,Male,Human,Pure-blood,Dark,4,None,None
+61,Millicent Bulstrode,Female,Human,Half-blood,None,4,None,None
+62,Graham Montague,Male,Human,Pure-blood or half-blood,Brown,4,None,None
+63,Bloody Baron,Male,Ghost,Pure-blood or half-blood,None,4,None,None
+64,Marcus Flint,Male,Human,Pure-blood or half-blood,None,4,None,None
+65,Penelope Clearwater,Female,Human,Muggle-born or half-blood[,None,2,None,Non-corporeal
+66,Roger Davies,Male,Human,None,Dark,2,None,None
+67,Marcus Belby,Male,Human,Pure-blood or half-blood,Dark,2,None,None
+68,Salazar Slytherin,Male,Human,Pure-blood,Dark,4,"snakewood, Basilisk horn",None
+69,Godric Gryffindor,Male,Human,Pure-blood or half-blood,Green,1,None,None
+70,Rowena Ravenclaw,Female,Human,Pure-blood or half-blood,Dark,2,None,None
+71,Nicholas de Mimsy-Porpington,Male,Ghost,None,None,1,None,None
 72,Cuthbert Binns,Male,Ghost,None,Black,None,None,None
 73,Barty Crouch Jr.,Male,Human,Pure-blood or half-blood,"Pale, freckled",None,None,None
 74,Charity Burbage,Female,Human,Pure-blood or half-blood,None,None,None,Non-corporeal
 75,Firenze,Male,Centaur,None,Astonishingly blue,None,None,None
-76,Alecto Carrow,Female,Human,Pure-blood or half-blood,None,Slytherin,None,None
-77,Amycus Carrow,Male,Human,Pure-blood or half-blood,None,Slytherin,None,None
-78,Helga Hufflepuff,Female,Human,Pure-blood or half-blood,Blue,Hufflepuff,None,None
-79,Fat Friar,Male,Ghost,None,None,Hufflepuff,None,None
-80,Helena Ravenclaw,Female,Ghost,Pure-blood or half-blood,Grey,Ravenclaw,None,None
-81,Pomona Sprout,Female,Human,Pure-blood or half-blood,Grey,Hufflepuff,None,Non-corporeal
-82,Newton Scamander,Male,Human,Pure-blood or half-blood,Blue,Hufflepuff,None,None
-83,Cedric Diggory,Male,Human,Pure-blood,Grey,Hufflepuff,"12¼"", Ash, unicorn hair",None
-84,Justin Finch-Fletchley,Male,Human,Muggle-born,None,Hufflepuff,None,Non-corporeal
-85,Zacharias Smith,Male,Human,Pure-blood or half-blood,None,Hufflepuff,None,None
-86,Hannah Abbott,Female,Human,Half-blood,Brown,Hufflepuff,None,Non-corporeal
-87,Ernest Macmillan,Male,Human,Pure-blood,None,Hufflepuff,None,Boar
-88,Susan Bones,Female,Human,Half-blood,None,Hufflepuff,None,None
-89,Dennis Creevey,Male,Human,Muggle-born,None,Gryffindor,None,None
-90,Albus Severus Potter,Male,Human,Half-blood,Bright green,Slytherin,None,None
-91,Scorpius Hyperion Malfoy,Male,Human,Pure-blood,Grey,Slytherin,None,None
-92,Edward Remus Lupin,Male,Human,Half-blood,Variable,Hufflepuff,None,None
-93,James Sirius Potter,Male,Human,Half-blood,None,Gryffindor,None,None
-94,Rose Granger-Weasley,Female,Human,Half-blood,None,Gryffindor,None,None
+76,Alecto Carrow,Female,Human,Pure-blood or half-blood,None,4,None,None
+77,Amycus Carrow,Male,Human,Pure-blood or half-blood,None,4,None,None
+78,Helga Hufflepuff,Female,Human,Pure-blood or half-blood,Blue,3,None,None
+79,Fat Friar,Male,Ghost,None,None,3,None,None
+80,Helena Ravenclaw,Female,Ghost,Pure-blood or half-blood,Grey,2,None,None
+81,Pomona Sprout,Female,Human,Pure-blood or half-blood,Grey,3,None,Non-corporeal
+82,Newton Scamander,Male,Human,Pure-blood or half-blood,Blue,3,None,None
+83,Cedric Diggory,Male,Human,Pure-blood,Grey,3,"12¼"", Ash, unicorn hair",None
+84,Justin Finch-Fletchley,Male,Human,Muggle-born,None,3,None,Non-corporeal
+85,Zacharias Smith,Male,Human,Pure-blood or half-blood,None,3,None,None
+86,Hannah Abbott,Female,Human,Half-blood,Brown,3,None,Non-corporeal
+87,Ernest Macmillan,Male,Human,Pure-blood,None,3,None,Boar
+88,Susan Bones,Female,Human,Half-blood,None,3,None,None
+89,Dennis Creevey,Male,Human,Muggle-born,None,1,None,None
+90,Albus Severus Potter,Male,Human,Half-blood,Bright green,4,None,None
+91,Scorpius Hyperion Malfoy,Male,Human,Pure-blood,Grey,4,None,None
+92,Edward Remus Lupin,Male,Human,Half-blood,Variable,3,None,None
+93,James Sirius Potter,Male,Human,Half-blood,None,1,None,None
+94,Rose Granger-Weasley,Female,Human,Half-blood,None,1,None,None
 95,Argus Filch,Male,Human,Squib,Pale,None,None,None
 96,Poppy Pomfrey,Female,Human,Pure-blood or half-blood,None,None,None,Non-corporeal
 97,Rolanda Hooch,Female,Human,None,Yellow,None,None,Non-corporeal
