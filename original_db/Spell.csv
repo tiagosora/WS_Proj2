@@ -36,7 +36,7 @@
 35,Cruciatus Curse,Crucio,Curse,Excruciating pain,Red or 
 36,Gouging Spell,Defodio,Charm,Carves through material,
 37,Eradication Spell,Deletrius,Charm,Counter-charm,Erases image from Reverse Spell,
-38,Densaugeo,Densaugeo,Hex ,Elongates teeth,Violet
+38,Densaugeo,Densaugeo,Hex,Elongates teeth,Violet
 39,Deprimo,Deprimo,Charm,Blasts holes in ground,Green
 40,Banishing Charm,Depulso,Charm,Sends target away,White or Red
 41,Descendo,Descendo,Charm,Lowers target,Blue
@@ -78,12 +78,12 @@
 77,Harmonia Nectere Passus,Harmonia Nectere Passus,Charm,Repairs Vanishing Cabinets,
 78,Herbifors Spell,Herbifors,Transfiguration,Transforms target into flowers,Red or Purple
 79,Herbivicus Charm,Herbivicus,Charm,Rapidly grows plants,Green
-80,Human Presence Revealing Spell,Homenum Revelio,Charm ,Reveals human presence,
+80,Human Presence Revealing Spell,Homenum Revelio,Charm,Reveals human presence,
 81,Illegibilus,Illegibilus,Charm,Makes text illegible,
 82,Freezing Charm,Immobulus,Charm,Stops movement and actions of the target,Blue
 83,Impediment Jinx,Impedimenta,Jinx,Hinders movement,Turquoise
 84,Imperius Curse,Imperio,Curse,Total control over the victim,
-85,Impervius Charm,Impervius ,Charm,Waterproofs an object,
+85,Impervius Charm,Impervius,Charm,Waterproofs an object,
 86,Incarcerous Spell,Incarcerous,Conjuration,Binds target in ropes,
 87,Fire-Making Spell,Incendio,Charm,Conjures flames,Orange and Red
 88,Incendio Tria,Incendio Tria,Charm,Conjures blue flames,Blue
@@ -111,15 +111,15 @@
 110,Cushioning Charm,Molliare,Charm,Invisible cushion,
 111,Dark Mark,Morsmordre,Curse,Conjures Dark Mark,Green
 112,Curse of the Bogies,Mucus ad Nauseam,Curse,Nasty cold & runny nose,Green
-113,Muffliato Charm,Muffliato ,Charm,Conceals sound,
-114,Multicorfors Spell,Multicorfors ,Transfiguration,Changes clothes,Red
+113,Muffliato Charm,Muffliato,Charm,Conceals sound,
+114,Multicorfors Spell,Multicorfors,Transfiguration,Changes clothes,Red
 115,Mutatio Skullus,Mutatio Skullus,Hex,Grows extra heads,
 116,Wand-Extinguishing Charm,Nox,Charm,Extinguishes wandlight,
 117,Nebulus,Nebulus,Charm,Conjures fog,Grey
 118,Oculus Reparo,Oculus Reparo,Charm,Repairs glasses,
 119,Memory Charm,Obliviate ,Charm,Erases memories,Green
 120,Obscuro,Obscuro,Conjuration,Blindfolds target,
-121,Oppugno Jinx,Oppugno ,Jinx,Assaults target with directed object(s),
+121,Oppugno Jinx,Oppugno,Jinx,Assaults target with directed object(s),
 122,Orbis Jinx,Orbis,Jinx,Sucks the target into the ground,Blue
 123,Orchideous,Orchideous,Conjuration,Conjures flowers,Pink
 124,Oscausi,Oscausi,Dark charm,Seals mouth,White
