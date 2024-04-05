@@ -1,0 +1,241 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:hogwarts="http://hogwarts.edu/ontology#">
+  <rdf:Description rdf:about="http://hogwarts.edu/courses/1">
+    <hogwarts:id>1</hogwarts:id>
+    <hogwarts:name>Transfiguration</hogwarts:name>
+    <hogwarts:type>Core</hogwarts:type>
+    <hogwarts:attendingYear>1</hogwarts:attendingYear>
+    <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/30"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/1"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/16"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/30"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/43"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/55"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/68"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/79"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/90"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/102"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/114"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/125"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/137"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/150"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/163"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/174"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/courses/2">
+    <hogwarts:id>2</hogwarts:id>
+    <hogwarts:name>Charms</hogwarts:name>
+    <hogwarts:type>Core</hogwarts:type>
+    <hogwarts:attendingYear>2</hogwarts:attendingYear>
+    <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/37"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/3"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/18"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/31"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/44"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/57"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/69"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/80"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/92"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/103"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/115"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/126"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/138"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/151"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/164"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/175"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/courses/3">
+    <hogwarts:id>3</hogwarts:id>
+    <hogwarts:name>Potions</hogwarts:name>
+    <hogwarts:type>Core</hogwarts:type>
+    <hogwarts:attendingYear>1</hogwarts:attendingYear>
+    <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/46"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/6"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/19"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/32"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/45"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/58"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/70"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/81"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/93"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/104"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/116"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/127"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/139"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/153"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/165"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/176"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/courses/4">
+    <hogwarts:id>4</hogwarts:id>
+    <hogwarts:name>History of Magic</hogwarts:name>
+    <hogwarts:type>Core</hogwarts:type>
+    <hogwarts:attendingYear>5</hogwarts:attendingYear>
+    <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/72"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/7"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/20"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/33"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/47"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/59"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/71"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/82"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/94"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/106"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/117"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/128"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/140"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/154"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/166"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/178"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/courses/5">
+    <hogwarts:id>5</hogwarts:id>
+    <hogwarts:name>Defence Against the Dark Arts</hogwarts:name>
+    <hogwarts:type>Core</hogwarts:type>
+    <hogwarts:attendingYear>5</hogwarts:attendingYear>
+    <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/15"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/9"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/22"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/34"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/48"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/61"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/72"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/83"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/95"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/107"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/118"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/129"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/141"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/155"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/167"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/179"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/courses/6">
+    <hogwarts:id>6</hogwarts:id>
+    <hogwarts:name>Astronomy</hogwarts:name>
+    <hogwarts:type>Core</hogwarts:type>
+    <hogwarts:attendingYear>2</hogwarts:attendingYear>
+    <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/99"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/10"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/23"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/35"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/49"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/62"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/73"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/84"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/96"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/108"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/119"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/130"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/143"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/156"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/168"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/180"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/courses/7">
+    <hogwarts:id>7</hogwarts:id>
+    <hogwarts:name>Herbology</hogwarts:name>
+    <hogwarts:type>Core</hogwarts:type>
+    <hogwarts:attendingYear>1</hogwarts:attendingYear>
+    <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/81"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/11"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/24"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/36"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/50"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/63"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/74"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/85"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/97"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/109"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/120"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/131"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/144"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/157"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/169"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/182"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/courses/8">
+    <hogwarts:id>8</hogwarts:id>
+    <hogwarts:name>Care of Magical Creatures</hogwarts:name>
+    <hogwarts:type>Elective</hogwarts:type>
+    <hogwarts:attendingYear>3</hogwarts:attendingYear>
+    <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/5"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/12"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/26"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/38"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/51"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/64"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/75"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/86"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/98"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/110"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/121"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/132"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/146"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/158"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/170"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/183"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/courses/9">
+    <hogwarts:id>9</hogwarts:id>
+    <hogwarts:name>Divination</hogwarts:name>
+    <hogwarts:type>Elective</hogwarts:type>
+    <hogwarts:attendingYear>4</hogwarts:attendingYear>
+    <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/38"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/13"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/27"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/39"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/52"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/65"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/76"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/87"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/99"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/111"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/122"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/133"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/147"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/159"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/171"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/courses/10">
+    <hogwarts:id>10</hogwarts:id>
+    <hogwarts:name>Arithmancy</hogwarts:name>
+    <hogwarts:type>Elective</hogwarts:type>
+    <hogwarts:attendingYear>5</hogwarts:attendingYear>
+    <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/100"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/14"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/28"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/40"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/53"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/66"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/77"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/88"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/100"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/112"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/123"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/134"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/148"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/160"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/172"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/courses/11">
+    <hogwarts:id>11</hogwarts:id>
+    <hogwarts:name>Muggle Studies</hogwarts:name>
+    <hogwarts:type>Elective</hogwarts:type>
+    <hogwarts:attendingYear>4</hogwarts:attendingYear>
+    <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/74"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/15"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/29"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/41"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/54"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/67"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/78"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/89"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/101"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/113"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/124"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/135"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/149"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/162"/>
+    <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/173"/>
+  </rdf:Description>
+</rdf:RDF>
