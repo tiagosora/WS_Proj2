@@ -10,6 +10,10 @@
     <hogwarts:house>1</hogwarts:house>
     <hogwarts:wand>11"  Holly  phoenix feather</hogwarts:wand>
     <hogwarts:patronus>Stag</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/1"/>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/2"/>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/3"/>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/50"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/2">
     <hogwarts:id>2</hogwarts:id>
@@ -21,6 +25,7 @@
     <hogwarts:house>1</hogwarts:house>
     <hogwarts:wand>12" Ash unicorn tail hair</hogwarts:wand>
     <hogwarts:patronus>Jack Russell terrier</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/4"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/3">
     <hogwarts:id>3</hogwarts:id>
@@ -32,6 +37,7 @@
     <hogwarts:house>1</hogwarts:house>
     <hogwarts:wand>10¾"  vine wood dragon heartstring</hogwarts:wand>
     <hogwarts:patronus>Otter</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/6"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/4">
     <hogwarts:id>4</hogwarts:id>
@@ -43,6 +49,7 @@
     <hogwarts:house>1</hogwarts:house>
     <hogwarts:wand>15" Elder Thestral tail hair core</hogwarts:wand>
     <hogwarts:patronus>Phoenix</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/6"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/5">
     <hogwarts:id>5</hogwarts:id>
@@ -52,6 +59,7 @@
     <hogwarts:blood-type>Part-Human (Half-giant)</hogwarts:blood-type>
     <hogwarts:eye_color>Black</hogwarts:eye_color>
     <hogwarts:house>1</hogwarts:house>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/56"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/6">
     <hogwarts:id>6</hogwarts:id>
@@ -62,6 +70,7 @@
     <hogwarts:house>1</hogwarts:house>
     <hogwarts:wand>13" Cherry unicorn hair</hogwarts:wand>
     <hogwarts:patronus>Non-corporeal</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/10"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/7">
     <hogwarts:id>7</hogwarts:id>
@@ -90,6 +99,7 @@
     <hogwarts:eye_color>Bright brown</hogwarts:eye_color>
     <hogwarts:house>1</hogwarts:house>
     <hogwarts:patronus>Horse</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/11"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/10">
     <hogwarts:id>10</hogwarts:id>
@@ -108,6 +118,7 @@
     <hogwarts:blood-type>Half-blood</hogwarts:blood-type>
     <hogwarts:house>1</hogwarts:house>
     <hogwarts:patronus>Fox</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/12"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/12">
     <hogwarts:id>12</hogwarts:id>
@@ -238,6 +249,7 @@
     <hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Blue</hogwarts:eye_color>
     <hogwarts:house>1</hogwarts:house>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/14"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/26">
     <hogwarts:id>26</hogwarts:id>
@@ -247,6 +259,7 @@
     <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Dark</hogwarts:eye_color>
     <hogwarts:house>1</hogwarts:house>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/14"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/27">
     <hogwarts:id>27</hogwarts:id>
@@ -264,6 +277,7 @@
     <hogwarts:species>Human</hogwarts:species>
     <hogwarts:blood-type>Muggle-born</hogwarts:blood-type>
     <hogwarts:house>1</hogwarts:house>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/15"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/29">
     <hogwarts:id>29</hogwarts:id>
@@ -283,6 +297,7 @@
     <hogwarts:house>1</hogwarts:house>
     <hogwarts:wand>9½" Fir dragon heartstring</hogwarts:wand>
     <hogwarts:patronus>Cat</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/17"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/31">
     <hogwarts:id>31</hogwarts:id>
@@ -292,6 +307,9 @@
     <hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Bright brown</hogwarts:eye_color>
     <hogwarts:house>1</hogwarts:house>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/18"/>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/27"/>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/10"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/32">
     <hogwarts:id>32</hogwarts:id>
@@ -302,6 +320,7 @@
     <hogwarts:eye_color>Green</hogwarts:eye_color>
     <hogwarts:house>1</hogwarts:house>
     <hogwarts:patronus>Weasel</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/20"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/33">
     <hogwarts:id>33</hogwarts:id>
@@ -322,6 +341,7 @@
     <hogwarts:eye_color>Dark</hogwarts:eye_color>
     <hogwarts:house>2</hogwarts:house>
     <hogwarts:patronus>Swan</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/3"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/35">
     <hogwarts:id>35</hogwarts:id>
@@ -332,6 +352,7 @@
     <hogwarts:eye_color>Pale silvery</hogwarts:eye_color>
     <hogwarts:house>2</hogwarts:house>
     <hogwarts:patronus>Hare</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/22"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/36">
     <hogwarts:id>36</hogwarts:id>
@@ -352,6 +373,7 @@
     <hogwarts:blood-type>Part-Goblin</hogwarts:blood-type>
     <hogwarts:house>2</hogwarts:house>
     <hogwarts:patronus>Non-corporeal</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/23"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/38">
     <hogwarts:id>38</hogwarts:id>
@@ -391,6 +413,7 @@
     <hogwarts:eye_color>Dark</hogwarts:eye_color>
     <hogwarts:house>2</hogwarts:house>
     <hogwarts:patronus>Non-corporeal</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/26"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/42">
     <hogwarts:id>42</hogwarts:id>
@@ -401,6 +424,7 @@
     <hogwarts:eye_color>Brown</hogwarts:eye_color>
     <hogwarts:house>2</hogwarts:house>
     <hogwarts:patronus>Squirrel</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/27"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/43">
     <hogwarts:id>43</hogwarts:id>
@@ -418,6 +442,7 @@
     <hogwarts:species>Human</hogwarts:species>
     <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:house>2</hogwarts:house>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/27"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/45">
     <hogwarts:id>45</hogwarts:id>
@@ -428,6 +453,7 @@
     <hogwarts:eye_color>Grey</hogwarts:eye_color>
     <hogwarts:house>2</hogwarts:house>
     <hogwarts:patronus>Non-corporeal</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/26"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/46">
     <hogwarts:id>46</hogwarts:id>
@@ -448,6 +474,7 @@
     <hogwarts:eye_color>Grey</hogwarts:eye_color>
     <hogwarts:house>4</hogwarts:house>
     <hogwarts:wand>10" Hawthorn unicorn hair</hogwarts:wand>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/26"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/48">
     <hogwarts:id>48</hogwarts:id>
@@ -522,6 +549,7 @@
     <hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
     <hogwarts:house>4</hogwarts:house>
     <hogwarts:patronus>Non-corporeal</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/3"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/56">
     <hogwarts:id>56</hogwarts:id>
@@ -530,6 +558,7 @@
     <hogwarts:species>Human</hogwarts:species>
     <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:house>4</hogwarts:house>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/26"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/57">
     <hogwarts:id>57</hogwarts:id>
@@ -608,6 +637,7 @@
     <hogwarts:blood-type>Muggle-born or half-blood[</hogwarts:blood-type>
     <hogwarts:house>2</hogwarts:house>
     <hogwarts:patronus>Non-corporeal</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/26"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/66">
     <hogwarts:id>66</hogwarts:id>
@@ -653,6 +683,9 @@
     <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Dark</hogwarts:eye_color>
     <hogwarts:house>2</hogwarts:house>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/6"/>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/27"/>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/23"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/71">
     <hogwarts:id>71</hogwarts:id>
@@ -722,6 +755,7 @@
     <hogwarts:gender>Male</hogwarts:gender>
     <hogwarts:species>Ghost</hogwarts:species>
     <hogwarts:house>3</hogwarts:house>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/34"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/80">
     <hogwarts:id>80</hogwarts:id>
@@ -750,6 +784,7 @@
     <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Blue</hogwarts:eye_color>
     <hogwarts:house>3</hogwarts:house>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/10"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/83">
     <hogwarts:id>83</hogwarts:id>
@@ -821,6 +856,7 @@
     <hogwarts:blood-type>Half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Bright green</hogwarts:eye_color>
     <hogwarts:house>4</hogwarts:house>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/38"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/91">
     <hogwarts:id>91</hogwarts:id>
@@ -839,6 +875,7 @@
     <hogwarts:blood-type>Half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Variable</hogwarts:eye_color>
     <hogwarts:house>3</hogwarts:house>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/50"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/93">
     <hogwarts:id>93</hogwarts:id>
@@ -879,6 +916,7 @@
     <hogwarts:species>Human</hogwarts:species>
     <hogwarts:eye_color>Yellow</hogwarts:eye_color>
     <hogwarts:patronus>Non-corporeal</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/41"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/98">
     <hogwarts:id>98</hogwarts:id>
@@ -886,6 +924,7 @@
     <hogwarts:gender>Female</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
     <hogwarts:patronus>Non-corporeal</hogwarts:patronus>
+    <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/41"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/99">
     <hogwarts:id>99</hogwarts:id>
