@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:hogwarts="http://hogwarts.edu/ontology#">
+  <rdf:Description rdf:about="http://hogwarts.edu/houses/1">
+    <hogwarts:id>1</hogwarts:id>
+    <hogwarts:name>Gryffindor</hogwarts:name>
+    <hogwarts:symbol>lion</hogwarts:symbol>
+    <hogwarts:founderId>69</hogwarts:founderId>
+    <hogwarts:location>Gryffindor Tower through the Fat Lady's portrait</hogwarts:location>
+    <hogwarts:professorInCharge>30</hogwarts:professorInCharge>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/houses/2">
+    <hogwarts:id>2</hogwarts:id>
+    <hogwarts:name>Ravenclaw</hogwarts:name>
+    <hogwarts:symbol>eagle</hogwarts:symbol>
+    <hogwarts:founderId>70</hogwarts:founderId>
+    <hogwarts:location>Ravenclaw Tower beyond a bronze eagle-shaped knocker that posed a riddle</hogwarts:location>
+    <hogwarts:professorInCharge>81</hogwarts:professorInCharge>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/houses/3">
+    <hogwarts:id>3</hogwarts:id>
+    <hogwarts:name>Hufflepuff</hogwarts:name>
+    <hogwarts:symbol>serpent</hogwarts:symbol>
+    <hogwarts:founderId>78</hogwarts:founderId>
+    <hogwarts:location>Hufflepuff Basement below ground level behind a stack of barrels near the kitchens</hogwarts:location>
+    <hogwarts:professorInCharge>37</hogwarts:professorInCharge>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/houses/4">
+    <hogwarts:id>4</hogwarts:id>
+    <hogwarts:name>Slytherin</hogwarts:name>
+    <hogwarts:symbol>badger</hogwarts:symbol>
+    <hogwarts:founderId>68</hogwarts:founderId>
+    <hogwarts:location>Slytherin Dungeon below ground level beyond a stone wall</hogwarts:location>
+    <hogwarts:professorInCharge>46</hogwarts:professorInCharge>
+  </rdf:Description>
+</rdf:RDF>

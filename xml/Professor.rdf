@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:hogwarts="http://hogwarts.edu/ontology#">
+  <rdf:Description rdf:about="http://hogwarts.edu/professors/1">
+    <hogwarts:id>1</hogwarts:id>
+    <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/5" />
+    <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/professors/2">
+    <hogwarts:id>2</hogwarts:id>
+    <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/15" />
+    <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/professors/3">
+    <hogwarts:id>3</hogwarts:id>
+    <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/30" />
+    <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/professors/4">
+    <hogwarts:id>4</hogwarts:id>
+    <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/37" />
+    <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/professors/5">
+    <hogwarts:id>5</hogwarts:id>
+    <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/38" />
+    <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/professors/6">
+    <hogwarts:id>7</hogwarts:id>
+    <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/46" />
+    <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/professors/7">
+    <hogwarts:id>7</hogwarts:id>
+    <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/51" />
+    <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/professors/8">
+    <hogwarts:id>8</hogwarts:id>
+    <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/52" />
+    <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/professors/9">
+    <hogwarts:id>9</hogwarts:id>
+    <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/72" />
+    <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/professors/10">
+    <hogwarts:id>10</hogwarts:id>
+    <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/74" />
+    <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/professors/11">
+    <hogwarts:id>11</hogwarts:id>
+    <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/75" />
+    <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/professors/12">
+    <hogwarts:id>12</hogwarts:id>
+    <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/81" />
+    <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/professors/13">
+    <hogwarts:id>13</hogwarts:id>
+    <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/82" />
+    <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/professors/14">
+    <hogwarts:id>14</hogwarts:id>
+    <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/99" />
+    <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/professors/15">
+    <hogwarts:id>15</hogwarts:id>
+    <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/100" />
+    <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1" />
+  </rdf:Description>
+</rdf:RDF>
