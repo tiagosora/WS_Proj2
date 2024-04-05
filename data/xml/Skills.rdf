@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:hogwarts="http://hogwarts.edu/ontology#">
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/1">
+    <hogwarts:id>1</hogwarts:id>
+    <hogwarts:name>Parseltongue</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/2">
+    <hogwarts:id>2</hogwarts:id>
+    <hogwarts:name>Defence against the dark arts</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/3">
+    <hogwarts:id>3</hogwarts:id>
+    <hogwarts:name>Seeker</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/4">
+    <hogwarts:id>4</hogwarts:id>
+    <hogwarts:name>Wizard chess</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/5">
+    <hogwarts:id>5</hogwarts:id>
+    <hogwarts:name>Goalkeeping</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/6">
+    <hogwarts:id>6</hogwarts:id>
+    <hogwarts:name>Almost everything</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/7">
+    <hogwarts:id>7</hogwarts:id>
+    <hogwarts:name>Resistant</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/8">
+    <hogwarts:id>8</hogwarts:id>
+    <hogwarts:name>Strength</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/9">
+    <hogwarts:id>9</hogwarts:id>
+    <hogwarts:name>Crossbowmanship</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/10">
+    <hogwarts:id>10</hogwarts:id>
+    <hogwarts:name>Herbology</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/11">
+    <hogwarts:id>11</hogwarts:id>
+    <hogwarts:name>Bat-Bogey hex</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/12">
+    <hogwarts:id>12</hogwarts:id>
+    <hogwarts:name>Pyrotechnics</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/13">
+    <hogwarts:id>13</hogwarts:id>
+    <hogwarts:name>Dragon trainnig</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/14">
+    <hogwarts:id>14</hogwarts:id>
+    <hogwarts:name>Divination</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/15">
+    <hogwarts:id>15</hogwarts:id>
+    <hogwarts:name>Photography</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/16">
+    <hogwarts:id>16</hogwarts:id>
+    <hogwarts:name>Quidditch</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/17">
+    <hogwarts:id>17</hogwarts:id>
+    <hogwarts:name>Animagus</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/18">
+    <hogwarts:id>18</hogwarts:id>
+    <hogwarts:name>Household spells</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/19">
+    <hogwarts:id>19</hogwarts:id>
+    <hogwarts:name>Healing magic</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/20">
+    <hogwarts:id>20</hogwarts:id>
+    <hogwarts:name>Muggle world works</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/21">
+    <hogwarts:id>21</hogwarts:id>
+    <hogwarts:name>Theory of defensive magic</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/22">
+    <hogwarts:id>22</hogwarts:id>
+    <hogwarts:name>Spotting Nargles</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/23">
+    <hogwarts:id>23</hogwarts:id>
+    <hogwarts:name>Charms</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/24">
+    <hogwarts:id>24</hogwarts:id>
+    <hogwarts:name>Seer</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/25">
+    <hogwarts:id>25</hogwarts:id>
+    <hogwarts:name>Wandcraft</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/26">
+    <hogwarts:id>26</hogwarts:id>
+    <hogwarts:name>Prefect</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/27">
+    <hogwarts:id>27</hogwarts:id>
+    <hogwarts:name>Potions</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/28">
+    <hogwarts:id>28</hogwarts:id>
+    <hogwarts:name>Occlumency</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/29">
+    <hogwarts:id>29</hogwarts:id>
+    <hogwarts:name>Self-transfiguration</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/30">
+    <hogwarts:id>30</hogwarts:id>
+    <hogwarts:name>Outstanding manipulation</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/31">
+    <hogwarts:id>31</hogwarts:id>
+    <hogwarts:name>Controlling peeves</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/32">
+    <hogwarts:id>32</hogwarts:id>
+    <hogwarts:name>Parselmouths</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/33">
+    <hogwarts:id>33</hogwarts:id>
+    <hogwarts:name>Potioneer</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/34">
+    <hogwarts:id>34</hogwarts:id>
+    <hogwarts:name>Curing peasants of the pox</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/35">
+    <hogwarts:id>35</hogwarts:id>
+    <hogwarts:name>Metamorphmagus</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/36">
+    <hogwarts:id>36</hogwarts:id>
+    <hogwarts:name>Defensive spells</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/37">
+    <hogwarts:id>37</hogwarts:id>
+    <hogwarts:name>Revising</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/38">
+    <hogwarts:id>38</hogwarts:id>
+    <hogwarts:name>Liaising with giants</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/39">
+    <hogwarts:id>39</hogwarts:id>
+    <hogwarts:name>Spying</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/40">
+    <hogwarts:id>40</hogwarts:id>
+    <hogwarts:name>Dark arts</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/41">
+    <hogwarts:id>41</hogwarts:id>
+    <hogwarts:name>Auror</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/42">
+    <hogwarts:id>42</hogwarts:id>
+    <hogwarts:name>Multilingual</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/43">
+    <hogwarts:id>43</hogwarts:id>
+    <hogwarts:name>Regulation and control of magical creatures</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/44">
+    <hogwarts:id>44</hogwarts:id>
+    <hogwarts:name>Writing</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/45">
+    <hogwarts:id>45</hogwarts:id>
+    <hogwarts:name>Triwizard tournament</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/46">
+    <hogwarts:id>46</hogwarts:id>
+    <hogwarts:name>Bartending</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/47">
+    <hogwarts:id>47</hogwarts:id>
+    <hogwarts:name>Gathering information</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/48">
+    <hogwarts:id>48</hogwarts:id>
+    <hogwarts:name>Guard duty</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/49">
+    <hogwarts:id>49</hogwarts:id>
+    <hogwarts:name>Escort missions</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/50">
+    <hogwarts:id>50</hogwarts:id>
+    <hogwarts:name>Duelling</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/51">
+    <hogwarts:id>51</hogwarts:id>
+    <hogwarts:name>Great wizard</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/52">
+    <hogwarts:id>52</hogwarts:id>
+    <hogwarts:name>Breeding bulldogs</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/53">
+    <hogwarts:id>53</hogwarts:id>
+    <hogwarts:name>Sniffing out mischief</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/54">
+    <hogwarts:id>54</hogwarts:id>
+    <hogwarts:name>Medical healer</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/55">
+    <hogwarts:id>55</hogwarts:id>
+    <hogwarts:name>Teaching</hogwarts:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hogwarts.edu/skills/56">
+    <hogwarts:id>56</hogwarts:id>
+    <hogwarts:name>Physical combat</hogwarts:name>
+  </rdf:Description>
+</rdf:RDF>
