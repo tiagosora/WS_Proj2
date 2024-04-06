@@ -3642,7 +3642,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Transfiguration</hogwarts:name>
         <hogwarts:type>Core</hogwarts:type>
-        <hogwarts:attendingYear>1</hogwarts:attendingYear>
+        <hogwarts:attending_year>1</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/30"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/1"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/16"/>
@@ -3665,7 +3665,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Charms</hogwarts:name>
         <hogwarts:type>Core</hogwarts:type>
-        <hogwarts:attendingYear>2</hogwarts:attendingYear>
+        <hogwarts:attending_year>2</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/37"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/3"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/18"/>
@@ -3688,7 +3688,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Potions</hogwarts:name>
         <hogwarts:type>Core</hogwarts:type>
-        <hogwarts:attendingYear>1</hogwarts:attendingYear>
+        <hogwarts:attending_year>1</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/46"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/6"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/19"/>
@@ -3711,7 +3711,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>History of Magic</hogwarts:name>
         <hogwarts:type>Core</hogwarts:type>
-        <hogwarts:attendingYear>5</hogwarts:attendingYear>
+        <hogwarts:attending_year>5</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/72"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/7"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/20"/>
@@ -3734,7 +3734,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Defence Against the Dark Arts</hogwarts:name>
         <hogwarts:type>Core</hogwarts:type>
-        <hogwarts:attendingYear>5</hogwarts:attendingYear>
+        <hogwarts:attending_year>5</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/15"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/9"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/22"/>
@@ -3757,7 +3757,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Astronomy</hogwarts:name>
         <hogwarts:type>Core</hogwarts:type>
-        <hogwarts:attendingYear>2</hogwarts:attendingYear>
+        <hogwarts:attending_year>2</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/99"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/10"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/23"/>
@@ -3780,7 +3780,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Herbology</hogwarts:name>
         <hogwarts:type>Core</hogwarts:type>
-        <hogwarts:attendingYear>1</hogwarts:attendingYear>
+        <hogwarts:attending_year>1</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/81"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/11"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/24"/>
@@ -3803,7 +3803,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Care of Magical Creatures</hogwarts:name>
         <hogwarts:type>Elective</hogwarts:type>
-        <hogwarts:attendingYear>3</hogwarts:attendingYear>
+        <hogwarts:attending_year>3</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/5"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/12"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/26"/>
@@ -3826,7 +3826,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Divination</hogwarts:name>
         <hogwarts:type>Elective</hogwarts:type>
-        <hogwarts:attendingYear>4</hogwarts:attendingYear>
+        <hogwarts:attending_year>4</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/38"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/13"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/27"/>
@@ -3848,7 +3848,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Arithmancy</hogwarts:name>
         <hogwarts:type>Elective</hogwarts:type>
-        <hogwarts:attendingYear>5</hogwarts:attendingYear>
+        <hogwarts:attending_year>5</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/100"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/14"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/28"/>
@@ -3870,7 +3870,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Muggle Studies</hogwarts:name>
         <hogwarts:type>Elective</hogwarts:type>
-        <hogwarts:attendingYear>4</hogwarts:attendingYear>
+        <hogwarts:attending_year>4</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/74"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/15"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/29"/>
