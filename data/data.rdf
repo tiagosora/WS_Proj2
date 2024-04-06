@@ -1,5 +1,28 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:hogwarts="http://hogwarts.edu/ontology#">
+    
+    <rdf:Description rdf:about="http://hogwarts.edu/accounts/1">
+        <hogwarts:id>1</hogwarts:id>
+        <rdfs:type>account</rdfs:type>
+        <hogwarts:number>104142</hogwarts:number>
+        <hogwarts:password>Pass.Muito.Forte123</hogwarts:password>
+        <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://hogwarts.edu/accounts/2">
+        <hogwarts:id>2</hogwarts:id>
+        <rdfs:type>account</rdfs:type>
+        <hogwarts:number>103234</hogwarts:number>
+        <hogwarts:password>Pass.Muito.Forte123</hogwarts:password>
+        <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/46"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://hogwarts.edu/accounts/3">
+        <hogwarts:id>3</hogwarts:id>
+        <rdfs:type>account</rdfs:type>
+        <hogwarts:number>103453</hogwarts:number>
+        <hogwarts:password>Pass.Muito.Forte123</hogwarts:password>
+        <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/4"/>
+    </rdf:Description>
+
     <rdf:Description rdf:about="http://hogwarts.edu/wizards/1">
         <hogwarts:id>1</hogwarts:id>
         <rdfs:type>wizard</rdfs:type>
