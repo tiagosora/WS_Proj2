@@ -143,3 +143,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 load_dotenv()
 
 GRAPHDB_ENDPOINT = os.getenv('REPO_URL')
+LOGIN_URL = 'authentication'
