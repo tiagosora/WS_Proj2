@@ -13,27 +13,36 @@ def wizard_detail(request, wizard_id):
     sparql = SPARQLWrapper(settings.GRAPHDB_ENDPOINT)
     wizard_uri = f"http://hogwarts.edu/wizards/{wizard_id}"
 
-    query = f"""
-    PREFIX hogwarts: <http://hogwarts.edu/>
+    # Query for wizard properties, including skill and spell URIs
+    query_wizard = f"""
+    PREFIX hogwarts: <http://hogwarts.edu/ontology#>
 
-    SELECT ?property ?value WHERE {{
-        <{wizard_uri}> ?property ?value .
+    SELECT ?property ?obj WHERE {{
+        <{wizard_uri}> ?property ?obj .
     }}
     """
-    sparql.setQuery(query)
+    sparql.setQuery(query_wizard)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
 
-    wizard_data = {'skills': []}
+    wizard_data = {'skills': [], 'spells': []}
     for result in results["results"]["bindings"]:
-        prop = result["property"]["value"].split('/')[-1]
-        val = result["value"]["value"]
+        prop = result["property"]["value"].split('#')[-1]
+        obj = result["obj"]["value"]
 
-        # Handle object properties differently, assuming skills are identified by their URIs
         if prop == "has_skill":
-            skill_id = val.split('/')[-1]
-            wizard_data['skills'].append(skill_id)
-        else:
-            wizard_data[prop] = val
+            query_skill = f"""
+            PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+
+            SELECT ?name WHERE {{
+                <{obj}> hogwarts:name ?name .
+            }}
+            """
+            sparql.setQuery(query_skill)
+            skill_results = sparql.query().convert()
+            for skill_result in skill_results["results"]["bindings"]:
+                skill_name = skill_result["name"]["value"]
+                wizard_data['skills'].append(skill_name)
 
     return render(request, 'app/wizard_detail.html', {'wizard': wizard_data, 'wizard_id': wizard_id})
+

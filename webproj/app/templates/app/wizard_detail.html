@@ -9,6 +9,18 @@
         {% for property, value in wizard.items %}
             <p><strong>{{ property }}:</strong> {{ value }}</p>
         {% endfor %}
+        <h2>Skills</h2>
+        <ul>
+            {% for skill_name in wizard.skills %}
+                <li>{{ skill_name }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Spells</h2>
+        <ul>
+            {% for spell_name in wizard.spells %}
+                <li>{{ spell_name }}</li>
+            {% endfor %}
+        </ul>
     {% else %}
         <p>Wizard details not found.</p>
     {% endif %}
