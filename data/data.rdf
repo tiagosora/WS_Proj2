@@ -1054,486 +1054,1096 @@
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/1"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>2</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/2">
         <hogwarts:id>2</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/2"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>2</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/3">
         <hogwarts:id>3</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/3"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>4</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/4">
         <hogwarts:id>4</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/6"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>5</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/5">
         <hogwarts:id>5</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/7"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>1</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/6">
         <hogwarts:id>6</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/8"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>1</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/7">
         <hogwarts:id>7</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/9"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>2</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/8">
         <hogwarts:id>8</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/10"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>4</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/9">
         <hogwarts:id>9</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/11"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>3</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/10">
         <hogwarts:id>10</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/12"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>2</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/11">
         <hogwarts:id>11</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/13"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>1</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/12">
         <hogwarts:id>12</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/14"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>4</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/13">
         <hogwarts:id>13</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/16"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>5</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/14">
         <hogwarts:id>14</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/17"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>5</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/15">
         <hogwarts:id>15</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/18"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>1</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/16">
         <hogwarts:id>16</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/19"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>3</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/17">
         <hogwarts:id>17</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/20"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>2</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/18">
         <hogwarts:id>18</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/21"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>1</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/19">
         <hogwarts:id>19</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/22"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>1</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/20">
         <hogwarts:id>20</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/23"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>5</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/21">
         <hogwarts:id>21</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/24"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>2</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/22">
         <hogwarts:id>22</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/25"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>2</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/23">
         <hogwarts:id>23</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/26"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>5</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/24">
         <hogwarts:id>24</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/27"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>5</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/25">
         <hogwarts:id>25</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/28"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>5</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/26">
         <hogwarts:id>26</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/29"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>3</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/27">
         <hogwarts:id>27</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/31"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>2</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/28">
         <hogwarts:id>28</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/32"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>2</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/29">
         <hogwarts:id>29</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/33"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>1</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/30">
         <hogwarts:id>30</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/34"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>3</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/31">
         <hogwarts:id>31</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/35"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>3</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/32">
         <hogwarts:id>32</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/36"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>3</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/33">
         <hogwarts:id>33</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/39"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>3</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/34">
         <hogwarts:id>34</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/40"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>3</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/35">
         <hogwarts:id>35</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/41"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>1</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/36">
         <hogwarts:id>36</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/42"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>1</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/37">
         <hogwarts:id>37</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/43"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>1</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/38">
         <hogwarts:id>38</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/44"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>1</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/39">
         <hogwarts:id>39</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/45"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>3</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/40">
         <hogwarts:id>40</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/47"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>3</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/41">
         <hogwarts:id>41</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/48"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>2</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/42">
         <hogwarts:id>42</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/49"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>1</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/43">
         <hogwarts:id>43</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/50"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>5</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/44">
         <hogwarts:id>44</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/53"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>2</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/45">
         <hogwarts:id>45</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/54"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>1</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/46">
         <hogwarts:id>46</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/55"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>3</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/47">
         <hogwarts:id>47</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/56"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>5</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/48">
         <hogwarts:id>48</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/57"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>4</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/49">
         <hogwarts:id>49</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/58"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>4</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/50">
         <hogwarts:id>50</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/59"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>2</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/51">
         <hogwarts:id>51</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/60"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>2</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/52">
         <hogwarts:id>52</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/61"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>1</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/53">
         <hogwarts:id>53</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/62"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>5</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/54">
         <hogwarts:id>54</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/63"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>3</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/55">
         <hogwarts:id>55</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/64"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>4</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/56">
         <hogwarts:id>56</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/65"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>3</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/57">
         <hogwarts:id>57</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/66"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>5</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/58">
         <hogwarts:id>58</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/67"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>5</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/59">
         <hogwarts:id>59</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/71"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>2</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/60">
         <hogwarts:id>60</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/73"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>4</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/61">
         <hogwarts:id>61</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/76"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>5</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/62">
         <hogwarts:id>62</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/77"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>4</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/63">
         <hogwarts:id>63</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/79"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>1</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/64">
         <hogwarts:id>64</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/80"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>2</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/65">
         <hogwarts:id>65</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/83"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>4</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/66">
         <hogwarts:id>66</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/84"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>4</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/67">
         <hogwarts:id>67</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/85"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>5</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/68">
         <hogwarts:id>68</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/86"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>4</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/69">
         <hogwarts:id>69</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/87"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>4</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/70">
         <hogwarts:id>70</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/88"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>3</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/71">
         <hogwarts:id>71</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/89"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>1</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/72">
         <hogwarts:id>72</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/90"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>2</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/73">
         <hogwarts:id>73</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/91"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>5</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/74">
         <hogwarts:id>74</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/92"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>3</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/75">
         <hogwarts:id>75</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/93"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>4</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/76">
         <hogwarts:id>76</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/94"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>1</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/77">
         <hogwarts:id>77</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/95"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>5</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/78">
         <hogwarts:id>78</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/96"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>4</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/79">
         <hogwarts:id>79</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/97"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>3</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/80">
         <hogwarts:id>80</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/98"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>3</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/students/81">
         <hogwarts:id>81</hogwarts:id>
         <rdfs:type>student</rdfs:type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/101"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
+        <hogwarts:school_year>4</hogwarts:school_year>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
+        <hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
+        <hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
     </rdf:Description>
 
     <rdf:Description rdf:about="http://hogwarts.edu/spells/1">
@@ -3561,7 +4171,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Transfiguration</hogwarts:name>
         <hogwarts:type>Core</hogwarts:type>
-        <hogwarts:attendingYear>1</hogwarts:attendingYear>
+        <hogwarts:attending_year>1</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/30"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/1"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/16"/>
@@ -3584,7 +4194,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Charms</hogwarts:name>
         <hogwarts:type>Core</hogwarts:type>
-        <hogwarts:attendingYear>2</hogwarts:attendingYear>
+        <hogwarts:attending_year>2</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/37"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/3"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/18"/>
@@ -3607,7 +4217,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Potions</hogwarts:name>
         <hogwarts:type>Core</hogwarts:type>
-        <hogwarts:attendingYear>1</hogwarts:attendingYear>
+        <hogwarts:attending_year>1</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/46"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/6"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/19"/>
@@ -3630,7 +4240,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>History of Magic</hogwarts:name>
         <hogwarts:type>Core</hogwarts:type>
-        <hogwarts:attendingYear>5</hogwarts:attendingYear>
+        <hogwarts:attending_year>5</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/72"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/7"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/20"/>
@@ -3653,7 +4263,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Defence Against the Dark Arts</hogwarts:name>
         <hogwarts:type>Core</hogwarts:type>
-        <hogwarts:attendingYear>5</hogwarts:attendingYear>
+        <hogwarts:attending_year>5</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/15"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/9"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/22"/>
@@ -3676,7 +4286,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Astronomy</hogwarts:name>
         <hogwarts:type>Core</hogwarts:type>
-        <hogwarts:attendingYear>2</hogwarts:attendingYear>
+        <hogwarts:attending_year>2</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/99"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/10"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/23"/>
@@ -3699,7 +4309,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Herbology</hogwarts:name>
         <hogwarts:type>Core</hogwarts:type>
-        <hogwarts:attendingYear>1</hogwarts:attendingYear>
+        <hogwarts:attending_year>1</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/81"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/11"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/24"/>
@@ -3722,7 +4332,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Care of Magical Creatures</hogwarts:name>
         <hogwarts:type>Elective</hogwarts:type>
-        <hogwarts:attendingYear>3</hogwarts:attendingYear>
+        <hogwarts:attending_year>3</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/5"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/12"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/26"/>
@@ -3745,7 +4355,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Divination</hogwarts:name>
         <hogwarts:type>Elective</hogwarts:type>
-        <hogwarts:attendingYear>4</hogwarts:attendingYear>
+        <hogwarts:attending_year>4</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/38"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/13"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/27"/>
@@ -3767,7 +4377,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Arithmancy</hogwarts:name>
         <hogwarts:type>Elective</hogwarts:type>
-        <hogwarts:attendingYear>5</hogwarts:attendingYear>
+        <hogwarts:attending_year>5</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/100"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/14"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/28"/>
@@ -3789,7 +4399,7 @@
         <rdfs:type>course</rdfs:type>
         <hogwarts:name>Muggle Studies</hogwarts:name>
         <hogwarts:type>Elective</hogwarts:type>
-        <hogwarts:attendingYear>4</hogwarts:attendingYear>
+        <hogwarts:attending_year>4</hogwarts:attending_year>
         <hogwarts:professor rdf:resource="http://hogwarts.edu/professors/74"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/15"/>
         <hogwarts:teaches_spell rdf:resource="http://hogwarts.edu/spells/29"/>
