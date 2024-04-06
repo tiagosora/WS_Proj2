@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import os
 from pathlib import Path
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,6 +28,8 @@ SECRET_KEY = 'django-insecure-*9oj+3$rd1p0tf*uks^3!+u9-ok=pxz%wg!y8uhker=m^&a53$
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+NPM_BIN_PATH = 'npm.cmd'
 
 
 # Application definition
@@ -136,4 +140,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-GRAPHDB_ENDPOINT = 'http://localhost:7200/repositories/WS_Project1'
+load_dotenv()
+
+GRAPHDB_ENDPOINT = os.getenv('REPO_URL')
