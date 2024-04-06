@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wizard Details</title>
+</head>
+<body>
+    <h1>Wizard Details: {{ wizard_id }}</h1>
+    {% if wizard %}
+        {% for property, value in wizard.items %}
+            <p><strong>{{ property }}:</strong> {{ value }}</p>
+        {% endfor %}
+    {% else %}
+        <p>Wizard details not found.</p>
+    {% endif %}
+</body>
+</html>
