@@ -10,4 +10,5 @@ urlpatterns = [
     
     #test
     path('wizard/<str:wizard_id>/', views.wizard_detail, name='wizard_detail'),
+
 ]

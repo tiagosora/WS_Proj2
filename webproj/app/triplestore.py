@@ -69,6 +69,9 @@ def create_new_wizard(password, blood_type, eye_color, gender,
                       house, nmec, name, 
                       patronus, species, wand):
     
+    if ( not bool(password) or not bool(name) or not bool(nmec)):
+        return False
+    
     if check_if_nmec_exists(nmec):
         return False
     
@@ -111,6 +114,7 @@ def create_new_wizard(password, blood_type, eye_color, gender,
         SELECT 
             ?houseId
         WHERE {{
+            ?house rdfs:type "house" .
             ?house hogwarts:name ?houseName .
             FILTER(LCASE(?houseName) = LCASE("{house}")) . 
             ?house hogwarts:id ?houseId .
@@ -125,6 +129,7 @@ def create_new_wizard(password, blood_type, eye_color, gender,
         houseId = results["results"]["bindings"][0]["houseId"]["value"]
     
     house = "hogwarts:house \"" + houseId + "\" ;" if houseId else ""
+    
     name = name if name else ""
     gender = "hogwarts:gender \"" + gender + "\" ;" if gender else ""
     species = "hogwarts:species \"" + species + "\" ;" if species else ""
@@ -165,11 +170,12 @@ def create_new_wizard(password, blood_type, eye_color, gender,
                 <http://hogwarts.edu/students/{max_student_id}> 
                     hogwarts:id "{max_student_id}" ;
                     rdfs:type "student" ;
+                    hogwarts:school <http://hogwarts.edu/schools/1> ;
+                    hogwarts:school_year "1" ;
                     hogwarts:wizard <http://hogwarts.edu/wizards/{max_wizard_id}> .
         }}
         }}
-    """
-    
+    """    
     
     sparql_update.setMethod(POST)
     sparql_update.setQuery(query_add)
