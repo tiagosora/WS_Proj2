@@ -1,52 +1,72 @@
 from SPARQLWrapper import SPARQLWrapper, JSON, POST, GET, TURTLE
 from django.conf import settings
+from rdflib import Graph, URIRef, Literal
+
+from app.models import Wizard, Skill
 
 sparql = SPARQLWrapper(settings.GRAPHDB_ENDPOINT)
 sparql_update = SPARQLWrapper(settings.GRAPHDB_ENDPOINT_UPDATE)
 
-def get_wizard_info(wizard_id):
-
-    wizard_uri = f"http://hogwarts.edu/wizards/{wizard_id}"
-
-    # Query for wizard properties, including skill URIs
-    query_wizard = f"""
+def get_skill_info(skill_uri):
+    sparql = SPARQLWrapper(settings.GRAPHDB_ENDPOINT)
+    query = f"""
     PREFIX hogwarts: <http://hogwarts.edu/>
-
-    SELECT ?property ?obj WHERE {{
-        <{wizard_uri}> ?property ?obj .
-    }}
+    DESCRIBE <{skill_uri}>
     """
-    sparql.setQuery(query_wizard)
-    sparql.setReturnFormat(JSON)
+    sparql.setQuery(query)
+    sparql.setReturnFormat('turtle')
     results = sparql.query().convert()
 
-    wizard_data = {'skills': []}
-    for result in results["results"]["bindings"]:
-        prop = result["property"]["value"].split('#')[-1]  # Assuming the namespace ends with '#'
-        obj = result["obj"]["value"]
+    g = Graph()
+    g.parse(data=results, format='turtle')
 
-        # Check if the property is a skill
-        if prop == "has_skill":
-            # Fetch the skill name based on the skill URI
-            query_skill = f"""
-            PREFIX hogwarts: <http://hogwarts.edu/ontology#>
-
-            SELECT ?name WHERE {{
-                <{obj}> hogwarts:name ?name .
-            }}
-            """
-            print(query_skill)
-            sparql.setQuery(query_skill)
-            skill_results = sparql.query().convert()
-            print(skill_results)
-            for skill_result in skill_results["results"]["bindings"]:
-                skill_name = skill_result["name"]["value"]
-                print(skill_name)
-                wizard_data['skills'].append(skill_name)
+    skill_attrs = {}
+    for s, p, o in g.triples((URIRef(skill_uri), None, None)):
+        prop = p.split('#')[-1]
+        print(s, p, o)
+        if isinstance(o, Literal):
+            value = o.toPython()
         else:
-            wizard_data[prop] = obj
-            
-            
+            value = str(o)
+        skill_attrs[prop] = value
+
+    return Skill(**skill_attrs)
+
+
+def get_wizard_info(wizard_id):
+    sparql = SPARQLWrapper(settings.GRAPHDB_ENDPOINT)
+    wizard_uri = f"http://hogwarts.edu/wizards/{wizard_id}"
+    query = f"""
+    PREFIX hogwarts: <http://hogwarts.edu/>
+    DESCRIBE <{wizard_uri}>
+    """
+    sparql.setQuery(query)
+    sparql.setReturnFormat('turtle')
+    results = sparql.query().convert()
+
+    g = Graph()
+    g.parse(data=results, format='turtle')
+
+    wizard_attrs = {'id': wizard_id, 'skills': [], 'spells': []}
+    for s, p, o in g:
+        prop = p.split('#')[-1]
+        if prop == 'has_skill':
+            skill_info = get_skill_info(str(o))
+            wizard_attrs['skills'].append(skill_info)
+        elif prop == 'has_spell':
+            # Process spells similarly if you have a Spell class
+            pass
+        else:
+            if isinstance(o, Literal):
+                value = o.toPython()
+            else:
+                value = str(o)
+            wizard_attrs[prop] = value
+
+    wizard = Wizard(**wizard_attrs)
+    return wizard
+
+
 def create_new_wizard(password, blood_type, eye_color, gender, 
                       house, nmec, name, 
                       patronus, species, wand):
@@ -156,4 +176,3 @@ def create_new_wizard(password, blood_type, eye_color, gender,
     sparql_update.setMethod(POST)
     sparql_update.setQuery(query_add)
     sparql_update.query()
-    
