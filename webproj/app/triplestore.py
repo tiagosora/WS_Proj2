@@ -1,4 +1,4 @@
-from SPARQLWrapper import SPARQLWrapper, JSON, POST, GET, TURTLE
+from SPARQLWrapper import SPARQLWrapper, JSON, POST
 from django.conf import settings
 from rdflib import Graph, URIRef, Literal
 
@@ -6,6 +6,7 @@ from app.models import Wizard, Skill
 
 sparql = SPARQLWrapper(settings.GRAPHDB_ENDPOINT)
 sparql_update = SPARQLWrapper(settings.GRAPHDB_ENDPOINT_UPDATE)
+
 
 def get_skill_info(skill_uri):
     query = f"""
@@ -65,18 +66,17 @@ def get_wizard_info(wizard_id):
     return wizard
 
 
-def create_new_wizard(password, blood_type, eye_color, gender, 
-                      house, nmec, name, 
+def create_new_wizard(password, blood_type, eye_color, gender,
+                      house, nmec, name,
                       patronus, species, wand):
-    
-    if ( not bool(password) or not bool(name) or not bool(nmec)):
+    if not bool(password) or not bool(name) or not bool(nmec):
         return False
-    
+
     if check_if_nmec_exists(nmec):
         return False
-    
-    max_wizard_id = max_student_id = max_account_id = houseId = None
-    
+
+    max_wizard_id = max_student_id = max_account_id = house_id = None
+
     max_ids_query = f"""
         PREFIX hogwarts: <http://hogwarts.edu/ontology#>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -95,7 +95,7 @@ def create_new_wizard(password, blood_type, eye_color, gender,
             ?account hogwarts:id ?accountId .
         }}
     """
-    
+
     sparql.setQuery(max_ids_query)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
@@ -103,10 +103,10 @@ def create_new_wizard(password, blood_type, eye_color, gender,
     max_wizard_id = int(results["results"]["bindings"][0]["nextWizardId"]["value"]) + 1
     max_student_id = int(results["results"]["bindings"][0]["nextStudentId"]["value"]) + 1
     max_account_id = int(results["results"]["bindings"][0]["nextAccountId"]["value"]) + 1
-    
+
     house = house if house else ""
-    
-    houseId_query = f"""
+
+    house_id_query = f"""
         PREFIX hogwarts: <http://hogwarts.edu/ontology#>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -120,16 +120,16 @@ def create_new_wizard(password, blood_type, eye_color, gender,
             ?house hogwarts:id ?houseId .
         }}
     """
-    
-    sparql.setQuery(houseId_query)
+
+    sparql.setQuery(house_id_query)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
 
-    if len(results["results"]["bindings"])>0 and "houseId" in results["results"]["bindings"][0].keys():
-        houseId = results["results"]["bindings"][0]["houseId"]["value"]
-    
-    house = "hogwarts:house \"" + houseId + "\" ;" if houseId else ""
-    
+    if len(results["results"]["bindings"]) > 0 and "houseId" in results["results"]["bindings"][0].keys():
+        house_id = results["results"]["bindings"][0]["houseId"]["value"]
+
+    house = "hogwarts:house \"" + house_id + "\" ;" if house_id else ""
+
     name = name if name else ""
     gender = "hogwarts:gender \"" + gender + "\" ;" if gender else ""
     species = "hogwarts:species \"" + species + "\" ;" if species else ""
@@ -137,8 +137,7 @@ def create_new_wizard(password, blood_type, eye_color, gender,
     eye_color = "hogwarts:eye_color \"" + eye_color + "\" ;" if eye_color else ""
     wand = "hogwarts:wand \"" + wand + "\" ;" if wand else ""
     patronus = "hogwarts:patronus \"" + patronus + "\" ;" if patronus else ""
-    
-    
+
     query_add = f"""
         PREFIX hogwarts: <http://hogwarts.edu/ontology#>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -175,16 +174,16 @@ def create_new_wizard(password, blood_type, eye_color, gender,
                     hogwarts:wizard <http://hogwarts.edu/wizards/{max_wizard_id}> .
         }}
         }}
-    """    
-    
+    """
+
     sparql_update.setMethod(POST)
     sparql_update.setQuery(query_add)
     sparql_update.query()
-    
+
     return True
-    
+
+
 def check_if_nmec_exists(nmec):
-    
     query_check = f"""
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX hogwarts: <http://hogwarts.edu/ontology#>
@@ -194,12 +193,13 @@ def check_if_nmec_exists(nmec):
             ?student hogwarts:number "{nmec}" .
         }}
     """
-    
+
     sparql.setQuery(query_check)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
-    
+
     return bool(results["boolean"])
+
 
 def check_authentication_correct(nmec, password):
     query_check = f"""
@@ -212,9 +212,9 @@ def check_authentication_correct(nmec, password):
             ?student hogwarts:password "{password}"
         }}
     """
-    
+
     sparql.setQuery(query_check)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
-    
+
     return bool(results["boolean"])

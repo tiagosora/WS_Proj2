@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
@@ -6,7 +6,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     
     # Authentication
-    path('authentication/', views.authentication, name='authentication'),
+    path('accounts/', include('django.contrib.auth.urls')),
     
     #test
     path('wizard/<str:wizard_id>/', views.wizard_detail, name='wizard_detail'),
