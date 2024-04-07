@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from app import triplestore
+
 
 
 # Create your views here.
@@ -15,5 +16,27 @@ def index(request):
     return render(request, 'app/index.html')
 
 
-def authentication(request):
-    return render(request, 'app/login.html')
+def register_view(request):
+    if request.method == 'POST':
+        # Here you would retrieve form data
+        nmec = request.POST.get('id_number')
+        password = request.POST.get('password')
+        blood_type = request.POST.get('blood_type')
+        eye_color = request.POST.get('eye_color')
+        gender = request.POST.get('gender')
+        house = request.POST.get('house')
+        name = request.POST.get('name')
+        patronus = request.POST.get('patronus')
+        species = request.POST.get('species')
+        wand = request.POST.get('wand')
+
+        # For example, using your create_new_wizard function
+
+        success = triplestore.create_new_wizard(password, blood_type, eye_color, gender, house, nmec, name, patronus, species, wand)  # Fill in other parameters
+        print(success)
+        if success:
+            return redirect('')  # Redirect to a success page
+        else:
+            return render(request, 'registration/login.html', {'error': 'Registration failed.'})
+
+    return render(request, 'registration/login.html')

@@ -56,7 +56,7 @@
                     </form>
                 </div>
                 <div id="registerForm" class="hidden">
-                    <form method="post" >
+                    <form method="post" action="{% url 'register' %}" >
                         {% csrf_token %}
                         <div class="grid grid-cols-2 gap-4">
                             <div>

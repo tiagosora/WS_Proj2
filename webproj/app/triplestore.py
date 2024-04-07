@@ -66,14 +66,31 @@ def get_wizard_info(wizard_id):
     return wizard
 
 
-def create_new_wizard(password, blood_type, eye_color, gender,
-                      house, nmec, name,
-                      patronus, species, wand):
+def create_new_wizard(password: str, blood_type: str, eye_color: str, gender: str,
+                      house: int, nmec: int, name: str,
+                      patronus: str, species: str, wand: str):
+
+    wand = wand.replace("\\", "\\\\").replace("\"", "\\\"")
+
+    print('Creating new wizard')
+    print('Password: ', password)
+    print('Blood type: ', blood_type)
+    print('Eye color: ', eye_color)
+    print('Gender: ', gender)
+    print('House: ', house)
+    print('NMEC: ', nmec)
+    print('Patronus: ', patronus)
+    print('Species: ', species)
+    print('Wand: ', wand)
+
     if not bool(password) or not bool(name) or not bool(nmec):
         return False
 
+    print("Bool Passed")
     if check_if_nmec_exists(nmec):
         return False
+
+    print("NMEC Passed")
 
     max_wizard_id = max_student_id = max_account_id = house_id = None
 
@@ -100,6 +117,8 @@ def create_new_wizard(password, blood_type, eye_color, gender,
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
 
+    print(results)
+
     max_wizard_id = int(results["results"]["bindings"][0]["nextWizardId"]["value"]) + 1
     max_student_id = int(results["results"]["bindings"][0]["nextStudentId"]["value"]) + 1
     max_account_id = int(results["results"]["bindings"][0]["nextAccountId"]["value"]) + 1
@@ -124,6 +143,8 @@ def create_new_wizard(password, blood_type, eye_color, gender,
     sparql.setQuery(house_id_query)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
+
+    print(results)
 
     if len(results["results"]["bindings"]) > 0 and "houseId" in results["results"]["bindings"][0].keys():
         house_id = results["results"]["bindings"][0]["houseId"]["value"]
@@ -179,6 +200,8 @@ def create_new_wizard(password, blood_type, eye_color, gender,
     sparql_update.setMethod(POST)
     sparql_update.setQuery(query_add)
     sparql_update.query()
+
+    print("Added Wizard")
 
     return True
 
