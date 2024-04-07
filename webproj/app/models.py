@@ -5,17 +5,17 @@ from django.db import models
 class Wizard:
     def __init__(self, **kwargs):
         self.id = kwargs.get('id')
-        self.name = kwargs.get('name')
-        self.gender = kwargs.get('gender')
-        self.species = kwargs.get('species')
-        self.blood_type = kwargs.get('blood_type')
-        self.eye_color = kwargs.get('eye_color')
-        self.house = kwargs.get('house')
-        self.wand = kwargs.get('wand')
-        self.patronus = kwargs.get('patronus')
+        self.name = kwargs.get('name', '')
+        self.gender = kwargs.get('gender', '')
+        self.species = kwargs.get('species', '')
+        self.blood_type = kwargs.get('blood_type', '')
+        self.eye_color = kwargs.get('eye_color', '')
+        self.house = kwargs.get('house', '')
+        self.wand = kwargs.get('wand', '')
+        self.patronus = kwargs.get('patronus', '')
         self.skills = kwargs.get('skills', [])
         self.spells = kwargs.get('spells', [])
-        self.type = kwargs.get('type')
+        self.type = kwargs.get('type', 'wizard')
 
     def __str__(self):
         return f"Wizard: {self.name}"

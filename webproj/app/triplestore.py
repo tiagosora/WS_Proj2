@@ -104,7 +104,7 @@ def create_new_wizard(password, blood_type, eye_color, gender,
     max_student_id = int(results["results"]["bindings"][0]["nextStudentId"]["value"]) + 1
     max_account_id = int(results["results"]["bindings"][0]["nextAccountId"]["value"]) + 1
 
-    house = house if house else ""
+    house = house if bool(house) else ""
 
     house_id_query = f"""
         PREFIX hogwarts: <http://hogwarts.edu/ontology#>
@@ -128,15 +128,15 @@ def create_new_wizard(password, blood_type, eye_color, gender,
     if len(results["results"]["bindings"]) > 0 and "houseId" in results["results"]["bindings"][0].keys():
         house_id = results["results"]["bindings"][0]["houseId"]["value"]
 
-    house = "hogwarts:house \"" + house_id + "\" ;" if house_id else ""
+    house = "hogwarts:house \"" + house_id + "\" ;" if bool(house_id) else ""
 
-    name = name if name else ""
-    gender = "hogwarts:gender \"" + gender + "\" ;" if gender else ""
-    species = "hogwarts:species \"" + species + "\" ;" if species else ""
-    blood_type = "hogwarts:blood-type \"" + blood_type + "\" ;" if blood_type else ""
-    eye_color = "hogwarts:eye_color \"" + eye_color + "\" ;" if eye_color else ""
-    wand = "hogwarts:wand \"" + wand + "\" ;" if wand else ""
-    patronus = "hogwarts:patronus \"" + patronus + "\" ;" if patronus else ""
+    name = name if bool(name) else ""
+    gender = "hogwarts:gender \"" + gender + "\" ;" if bool(gender) else ""
+    species = "hogwarts:species \"" + species + "\" ;" if bool(species) else ""
+    blood_type = "hogwarts:blood-type \"" + blood_type + "\" ;" if bool(blood_type) else ""
+    eye_color = "hogwarts:eye_color \"" + eye_color + "\" ;" if bool(eye_color) else ""
+    wand = "hogwarts:wand \"" + wand + "\" ;" if bool(wand) else ""
+    patronus = "hogwarts:patronus \"" + patronus + "\" ;" if bool(patronus) else ""
 
     query_add = f"""
         PREFIX hogwarts: <http://hogwarts.edu/ontology#>
@@ -200,29 +200,7 @@ def check_if_nmec_exists(nmec):
 
     return bool(results["boolean"])
 
-
-def check_authentication_correct(nmec, password):
-    query_check = f"""
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        PREFIX hogwarts: <http://hogwarts.edu/ontology#>
-
-        ASK WHERE {{
-            ?student rdfs:type "account" .
-            ?student hogwarts:number "{nmec}" .
-            ?student hogwarts:password "{password}"
-        }}
-    """
-
-    sparql.setQuery(query_check)
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
-
-    return bool(results["boolean"])
-
 def login(nmec, password):
-    
-    """ if (not check_authentication_correct(nmec, password)):     #TODO: redudante?
-        return None """
     
     query_login = f"""
         PREFIX hogwarts: <http://hogwarts.edu/ontology#>
