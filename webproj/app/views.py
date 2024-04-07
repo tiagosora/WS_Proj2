@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from app import triplestore
@@ -45,3 +45,15 @@ def register_view(request):
             return render(request, 'registration/login.html', {'error': 'Registration failed.'})
 
     return render(request, 'registration/login.html')
+
+
+def login_view(request):
+    pass
+
+
+def logout_view(request):
+    print("logout_view")
+    logout(request)
+    print("logout done")
+    return redirect('index')  # Update 'home_page_url' to your actual home page URL name
+
