@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-#NPM_BIN_PATH = 'npm.cmd'
+NPM_BIN_PATH = 'npm.cmd'
 
 
 # Application definition
@@ -143,3 +143,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 load_dotenv()
 
 GRAPHDB_ENDPOINT = os.getenv('REPO_URL')
+GRAPHDB_ENDPOINT_UPDATE = os.getenv('REPO_URL_UPDATE')
