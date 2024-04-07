@@ -8,7 +8,6 @@ sparql = SPARQLWrapper(settings.GRAPHDB_ENDPOINT)
 sparql_update = SPARQLWrapper(settings.GRAPHDB_ENDPOINT_UPDATE)
 
 def get_skill_info(skill_uri):
-    sparql = SPARQLWrapper(settings.GRAPHDB_ENDPOINT)
     query = f"""
     PREFIX hogwarts: <http://hogwarts.edu/>
     DESCRIBE <{skill_uri}>
@@ -34,7 +33,6 @@ def get_skill_info(skill_uri):
 
 
 def get_wizard_info(wizard_id):
-    sparql = SPARQLWrapper(settings.GRAPHDB_ENDPOINT)
     wizard_uri = f"http://hogwarts.edu/wizards/{wizard_id}"
     query = f"""
     PREFIX hogwarts: <http://hogwarts.edu/>
@@ -70,6 +68,9 @@ def get_wizard_info(wizard_id):
 def create_new_wizard(password, blood_type, eye_color, gender, 
                       house, nmec, name, 
                       patronus, species, wand):
+    
+    if check_if_nmec_exists(nmec):
+        return False
     
     max_wizard_id = max_student_id = max_account_id = houseId = None
     
@@ -117,7 +118,6 @@ def create_new_wizard(password, blood_type, eye_color, gender,
     """
     
     sparql.setQuery(houseId_query)
-    sparql.setMethod(GET)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
 
@@ -169,10 +169,46 @@ def create_new_wizard(password, blood_type, eye_color, gender,
         }}
         }}
     """
-
-    print(query_add)
     
     
     sparql_update.setMethod(POST)
     sparql_update.setQuery(query_add)
     sparql_update.query()
+    
+    return True
+    
+def check_if_nmec_exists(nmec):
+    
+    query_check = f"""
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+
+        ASK WHERE {{
+            ?student rdfs:type "account" .
+            ?student hogwarts:number "{nmec}" .
+        }}
+    """
+    
+    sparql.setQuery(query_check)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    
+    return bool(results["boolean"])
+
+def check_authentication_correct(nmec, password):
+    query_check = f"""
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+
+        ASK WHERE {{
+            ?student rdfs:type "account" .
+            ?student hogwarts:number "{nmec}" .
+            ?student hogwarts:password "{password}"
+        }}
+    """
+    
+    sparql.setQuery(query_check)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    
+    return bool(results["boolean"])
