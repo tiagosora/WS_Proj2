@@ -15,15 +15,17 @@ class Wizard:
         self.patronus = kwargs.get('patronus')
         self.skills = kwargs.get('skills', [])
         self.spells = kwargs.get('spells', [])
+        self.type = kwargs.get('type')
 
     def __str__(self):
         return f"Wizard: {self.name}"
 
 
 class Skill:
-    def __init__(self, id=None, name=None):
+    def __init__(self, id=None, name=None, type='skill'):
         self.id = id
         self.name = name
+        self.type = type
 
     def __str__(self):
         return f"Skill: {self.name}"

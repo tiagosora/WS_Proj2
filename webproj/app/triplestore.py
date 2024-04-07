@@ -241,3 +241,37 @@ def check_authentication_correct(nmec, password):
     results = sparql.query().convert()
 
     return bool(results["boolean"])
+
+def login(nmec, password):
+    
+    """ if (not check_authentication_correct(nmec, password)):     #TODO: redudante?
+        return None """
+    
+    query_login = f"""
+        PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+        SELECT 
+        ?wizardId
+        WHERE 
+        {{
+            ?account rdfs:type "account" . 
+            ?account hogwarts:number "{nmec}" .
+            ?account hogwarts:password "{password}" .
+            ?account hogwarts:wizard ?wizard .
+            ?wizard hogwarts:id ?wizardId 
+        }}
+    """
+    
+    sparql.setQuery(query_login)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    
+    wizardId = None
+    if (len(results["results"]["bindings"])>0 and results["results"]["bindings"][0]["wizardId"]["value"]):
+        wizardId = int(results["results"]["bindings"][0]["wizardId"]["value"])
+    
+    if not bool(wizardId):
+        return None
+    
+    return get_wizard_info(wizardId)
