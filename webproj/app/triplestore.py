@@ -69,28 +69,13 @@ def get_wizard_info(wizard_id):
 def create_new_wizard(password: str, blood_type: str, eye_color: str, gender: str,
                       house: int, nmec: int, name: str,
                       patronus: str, species: str, wand: str):
-
     wand = wand.replace("\\", "\\\\").replace("\"", "\\\"")
 
-    print('Creating new wizard')
-    print('Password: ', password)
-    print('Blood type: ', blood_type)
-    print('Eye color: ', eye_color)
-    print('Gender: ', gender)
-    print('House: ', house)
-    print('NMEC: ', nmec)
-    print('Patronus: ', patronus)
-    print('Species: ', species)
-    print('Wand: ', wand)
-
     if not bool(password) or not bool(name) or not bool(nmec):
-        return False
+        return False, None
 
-    print("Bool Passed")
     if check_if_nmec_exists(nmec):
-        return False
-
-    print("NMEC Passed")
+        return False, None
 
     max_wizard_id = max_student_id = max_account_id = house_id = None
 
@@ -117,8 +102,6 @@ def create_new_wizard(password: str, blood_type: str, eye_color: str, gender: st
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
 
-    print(results)
-
     max_wizard_id = int(results["results"]["bindings"][0]["nextWizardId"]["value"]) + 1
     max_student_id = int(results["results"]["bindings"][0]["nextStudentId"]["value"]) + 1
     max_account_id = int(results["results"]["bindings"][0]["nextAccountId"]["value"]) + 1
@@ -143,8 +126,6 @@ def create_new_wizard(password: str, blood_type: str, eye_color: str, gender: st
     sparql.setQuery(house_id_query)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
-
-    print(results)
 
     if len(results["results"]["bindings"]) > 0 and "houseId" in results["results"]["bindings"][0].keys():
         house_id = results["results"]["bindings"][0]["houseId"]["value"]
@@ -201,9 +182,7 @@ def create_new_wizard(password: str, blood_type: str, eye_color: str, gender: st
     sparql_update.setQuery(query_add)
     sparql_update.query()
 
-    print("Added Wizard")
-
-    return True
+    return True, max_wizard_id
 
 
 def check_if_nmec_exists(nmec):
@@ -242,11 +221,11 @@ def check_authentication_correct(nmec, password):
 
     return bool(results["boolean"])
 
+
 def login(nmec, password):
-    
     """ if (not check_authentication_correct(nmec, password)):     #TODO: redudante?
         return None """
-    
+
     query_login = f"""
         PREFIX hogwarts: <http://hogwarts.edu/ontology#>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -262,16 +241,16 @@ def login(nmec, password):
             ?wizard hogwarts:id ?wizardId 
         }}
     """
-    
+
     sparql.setQuery(query_login)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
-    
+
     wizardId = None
-    if (len(results["results"]["bindings"])>0 and results["results"]["bindings"][0]["wizardId"]["value"]):
+    if len(results["results"]["bindings"]) > 0 and results["results"]["bindings"][0]["wizardId"]["value"]:
         wizardId = int(results["results"]["bindings"][0]["wizardId"]["value"])
-    
+
     if not bool(wizardId):
         return None
-    
+
     return get_wizard_info(wizardId)

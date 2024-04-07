@@ -65,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "django_browser_reload.middleware.BrowserReloadMiddleware",
+    'app.middleware.CustomAuthenticationMiddleware',  # Adjust the path accordingly
 ]
 
 ROOT_URLCONF = 'webproj.urls'
@@ -144,6 +145,7 @@ load_dotenv()
 
 GRAPHDB_ENDPOINT = os.getenv('REPO_URL')
 GRAPHDB_ENDPOINT_UPDATE = os.getenv('REPO_URL_UPDATE')
+
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'

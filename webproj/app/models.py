@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractBaseUser
 
 
 # Create your models here.
@@ -29,3 +30,15 @@ class Skill:
 
     def __str__(self):
         return f"Skill: {self.name}"
+
+
+# Define a simple custom user class
+class CustomUser:
+    def __init__(self, nmec, wizard_id):
+        self.nmec = nmec
+        self.wizard_id = wizard_id
+
+    @property
+    def is_authenticated(self):
+        return True
+
