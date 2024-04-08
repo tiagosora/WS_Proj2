@@ -33,7 +33,7 @@
                 <p><strong>Gender:</strong class="text-amber-600"> {{ student.gender|default:"Unknown" }}</p>
                 <p><strong>House:</strong class="text-amber-600"> {{ student.house_name|default:"Unknown" }}</p>
                 <p><strong>School:</strong class="text-amber-600"> {{ student.school_name|default:"Unknown" }}, Year {{ student.school_year|default:"Unknown" }}</p>
-                <p><strong>Skills:</strong class="text-amber-600"> {{ student.skills|join:", "|default:"None" }}</p>
+                <p><strong>Skills:</strong class="text-amber-600"> {{ skills |default:"None" }}</p>
                 <p><strong>Patronus:</strong class="text-amber-600"> {{ student.patronus|default:"Unknown" }}</p>
                 <p><strong>Eye Color:</strong class="text-amber-600"> {{ student.eye_color|default:"Unknown" }}</p>
             </div>
@@ -309,13 +309,16 @@ document.addEventListener('DOMContentLoaded', function() {
         // Carousel interaction logic
         let currentIndex = 0;
         window.changeSpellGroup = (delta) => {
-            console.log(currentIndex);
             var items = document.querySelectorAll('.carousel-item');
-            console.log(items);
             items[currentIndex].classList.remove('active');
             currentIndex = (currentIndex + delta + items.length) % items.length;
             items[currentIndex].classList.add('active');
-            document.getElementById('carouselIndicator').innerText = `Page ${currentIndex + 1}`;
+            document.getElementById('carouselIndicator').innerText = `Page ${currentIndex + 1} of ${spellGroups.length}`;
+            
+            // Hide all items except the current one
+            items.forEach((item, index) => {
+                item.style.display = index === currentIndex ? 'block' : 'none';
+            });
         };
     
         // Update to show the correct page number on initial load
