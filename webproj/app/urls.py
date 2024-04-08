@@ -10,6 +10,7 @@ urlpatterns = [
 
     # test
     path('wizard/<str:wizard_id>/', views.wizard_detail, name='wizard_detail'),
+    #path('test/', views.test, name="test"),
 
     # path('login/', views.login_view, name='login'),
     path('register/', views.register_view, name='register'),
