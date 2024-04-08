@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wizard Details</title>
+</head>
+<body>
+    <h1>Wizard Details</h1>
+    {% if wizard %}
+        <p><strong>ID:</strong> {{ wizard.id }}</p>
+        <p><strong>Name:</strong> {{ wizard.name }}</p>
+        <p><strong>Gender:</strong> {{ wizard.gender }}</p>
+        <p><strong>Species:</strong> {{ wizard.species }}</p>
+        <p><strong>Blood Type:</strong> {{ wizard.blood_type }}</p>
+        <p><strong>Eye Color:</strong> {{ wizard.eye_color }}</p>
+        <p><strong>House:</strong> {{ wizard.house }}</p>
+        <p><strong>Wand:</strong> {{ wizard.wand }}</p>
+        <p><strong>Patronus:</strong> {{ wizard.patronus }}</p>
+
+        <h2>Skills</h2>
+        <ul>
+            {% for skill in wizard.skills %}
+                <li>{{ skill.name }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Spells</h2>
+        <ul>
+            {% for spell in wizard.spells %}
+                <li>{{ spell }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Wizard details not found.</p>
+    {% endif %}
+</body>
+</html>

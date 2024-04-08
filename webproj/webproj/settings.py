@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import os
 from pathlib import Path
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,6 +28,8 @@ SECRET_KEY = 'django-insecure-*9oj+3$rd1p0tf*uks^3!+u9-ok=pxz%wg!y8uhker=m^&a53$
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+#NPM_BIN_PATH = 'npm.cmd'
 
 
 # Application definition
@@ -61,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "django_browser_reload.middleware.BrowserReloadMiddleware",
+    'app.middleware.CustomAuthenticationMiddleware',  # Adjust the path accordingly
 ]
 
 ROOT_URLCONF = 'webproj.urls'
@@ -136,4 +141,11 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_URL = 'authentication'
+load_dotenv()
+
+GRAPHDB_ENDPOINT = os.getenv('REPO_URL')
+GRAPHDB_ENDPOINT_UPDATE = os.getenv('REPO_URL_UPDATE')
+
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
