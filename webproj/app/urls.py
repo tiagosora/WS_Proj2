@@ -5,7 +5,9 @@ urlpatterns = [
     # Testing index
     path('', views.index, name='index'),
 
-    # Authentication
+    # path('dashboard/', views.dashboard, name='dashboard'),
+    path('student/', views.student_dashboard, name='student_dashboard'),
+    
     path('accounts/', include('django.contrib.auth.urls')),
 
     # test

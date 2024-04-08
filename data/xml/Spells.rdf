@@ -13,7 +13,7 @@
     <hogwarts:name>Water-Making Spell</hogwarts:name>
     <hogwarts:incantation>Aguamenti</hogwarts:incantation>
     <hogwarts:type>Conjuration</hogwarts:type>
-    <hogwarts:effect>Conjures water</hogwarts:effect>
+    <hogwarts:effect>Conjures water</hogwarts:effect>
     <hogwarts:light>Icy blue</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/3">
@@ -61,7 +61,7 @@
     <hogwarts:name>Tracking spell</hogwarts:name>
     <hogwarts:incantation>Appare Vestigium</hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
-    <hogwarts:effect>Reveals traces of magic including footprints and track marks</hogwarts:effect>
+    <hogwarts:effect>Reveals traces of magic including footprints and track marks</hogwarts:effect>
     <hogwarts:light>Swirl of gold</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/9">
@@ -77,7 +77,7 @@
     <hogwarts:name>Aqua Eructo Charm</hogwarts:name>
     <hogwarts:incantation>Aqua Eructo</hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
-    <hogwarts:effect>Jet of water</hogwarts:effect>
+    <hogwarts:effect>Jet of water</hogwarts:effect>
     <hogwarts:light>Ice Blue</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/11">
@@ -93,7 +93,7 @@
     <hogwarts:name>Slowing Charm</hogwarts:name>
     <hogwarts:incantation>Arresto Momentum</hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
-    <hogwarts:effect>Slows or stops target's velocity</hogwarts:effect>
+    <hogwarts:effect>Slows or stops target's velocity</hogwarts:effect>
     <hogwarts:light></hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/13">
@@ -115,7 +115,7 @@
   <rdf:Description rdf:about="http://hogwarts.edu/spells/15">
     <hogwarts:id>15</hogwarts:id>
     <hogwarts:name>Avifors Spell</hogwarts:name>
-    <hogwarts:incantation>Avifors </hogwarts:incantation>
+    <hogwarts:incantation>Avifors </hogwarts:incantation>
     <hogwarts:type>Transfiguration</hogwarts:type>
     <hogwarts:effect>Transforms the target into a bird</hogwarts:effect>
     <hogwarts:light>Blue</hogwarts:light>
@@ -133,7 +133,7 @@
     <hogwarts:name>Bird-Conjuring Charm</hogwarts:name>
     <hogwarts:incantation>Avis</hogwarts:incantation>
     <hogwarts:type>Conjuration</hogwarts:type>
-    <hogwarts:effect>Conjures birds</hogwarts:effect>
+    <hogwarts:effect>Conjures birds</hogwarts:effect>
     <hogwarts:light>Blue</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/18">
@@ -294,7 +294,7 @@
     <hogwarts:incantation>Deletrius</hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
     <hogwarts:effect>Counter-charm</hogwarts:effect>
-    <hogwarts:light>Erases image from Reverse Spell</hogwarts:light>
+    <hogwarts:light>Erases image from Reverse Spell</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/38">
     <hogwarts:id>38</hogwarts:id>
@@ -357,7 +357,7 @@
     <hogwarts:name>Draconifors Spell</hogwarts:name>
     <hogwarts:incantation>Draconifors</hogwarts:incantation>
     <hogwarts:type>Transfiguration</hogwarts:type>
-    <hogwarts:effect>Turns object into dragon</hogwarts:effect>
+    <hogwarts:effect>Turns object into dragon</hogwarts:effect>
     <hogwarts:light>Fiery orange</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/46">
@@ -404,7 +404,7 @@
     <hogwarts:id>51</hogwarts:id>
     <hogwarts:name>Insect Jinx</hogwarts:name>
     <hogwarts:incantation>Entomorphis</hogwarts:incantation>
-    <hogwarts:type>Transfiguration Jinx</hogwarts:type>
+    <hogwarts:type>Transfiguration Jinx</hogwarts:type>
     <hogwarts:effect>Turns into insect</hogwarts:effect>
     <hogwarts:light>Red or Purple</hogwarts:light>
   </rdf:Description>
@@ -412,7 +412,7 @@
     <hogwarts:id>52</hogwarts:id>
     <hogwarts:name>Epoximise</hogwarts:name>
     <hogwarts:incantation>Epoximise</hogwarts:incantation>
-    <hogwarts:type>Transfiguration spell</hogwarts:type>
+    <hogwarts:type>Transfiguration spell</hogwarts:type>
     <hogwarts:effect>Bonds two objects</hogwarts:effect>
     <hogwarts:light></hogwarts:light>
   </rdf:Description>
@@ -429,7 +429,7 @@
     <hogwarts:name>Evanesce</hogwarts:name>
     <hogwarts:incantation>Evanesce</hogwarts:incantation>
     <hogwarts:type>Transfiguration</hogwarts:type>
-    <hogwarts:effect>Vanishes objects</hogwarts:effect>
+    <hogwarts:effect>Vanishes objects</hogwarts:effect>
     <hogwarts:light>Bluish-white</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/55">
@@ -437,7 +437,7 @@
     <hogwarts:name>Vanishing Spell</hogwarts:name>
     <hogwarts:incantation>Evanesco</hogwarts:incantation>
     <hogwarts:type>Transfiguration</hogwarts:type>
-    <hogwarts:effect>Vanishes things</hogwarts:effect>
+    <hogwarts:effect>Vanishes things</hogwarts:effect>
     <hogwarts:light></hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/56">
@@ -501,7 +501,7 @@
     <hogwarts:name>General Counter-Spell</hogwarts:name>
     <hogwarts:incantation>Finite</hogwarts:incantation>
     <hogwarts:type>Counter-spell</hogwarts:type>
-    <hogwarts:effect>Terminates all spell effects</hogwarts:effect>
+    <hogwarts:effect>Terminates all spell effects</hogwarts:effect>
     <hogwarts:light>Red</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/64">
@@ -525,7 +525,7 @@
     <hogwarts:name>Flintifors</hogwarts:name>
     <hogwarts:incantation>Flintifors</hogwarts:incantation>
     <hogwarts:type>Transfiguration</hogwarts:type>
-    <hogwarts:effect>Turns target into matchboxes</hogwarts:effect>
+    <hogwarts:effect>Turns target into matchboxes</hogwarts:effect>
     <hogwarts:light></hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/67">
@@ -541,7 +541,7 @@
     <hogwarts:name>Flipendo Tria</hogwarts:name>
     <hogwarts:incantation>Flipendo Tria</hogwarts:incantation>
     <hogwarts:type>Jinx</hogwarts:type>
-    <hogwarts:effect>More powerful version of Flipendo</hogwarts:effect>
+    <hogwarts:effect>More powerful version of Flipendo</hogwarts:effect>
     <hogwarts:light>Blue</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/69">
@@ -613,7 +613,7 @@
     <hogwarts:name>Harmonia Nectere Passus</hogwarts:name>
     <hogwarts:incantation>Harmonia Nectere Passus</hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
-    <hogwarts:effect>Repairs Vanishing Cabinets</hogwarts:effect>
+    <hogwarts:effect>Repairs Vanishing Cabinets</hogwarts:effect>
     <hogwarts:light></hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/78">
@@ -677,7 +677,7 @@
     <hogwarts:name>Impervius Charm</hogwarts:name>
     <hogwarts:incantation>Impervius</hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
-    <hogwarts:effect>Waterproofs an object</hogwarts:effect>
+    <hogwarts:effect>Waterproofs an object</hogwarts:effect>
     <hogwarts:light></hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/86">
@@ -693,7 +693,7 @@
     <hogwarts:name>Fire-Making Spell</hogwarts:name>
     <hogwarts:incantation>Incendio</hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
-    <hogwarts:effect>Conjures flames</hogwarts:effect>
+    <hogwarts:effect>Conjures flames</hogwarts:effect>
     <hogwarts:light>Orange and Red</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/88">
@@ -701,7 +701,7 @@
     <hogwarts:name>Incendio Tria</hogwarts:name>
     <hogwarts:incantation>Incendio Tria</hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
-    <hogwarts:effect>Conjures blue flames</hogwarts:effect>
+    <hogwarts:effect>Conjures blue flames</hogwarts:effect>
     <hogwarts:light>Blue</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/89">
@@ -717,7 +717,7 @@
     <hogwarts:name>Informous Spell</hogwarts:name>
     <hogwarts:incantation>Informous</hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
-    <hogwarts:effect>Adds to the Folio Bruti</hogwarts:effect>
+    <hogwarts:effect>Adds to the Folio Bruti</hogwarts:effect>
     <hogwarts:light>Blue</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/91">
@@ -733,7 +733,7 @@
     <hogwarts:name>Lacarnum Inflamari</hogwarts:name>
     <hogwarts:incantation>Lacarnum Inflamari</hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
-    <hogwarts:effect>Ignites cloaks</hogwarts:effect>
+    <hogwarts:effect>Ignites cloaks</hogwarts:effect>
     <hogwarts:light>Orange</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/93">
@@ -773,7 +773,7 @@
     <hogwarts:name>Liberacorpus</hogwarts:name>
     <hogwarts:incantation>Liberacorpus</hogwarts:incantation>
     <hogwarts:type>Counter-jinx</hogwarts:type>
-    <hogwarts:effect>Counteracts Levicorpus</hogwarts:effect>
+    <hogwarts:effect>Counteracts Levicorpus</hogwarts:effect>
     <hogwarts:light></hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/98">
@@ -797,7 +797,7 @@
     <hogwarts:name>Wand-Lighting Charm</hogwarts:name>
     <hogwarts:incantation>Lumos</hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
-    <hogwarts:effect>Illuminates the wand tip</hogwarts:effect>
+    <hogwarts:effect>Illuminates the wand tip</hogwarts:effect>
     <hogwarts:light>White</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/101">
@@ -838,7 +838,7 @@
     <hogwarts:incantation>Melofors</hogwarts:incantation>
     <hogwarts:type>Conjuration</hogwarts:type>
     <hogwarts:effect>Jinx</hogwarts:effect>
-    <hogwarts:light>Encases head in pumpkin</hogwarts:light>
+    <hogwarts:light>Encases head in pumpkin</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/106">
     <hogwarts:id>106</hogwarts:id>
@@ -861,7 +861,7 @@
     <hogwarts:name>Mobiliarbus</hogwarts:name>
     <hogwarts:incantation>Mobiliarbus</hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
-    <hogwarts:effect>Levitates wooden things</hogwarts:effect>
+    <hogwarts:effect>Levitates wooden things</hogwarts:effect>
     <hogwarts:light>Blue</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/109">
@@ -885,7 +885,7 @@
     <hogwarts:name>Dark Mark</hogwarts:name>
     <hogwarts:incantation>Morsmordre</hogwarts:incantation>
     <hogwarts:type>Curse</hogwarts:type>
-    <hogwarts:effect>Conjures Dark Mark</hogwarts:effect>
+    <hogwarts:effect>Conjures Dark Mark</hogwarts:effect>
     <hogwarts:light>Green</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/112">
@@ -893,7 +893,7 @@
     <hogwarts:name>Curse of the Bogies</hogwarts:name>
     <hogwarts:incantation>Mucus ad Nauseam</hogwarts:incantation>
     <hogwarts:type>Curse</hogwarts:type>
-    <hogwarts:effect>Nasty cold &amp; runny nose</hogwarts:effect>
+    <hogwarts:effect>Nasty cold &amp; runny nose</hogwarts:effect>
     <hogwarts:light>Green</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/113">
@@ -925,7 +925,7 @@
     <hogwarts:name>Wand-Extinguishing Charm</hogwarts:name>
     <hogwarts:incantation>Nox</hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
-    <hogwarts:effect>Extinguishes wandlight</hogwarts:effect>
+    <hogwarts:effect>Extinguishes wandlight</hogwarts:effect>
     <hogwarts:light></hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/117">
@@ -941,15 +941,15 @@
     <hogwarts:name>Oculus Reparo</hogwarts:name>
     <hogwarts:incantation>Oculus Reparo</hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
-    <hogwarts:effect>Repairs glasses</hogwarts:effect>
+    <hogwarts:effect>Repairs glasses</hogwarts:effect>
     <hogwarts:light></hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/119">
     <hogwarts:id>119</hogwarts:id>
     <hogwarts:name>Memory Charm</hogwarts:name>
-    <hogwarts:incantation>Obliviate </hogwarts:incantation>
+    <hogwarts:incantation>Obliviate </hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
-    <hogwarts:effect>Erases memories</hogwarts:effect>
+    <hogwarts:effect>Erases memories</hogwarts:effect>
     <hogwarts:light>Green</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/120">
@@ -1029,7 +1029,7 @@
     <hogwarts:name>Peskipiksi Pesternomi</hogwarts:name>
     <hogwarts:incantation>Peskipiksi Pesternomi</hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
-    <hogwarts:effect>Nothing (supposedly captures pixies)</hogwarts:effect>
+    <hogwarts:effect>Nothing (supposedly captures pixies)</hogwarts:effect>
     <hogwarts:light></hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/130">
@@ -1069,7 +1069,7 @@
     <hogwarts:name>Portus</hogwarts:name>
     <hogwarts:incantation>Portus</hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
-    <hogwarts:effect>Turns object into Portkey</hogwarts:effect>
+    <hogwarts:effect>Turns object into Portkey</hogwarts:effect>
     <hogwarts:light>Blue</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/135">
@@ -1237,7 +1237,7 @@
     <hogwarts:name>Boggart-Banishing Spell</hogwarts:name>
     <hogwarts:incantation>Riddikulus</hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
-    <hogwarts:effect>Turns a Boggart into something amusing</hogwarts:effect>
+    <hogwarts:effect>Turns a Boggart into something amusing</hogwarts:effect>
     <hogwarts:light></hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/156">
@@ -1269,7 +1269,7 @@
     <hogwarts:name>Snake Summons Spell</hogwarts:name>
     <hogwarts:incantation>Serpensortia</hogwarts:incantation>
     <hogwarts:type>Conjuration</hogwarts:type>
-    <hogwarts:effect>Conjures snake</hogwarts:effect>
+    <hogwarts:effect>Conjures snake</hogwarts:effect>
     <hogwarts:light>White</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/160">
@@ -1293,7 +1293,7 @@
     <hogwarts:name>Slug-vomiting Charm</hogwarts:name>
     <hogwarts:incantation>Slugulus Eructo</hogwarts:incantation>
     <hogwarts:type>Curse</hogwarts:type>
-    <hogwarts:effect>Victim vomits slugs</hogwarts:effect>
+    <hogwarts:effect>Victim vomits slugs</hogwarts:effect>
     <hogwarts:light>Green</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/163">
@@ -1347,7 +1347,7 @@
   <rdf:Description rdf:about="http://hogwarts.edu/spells/169">
     <hogwarts:id>169</hogwarts:id>
     <hogwarts:name>Dancing Feet Spell</hogwarts:name>
-    <hogwarts:incantation>Tarantallegra </hogwarts:incantation>
+    <hogwarts:incantation>Tarantallegra </hogwarts:incantation>
     <hogwarts:type>Jinx</hogwarts:type>
     <hogwarts:effect>Sends legs out of control</hogwarts:effect>
     <hogwarts:light></hogwarts:light>
@@ -1356,8 +1356,8 @@
     <hogwarts:id>170</hogwarts:id>
     <hogwarts:name>Tentaclifors</hogwarts:name>
     <hogwarts:incantation>Tentaclifors</hogwarts:incantation>
-    <hogwarts:type>Transfiguration Jinx</hogwarts:type>
-    <hogwarts:effect>Turns victim's head into tentacle</hogwarts:effect>
+    <hogwarts:type>Transfiguration Jinx</hogwarts:type>
+    <hogwarts:effect>Turns victim's head into tentacle</hogwarts:effect>
     <hogwarts:light>Purple</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/171">
@@ -1389,7 +1389,7 @@
     <hogwarts:name>Ventus Duo</hogwarts:name>
     <hogwarts:incantation>Ventus Duo</hogwarts:incantation>
     <hogwarts:type>Jinx</hogwarts:type>
-    <hogwarts:effect>Creates a stronger jet of wind compared to Ventus</hogwarts:effect>
+    <hogwarts:effect>Creates a stronger jet of wind compared to Ventus</hogwarts:effect>
     <hogwarts:light></hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/175">
@@ -1397,7 +1397,7 @@
     <hogwarts:name>Vera Verto</hogwarts:name>
     <hogwarts:incantation>Vera Verto</hogwarts:incantation>
     <hogwarts:type>Transfiguration</hogwarts:type>
-    <hogwarts:effect>Transforms animals into water goblets</hogwarts:effect>
+    <hogwarts:effect>Transforms animals into water goblets</hogwarts:effect>
     <hogwarts:light>Crystal clear</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/176">
@@ -1437,7 +1437,7 @@
     <hogwarts:name>Snake-Vanishing Spell</hogwarts:name>
     <hogwarts:incantation>Vipera Evanesca</hogwarts:incantation>
     <hogwarts:type>Vanishment</hogwarts:type>
-    <hogwarts:effect>Vanishes snakes</hogwarts:effect>
+    <hogwarts:effect>Vanishes snakes</hogwarts:effect>
     <hogwarts:light>Black smoke</hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/181">
@@ -1461,7 +1461,7 @@
     <hogwarts:name>Levitation Charm</hogwarts:name>
     <hogwarts:incantation>Wingardium Leviosa</hogwarts:incantation>
     <hogwarts:type>Charm</hogwarts:type>
-    <hogwarts:effect>Makes objects fly</hogwarts:effect>
+    <hogwarts:effect>Makes objects fly</hogwarts:effect>
     <hogwarts:light></hogwarts:light>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/spells/184">
