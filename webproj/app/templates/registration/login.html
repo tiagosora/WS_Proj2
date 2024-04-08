@@ -1,0 +1,149 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block title %}Login | Register{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-image: url('{% static "images/hogwarts_background.jpg" %}');
+        background-size: cover;
+        background-position: center;
+    }
+    .card {
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+    }
+</style>
+<div class="flex items-center justify-center min-h-screen p-4">
+    <div class="card p-8 rounded-lg shadow-lg w-full max-w-xl">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800 text-center">Enter the Wizarding World</h2>
+        <div class="mb-4">
+            <ul class="flex cursor-pointer">
+                <li class="flex-1 mr-2">
+                    <a class="text-center block border border-amber-400 rounded py-2 px-4 bg-amber-400 hover:bg-amber-500 text-white" href="#login" onclick="showForm('login')">Login</a>
+                </li>
+                <li class="flex-1">
+                    <a class="text-center block border border-amber-400 rounded py-2 px-4 bg-amber-400 hover:bg-amber-500 text-white" href="#register" onclick="showForm('register')">Register</a>
+                </li>
+            </ul>
+        </div>
+        <div id="loginForm">
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-4">
+                    <label for="id_number" class="block text-gray-700 text-sm font-bold mb-2">Id Number</label>
+                    <input required type="text" name="id_number" id="id_number" placeholder="Your Wizarding Number"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                    <input required type="password" name="password" id="password" placeholder="Secret Spell"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="flex items-center justify-between">
+                    <button type="submit"
+                            class="bg-amber-400 hover:bg-amber-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        Enter
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div id="registerForm" class="hidden">
+            <form method="post" >
+                {% csrf_token %}
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="id_number" class="block text-gray-700 text-sm font-bold mb-2">Id Number</label>
+                        <input required type="text" name="id_number" id="id_number" placeholder="Your Wizarding Number"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div>
+                        <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                        <input required type="password" type="password" name="password" id="password" placeholder="Secret Spell"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div>
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                        <input required type="text" name="name" id="name" placeholder="Your Full Name"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div>
+                        <label for="house" class="block text-gray-700 text-sm font-bold mb-2">House</label>
+                        <select required name="house" id="house" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            <option value="">Your House</option>
+                            <option value="gryffindor">Gryffindor</option>
+                            <option value="ravenclaw">Ravenclaw</option>
+                            <option value="hufflepuff">Hufflepuff</option>
+                            <option value="slytherin">Slytherin</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="gender" class="block text-gray-700 text-sm font-bold mb-2">Gender</label>
+                        <select name="gender" id="gender" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            <option value="">Your Gender</option>
+                            <option value="">Undefined</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="blood_type" class="block text-gray-700 text-sm font-bold mb-2">Blood Type</label>
+                        <select name="blood_type" id="blood_type" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            <option value="">Your Blood Type</option>
+                            <option value="">Undefined</option>
+                            <option value="half_blood">Half-blood</option>
+                            <option value="pure-blood">Pure-blood</option>
+                            <option value="muggle-born">Muggle-born</option>
+                            <option value="part-Human">Part-Human</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="species" class="block text-gray-700 text-sm font-bold mb-2">Species</label>
+                        <select name="species" id="species" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            <option value="">Your Species</option>
+                            <option value="">Undefined</option>
+                            <option value="human">Human</option>
+                            <option value="half-Human">Half-Human</option>
+                            <option value="werewolf">Werewolf</option>
+                            <option value="ghost">Ghost</option>
+                            <option value="centaur">Centaur</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="eye_color" class="block text-gray-700 text-sm font-bold mb-2">Eye Color</label>
+                        <input type="text" name="eye_color" id="eye_color" placeholder="Your Eye Color"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div>
+                        <label for="patronus" class="block text-gray-700 text-sm font-bold mb-2">Patronus</label>
+                        <input type="text" name="patronus" id="patronus" placeholder="Your Patronus Form"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div>
+                        <label for="wand" class="block text-gray-700 text-sm font-bold mb-2">Wand</label>
+                        <input type="text" name="wand" id="wand" placeholder="Your Wand Core"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-4">
+                    <button type="submit" class="bg-amber-400 hover:bg-amber-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        Register
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function showForm(form) {
+        if (form === 'login') {
+            document.getElementById('loginForm').classList.remove('hidden');
+            document.getElementById('registerForm').classList.add('hidden');
+        } else {
+            document.getElementById('loginForm').classList.add('hidden');
+            document.getElementById('registerForm').classList.remove('hidden');
+        }
+    }
+</script>
+{% endblock %}

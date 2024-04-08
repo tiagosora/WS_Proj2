@@ -1,16 +1,22 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
     # Testing index
     path('', views.index, name='index'),
-    
-    # Authentication
-    path('authentication/', views.authentication, name='authentication'),
-    
-    # Dashboards
+
     # path('dashboard/', views.dashboard, name='dashboard'),
     path('student/', views.student_dashboard, name='student_dashboard'),
-    path('professor/', views.professor_dashboard, name='professor_dashboard'),
-    path('headmaster/', views.headmaster_dashboard, name='headmaster_dashboard'),
+    
+    path('accounts/', include('django.contrib.auth.urls')),
+
+    # test
+    path('wizard/<str:wizard_id>/', views.wizard_detail, name='wizard_detail'),
+    #path('test/', views.test, name="test"),
+
+    # path('login/', views.login_view, name='login'),
+    path('register/', views.register_view, name='register'),
+    path('login/', views.login_view, name='login'),
+    path('logout/', views.logout_view, name='logout'),
+
 ]
