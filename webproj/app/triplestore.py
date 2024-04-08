@@ -356,8 +356,8 @@ def get_student_view_info(student_id):
 
     skills = [skill.name for skill in wizard.skills]
 
-    spells_aquired = []
-    [spells_aquired.extend(spell['spells']) for spell in is_learning_courses]
+    spells_acquired = []
+    [spells_acquired.extend(spell['spells']) for spell in learned_courses]
 
     return {'student':
                 wizard.info()
@@ -366,7 +366,7 @@ def get_student_view_info(student_id):
                 | {'school_name': get_school_name(student.school)},
             'is_learning_courses': is_learning_courses,
             'learned_courses': learned_courses,
-            'spells_aquired': spells_aquired,
+            'spells_acquired': spells_acquired,
             'skills': skills
             }
 
