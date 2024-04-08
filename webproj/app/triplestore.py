@@ -7,6 +7,7 @@ sparql = SPARQLWrapper(settings.GRAPHDB_ENDPOINT)
 sparql_update = SPARQLWrapper(settings.GRAPHDB_ENDPOINT_UPDATE)
 
 
+# DONE
 def load_sparql_query(filename, **kwargs):
     with open(filename, 'r') as file:
         query_template = file.read()
@@ -15,16 +16,36 @@ def load_sparql_query(filename, **kwargs):
     return query
 
 
+def execute_sparql_query(query_name, format="turtle", **kwargs):
+    g = Graph()
+    results = None
+
+    if format == "POST":
+        query = load_sparql_query(query_name, **kwargs)
+        sparql_update.setMethod(POST)
+        sparql_update.setQuery(query)
+        sparql_update.query()
+
+    else:
+        query = load_sparql_query(query_name, **kwargs)
+        sparql.setQuery(query)
+        if format == 'JSON':
+            sparql.setReturnFormat(JSON)
+            results = sparql.query().convert()
+            g.parse(data=results, format='JSON')
+        elif format == 'turtle':
+            sparql.setReturnFormat('turtle')
+            results = sparql.query().convert()
+            g.parse(data=results, format='turtle')
+
+    return results, g
+
+
+# DONE
 def get_skill_info(skill_uri):
     query_name = "app/queries/get_skill_info.sparql"
-    query = load_sparql_query(query_name, skill_uri=skill_uri)
 
-    sparql.setQuery(query)
-    sparql.setReturnFormat('turtle')
-    results = sparql.query().convert()
-
-    g = Graph()
-    g.parse(data=results, format='turtle')
+    results, g = execute_sparql_query(query_name, format="turtle", skill_uri=skill_uri)
 
     skill_attrs = {}
     for s, p, o in g.triples((URIRef(skill_uri), None, None)):
@@ -38,16 +59,11 @@ def get_skill_info(skill_uri):
     return Skill(**skill_attrs)
 
 
+# DONE
 def get_wizard_info_by_uri(wizard_uri):
     query_name = "app/queries/get_user_info.sparql"
-    query = load_sparql_query(query_name, user_uri=wizard_uri)
 
-    sparql.setQuery(query)
-    sparql.setReturnFormat('turtle')
-    results = sparql.query().convert()
-
-    g = Graph()
-    g.parse(data=results, format='turtle')
+    results, g = execute_sparql_query(query_name, format="turtle", wizard_uri=wizard_uri)
 
     wizard_attrs = {'skills': [], 'spells': []}
     for s, p, o in g:
@@ -66,6 +82,7 @@ def get_wizard_info_by_uri(wizard_uri):
     return wizard
 
 
+# DONE
 def create_new_wizard(password: str, blood_type: str, eye_color: str, gender: str,
                       house: int, nmec: int, name: str,
                       patronus: str, species: str, wand: str):
@@ -81,11 +98,7 @@ def create_new_wizard(password: str, blood_type: str, eye_color: str, gender: st
 
     query_name = "app/queries/max_ids_info.sparql"
 
-    max_ids_query = load_sparql_query(query_name)
-
-    sparql.setQuery(max_ids_query)
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
+    results, _ = execute_sparql_query(query_name, format="JSON")
 
     max_wizard_id = int(results["results"]["bindings"][0]["nextWizardId"]["value"]) + 1
     max_student_id = int(results["results"]["bindings"][0]["nextStudentId"]["value"]) + 1
@@ -94,11 +107,8 @@ def create_new_wizard(password: str, blood_type: str, eye_color: str, gender: st
     house = house if bool(house) else ""
 
     query_name = "app/queries/house_id_info.sparql"
-    house_id_query = load_sparql_query(query_name, house=house)
 
-    sparql.setQuery(house_id_query)
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
+    results, _ = execute_sparql_query(query_name, format="JSON", house=house)
 
     if len(results["results"]["bindings"]) > 0 and "houseId" in results["results"]["bindings"][0].keys():
         house_id = results["results"]["bindings"][0]["houseId"]["value"]
@@ -114,41 +124,32 @@ def create_new_wizard(password: str, blood_type: str, eye_color: str, gender: st
     patronus = "hogwarts:patronus \"" + patronus + "\" ;" if bool(patronus) else ""
 
     query_name = "app/queries/add_wizard.sparql"
-    query = load_sparql_query(query_name, name=name, gender=gender,
-                              species=species, blood_type=blood_type, eye_color=eye_color, wand=wand,
-                              patronus=patronus,max_wizard_id=max_wizard_id, house=house,
-                              max_account_id=max_account_id, nmec=nmec, password=password,
-                              max_student_id=max_student_id)
-
-    sparql_update.setMethod(POST)
-    sparql_update.setQuery(query)
-    sparql_update.query()
+    _, _ = execute_sparql_query(query_name, name=name, gender=gender,
+                                species=species, blood_type=blood_type, eye_color=eye_color,
+                                wand=wand, patronus=patronus, max_wizard_id=max_wizard_id,
+                                house=house, max_account_id=max_account_id, nmec=nmec,
+                                password=password, max_student_id=max_student_id)
 
     return True, max_wizard_id
 
 
+# DONE
 def check_if_nmec_exists(nmec):
     query_name = "app/queries/check_if_nmec_exists.sparql"
-    query = load_sparql_query(query_name, nmec=nmec)
 
-    sparql.setQuery(query)
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
+    results, _ = execute_sparql_query(query_name, format="JSON", nmec=nmec)
 
     return bool(results["boolean"])
 
 
+# DONE
 def login(nmec, password):
     nmec_literal = f'"{nmec}"'
     password_literal = f'"{password}"'
 
     query_name = "app/queries/login.sparql"
 
-    query = load_sparql_query(query_name, nmec_literal=nmec_literal, password_literal=password_literal)
-
-    sparql.setQuery(query)
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
+    results, _ = execute_sparql_query(query_name, nmec_literal=nmec_literal, password_literal=password_literal)
 
     if len(results["results"]["bindings"]) > 0 and results["results"]["bindings"][0]["wizardId"]["value"]:
         wizard_id = int(results["results"]["bindings"][0]["wizardId"]["value"])
@@ -158,17 +159,11 @@ def login(nmec, password):
     return True, wizard_id
 
 
+# DONE
 def get_role_info_by_wizard_id(wizard_id):
-    """
-        Returns the type of wizard from 3 possible: student, professor or headmaster. \n
-        Returns None, None, None if it can't find any wizard in the database.
-    """
     query_name = "app/queries/get_role_info_by_wizard_id.sparql"
-    query = load_sparql_query(query_name, wizard_id=wizard_id)
 
-    sparql.setQuery(query)
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
+    results, _ = execute_sparql_query(query_name, format="JSON", wizard_id=wizard_id)
 
     if len(results["results"]["bindings"]) <= 0:
         return None, None, None
@@ -180,17 +175,12 @@ def get_role_info_by_wizard_id(wizard_id):
     return wizard_type, wizard_role, wizard_type_id
 
 
+# DONE
 def get_student_view_info(student_id):
     student_uri = f"http://hogwarts.edu/students/{student_id}"
     query_name = "app/queries/get_user_info.sparql"
-    query = load_sparql_query(query_name, user_uri=student_uri)
 
-    sparql.setQuery(query)
-    sparql.setReturnFormat('turtle')
-    results = sparql.query().convert()
-
-    g = Graph()
-    g.parse(data=results, format='turtle')
+    results, g = execute_sparql_query(query_name, format="turtle", user_uri=student_uri)
 
     student_attrs = {'id': student_id, 'learned': [], 'is_learning': []}
     for s, p, o in g:
@@ -247,16 +237,11 @@ def get_student_view_info(student_id):
             }
 
 
+# DONE
 def get_course_info(course_uri):
     query_name = "app/queries/get_user_info.sparql"
-    query = load_sparql_query(query_name, user_uri=course_uri)
 
-    sparql.setQuery(query)
-    sparql.setReturnFormat('turtle')
-    results = sparql.query().convert()
-
-    g = Graph()
-    g.parse(data=results, format='turtle')
+    results, g = execute_sparql_query(query_name, format="turtle", user_uri=course_uri)
 
     course_attrs = {'teaches_spell': []}
     for s, p, o in g.triples((URIRef(course_uri), None, None)):
@@ -275,6 +260,7 @@ def get_course_info(course_uri):
     return course
 
 
+# DONE
 def manage_spells_list(spells_uri):
     spells = []
     for spell in spells_uri:
@@ -282,17 +268,11 @@ def manage_spells_list(spells_uri):
 
     return spells
 
-
+# DONE
 def get_spell_info(spell_uri):
     query_name = "app/queries/get_user_info.sparql"
-    query = load_sparql_query(query_name, user_uri=spell_uri)
 
-    sparql.setQuery(query)
-    sparql.setReturnFormat('turtle')
-    results = sparql.query().convert()
-
-    g = Graph()
-    g.parse(data=results, format='turtle')
+    results, g = execute_sparql_query(query_name, format="turtle", user_uri=spell_uri)
 
     spell_attrs = {'teaches_spell': []}
     for s, p, o in g.triples((URIRef(spell_uri), None, None)):
@@ -308,13 +288,11 @@ def get_spell_info(spell_uri):
     return spell
 
 
+# DONE
 def get_professor_name(professor_uri):
     query_name = "app/queries/get_professor_name.sparql"
-    query = load_sparql_query(query_name, professor_uri=professor_uri)
 
-    sparql.setQuery(query)
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
+    results, _ = execute_sparql_query(query_name, format="JSON", professor_uri=professor_uri)
 
     name = ""
     if len(results["results"]["bindings"]) > 0:
@@ -323,13 +301,11 @@ def get_professor_name(professor_uri):
     return name
 
 
+# DONE
 def get_house_name(houseId):
     query_name = "app/queries/get_house_name.sparql"
-    query = load_sparql_query(query_name, houseId=houseId)
 
-    sparql.setQuery(query)
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
+    results, _ = execute_sparql_query(query_name, format="JSON", houseId=houseId)
 
     name = ""
     if len(results["results"]["bindings"]) > 0:
@@ -338,13 +314,11 @@ def get_house_name(houseId):
     return name
 
 
+# DONE
 def get_school_name(school_uri):
     query_name = "app/queries/get_school_name.sparql"
-    query = load_sparql_query(query_name, school_uri=school_uri)
 
-    sparql.setQuery(query)
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
+    results, _ = execute_sparql_query(query_name, format="JSON", school_uri=school_uri)
 
     name = ""
     if len(results["results"]["bindings"]) > 0:
