@@ -2,13 +2,10 @@ from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
+from app import triplestore
 
 def authentication(request):
     return render(request, 'app/login.html')
-
-#### DEVELOPMENT ####
-from app import triplestore
-
 
 # Create your views here.
 def wizard_detail(request, wizard_id):
@@ -22,8 +19,6 @@ def index(request):
     return render(request, 'app/index.html')
 
 def student_dashboard(request):
-    print(request.method)
-    print(request.GET)
     
     student_info = request.session['student_info']
 
@@ -37,13 +32,15 @@ def student_dashboard(request):
     for course in learned_courses:
         spells_per_course[course["name"]] = len(course["spells"])
             
-    spells_acquired = spells_per_course.values()
+    spells_acquired = []
+    for course in learned_courses:
+        for spell in course["spells"]:
+            spells_acquired.append(spell)
             
     number_of_spells_not_acquired = total_number_of_spells - len(spells_acquired)
             
     paginator = Paginator(spells_acquired, 24)
     page_number = request.GET.get('page')
-    page_number = int(page_number) if page_number else 1
     page_obj = paginator.get_page(page_number)
     
     return render(request, 'app/student_dashboard.html', {
@@ -51,7 +48,7 @@ def student_dashboard(request):
         'is_learning_courses': is_learning_courses,
         'learned_courses': learned_courses,
         'spells_acquired': spells_acquired,
-        'skills': ", ".join(student["skills"]),
+        'skills': ", ".join(student_info["skills"]),
         'number_of_spells_not_acquired': number_of_spells_not_acquired,
         'spells_per_course': spells_per_course,
         'page_obj': page_obj,

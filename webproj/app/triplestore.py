@@ -427,7 +427,7 @@ def get_spell_info(spell_uri):
             value = o.toPython()
         else:
             value = str(o)
-        spell_attrs[prop] = value.replace("\xa0", " ")
+        spell_attrs[prop] = value.replace("\xa0", " ") if bool(value) else "Unknown"
 
     spell = Spell(**spell_attrs)
 
