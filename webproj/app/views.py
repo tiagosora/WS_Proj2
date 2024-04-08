@@ -34,12 +34,10 @@ def register_view(request):
 
         success = triplestore.create_new_wizard(password, blood_type, eye_color, gender, house, nmec, name, patronus,
                                                 species, wand)  # Fill in other parameters
-        print(success)
         if success[0]:
             request.session['nmec'] = nmec
             request.session['wizard_id'] = success[1]  # An example of user identification
             request.session['authenticated'] = True  # Indicate the user is logged in
-            print(request.session['authenticated'])
             return redirect('index')
         else:
             return render(request, 'registration/login.html', {'error': 'Registration failed.'})
@@ -48,12 +46,26 @@ def register_view(request):
 
 
 def login_view(request):
-    pass
+    if request.method == 'POST':
+        nmec = request.POST.get('id_number')
+        password = request.POST.get('password')
+
+        success = triplestore.login(nmec, password)
+
+        print(success)
+
+        if success[0]:
+            request.session['nmec'] = nmec
+            request.session['wizard_id'] = success[1]  # An example of user identification
+            request.session['authenticated'] = True  # Indicate the user is logged in
+            return redirect('index')
+        else:
+            return render(request, 'registration/login.html', {'error': 'Registration failed.'})
+
+    return render(request, 'registration/login.html')
 
 
 def logout_view(request):
-    print("logout_view")
     logout(request)
-    print("logout done")
     return redirect('index')  # Update 'home_page_url' to your actual home page URL name
 

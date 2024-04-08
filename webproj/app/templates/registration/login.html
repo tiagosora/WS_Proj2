@@ -35,7 +35,7 @@
                     </ul>
                 </div>
                 <div id="loginForm">
-                    <form method="post">
+                    <form method="post" action="{% url 'login' %}">
                         {% csrf_token %}
                         <div class="mb-4">
                             <label for="id_number" class="block text-gray-700 text-sm font-bold mb-2">Id Number</label>

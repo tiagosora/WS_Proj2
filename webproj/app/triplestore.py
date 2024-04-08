@@ -33,6 +33,7 @@ def get_skill_info(skill_uri):
 
     return Skill(**skill_attrs)
 
+
 def get_wizard_info(wizard_id):
     wizard_uri = f"http://hogwarts.edu/wizards/{wizard_id}"
     query = f"""
@@ -64,6 +65,7 @@ def get_wizard_info(wizard_id):
 
     wizard = Wizard(**wizard_attrs)
     return wizard
+
 
 def get_wizard_info_by_uri(wizard_uri):
     query = f"""
@@ -231,26 +233,10 @@ def check_if_nmec_exists(nmec):
     return bool(results["boolean"])
 
 
-def check_authentication_correct(nmec, password):
-    query_check = f"""
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        PREFIX hogwarts: <http://hogwarts.edu/ontology#>
-
-        ASK WHERE {{
-            ?student rdfs:type "account" .
-            ?student hogwarts:number "{nmec}" .
-            ?student hogwarts:password "{password}"
-        }}
-    """
-
-    sparql.setQuery(query_check)
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
-
-    return bool(results["boolean"])
-
-
 def login(nmec, password):
+    nmec_literal = f'"{nmec}"'
+    password_literal = f'"{password}"'
+
     query_login = f"""
         PREFIX hogwarts: <http://hogwarts.edu/ontology#>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -260,8 +246,8 @@ def login(nmec, password):
         WHERE 
         {{
             ?account rdfs:type "account" . 
-            ?account hogwarts:number "{nmec}" .
-            ?account hogwarts:password "{password}" .
+            ?account hogwarts:number {nmec_literal} .
+            ?account hogwarts:password {password_literal} .
             ?account hogwarts:wizard ?wizard .
             ?wizard hogwarts:id ?wizardId 
         }}
@@ -271,14 +257,12 @@ def login(nmec, password):
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
 
-    wizard_id = None
     if len(results["results"]["bindings"]) > 0 and results["results"]["bindings"][0]["wizardId"]["value"]:
         wizard_id = int(results["results"]["bindings"][0]["wizardId"]["value"])
+    else:
+        return False, None
 
-    if not bool(wizard_id):
-        return None
-
-    return get_wizard_info(wizard_id)
+    return True, wizard_id
 
 
 def get_role_info_by_wizard_id(wizard_id):
@@ -286,7 +270,7 @@ def get_role_info_by_wizard_id(wizard_id):
         Returns the type of wizard from 3 possible: student, professor or headmaster. \n
         Returns None, None, None if it can't find any wizard in the database.
     """
-    
+
     query_role = f"""
         PREFIX hogwarts: <http://hogwarts.edu/ontology#>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -303,19 +287,18 @@ def get_role_info_by_wizard_id(wizard_id):
             }}
         }}
     """
-    
+
     sparql.setQuery(query_role)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
-    
+
     if (len(results["results"]["bindings"]) <= 0):
         return None, None, None
-    
+
     wizard_type = results["results"]["bindings"][0]["type"]["value"]
     wizard_role = results["results"]["bindings"][0]["role"]["value"]
     wizard_type_id = results["results"]["bindings"][0]["type_id"]["value"]
-    
-    
+
     return wizard_type, wizard_role, wizard_type_id
 
 
@@ -325,7 +308,7 @@ def get_student_view_info(student_id):
         PREFIX hogwarts: <http://hogwarts.edu/>
         DESCRIBE <{student_uri}>
     """
-    
+
     sparql.setQuery(query)
     sparql.setReturnFormat('turtle')
     results = sparql.query().convert()
@@ -346,48 +329,47 @@ def get_student_view_info(student_id):
             else:
                 value = str(o)
             student_attrs[prop] = value
-         
+
     student = Student(**student_attrs)
     wizard = get_wizard_info_by_uri(student.wizard)
-    
+
     courses_is_learning_list = []
     for course in student.is_learning:
         courses_is_learning_list.append(get_course_info(course))
-        
+
     courses_learned_list = []
     spells_learned = []
     for course in student.learned:
         temp_course = get_course_info(course)
         spells_learned.extend(temp_course.teaches_spell)
         courses_learned_list.append(temp_course)
-        
-    is_learning_courses = [course.info() 
-                           | {'spells': manage_spells_list(course.teaches_spell)} 
-                           | {'professor_name': get_professor_name(course.professor)} 
+
+    is_learning_courses = [course.info()
+                           | {'spells': manage_spells_list(course.teaches_spell)}
+                           | {'professor_name': get_professor_name(course.professor)}
                            for course in courses_is_learning_list]
-    
-    learned_courses = [course.info() 
-                           | {'spells': manage_spells_list(course.teaches_spell)} 
-                           | {'professor_name': get_professor_name(course.professor)} 
-                           for course in courses_learned_list]
+
+    learned_courses = [course.info()
+                       | {'spells': manage_spells_list(course.teaches_spell)}
+                       | {'professor_name': get_professor_name(course.professor)}
+                       for course in courses_learned_list]
 
     skills = [skill.name for skill in wizard.skills]
-    
+
     spells_aquired = []
     [spells_aquired.extend(spell['spells']) for spell in is_learning_courses]
-    
 
-    return {'student': 
-                wizard.info() 
-                | {'house_name': get_house_name(wizard.house)} 
-                | {'school_year' : student.school_year} 
-                | {'school_name' : get_school_name(student.school)},
-            'is_learning_courses' : is_learning_courses,
+    return {'student':
+                wizard.info()
+                | {'house_name': get_house_name(wizard.house)}
+                | {'school_year': student.school_year}
+                | {'school_name': get_school_name(student.school)},
+            'is_learning_courses': is_learning_courses,
             'learned_courses': learned_courses,
             'spells_aquired': spells_aquired,
             'skills': skills
             }
-    
+
 
 def get_course_info(course_uri):
     query = f"""
@@ -401,7 +383,7 @@ def get_course_info(course_uri):
     g = Graph()
     g.parse(data=results, format='turtle')
 
-    course_attrs = {'teaches_spell':[]}
+    course_attrs = {'teaches_spell': []}
     for s, p, o in g.triples((URIRef(course_uri), None, None)):
         prop = p.split('#')[-1]
         if prop == 'teaches_spell':
@@ -417,12 +399,14 @@ def get_course_info(course_uri):
 
     return course
 
+
 def manage_spells_list(spells_uri):
     spells = []
     for spell in spells_uri:
         spells.append(get_spell_info(spell).info())
-        
+
     return spells
+
 
 def get_spell_info(spell_uri):
     query = f"""
@@ -432,11 +416,11 @@ def get_spell_info(spell_uri):
     sparql.setQuery(query)
     sparql.setReturnFormat('turtle')
     results = sparql.query().convert()
-    
+
     g = Graph()
     g.parse(data=results, format='turtle')
 
-    spell_attrs = {'teaches_spell':[]}
+    spell_attrs = {'teaches_spell': []}
     for s, p, o in g.triples((URIRef(spell_uri), None, None)):
         prop = p.split('#')[-1]
         if isinstance(o, Literal):
@@ -448,6 +432,7 @@ def get_spell_info(spell_uri):
     spell = Spell(**spell_attrs)
 
     return spell
+
 
 def get_professor_name(professor_uri):
     query = f"""
@@ -465,15 +450,15 @@ def get_professor_name(professor_uri):
     sparql.setQuery(query)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
-    
+
     name = ""
-    if len(results["results"]["bindings"])>0:
+    if len(results["results"]["bindings"]) > 0:
         name = results["results"]["bindings"][0]["name"]["value"]
 
     return name
 
-def get_house_name(houseId):
 
+def get_house_name(houseId):
     query = f"""
         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -488,12 +473,13 @@ def get_house_name(houseId):
     sparql.setQuery(query)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
-    
+
     name = ""
-    if len(results["results"]["bindings"])>0:
+    if len(results["results"]["bindings"]) > 0:
         name = results["results"]["bindings"][0]["name"]["value"]
 
     return name
+
 
 def get_school_name(school_uri):
     query = f"""
@@ -510,9 +496,9 @@ def get_school_name(school_uri):
     sparql.setQuery(query)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
-    
+
     name = ""
-    if len(results["results"]["bindings"])>0:
+    if len(results["results"]["bindings"]) > 0:
         name = results["results"]["bindings"][0]["name"]["value"]
 
     return name
