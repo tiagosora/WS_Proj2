@@ -1,0 +1,285 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block title %}{{ student.name }}'s Dashboard{% endblock %}
+
+{% block content %}
+<style>
+    .dashboard-card {
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+    }
+    .dashboard-main-card {
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+    }
+    .dashboard-card:hover {
+        background-color: rgba(255, 255, 255, 0.6x);
+    }
+    .body {
+        background-color: black;
+    }
+</style>
+
+<h2 class="text-4xl font-bold text-center mt-10">{{ student.name }}'s Dashboard</h2>
+<div class="mt-10 flex flex-col items-center justify-center">
+    <div class="container mx-auto px-6 rounded-lg">
+        <div class="dashboard-main-card shadow-xl rounded-lg p-6 mb-10">
+            <div class="grid grid-cols-1 shadow dashboard-main-card bg-white rounded-lg p-6 md:grid-cols-2 gap-4 text-gray-800">
+                <p><strong>Species:</strong class="text-amber-600"> {{ student.species }}</p>
+                <p><strong>Blood Type:</strong class="text-amber-600"> {{ student.blood_type }}</p>
+                <p><strong>Gender:</strong class="text-amber-600"> {{ student.gender }}</p>
+                <p><strong>House:</strong class="text-amber-600"> {{ student.house }}</p>
+                <p><strong>School:</strong class="text-amber-600"> {{ student.school }}, Year {{ student.school_year }}</p>
+                <p><strong>Skills:</strong class="text-amber-600"> {{ student.skills | join:", " }}</p>
+                <p><strong>Patronus:</strong class="text-amber-600"> {{ student.patronus }}</p>
+                <p><strong>Eye Color:</strong class="text-amber-600"> {{ student.eye_color }}</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+                <div id="learningCoursesContainer" class="dashboard-card bg-white rounded-lg shadow p-4">
+                    <h3 class="text-2xl font-semibold mb-3 text-amber-600">Currently Learning</h3>
+                    <div class="list-disc pl-5">
+                    </div>
+                </div>
+                <div id="learnedCoursesContainer" class="dashboard-card bg-white rounded-lg shadow p-4">
+                    <h3 class="text-2xl font-semibold mb-3 text-amber-600">Learned Courses</h3>
+                    <div class="list-disc pl-5">
+                    </div>
+                </div>
+                
+                <div class="dashboard-card bg-white rounded-lg shadow p-4 col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-semibold mb-3 text-amber-600">Spells Acquired</h3>
+                    <div class="flex flex-col md:flex-row mt-8">
+                        <div id="spellsContainer" class="grid grid-cols-1 md:grid-cols-4 flex-grow">
+                            <!-- Spells will be dynamically inserted here -->
+                        </div>
+                        
+                        <!-- Pie Chart Container -->
+                        <div class="md:w-1/4 mr-12">
+                            <canvas id="spellsChart"></canvas>
+                        </div>
+                    </div>
+                
+                    <!-- Pagination Controls -->
+                    <div class="pagination mt-4 text-amber-600 flex justify-center items-center gap-4">
+                        <button onclick="changePage(-1)" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">Prev</button>
+                        <span id="pageIndicator" class="font-semibold">Page 1</span>
+                        <button onclick="changePage(1)" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="spellModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75"></div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full sm:max-w-lg">
+            <div class="px-4 pt-5 pb-4 bg-white">
+                <div class="sm:flex sm:items-start">
+                    <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
+                        <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">Spell Details</h3>
+                        <div class="mt-4">
+                            <div class="flex flex-col space-y-2">
+                                <div class="flex justify-between">
+                                    <p class="text-sm font-medium text-gray-500">Name:</p>
+                                    <p id="spellName" class="text-sm text-gray-900"></p>
+                                </div>
+                                <div class="flex justify-between">
+                                    <p class="text-sm font-medium text-gray-500">Effect:</p>
+                                    <p id="spellEffect" class="text-sm text-gray-900"></p>
+                                </div>
+                                <div class="flex justify-between">
+                                    <p class="text-sm font-medium text-gray-500">Incantation:</p>
+                                    <p id="spellIncantation" class="text-sm text-gray-900"></p>
+                                </div>
+                                <div class="flex justify-between">
+                                    <p class="text-sm font-medium text-gray-500">Light:</p>
+                                    <p id="spellLight" class="text-sm text-gray-900"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-amber-600 text-base font-medium text-white hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Course Details Modal -->
+<div id="courseModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75"></div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full sm:max-w-2xl">
+            <div class="px-4 pt-5 pb-4 bg-white">
+                <div class="sm:flex sm:items-start">
+                    <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
+                        <h3 id="courseName" class="text-lg leading-6 font-medium text-gray-900" id="modal-title">Course Details</h3>
+                        <div class="mt-2">
+                            <p id="professorInCharge" class="text-sm text-gray-500"></p>
+                            <div id="spellsTaught" class="mt-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-amber-600 text-base font-medium text-white hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" onclick="closeCourseModal()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+var spells = [
+    {% for spell in spells_acquired %}
+    {
+        name: "{{ spell.name|escapejs }}",
+        effect: "{{ spell.effect|escapejs }}",
+        incantation: "{{ spell.incantation|escapejs }}",
+        light: "{{ spell.light|escapejs }}"
+    }{% if not forloop.last %},{% endif %}
+    {% endfor %}
+];
+var currentPage = 1;
+var spellsPerPage = 24;
+
+function renderSpells() {
+    var container = document.getElementById('spellsContainer');
+    container.innerHTML = '';
+    var start = (currentPage - 1) * spellsPerPage;
+    var end = start + spellsPerPage;
+    var paginatedSpells = spells.slice(start, end);
+    console.log(paginatedSpells)
+
+    paginatedSpells.forEach(spell => {
+        var div = document.createElement('div');
+        div.innerHTML = `<button class="text-black hover:text-amber-600" onclick="openModal(${JSON.stringify(spell).split('"').join("&quot;")})">${spell.name}</button>`;
+        container.appendChild(div);
+    });
+
+    document.getElementById('pageIndicator').innerText = `Page ${currentPage}`;
+}
+
+function openModal(spell) {
+    document.getElementById('spellModal').style.display = 'block';
+    document.getElementById('spellName').innerText = `${spell.name}`;
+    document.getElementById('spellEffect').innerText = `${spell.effect}`;
+    document.getElementById('spellIncantation').innerText = `${spell.incantation}`;
+    document.getElementById('spellLight').innerText = `${spell.light}`;
+}
+
+function closeModal() {
+    document.getElementById('spellModal').style.display = 'none';
+}
+
+function changePage(step) {
+    var totalPages = Math.ceil(spells.length / spellsPerPage);
+    currentPage += step;
+    if (currentPage < 1) currentPage = 1;
+    else if (currentPage > totalPages) currentPage = totalPages;
+    
+    renderSpells();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    renderSpells();
+    var ctx = document.getElementById('spellsChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: Object.keys({{ spells_per_course|safe }}).concat(['Not Acquired']),
+            datasets: [{
+                label: 'Number of Spells',
+                data: Object.values({{ spells_per_course|safe }}).concat([{{ n_spells_not_acquired }}]),
+                backgroundColor: [
+                    'rgba(128, 0, 0, 0.2)', // Deep Red
+                    'rgba(205, 127, 50, 0.2)', // Gold
+                    'rgba(0, 128, 0, 0.2)', // Dark Green
+                    'rgba(192, 192, 192, 0.2)', // Silver
+                    'rgba(255, 255, 0, 0.2)', // Canary Yellow
+                    'rgba(0, 0, 0, 0.2)', // Black
+                    'rgba(0, 0, 139, 0.2)', // Royal Blue
+                    'rgba(205, 133, 63, 0.2)', // Bronze
+                    'rgba(153, 50, 204, 0.2)', // Magic Amethyst
+                    'rgba(128, 0, 128, 0.2)', // Potion Purple
+                    'rgba(0, 128, 128, 0.2)', // Enchanted Emerald
+                    'rgba(0, 0, 255, 0.2)', // Spellbound Sapphire
+                    'rgba(255, 215, 0, 0.2)', // Wizard Gold
+                    'rgba(192, 192, 192, 0.2)', // Mystic Silver
+                    'rgba(255, 165, 0, 0.2)', // Phoenix Feather Orange
+                ],
+                borderColor: [
+                    'grey'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+            }
+        },
+    });
+});
+</script>
+<script>
+    // Example course data, replace with dynamic data from your backend
+    var isLearningCourses = {{ is_learning_courses|safe }};
+    var learnedCourses = {{ learned_courses|safe }};
+    
+    function renderCourses() {
+        var learningContainer = document.getElementById('learningCoursesContainer');
+        var learnedContainer = document.getElementById('learnedCoursesContainer');
+    
+        // Dynamically create course list for 'is_learning_courses'
+        isLearningCourses.forEach(course => {
+            var courseDiv = document.createElement('div');
+            courseDiv.innerHTML = `<button class="text-black hover:text-amber-600" onclick="openCourseModal(${JSON.stringify(course).split('"').join("&quot;")})">${course.name}</button>`;
+            learningContainer.appendChild(courseDiv);
+        });
+    
+        // Repeat for 'learned_courses'
+        learnedCourses.forEach(course => {
+            var courseDiv = document.createElement('div');
+            courseDiv.innerHTML = `<button class="text-black hover:text-amber-600" onclick="openCourseModal(${JSON.stringify(course).split('"').join("&quot;")})">${course.name}</button>`;
+            learnedContainer.appendChild(courseDiv);
+        });
+    }
+    
+    function openCourseModal(course) {
+        document.getElementById('courseName').innerText = course.name;
+        document.getElementById('professorInCharge').innerText = `Professor in charge: ${course.professor_in_charge}`;
+    
+        // Handle spells taught
+        var spellsTaughtDiv = document.getElementById('spellsTaught');
+        spellsTaughtDiv.innerHTML = '<h4 class="font-medium">Spells Taught:</h4>';
+        course.spells_taught.forEach(spell => {
+            var spellDiv = document.createElement('div');
+            spellDiv.innerHTML = `<p>${spell.name} - ${spell.effect} (${spell.type})</p>`;
+            spellsTaughtDiv.appendChild(spellDiv);
+        });
+    
+        document.getElementById('courseModal').style.display = 'block';
+    }
+    
+    function closeCourseModal() {
+        document.getElementById('courseModal').style.display = 'none';
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        renderCourses();
+    });
+    </script>
+    
+{% endblock %}
