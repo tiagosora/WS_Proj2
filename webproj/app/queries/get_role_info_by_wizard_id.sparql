@@ -1,0 +1,14 @@
+PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?type ?role ?type_id
+WHERE {{
+    ?wizard rdfs:type "wizard" .
+    ?wizard hogwarts:id "{wizard_id}" .
+    OPTIONAL {{
+        ?role hogwarts:wizard ?wizard .
+        ?role rdfs:type ?type .
+        ?role hogwarts:id ?type_id .
+        FILTER (?type IN ("headmaster", "professor", "student"))
+    }}
+}}

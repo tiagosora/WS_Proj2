@@ -117,7 +117,7 @@ class Student:
             
 
 # Define a simple custom user class
-class CustomUser:
+class WizardAccount:
     def __init__(self, nmec, wizard_id):
         self.nmec = nmec
         self.wizard_id = wizard_id
