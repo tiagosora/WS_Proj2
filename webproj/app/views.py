@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
@@ -21,228 +21,38 @@ def index(request):
     
     return render(request, 'app/index.html')
 
-# def student_dashboard(request):
-    
-#     # Mock Student
-#     student = {
-#         "name": "Sirius Black",
-#         "species": "Human",
-#         "blood_type": "Pure-blood",
-#         "gender": "Male",
-#         "house": "Gryffindor",
-#         "school": "Hogwarts",
-#         "school_year": 1,
-#         "skills": ["Animagus (Dog)", "Defensive Magic"],
-#         "patronus": "Non-corporeal",
-#         "wand": None,
-#         "eye_color": "Grey",
-#     }
-
-#     # Mock Course
-#     courses = [
-#         {
-#         "name": "Defence Against the Dark Arts",
-#         "professor_in_charge": "Remus Lupin",
-#         "spells_taught": [
-#             {
-#                 "name": "Expecto Patronum",
-#                 "incantation": "Expecto Patronum",
-#                 "effect": "Summons a Patronus",
-#                 "light": "Silver",
-#                 "type": "Charm"
-#             },{
-#                 "name": "Expecto Patronum",
-#                 "incantation": "Expecto Patronum",
-#                 "effect": "Summons a Patronus",
-#                 "light": "Silver",
-#                 "type": "Charm"
-#             },{
-#                 "name": "Expecto Patronum",
-#                 "incantation": "Expecto Patronum",
-#                 "effect": "Summons a Patronus",
-#                 "light": "Silver",
-#                 "type": "Charm"
-#             },
-#             ]
-#         },{
-#         "name": "Defence Against the Dark Arts",
-#         "professor_in_charge": "Remus Lupin",
-#         "spells_taught": [
-#             {
-#                 "name": "Expecto Patronum",
-#                 "incantation": "Expecto Patronum",
-#                 "effect": "Summons a Patronus",
-#                 "light": "Silver",
-#                 "type": "Charm"
-#             },{
-#                 "name": "Expecto Patronum",
-#                 "incantation": "Expecto Patronum",
-#                 "effect": "Summons a Patronus",
-#                 "light": "Silver",
-#                 "type": "Charm"
-#             },{
-#                 "name": "Expecto Patronum",
-#                 "incantation": "Expecto Patronum",
-#                 "effect": "Summons a Patronus",
-#                 "light": "Silver",
-#                 "type": "Charm"
-#             },
-#             ]
-#         },{
-#         "name": "Defence Against the Dark Arts",
-#         "professor_in_charge": "Remus Lupin",
-#         "spells_taught": [
-#             {
-#                 "name": "Expecto Patronum",
-#                 "incantation": "Expecto Patronum",
-#                 "effect": "Summons a Patronus",
-#                 "light": "Silver",
-#                 "type": "Charm"
-#             },{
-#                 "name": "Expecto Patronum",
-#                 "incantation": "Expecto Patronum",
-#                 "effect": "Summons a Patronus",
-#                 "light": "Silver",
-#                 "type": "Charm"
-#             },{
-#                 "name": "Expecto Patronum",
-#                 "incantation": "Expecto Patronum",
-#                 "effect": "Summons a Patronus",
-#                 "light": "Silver",
-#                 "type": "Charm"
-#             },
-#             ]
-#         },{
-#         "name": "Defence Against the Dark Arts",
-#         "professor_in_charge": "Remus Lupin",
-#         "spells_taught": [
-#             {
-#                 "name": "Expecto Patronum",
-#                 "incantation": "Expecto Patronum",
-#                 "effect": "Summons a Patronus",
-#                 "light": "Silver",
-#                 "type": "Charm"
-#             },{
-#                 "name": "Expecto Patronum",
-#                 "incantation": "Expecto Patronum",
-#                 "effect": "Summons a Patronus",
-#                 "light": "Silver",
-#                 "type": "Charm"
-#             },{
-#                 "name": "Expecto Patronum",
-#                 "incantation": "Expecto Patronum",
-#                 "effect": "Summons a Patronus",
-#                 "light": "Silver",
-#                 "type": "Charm"
-#             },
-#             ]
-#         },{ "name": "Defence Against the Dark Arts", "professor_in_charge": "Remus Lupin", "spells_taught": [ { "name": "Expecto Patronum", "incantation": "Expecto Patronum", "effect": "Summons a Patronus", "light": "Silver", "type": "Charm" },{ "name": "Expecto Patronum", "incantation": "Expecto Patronum", "effect": "Summons a Patronus", "light": "Silver", "type": "Charm" },{ "name": "Expecto Patronum", "incantation": "Expecto Patronum", "effect": "Summons a Patronus", "light": "Silver", "type": "Charm" }, ] }
-#         ,{ "name": "Defence Against the Dark Arts", "professor_in_charge": "Remus Lupin", "spells_taught": [ { "name": "Expecto Patronum", "incantation": "Expecto Patronum", "effect": "Summons a Patronus", "light": "Silver", "type": "Charm" },{ "name": "Expecto Patronum", "incantation": "Expecto Patronum", "effect": "Summons a Patronus", "light": "Silver", "type": "Charm" },{ "name": "Expecto Patronum", "incantation": "Expecto Patronum", "effect": "Summons a Patronus", "light": "Silver", "type": "Charm" }, ] }
-#         ,{ "name": "Defence Against the Dark Arts", "professor_in_charge": "Remus Lupin", "spells_taught": [ { "name": "Expecto Patronum", "incantation": "Expecto Patronum", "effect": "Summons a Patronus", "light": "Silver", "type": "Charm" },{ "name": "Expecto Patronum", "incantation": "Expecto Patronum", "effect": "Summons a Patronus", "light": "Silver", "type": "Charm" },{ "name": "Expecto Patronum", "incantation": "Expecto Patronum", "effect": "Summons a Patronus", "light": "Silver", "type": "Charm" }, ] }
-#         ,{ "name": "Defence Against the Dark Arts", "professor_in_charge": "Remus Lupin", "spells_taught": [ { "name": "Expecto Patronum", "incantation": "Expecto Patronum", "effect": "Summons a Patronus", "light": "Silver", "type": "Charm" },{ "name": "Expecto Patronum", "incantation": "Expecto Patronum", "effect": "Summons a Patronus", "light": "Silver", "type": "Charm" },{ "name": "Expecto Patronum", "incantation": "Expecto Patronum", "effect": "Summons a Patronus", "light": "Silver", "type": "Charm" }, ] }
-#         ,{ "name": "Defence Against the Dark Arts", "professor_in_charge": "Remus Lupin", "spells_taught": [ { "name": "Expecto Patronum", "incantation": "Expecto Patronum", "effect": "Summons a Patronus", "light": "Silver", "type": "Charm" },{ "name": "Expecto Patronum", "incantation": "Expecto Patronum", "effect": "Summons a Patronus", "light": "Silver", "type": "Charm" },{ "name": "Expecto Patronum", "incantation": "Expecto Patronum", "effect": "Summons a Patronus", "light": "Silver", "type": "Charm" }, ] },{
-#         "name": "Defence Against the Dark Arts",
-#         "professor_in_charge": "Remus Lupin",
-#         "spells_taught": [
-#             {
-#                 "name": "Expecto Patronum",
-#                 "incantation": "Expecto Patronum",
-#                 "effect": "Summons a Patronus",
-#                 "light": "Silver",
-#                 "type": "Charm"
-#             },{
-#                 "name": "Expecto Patronum",
-#                 "incantation": "Expecto Patronum",
-#                 "effect": "Summons a Patronus",
-#                 "light": "Silver",
-#                 "type": "Charm"
-#             },{
-#                 "name": "Expecto Patronum",
-#                 "incantation": "Expecto Patronum",
-#                 "effect": "Summons a Patronus",
-#                 "light": "Silver",
-#                 "type": "Charm"
-#             },
-#             ]
-#         },{
-#         "name": "Defence Against the Dark Arts",
-#         "professor_in_charge": "Remus Lupin",
-#         "spells_taught": [
-#             {
-#                 "name": "Expecto Patronum",
-#                 "incantation": "Expecto Patronum",
-#                 "effect": "Summons a Patronus",
-#                 "light": "Silver",
-#                 "type": "Charm"
-#             },{
-#                 "name": "Expecto Patronum",
-#                 "incantation": "Expecto Patronum",
-#                 "effect": "Summons a Patronus",
-#                 "light": "Silver",
-#                 "type": "Charm"
-#             },{
-#                 "name": "dwdwdw",
-#                 "incantation": "Expecto Patronum",
-#                 "effect": "Summons a Patronus",
-#                 "light": "Silver",
-#                 "type": "Charm"
-#             },
-#             ]
-#         }
-#     ]
-    
-#     spells = []
-#     for course in courses:
-#         spells_taught = course["spells_taught"]
-#         for spell in spells_taught:
-#             spells.append(spell)
-            
-#     print(len(spells))
-            
-#     paginator = Paginator(spells, 24)
-#     page_number = request.GET.get('page')
-#     page_obj = paginator.get_page(page_number)
-    
-#     spells_per_course = {'Potions': 5, 'Charms': 3, 'Transfiguration': 2}
-
-
-#     return render(request, 'app/student_dashboard.html', {
-#         'student': student,
-#         'is_learning_courses': courses,
-#         'learned_courses': courses,
-#         'spells_acquired': spells,
-#         'skills': ", ".join(student["skills"]),
-#         'n_spells_not_acquired': 10,
-#         'spells_per_course': spells_per_course,
-#         'page_obj': page_obj,
-#     })
-
 def student_dashboard(request):
+    print(request.method)
+    print(request.GET)
+    
+    student_info = request.session['student_info']
 
+    student = student_info['student']
+    is_learning_courses = student_info['is_learning_courses']
+    learned_courses = student_info['learned_courses']
     
+    total_number_of_spells = triplestore.get_len_all_spells()
     
-    unique_spells = []
-    for course in courses:
-        spells_taught = course["spells_taught"]
-        for spell in spells_taught:
-            spells.append(spell)
+    spells_per_course = {}
+    for course in learned_courses:
+        spells_per_course[course["name"]] = len(course["spells"])
             
-    print(len(spells))
+    spells_acquired = spells_per_course.values()
             
-    paginator = Paginator(spells, 24)
+    number_of_spells_not_acquired = total_number_of_spells - len(spells_acquired)
+            
+    paginator = Paginator(spells_acquired, 24)
     page_number = request.GET.get('page')
+    page_number = int(page_number) if page_number else 1
     page_obj = paginator.get_page(page_number)
     
-    spells_per_course = {'Potions': 5, 'Charms': 3, 'Transfiguration': 2}
-
-
     return render(request, 'app/student_dashboard.html', {
         'student': student,
-        'is_learning_courses': courses,
-        'learned_courses': courses,
-        'spells_acquired': spells,
+        'is_learning_courses': is_learning_courses,
+        'learned_courses': learned_courses,
+        'spells_acquired': spells_acquired,
         'skills': ", ".join(student["skills"]),
-        'n_spells_not_acquired': 10,
+        'number_of_spells_not_acquired': number_of_spells_not_acquired,
         'spells_per_course': spells_per_course,
         'page_obj': page_obj,
     })
@@ -281,35 +91,30 @@ def register_view(request):
 
     return render(request, 'registration/login.html')
 
-
 def login_view(request):
-    print(request)
     if request.method == 'POST':
         nmec = request.POST.get('id_number')
         password = request.POST.get('password')
 
         success, id_number = triplestore.login(nmec, password)
 
-        print(success)
-
-        if success[0]:
+        if success:
             request.session['nmec'] = nmec
             request.session['wizard_id'] = id_number  # An example of user identification
             request.session['authenticated'] = True  # Indicate the user is logged in
              
             #ver qual o role da pessoa que se autenticou e ir para a pagina correspondente
-            wizard_info, wizard_role, wizard_type_id = triplestore.get_role_info_by_wizard_id(id_number)
+            wizard_info, _, wizard_type_id = triplestore.get_role_info_by_wizard_id(id_number)
             
-            print(wizard_role)
-            
-            match(wizard_role):
+            match(wizard_info):
                 case 'student': 
+                    print("here")
                     request.session['student_info'] = triplestore.get_student_view_info(wizard_type_id)
-                    redirect('app/student_dashboard.html')
+                    return redirect("student_dashboard")
                 case 'profesor':
-                    redirect('index') #TODO: mudar para pagina do professor
+                    return professor_dashboard(request) #TODO: mudar para pagina do professor
                 case 'headmaster':
-                    redirect('index') #TODO: mudar para pagina do professor
+                    return professor_dashboard(request) #TODO: mudar para pagina do professor
                 case _ : 
                     return redirect('index')
         else:

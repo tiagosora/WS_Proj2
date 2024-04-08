@@ -502,3 +502,23 @@ def get_school_name(school_uri):
         name = results["results"]["bindings"][0]["name"]["value"]
 
     return name
+
+def get_len_all_spells():
+    query = f"""
+        PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+        SELECT (COUNT(?spells) AS ?count)
+        WHERE {{
+            ?spells rdfs:type "spell" . 
+        }}
+    """
+    
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    
+    if len(results["results"]["bindings"]) > 0:
+        return int(results["results"]["bindings"][0]["count"]["value"])
+        
+    return None
