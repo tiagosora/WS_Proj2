@@ -56,7 +56,7 @@
     <hogwarts:name>Rubeus Hagrid</hogwarts:name>
     <hogwarts:gender>Male</hogwarts:gender>
     <hogwarts:species>Half-Human/Half-Giant</hogwarts:species>
-    <hogwarts:blood-type>Part-Human (Half-giant)</hogwarts:blood-type>
+    <hogwarts:blood-type>Part-Human (Half-giant)</hogwarts:blood-type>
     <hogwarts:eye_color>Black</hogwarts:eye_color>
     <hogwarts:house>1</hogwarts:house>
     <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/56"/>
@@ -165,7 +165,7 @@
     <hogwarts:name>Peter Pettigrew</hogwarts:name>
     <hogwarts:gender>Male</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Half-blood or pure-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Half-blood or pure-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Blue</hogwarts:eye_color>
     <hogwarts:house>1</hogwarts:house>
     <hogwarts:wand>9¼" Chestnut dragon heartstring</hogwarts:wand>
@@ -203,7 +203,7 @@
     <hogwarts:name>Lee Jordan</hogwarts:name>
     <hogwarts:gender>Male</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Brown</hogwarts:eye_color>
     <hogwarts:house>1</hogwarts:house>
   </rdf:Description>
@@ -212,7 +212,7 @@
     <hogwarts:name>Oliver Wood</hogwarts:name>
     <hogwarts:gender>Male</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or Half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or Half-blood</hogwarts:blood-type>
     <hogwarts:house>1</hogwarts:house>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/22">
@@ -228,7 +228,7 @@
     <hogwarts:name>Katie Bell</hogwarts:name>
     <hogwarts:gender>Female</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Brown</hogwarts:eye_color>
     <hogwarts:house>1</hogwarts:house>
   </rdf:Description>
@@ -237,7 +237,7 @@
     <hogwarts:name>Alicia Spinnet</hogwarts:name>
     <hogwarts:gender>Female</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Brown</hogwarts:eye_color>
     <hogwarts:house>1</hogwarts:house>
   </rdf:Description>
@@ -256,7 +256,7 @@
     <hogwarts:name>Parvati Patil</hogwarts:name>
     <hogwarts:gender>Female</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Dark</hogwarts:eye_color>
     <hogwarts:house>1</hogwarts:house>
     <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/14"/>
@@ -266,7 +266,7 @@
     <hogwarts:name>Romilda Vane</hogwarts:name>
     <hogwarts:gender>Female</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Dark</hogwarts:eye_color>
     <hogwarts:house>1</hogwarts:house>
   </rdf:Description>
@@ -284,7 +284,7 @@
     <hogwarts:name>Cormac McLaggen</hogwarts:name>
     <hogwarts:gender>Male</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:house>1</hogwarts:house>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/30">
@@ -337,7 +337,7 @@
     <hogwarts:name>Cho Chang</hogwarts:name>
     <hogwarts:gender>Female</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Dark</hogwarts:eye_color>
     <hogwarts:house>2</hogwarts:house>
     <hogwarts:patronus>Swan</hogwarts:patronus>
@@ -348,7 +348,7 @@
     <hogwarts:name>Luna Lovegood</hogwarts:name>
     <hogwarts:gender>Female</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Pale silvery</hogwarts:eye_color>
     <hogwarts:house>2</hogwarts:house>
     <hogwarts:patronus>Hare</hogwarts:patronus>
@@ -409,7 +409,7 @@
     <hogwarts:name>Padma Patil</hogwarts:name>
     <hogwarts:gender>Female</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Dark</hogwarts:eye_color>
     <hogwarts:house>2</hogwarts:house>
     <hogwarts:patronus>Non-corporeal</hogwarts:patronus>
@@ -431,7 +431,7 @@
     <hogwarts:name>Marietta Edgecombe</hogwarts:name>
     <hogwarts:gender>Female</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Grey</hogwarts:eye_color>
     <hogwarts:house>2</hogwarts:house>
   </rdf:Description>
@@ -440,7 +440,7 @@
     <hogwarts:name>Terry Boot</hogwarts:name>
     <hogwarts:gender>Male</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:house>2</hogwarts:house>
     <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/27"/>
   </rdf:Description>
@@ -516,7 +516,7 @@
     <hogwarts:id>52</hogwarts:id>
     <hogwarts:name>Horace Eugene Flaccus Slughorn</hogwarts:name>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Gooseberry</hogwarts:eye_color>
     <hogwarts:house>4</hogwarts:house>
     <hogwarts:wand>10¼" Cedar dragon heartstring fairly flexible</hogwarts:wand>
@@ -556,7 +556,7 @@
     <hogwarts:name>Pansy Parkinson</hogwarts:name>
     <hogwarts:gender>Female</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:house>4</hogwarts:house>
     <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/26"/>
   </rdf:Description>
@@ -565,7 +565,7 @@
     <hogwarts:name>Blaise Zabini</hogwarts:name>
     <hogwarts:gender>Male</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Brown</hogwarts:eye_color>
     <hogwarts:house>4</hogwarts:house>
   </rdf:Description>
@@ -609,7 +609,7 @@
     <hogwarts:name>Graham Montague</hogwarts:name>
     <hogwarts:gender>Male</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Brown</hogwarts:eye_color>
     <hogwarts:house>4</hogwarts:house>
   </rdf:Description>
@@ -618,7 +618,7 @@
     <hogwarts:name>Bloody Baron</hogwarts:name>
     <hogwarts:gender>Male</hogwarts:gender>
     <hogwarts:species>Ghost</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:house>4</hogwarts:house>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/64">
@@ -626,7 +626,7 @@
     <hogwarts:name>Marcus Flint</hogwarts:name>
     <hogwarts:gender>Male</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:house>4</hogwarts:house>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/65">
@@ -634,7 +634,7 @@
     <hogwarts:name>Penelope Clearwater</hogwarts:name>
     <hogwarts:gender>Female</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Muggle-born or half-blood[</hogwarts:blood-type>
+    <hogwarts:blood-type>Muggle-born or half-blood[</hogwarts:blood-type>
     <hogwarts:house>2</hogwarts:house>
     <hogwarts:patronus>Non-corporeal</hogwarts:patronus>
     <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/26"/>
@@ -652,7 +652,7 @@
     <hogwarts:name>Marcus Belby</hogwarts:name>
     <hogwarts:gender>Male</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Dark</hogwarts:eye_color>
     <hogwarts:house>2</hogwarts:house>
   </rdf:Description>
@@ -706,7 +706,7 @@
     <hogwarts:name>Barty Crouch Jr.</hogwarts:name>
     <hogwarts:gender>Male</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Pale, freckled</hogwarts:eye_color>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/74">
@@ -714,7 +714,7 @@
     <hogwarts:name>Charity Burbage</hogwarts:name>
     <hogwarts:gender>Female</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:patronus>Non-corporeal</hogwarts:patronus>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/75">
@@ -729,7 +729,7 @@
     <hogwarts:name>Alecto Carrow</hogwarts:name>
     <hogwarts:gender>Female</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:house>4</hogwarts:house>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/77">
@@ -737,7 +737,7 @@
     <hogwarts:name>Amycus Carrow</hogwarts:name>
     <hogwarts:gender>Male</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:house>4</hogwarts:house>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/78">
@@ -745,7 +745,7 @@
     <hogwarts:name>Helga Hufflepuff</hogwarts:name>
     <hogwarts:gender>Female</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Blue</hogwarts:eye_color>
     <hogwarts:house>3</hogwarts:house>
   </rdf:Description>
@@ -762,7 +762,7 @@
     <hogwarts:name>Helena Ravenclaw</hogwarts:name>
     <hogwarts:gender>Female</hogwarts:gender>
     <hogwarts:species>Ghost</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Grey</hogwarts:eye_color>
     <hogwarts:house>2</hogwarts:house>
   </rdf:Description>
@@ -771,7 +771,7 @@
     <hogwarts:name>Pomona Sprout</hogwarts:name>
     <hogwarts:gender>Female</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Grey</hogwarts:eye_color>
     <hogwarts:house>3</hogwarts:house>
     <hogwarts:patronus>Non-corporeal</hogwarts:patronus>
@@ -781,7 +781,7 @@
     <hogwarts:name>Newton Scamander</hogwarts:name>
     <hogwarts:gender>Male</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Blue</hogwarts:eye_color>
     <hogwarts:house>3</hogwarts:house>
     <hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/10"/>
@@ -810,7 +810,7 @@
     <hogwarts:name>Zacharias Smith</hogwarts:name>
     <hogwarts:gender>Male</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:house>3</hogwarts:house>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/86">
@@ -906,7 +906,7 @@
     <hogwarts:name>Poppy Pomfrey</hogwarts:name>
     <hogwarts:gender>Female</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:patronus>Non-corporeal</hogwarts:patronus>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/97">
@@ -931,7 +931,7 @@
     <hogwarts:name>Aurora Sinistra</hogwarts:name>
     <hogwarts:gender>Female</hogwarts:gender>
     <hogwarts:species>Human</hogwarts:species>
-    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+    <hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
     <hogwarts:eye_color>Dark</hogwarts:eye_color>
   </rdf:Description>
   <rdf:Description rdf:about="http://hogwarts.edu/wizards/100">

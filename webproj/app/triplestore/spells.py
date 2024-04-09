@@ -24,8 +24,19 @@ def get_spell_info(spell_uri):
             value = o.toPython()
         else:
             value = str(o)
-        spell_attrs[prop] = value.replace("\xa0", " ")
+        spell_attrs[prop] = value.replace("\xa0", " ") if bool(value) else "Unknown"
 
     spell = Spell(**spell_attrs)
 
     return spell
+
+
+def get_len_all_spells():
+    query_name = "app/queries/get_len_all_spells.sparql"
+
+    results, _ = execute_sparql_query(query_name, format="JSON")
+
+    if len(results["results"]["bindings"]) > 0:
+        return int(results["results"]["bindings"][0]["count"]["value"])
+
+    return None
