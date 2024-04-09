@@ -5,9 +5,10 @@ from django.contrib.auth.decorators import login_required
 from app.triplestore.wizards import create_new_wizard
 from app.triplestore.wizards import wizard_login
 from django.core.paginator import Paginator
-
 from app.triplestore.spells import get_len_all_spells
 from app.triplestore.wizards import get_role_info_by_wizard_id, get_student_view_info
+
+from app.decorators import student_required, professor_required, headmaster_required, logout_required
 
 
 def authentication(request):
@@ -21,6 +22,7 @@ def index(request):
     return render(request, 'app/index.html')
 
 
+@student_required
 def student_dashboard(request):
     student_info = request.session['student_info']
 
@@ -57,14 +59,17 @@ def student_dashboard(request):
     })
 
 
+@professor_required
 def professor_dashboard(request):
     return render(request, 'app/professor/dashboard.html')
 
 
+@headmaster_required
 def headmaster_dashboard(request):
     return render(request, 'app/headmaster/dashboard.html')
 
 
+@logout_required
 def register_view(request):
     if request.method == 'POST':
         # Here you would retrieve form data
@@ -94,6 +99,7 @@ def register_view(request):
     return render(request, 'registration/login.html')
 
 
+@logout_required
 def login_view(request):
     if request.method == 'POST':
         nmec = request.POST.get('id_number')
@@ -109,7 +115,9 @@ def login_view(request):
             # ver qual o role da pessoa que se autenticou e ir para a pagina correspondente
             wizard_info, _, wizard_type_id = get_role_info_by_wizard_id(id_number)
 
-            match (wizard_info):
+            request.session['role'] = wizard_info
+
+            match wizard_info:
                 case 'student':
                     request.session['student_info'] = get_student_view_info(wizard_type_id)
                     return redirect("student_dashboard")
@@ -124,6 +132,7 @@ def login_view(request):
     return render(request, 'registration/login.html')
 
 
+@login_required(redirect_field_name="")
 def logout_view(request):
     logout(request)
     return redirect('index')  # Update 'home_page_url' to your actual home page URL name
