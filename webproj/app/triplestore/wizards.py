@@ -1,65 +1,16 @@
-from SPARQLWrapper import SPARQLWrapper, JSON, POST
-from app.models import Wizard, Skill, Student, Course, Spell
-from django.conf import settings
-from rdflib import Graph, URIRef, Literal
+from rdflib import Literal
+from app.triplestore.names_and_ids import get_house_name, get_school_name, get_professor_name
 
-sparql = SPARQLWrapper(settings.GRAPHDB_ENDPOINT)
-sparql_update = SPARQLWrapper(settings.GRAPHDB_ENDPOINT_UPDATE)
+from app.triplestore.spells import manage_spells_list
 
+from app.triplestore.courses import get_course_info
 
-# DONE
-def load_sparql_query(filename, **kwargs):
-    with open(filename, 'r') as file:
-        query_template = file.read()
+from app.models import Student, Wizard
+from app.triplestore.utils import execute_sparql_query, check_if_nmec_exists
 
-    query = query_template.format(**kwargs)
-    return query
+from app.triplestore.skills import get_skill_info
 
 
-def execute_sparql_query(query_name, format="turtle", **kwargs):
-    g = Graph()
-    results = None
-
-    if format == "POST":
-        query = load_sparql_query(query_name, **kwargs)
-        sparql_update.setMethod(POST)
-        sparql_update.setQuery(query)
-        sparql_update.query()
-
-    else:
-        query = load_sparql_query(query_name, **kwargs)
-        sparql.setQuery(query)
-        if format == 'JSON':
-            sparql.setReturnFormat(JSON)
-            results = sparql.query().convert()
-            g.parse(data=results, format='JSON')
-        elif format == 'turtle':
-            sparql.setReturnFormat('turtle')
-            results = sparql.query().convert()
-            g.parse(data=results, format='turtle')
-
-    return results, g
-
-
-# DONE
-def get_skill_info(skill_uri):
-    query_name = "app/queries/get_skill_info.sparql"
-
-    results, g = execute_sparql_query(query_name, format="turtle", skill_uri=skill_uri)
-
-    skill_attrs = {}
-    for s, p, o in g.triples((URIRef(skill_uri), None, None)):
-        prop = p.split('#')[-1]
-        if isinstance(o, Literal):
-            value = o.toPython()
-        else:
-            value = str(o)
-        skill_attrs[prop] = value
-
-    return Skill(**skill_attrs)
-
-
-# DONE
 def get_wizard_info_by_uri(wizard_uri):
     query_name = "app/queries/get_user_info.sparql"
 
@@ -82,7 +33,6 @@ def get_wizard_info_by_uri(wizard_uri):
     return wizard
 
 
-# DONE
 def create_new_wizard(password: str, blood_type: str, eye_color: str, gender: str,
                       house: int, nmec: int, name: str,
                       patronus: str, species: str, wand: str):
@@ -124,7 +74,7 @@ def create_new_wizard(password: str, blood_type: str, eye_color: str, gender: st
     patronus = "hogwarts:patronus \"" + patronus + "\" ;" if bool(patronus) else ""
 
     query_name = "app/queries/add_wizard.sparql"
-    _, _ = execute_sparql_query(query_name, name=name, gender=gender,
+    _, _ = execute_sparql_query(query_name, format="POST", name=name, gender=gender,
                                 species=species, blood_type=blood_type, eye_color=eye_color,
                                 wand=wand, patronus=patronus, max_wizard_id=max_wizard_id,
                                 house=house, max_account_id=max_account_id, nmec=nmec,
@@ -133,23 +83,14 @@ def create_new_wizard(password: str, blood_type: str, eye_color: str, gender: st
     return True, max_wizard_id
 
 
-# DONE
-def check_if_nmec_exists(nmec):
-    query_name = "app/queries/check_if_nmec_exists.sparql"
-
-    results, _ = execute_sparql_query(query_name, format="JSON", nmec=nmec)
-
-    return bool(results["boolean"])
-
-
-# DONE
-def login(nmec, password):
+def wizard_login(nmec, password):
     nmec_literal = f'"{nmec}"'
     password_literal = f'"{password}"'
 
     query_name = "app/queries/login.sparql"
 
-    results, _ = execute_sparql_query(query_name, nmec_literal=nmec_literal, password_literal=password_literal)
+    results, _ = execute_sparql_query(query_name, format="JSON", nmec_literal=nmec_literal,
+                                      password_literal=password_literal)
 
     if len(results["results"]["bindings"]) > 0 and results["results"]["bindings"][0]["wizardId"]["value"]:
         wizard_id = int(results["results"]["bindings"][0]["wizardId"]["value"])
@@ -159,7 +100,6 @@ def login(nmec, password):
     return True, wizard_id
 
 
-# DONE
 def get_role_info_by_wizard_id(wizard_id):
     query_name = "app/queries/get_role_info_by_wizard_id.sparql"
 
@@ -175,7 +115,6 @@ def get_role_info_by_wizard_id(wizard_id):
     return wizard_type, wizard_role, wizard_type_id
 
 
-# DONE
 def get_student_view_info(student_id):
     student_uri = f"http://hogwarts.edu/students/{student_id}"
     query_name = "app/queries/get_user_info.sparql"
@@ -235,93 +174,3 @@ def get_student_view_info(student_id):
             'spells_aquired': spells_aquired,
             'skills': skills
             }
-
-
-# DONE
-def get_course_info(course_uri):
-    query_name = "app/queries/get_user_info.sparql"
-
-    results, g = execute_sparql_query(query_name, format="turtle", user_uri=course_uri)
-
-    course_attrs = {'teaches_spell': []}
-    for s, p, o in g.triples((URIRef(course_uri), None, None)):
-        prop = p.split('#')[-1]
-        if prop == 'teaches_spell':
-            course_attrs['teaches_spell'].append(str(o))
-        else:
-            if isinstance(o, Literal):
-                value = o.toPython()
-            else:
-                value = str(o)
-            course_attrs[prop] = value
-
-    course = Course(**course_attrs)
-
-    return course
-
-
-# DONE
-def manage_spells_list(spells_uri):
-    spells = []
-    for spell in spells_uri:
-        spells.append(get_spell_info(spell).info())
-
-    return spells
-
-# DONE
-def get_spell_info(spell_uri):
-    query_name = "app/queries/get_user_info.sparql"
-
-    results, g = execute_sparql_query(query_name, format="turtle", user_uri=spell_uri)
-
-    spell_attrs = {'teaches_spell': []}
-    for s, p, o in g.triples((URIRef(spell_uri), None, None)):
-        prop = p.split('#')[-1]
-        if isinstance(o, Literal):
-            value = o.toPython()
-        else:
-            value = str(o)
-        spell_attrs[prop] = value.replace("\xa0", " ")
-
-    spell = Spell(**spell_attrs)
-
-    return spell
-
-
-# DONE
-def get_professor_name(professor_uri):
-    query_name = "app/queries/get_professor_name.sparql"
-
-    results, _ = execute_sparql_query(query_name, format="JSON", professor_uri=professor_uri)
-
-    name = ""
-    if len(results["results"]["bindings"]) > 0:
-        name = results["results"]["bindings"][0]["name"]["value"]
-
-    return name
-
-
-# DONE
-def get_house_name(houseId):
-    query_name = "app/queries/get_house_name.sparql"
-
-    results, _ = execute_sparql_query(query_name, format="JSON", houseId=houseId)
-
-    name = ""
-    if len(results["results"]["bindings"]) > 0:
-        name = results["results"]["bindings"][0]["name"]["value"]
-
-    return name
-
-
-# DONE
-def get_school_name(school_uri):
-    query_name = "app/queries/get_school_name.sparql"
-
-    results, _ = execute_sparql_query(query_name, format="JSON", school_uri=school_uri)
-
-    name = ""
-    if len(results["results"]["bindings"]) > 0:
-        name = results["results"]["bindings"][0]["name"]["value"]
-
-    return name

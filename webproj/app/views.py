@@ -1,7 +1,9 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from app import triplestore
+
+from app.triplestore.wizards import create_new_wizard
+from app.triplestore.wizards import wizard_login
 
 
 # Create your views here.
@@ -27,7 +29,7 @@ def register_view(request):
 
         # For example, using your create_new_wizard function
 
-        success = triplestore.create_new_wizard(password, blood_type, eye_color, gender, house, nmec, name, patronus,
+        success = create_new_wizard(password, blood_type, eye_color, gender, house, nmec, name, patronus,
                                                 species, wand)  # Fill in other parameters
         if success[0]:
             request.session['nmec'] = nmec
@@ -45,7 +47,7 @@ def login_view(request):
         nmec = request.POST.get('id_number')
         password = request.POST.get('password')
 
-        success = triplestore.login(nmec, password)
+        success = wizard_login(nmec, password)
 
         print(success)
 
