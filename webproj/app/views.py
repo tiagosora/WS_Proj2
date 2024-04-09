@@ -111,7 +111,6 @@ def login_view(request):
 
             match (wizard_info):
                 case 'student':
-                    print("here")
                     request.session['student_info'] = get_student_view_info(wizard_type_id)
                     return redirect("student_dashboard")
                 case 'profesor':
