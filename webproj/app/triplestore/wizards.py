@@ -14,7 +14,7 @@ from app.triplestore.skills import get_skill_info
 def get_wizard_info_by_uri(wizard_uri):
     query_name = "app/queries/get_user_info.sparql"
 
-    results, g = execute_sparql_query(query_name, format="turtle", wizard_uri=wizard_uri)
+    results, g = execute_sparql_query(query_name, format="turtle", user_uri=wizard_uri)
 
     wizard_attrs = {'skills': [], 'spells': []}
     for s, p, o in g:
