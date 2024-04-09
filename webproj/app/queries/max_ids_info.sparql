@@ -1,0 +1,16 @@
+PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+    (MAX(xsd:integer(?wizardId)) AS ?nextWizardId)
+    (MAX(xsd:integer(?studentId)) AS ?nextStudentId)
+    (MAX(xsd:integer(?accountId)) AS ?nextAccountId)
+WHERE {{
+    ?wizard rdfs:type "wizard" .
+    ?wizard hogwarts:id ?wizardId .
+    ?student rdfs:type "student" .
+    ?student hogwarts:id ?studentId .
+    ?account rdfs:type "account" .
+    ?account hogwarts:id ?accountId .
+}}
