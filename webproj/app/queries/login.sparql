@@ -5,7 +5,7 @@ SELECT
 ?wizardId
 WHERE
 {{
-    ?account rdfs:type "account" .
+    ?account hogwarts:_type "account" .
     ?account hogwarts:number {nmec_literal} .
     ?account hogwarts:password {password_literal} .
     ?account hogwarts:wizard ?wizard .

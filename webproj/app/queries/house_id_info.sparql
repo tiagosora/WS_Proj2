@@ -5,7 +5,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT
     ?houseId
 WHERE {{
-    ?house rdfs:type "house" .
+    ?house hogwarts:_type "house" .
     ?house hogwarts:name ?houseName .
     FILTER(LCASE(?houseName) = LCASE("{house}")) .
     ?house hogwarts:id ?houseId .

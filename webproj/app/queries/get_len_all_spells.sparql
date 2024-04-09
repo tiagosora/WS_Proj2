@@ -3,5 +3,5 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT (COUNT(?spells) AS ?count)
 WHERE {{
-    ?spells rdfs:type "spell" .
+    ?spells hogwarts:_type "spell" .
 }}

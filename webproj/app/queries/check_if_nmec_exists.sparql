@@ -2,6 +2,6 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX hogwarts: <http://hogwarts.edu/ontology#>
 
 ASK WHERE {{
-    ?student rdfs:type "account" .
+    ?student hogwarts:_type "account" .
     ?student hogwarts:number "{nmec}" .
 }}

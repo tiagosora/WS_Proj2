@@ -7,10 +7,10 @@ SELECT
     (MAX(xsd:integer(?studentId)) AS ?nextStudentId)
     (MAX(xsd:integer(?accountId)) AS ?nextAccountId)
 WHERE {{
-    ?wizard rdfs:type "wizard" .
+    ?wizard hogwarts:_type "wizard" .
     ?wizard hogwarts:id ?wizardId .
-    ?student rdfs:type "student" .
+    ?student hogwarts:_type "student" .
     ?student hogwarts:id ?studentId .
-    ?account rdfs:type "account" .
+    ?account hogwarts:_type "account" .
     ?account hogwarts:id ?accountId .
 }}
