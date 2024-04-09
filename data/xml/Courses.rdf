@@ -1,4 +1,4 @@
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:hogwarts="http://hogwarts.edu/ontology#">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:hogwarts="http://hogwarts.edu/ontology#">
   <rdf:Description rdf:about="http://hogwarts.edu/courses/1">
     <hogwarts:id>1</hogwarts:id>
     <hogwarts:name>Transfiguration</hogwarts:name>
