@@ -34,10 +34,10 @@ class Wizard:
 
 
 class Skill:
-    def __init__(self, id=None, name=None, type='skill'):
+    def __init__(self, id=None, name=None, _type='skill'):
         self.id = id
         self.name = name
-        self.type = type
+        self._type = type
 
     def __str__(self):
         return f"Skill: {self.name}"
@@ -77,7 +77,7 @@ class Course:
         self.professor = kwargs.get('professor', '')
         self.attending_year = kwargs.get('attending_year', '')
         self.teaches_spell = kwargs.get('teaches_spell', [])
-        self.type = kwargs.get('type', 'course')
+        self.type = kwargs.get('_type', 'course')
         
     def __str__(self) -> str:
         return f"ID: {self.id}, \n\
@@ -104,7 +104,7 @@ class Student:
         self.school = kwargs.get('school', '')
         self.school_year = kwargs.get('school_year', '')
         self.wizard = kwargs.get('wizard', '')
-        self.type = kwargs.get('type', 'student')
+        self.type = kwargs.get('_type', 'student')
     
     def __str__(self) -> str:
         return f"ID: {self.id}, \n\

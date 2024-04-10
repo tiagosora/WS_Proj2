@@ -53,7 +53,7 @@ def create_new_wizard(password: str, blood_type: str, eye_color: str, gender: st
     max_wizard_id = int(results["results"]["bindings"][0]["nextWizardId"]["value"]) + 1
     max_student_id = int(results["results"]["bindings"][0]["nextStudentId"]["value"]) + 1
     max_account_id = int(results["results"]["bindings"][0]["nextAccountId"]["value"]) + 1
-
+    
     house = house if bool(house) else ""
 
     query_name = "app/queries/house_id_info.sparql"
