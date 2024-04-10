@@ -24,3 +24,15 @@ def get_course_info(course_uri):
     course = Course(**course_attrs)
 
     return course
+
+def get_courses_uri_by_professor_uri(professor_uri):
+    query_name = "app/queries/get_courses_uri_by_professor_uri.sparql"
+    
+    results, _ = execute_sparql_query(query_name, format='JSON', user_uri=professor_uri)
+    
+    total_courses = []
+    for elem in results["results"]["bindings"]:
+        total_courses.append(elem["courses"]["value"])
+        
+    return total_courses
+

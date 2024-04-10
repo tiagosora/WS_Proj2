@@ -77,13 +77,12 @@ class Course:
         self.professor = kwargs.get('professor', '')
         self.attending_year = kwargs.get('attending_year', '')
         self.teaches_spell = kwargs.get('teaches_spell', [])
-        self.type = kwargs.get('_type', 'course')
+        self.type = kwargs.get('type', 'course')
         
     def __str__(self) -> str:
         return f"ID: {self.id}, \n\
                 Name: {self.name}, \n\
                 Professor: {self.professor}, \n\
-                School: {self.school}, \n\
                 Attending_year: {self.attending_year}, \n\
                 Teaches_spell: {self.teaches_spell}, \n \
                 Type: {self.type} \n "
@@ -115,6 +114,19 @@ class Student:
                 Wizard: {self.wizard}, \n\
                 Type: {self.type} \n"
             
+
+class Professor:
+    def __init__(self, **kwargs):
+        self.id = kwargs.get('id')
+        self.school = kwargs.get('school', '')
+        self.wizard = kwargs.get('wizard', '')
+        self.type = kwargs.get('_type', 'student')
+    
+    def __str__(self) -> str:
+        return f"ID: {self.id}, \n\
+                School: {self.school}, \n\
+                Wizard: {self.wizard}, \n\
+                Type: {self.type} \n"
 
 # Define a simple custom user class
 class WizardAccount:

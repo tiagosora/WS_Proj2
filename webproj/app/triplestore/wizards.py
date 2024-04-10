@@ -3,9 +3,9 @@ from app.triplestore.names_and_ids import get_house_name, get_school_name, get_p
 
 from app.triplestore.spells import manage_spells_list
 
-from app.triplestore.courses import get_course_info
+from app.triplestore.courses import get_course_info, get_courses_uri_by_professor_uri
 
-from app.models import Student, Wizard
+from app.models import Student, Wizard, Professor
 from app.triplestore.utils import execute_sparql_query, check_if_nmec_exists
 
 from app.triplestore.skills import get_skill_info
@@ -115,14 +115,13 @@ def get_role_info_by_wizard_id(wizard_id):
     return wizard_type, wizard_role, wizard_type_id
 
 
-def get_student_view_info(student_id):
-    student_uri = f"http://hogwarts.edu/students/{student_id}"
+def get_student_info(student_uri):
     query_name = "app/queries/get_user_info.sparql"
 
-    results, g = execute_sparql_query(query_name, format="turtle", user_uri=student_uri)
+    _, g = execute_sparql_query(query_name, format="turtle", user_uri=student_uri)
 
-    student_attrs = {'id': student_id, 'learned': [], 'is_learning': []}
-    for s, p, o in g:
+    student_attrs = {'learned': [], 'is_learning': []}
+    for _, p, o in g:
         prop = p.split('#')[-1]
         if prop == 'learned':
             student_attrs['learned'].append(str(o))
@@ -135,7 +134,14 @@ def get_student_view_info(student_id):
                 value = str(o)
             student_attrs[prop] = value
 
-    student = Student(**student_attrs)
+    return Student(**student_attrs)
+
+
+def get_student_view_info(student_id):
+    
+    student_uri = f"http://hogwarts.edu/students/{student_id}"
+    
+    student = get_student_info(student_uri)
     wizard = get_wizard_info_by_uri(student.wizard)
 
     courses_is_learning_list = []
@@ -174,3 +180,60 @@ def get_student_view_info(student_id):
             'spells_acquired': spells_acquired,
             'skills': skills
             }
+    
+    
+def get_students_enrolled(course_id):
+    query_name = "app/queries/get_students_enrolled_course.sparql"
+    results, _ = execute_sparql_query(query_name, format="JSON", course_id=course_id)
+    
+    
+    students_enrolled = []
+    for elem in results["results"]["bindings"]:
+        student_uri = elem["student"]["value"]
+        student = get_student_info(student_uri)
+        wizard = get_wizard_info_by_uri(student.wizard)
+        
+        student_information = {}
+        student_information.update({"attending_year": student.school_year})
+        student_information.update(wizard.info())
+        student_information.update({"skills": [skill.name for skill in wizard.skills]})
+
+        students_enrolled.append(student_information)
+
+    return students_enrolled
+    
+def get_professor_info(professor_id):
+    professor_uri = f"http://hogwarts.edu/professors/{professor_id}"
+    query_name = "app/queries/get_user_info.sparql"
+
+    _, g = execute_sparql_query(query_name, format="turtle", user_uri=professor_uri)
+
+    professor_attrs = {'id': professor_id, 'learned': [], 'is_learning': []}
+    for _, p, o in g:
+        prop = p.split('#')[-1]
+        if isinstance(o, Literal):
+            value = o.toPython()
+        else:
+            value = str(o)
+        professor_attrs[prop] = value
+
+    professor = Professor(**professor_attrs)
+    wizard = get_wizard_info_by_uri(professor.wizard)
+    
+    professor_courses = get_courses_uri_by_professor_uri(professor_uri)
+    
+    total_professor_courses = []
+    for course_uri in professor_courses:
+        total_professor_courses.append(get_course_info(course_uri))
+        
+    professor_courses = [course.info()
+                        | {'spells': manage_spells_list(course.teaches_spell)}
+                        | {'students_enrolled': get_students_enrolled(course.id)}
+                        for course in total_professor_courses]
+    
+    professor_info = {}
+    professor_info.update({"courses": professor_courses})
+    professor_info.update({"professor": wizard.info() | {"school_name": get_school_name(professor.school)} })
+                        
+                        
+    return professor_info

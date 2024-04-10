@@ -1,0 +1,7 @@
+    PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+
+    SELECT ?courses
+    WHERE {{
+        ?courses hogwarts:_type "course" . 
+        ?courses hogwarts:professor <{user_uri}> . 
+    }}
