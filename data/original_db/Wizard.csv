@@ -19,7 +19,7 @@ Id,Name,Gender,Species,Blood-Type,Eye Color,HouseId,Wand,Patronus
 18,William Arthur Weasley,Male,Human,Pure-blood,Blue,1,None,None
 19,Charles Weasley,Male,Human,Pure-blood,Grey,1,"12""  Ash unicorn tail hair",None
 20,Lee Jordan,Male,Human,Pure-blood or half-blood,Brown,1,None,None
-21,Oliver Wood,Male,Human,Pure-blood or Half-blood,None,1,None,None
+21,Oliver Wood,Male,Human,Pure-blood or half-blood,None,1,None,None
 22,Angelina Johnson,Female,Human,None,Brown,1,None,None
 23,Katie Bell,Female,Human,Pure-blood or half-blood,Brown,1,None,None
 24,Alicia Spinnet,Female,Human,Pure-blood or half-blood,Brown,1,None,None
@@ -38,7 +38,7 @@ Id,Name,Gender,Species,Blood-Type,Eye Color,HouseId,Wand,Patronus
 37,Filius Flitwick,Male,Human,Part-Goblin,None,2,None,Non-corporeal
 38,Sybill Patricia Trelawney,Female,Human,Half-blood,None,2,9 ½” hazel unicorn hair core,Non-corporeal
 39,Garrick Ollivander,Male,Human,Half-blood,Silvery,2,"12¾"" Hornbeam dragon heartstring",Non-corporeal
-40,Myrtle Elizabeth Warren,Female,Ghost,Muggle-born,None,2,None,None
+40,Myrtle Elizabeth Warren (Moaning Myrtle),Female,Ghost,Muggle-born,None,2,None,None
 41,Padma Patil,Female,Human,Pure-blood or half-blood,Dark,2,None,Non-corporeal
 42,Michael Corner,Male,Human,Half-blood,Brown,2,None,Squirrel
 43,Marietta Edgecombe,Female,Human,Pure-blood or half-blood,Grey,2,None,None

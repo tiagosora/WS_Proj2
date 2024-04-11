@@ -1,12 +1,12 @@
 Id,Name,Type,AttendingYear,ProfessorId
-1,Transfiguration,Core,1,30
-2,Charms,Core,2,37
-3,Potions,Core,1,46
-4,History of Magic,Core,5,72
+1,Transfiguration,Core,1,3
+2,Charms,Core,2,4
+3,Potions,Core,1,6
+4,History of Magic,Core,5,9
 5,Defence Against the Dark Arts,Core,5,15
-6,Astronomy,Core,2,99
-7,Herbology,Core,1,81
+6,Astronomy,Core,2,14
+7,Herbology,Core,1,12
 8,Care of Magical Creatures,Elective,3,5
-9,Divination,Elective,4,38
-10,Arithmancy,Elective,5,100
-11,Muggle Studies,Elective,4,74
+9,Divination,Elective,4,5
+10,Arithmancy,Elective,5,15
+11,Muggle Studies,Elective,4,10
