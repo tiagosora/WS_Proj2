@@ -61,12 +61,18 @@ def student_dashboard(request):
 
 @professor_required
 def professor_dashboard(request):
-    return render(request, 'app/professor/dashboard.html')
+    print("entrei, professor dashboard")
+    professor_info = request.session['professor_info']
+    print(professor_info)
+    return render(request, 'app/professor_dashboard.html', {
+        'professor': professor_info["professor"],
+        'courses': professor_info["courses"],
+    })
 
 
 @headmaster_required
 def headmaster_dashboard(request):
-    return render(request, 'app/headmaster/dashboard.html')
+    return render(request, 'app/headmaster_dashboard.html')
 
 
 @logout_required
@@ -116,15 +122,20 @@ def login_view(request):
             wizard_info, _, wizard_type_id = get_role_info_by_wizard_id(id_number)
 
             request.session['role'] = wizard_info
+            
+            print("Wizard info: ", wizard_info)
+            print(wizard_type_id)
 
             match wizard_info:
                 case 'student':
                     request.session['student_info'] = get_student_view_info(wizard_type_id)
                     return redirect("student_dashboard")
-                case 'profesor':
-                    return professor_dashboard(request)  # TODO: mudar para pagina do professor
+                case 'professor':
+                    request.session['professor_info'] = get_professor_info(wizard_type_id)
+                    print("entrei")
+                    return redirect("professor_dashboard")
                 case 'headmaster':
-                    return professor_dashboard(request)  # TODO: mudar para pagina do professor
+                    return redirect("headmaster_dashboard")
                 case _:
                     return redirect('index')
         else:
