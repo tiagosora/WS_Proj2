@@ -1,10 +1,10 @@
 from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
 
 from app.triplestore.wizards import create_new_wizard
 from app.triplestore.wizards import wizard_login
-from django.core.paginator import Paginator
 from app.triplestore.spells import get_len_all_spells
 from app.triplestore.wizards import get_role_info_by_wizard_id, get_student_view_info, get_professor_info
 

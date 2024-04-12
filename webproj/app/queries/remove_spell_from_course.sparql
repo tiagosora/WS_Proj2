@@ -1,0 +1,12 @@
+PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+
+DELETE {{
+  ?course hogwarts:teaches_spell ?spell
+}}
+WHERE {{
+    ?spell hogwarts:_type "spell" .
+    ?spell hogwarts:id "{spell_id}" .
+    ?course hogwarts:_type "course" .
+    ?course hogwarts:id "{course_id}" .
+    ?student hogwarts:teaches_spell ?spell
+}}

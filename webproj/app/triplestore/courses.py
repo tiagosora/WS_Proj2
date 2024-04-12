@@ -36,3 +36,26 @@ def get_courses_uri_by_professor_uri(professor_uri):
         
     return total_courses
 
+def update_learned_to_is_learning(course_id, student_id):   #teoricamente, useless
+    query_name = "app/queries/update_learned_to_is_learning.sparql"
+    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, student_id=student_id)
+    
+def update_is_learning_to_learned(course_id, student_id):
+    query_name = "app/queries/update_is_learning_to_learned.sparql"
+    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, student_id=student_id)
+    
+def add_spell_to_course(course_id, spell_id):
+    query_name = "app/queries/add_spell_to_course.sparql"
+    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, spell_id=spell_id)
+    
+def remove_spell_from_course(course_id, spell_id):
+    query_name = "app/queries/remove_spell_from_course.sparql"
+    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, spell_id=spell_id)
+    
+def add_student_to_course(course_id, student_id):
+    query_name = "app/queries/add_student_to_course.sparql"
+    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, student_id=student_id)
+
+def remove_student_from_course(course_id, student_id):  #teoricamente, useless
+    query_name = "app/queries/remove_student_from_course.sparql"
+    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, student_id=student_id)
