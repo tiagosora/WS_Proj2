@@ -3141,7 +3141,7 @@
 		<hogwarts:name>Curse of the Bogies</hogwarts:name>
 		<hogwarts:incantation>Mucus ad Nauseam</hogwarts:incantation>
 		<hogwarts:type>Curse</hogwarts:type>
-		<hogwarts:effect>Nasty cold & runny nose</hogwarts:effect>
+		<hogwarts:effect>Nasty cold &amp; runny nose</hogwarts:effect>
 		<hogwarts:light>Green</hogwarts:light>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/spells/113">
