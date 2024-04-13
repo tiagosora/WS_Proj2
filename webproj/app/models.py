@@ -16,7 +16,7 @@ class Wizard:
         self.patronus = kwargs.get('patronus', '')
         self.skills = kwargs.get('skills', [])
         self.spells = kwargs.get('spells', [])
-        self.type = kwargs.get('type', 'wizard')
+        self.type = kwargs.get('_type', 'wizard')
 
     def __str__(self):
         return f"Wizard: {self.name}"
@@ -77,7 +77,7 @@ class Course:
         self.professor = kwargs.get('professor', '')
         self.attending_year = kwargs.get('attending_year', '')
         self.teaches_spell = kwargs.get('teaches_spell', [])
-        self.type = kwargs.get('type', 'course')
+        self.type = kwargs.get('_type', 'course')
         
     def __str__(self) -> str:
         return f"ID: {self.id}, \n\
@@ -120,7 +120,7 @@ class Professor:
         self.id = kwargs.get('id')
         self.school = kwargs.get('school', '')
         self.wizard = kwargs.get('wizard', '')
-        self.type = kwargs.get('_type', 'student')
+        self.type = kwargs.get('_type', 'professor')
     
     def __str__(self) -> str:
         return f"ID: {self.id}, \n\

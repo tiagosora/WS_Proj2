@@ -2471,7 +2471,7 @@
         <hogwarts:incantation>Crucio</hogwarts:incantation>
         <hogwarts:type>Curse</hogwarts:type>
         <hogwarts:effect>Excruciating pain</hogwarts:effect>
-        <hogwarts:light>Red or</hogwarts:light>
+        <hogwarts:light>Red</hogwarts:light>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/spells/36">
         <hogwarts:id>36</hogwarts:id>
@@ -3141,7 +3141,7 @@
         <hogwarts:name>Curse of the Bogies</hogwarts:name>
         <hogwarts:incantation>Mucus ad Nauseam</hogwarts:incantation>
         <hogwarts:type>Curse</hogwarts:type>
-        <hogwarts:effect>Nasty cold &amp; runny nose</hogwarts:effect>
+        <hogwarts:effect>Nasty cold & runny nose</hogwarts:effect>
         <hogwarts:light>Green</hogwarts:light>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/spells/113">
@@ -4051,7 +4051,7 @@
         <hogwarts:name>Hogwarts School of Wizards</hogwarts:name>
         <hogwarts:location>Scotland</hogwarts:location>
         <hogwarts:dateOfCreation>9th/10th Century</hogwarts:dateOfCreation>
-        <hogwarts:headmaster>http://hogwarts.edu/wizards/4</hogwarts:headmaster>
+        <hogwarts:headmaster rdf:resource="http://hogwarts.edu/wizards/4"/>
     </rdf:Description>
 
     <rdf:Description rdf:about="http://hogwarts.edu/professors/1">
