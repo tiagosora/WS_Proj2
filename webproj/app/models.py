@@ -23,6 +23,7 @@ class Wizard:
     
     def info(self):
         return {
+            'id': self.id,
             'name': self.name,
             'gender': self.gender,
             'species': self.species,
@@ -41,6 +42,12 @@ class Skill:
 
     def __str__(self):
         return f"Skill: {self.name}"
+    
+    def info(self):         #TODO: pode dar erro no frontend
+        return {
+            'id': self.id,
+            'name': self.name
+        }
     
 
 class Spell:
@@ -63,6 +70,7 @@ class Spell:
     
     def info(self):
         return {
+            'id': self.id,
             'effect': self.effect,
             'incantation': self.incantation,
             'light': self.light,
@@ -89,6 +97,7 @@ class Course:
                 
     def info(self):
         return {
+            'id': self.id,
             'name': self.name,
             'attending_year': self.attending_year,
             'type': self.type
