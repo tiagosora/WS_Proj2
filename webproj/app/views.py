@@ -1,6 +1,7 @@
 from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.http import require_http_methods
 from django.core.paginator import Paginator
 
 from app.triplestore.wizards import create_new_wizard
@@ -9,6 +10,7 @@ from app.triplestore.spells import get_len_all_spells
 from app.triplestore.wizards import get_role_info_by_wizard_id, get_student_view_info, get_professor_info
 
 from app.decorators import student_required, professor_required, headmaster_required, logout_required
+from app.triplestore.courses import update_is_learning_to_learned
 
 
 def authentication(request):
@@ -62,12 +64,16 @@ def student_dashboard(request):
 
 @professor_required
 def professor_dashboard(request):
-    return render(request, 'app/professor/dashboard.html')
+    professor_info = request.session['professor_info']
+    return render(request, 'app/professor_dashboard.html', {
+        'professor': professor_info["professor"],
+        'courses': professor_info["courses"],
+    })
 
 
 @headmaster_required
 def headmaster_dashboard(request):
-    return render(request, 'app/headmaster/dashboard.html')
+    return render(request, 'app/headmaster_dashboard.html')
 
 
 @logout_required
@@ -100,10 +106,10 @@ def register_view(request):
                 case 'student':
                     request.session['student_info'] = get_student_view_info(wizard_type_id)
                     return redirect("student_dashboard")
-                case 'profesor':
-                    return professor_dashboard(request)  # TODO: mudar para pagina do professor
-                case 'headmaster':
-                    return professor_dashboard(request)  # TODO: mudar para pagina do professor
+                # case 'profesor':
+                #     return professor_dashboard(request)  # TODO: mudar para pagina do professor
+                # case 'headmaster':
+                #     return professor_dashboard(request)  # TODO: mudar para pagina do professor
                 case _:
                     logout(request)
                     return redirect("index")
@@ -131,15 +137,17 @@ def login_view(request):
             wizard_info, _, wizard_type_id = get_role_info_by_wizard_id(id_number)
 
             request.session['role'] = wizard_info
-
+            request.session['wizard_type_id'] = wizard_type_id
+            
             match wizard_info:
                 case 'student':
                     request.session['student_info'] = get_student_view_info(wizard_type_id)
                     return redirect("student_dashboard")
-                case 'profesor':
-                    return professor_dashboard(request)  # TODO: mudar para pagina do professor
+                case 'professor':
+                    request.session['professor_info'] = get_professor_info(wizard_type_id)
+                    return redirect("professor_dashboard")
                 case 'headmaster':
-                    return professor_dashboard(request)  # TODO: mudar para pagina do professor
+                    return redirect("headmaster_dashboard")
                 case _:
                     logout(request)
                     return redirect("index")
@@ -147,8 +155,17 @@ def login_view(request):
             return render(request, 'registration/login.html', {'error': 'Registration failed.'})
     return render(request, 'registration/login.html')
 
+@require_http_methods(["POST"])
+def pass_student(request):
+    student_id = request.POST.get('student_id')
+    course_id = request.POST.get('course_id')
+
+    update_is_learning_to_learned(course_id, student_id)
+    
+    request.session['professor_info'] = get_professor_info(request.session['wizard_type_id'])
+    return redirect("professor_dashboard")
 
 @login_required(redirect_field_name="")
 def logout_view(request):
     logout(request)
-    return redirect('index')  # Update 'home_page_url' to your actual home page URL name
+    return redirect('index')

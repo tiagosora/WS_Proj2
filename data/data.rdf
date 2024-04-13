@@ -4085,7 +4085,7 @@
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://hogwarts.edu/professors/6">
-        <hogwarts:id>7</hogwarts:id>
+        <hogwarts:id>6</hogwarts:id>
         <hogwarts:_type>professor</hogwarts:_type>
         <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/46"/>
         <hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
