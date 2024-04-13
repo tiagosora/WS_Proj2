@@ -1,0 +1,6 @@
+PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+
+SELECT (COUNT(?course) AS ?count)
+WHERE {{
+    ?course hogwarts:_type "course" .
+}}
