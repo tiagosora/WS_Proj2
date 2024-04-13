@@ -1,6 +1,7 @@
 from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.http import require_http_methods
 
 from app.triplestore.wizards import create_new_wizard
 from app.triplestore.wizards import wizard_login
@@ -61,9 +62,7 @@ def student_dashboard(request):
 
 @professor_required
 def professor_dashboard(request):
-    print("entrei, professor dashboard")
     professor_info = request.session['professor_info']
-    print(professor_info)
     return render(request, 'app/professor_dashboard.html', {
         'professor': professor_info["professor"],
         'courses': professor_info["courses"],
@@ -123,16 +122,12 @@ def login_view(request):
 
             request.session['role'] = wizard_info
             
-            print("Wizard info: ", wizard_info)
-            print(wizard_type_id)
-
             match wizard_info:
                 case 'student':
                     request.session['student_info'] = get_student_view_info(wizard_type_id)
                     return redirect("student_dashboard")
                 case 'professor':
                     request.session['professor_info'] = get_professor_info(wizard_type_id)
-                    print("entrei")
                     return redirect("professor_dashboard")
                 case 'headmaster':
                     return redirect("headmaster_dashboard")
@@ -142,6 +137,13 @@ def login_view(request):
             return render(request, 'registration/login.html', {'error': 'Registration failed.'})
     return render(request, 'registration/login.html')
 
+@require_http_methods(["POST"])
+def pass_student(request):
+    # Assuming the student's ID is sent in the request
+    student_id = request.POST.get('student_id')
+    print(student_id)
+    
+    return redirect("professor_dashboard")
 
 @login_required(redirect_field_name="")
 def logout_view(request):

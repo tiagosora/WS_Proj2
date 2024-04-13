@@ -34,10 +34,10 @@ class Wizard:
 
 
 class Skill:
-    def __init__(self, id=None, name=None, _type='skill'):
-        self.id = id
-        self.name = name
-        self._type = _type
+    def __init__(self, **kwargs):
+        self.id = kwargs.get('id')
+        self.name = kwargs.get('name', '')
+        self._type = kwargs.get('_type', 'skill')
 
     def __str__(self):
         return f"Skill: {self.name}"
