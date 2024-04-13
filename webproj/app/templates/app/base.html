@@ -17,11 +17,24 @@
         {% tailwind_css %}
     </head>
     <body class="bg-[#edeae5]">
+        {% if not 'account' in request.path %}
+            <header class="flex justify-end items-center p-5">
+                <!-- Place other header items here -->
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                        Logout
+                    </button>
+                </form>
+            </header>
+        {% endif %}
+
 
         <main>
             {% block content %}
             {% endblock %}
         </main>
+
 
         {% comment %} <footer class="text-gray-600 body-font">
             <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">

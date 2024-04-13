@@ -87,13 +87,27 @@ def register_view(request):
 
         # For example, using your create_new_wizard function
 
-        success = create_new_wizard(password, blood_type, eye_color, gender, house, nmec, name, patronus,
+        success, id_number = create_new_wizard(password, blood_type, eye_color, gender, house, nmec, name, patronus,
                                     species, wand)  # Fill in other parameters
-        if success[0]:
+        if success:
             request.session['nmec'] = nmec
-            request.session['wizard_id'] = success[1]  # An example of user identification
+            request.session['wizard_id'] = id_number  # An example of user identification
             request.session['authenticated'] = True  # Indicate the user is logged in
-            return redirect('index')
+
+            wizard_info, _, wizard_type_id = get_role_info_by_wizard_id(id_number)
+
+            match wizard_info:
+                case 'student':
+                    request.session['student_info'] = get_student_view_info(wizard_type_id)
+                    return redirect("student_dashboard")
+                case 'profesor':
+                    return professor_dashboard(request)  # TODO: mudar para pagina do professor
+                case 'headmaster':
+                    return professor_dashboard(request)  # TODO: mudar para pagina do professor
+                case _:
+                    logout(request)
+                    return redirect("index")
+
         else:
             return render(request, 'registration/login.html', {'error': 'Registration failed.'})
 
@@ -127,7 +141,8 @@ def login_view(request):
                 case 'headmaster':
                     return professor_dashboard(request)  # TODO: mudar para pagina do professor
                 case _:
-                    return redirect('index')
+                    logout(request)
+                    return redirect("index")
         else:
             return render(request, 'registration/login.html', {'error': 'Registration failed.'})
     return render(request, 'registration/login.html')
