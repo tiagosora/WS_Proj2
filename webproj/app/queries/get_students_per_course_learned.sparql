@@ -1,0 +1,9 @@
+PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+
+SELECT ?id (COUNT(?student) AS ?numberOfStudents)
+WHERE {{
+    ?student hogwarts:_type "student" ;
+             hogwarts:learned ?course .
+    ?course hogwarts:id ?id
+}}
+GROUP BY ?id
