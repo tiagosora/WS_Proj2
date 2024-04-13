@@ -37,7 +37,7 @@ class Skill:
     def __init__(self, id=None, name=None, _type='skill'):
         self.id = id
         self.name = name
-        self._type = type
+        self._type = _type
 
     def __str__(self):
         return f"Skill: {self.name}"
