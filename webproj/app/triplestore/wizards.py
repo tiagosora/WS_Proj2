@@ -165,7 +165,9 @@ def get_student_view_info(student_id):
                        | {'professor_name': get_professor_name(course.professor)}
                        for course in courses_learned_list]
 
-    skills = [skill.name for skill in wizard.skills]
+    skills = [skill.info() for skill in wizard.skills]
+    
+    
 
     spells_acquired = []
     [spells_acquired.extend(spell['spells']) for spell in learned_courses]

@@ -1,0 +1,15 @@
+PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+
+DELETE {{
+  ?student hogwarts:is_learning ?course .
+}}
+INSERT {{
+  ?student hogwarts:learned ?course .
+}}
+WHERE {{
+    ?course hogwarts:_type "course" .
+    ?course hogwarts:id "{course_id}" .
+    ?student hogwarts:_type "student" .
+    ?student hogwarts:id "{student_id}" .
+    ?student hogwarts:is_learning ?course
+}}

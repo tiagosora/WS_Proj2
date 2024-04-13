@@ -1,10 +1,10 @@
 from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
 
 from app.triplestore.wizards import create_new_wizard
 from app.triplestore.wizards import wizard_login
-from django.core.paginator import Paginator
 from app.triplestore.spells import get_len_all_spells
 from app.triplestore.wizards import get_role_info_by_wizard_id, get_student_view_info, get_professor_info
 
@@ -13,7 +13,6 @@ from app.decorators import student_required, professor_required, headmaster_requ
 
 def authentication(request):
     return render(request, 'app/login.html')
-
 
 # Create your views here.
 
@@ -46,13 +45,15 @@ def student_dashboard(request):
     paginator = Paginator(spells_acquired, 24)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
+    skills = [skill["name"] for skill in student_info["skills"]]
+    
 
     return render(request, 'app/student_dashboard.html', {
         'student': student,
         'is_learning_courses': is_learning_courses,
         'learned_courses': learned_courses,
         'spells_acquired': spells_acquired,
-        'skills': ", ".join(student_info["skills"]),
+        'skills': ", ".join(skills),
         'number_of_spells_not_acquired': number_of_spells_not_acquired,
         'spells_per_course': spells_per_course,
         'page_obj': page_obj,
