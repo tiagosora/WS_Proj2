@@ -10,6 +10,10 @@ urlpatterns = [
     path('professor/', views.professor_dashboard, name='professor_dashboard'),
     path('pass_student/', views.pass_student, name='pass_student'),
 
+    path('headmaster/', views.headmaster_dashboard, name='headmaster_dashboard'),
+
+    path('professor/', views.professor_dashboard, name='professor_dashboard'),
+
     path('accounts/', include('django.contrib.auth.urls')),
 
     # Register

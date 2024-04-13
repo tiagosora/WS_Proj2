@@ -196,6 +196,7 @@ def get_students_enrolled(course_id):
         wizard = get_wizard_info_by_uri(student.wizard)
         
         student_information = {}
+        student_information.update({"student_id": student.id})
         student_information.update({"attending_year": student.school_year})
         student_information.update(wizard.info())
         student_information.update({"skills": [skill.name for skill in wizard.skills]})
