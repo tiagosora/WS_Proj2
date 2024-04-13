@@ -10,6 +10,7 @@ from app.triplestore.spells import get_len_all_spells
 from app.triplestore.wizards import get_role_info_by_wizard_id, get_student_view_info, get_professor_info
 
 from app.decorators import student_required, professor_required, headmaster_required, logout_required
+from app.triplestore.courses import update_is_learning_to_learned
 
 
 def authentication(request):
@@ -105,10 +106,10 @@ def register_view(request):
                 case 'student':
                     request.session['student_info'] = get_student_view_info(wizard_type_id)
                     return redirect("student_dashboard")
-                case 'profesor':
-                    return professor_dashboard(request)  # TODO: mudar para pagina do professor
-                case 'headmaster':
-                    return professor_dashboard(request)  # TODO: mudar para pagina do professor
+                # case 'profesor':
+                #     return professor_dashboard(request)  # TODO: mudar para pagina do professor
+                # case 'headmaster':
+                #     return professor_dashboard(request)  # TODO: mudar para pagina do professor
                 case _:
                     logout(request)
                     return redirect("index")
@@ -136,6 +137,7 @@ def login_view(request):
             wizard_info, _, wizard_type_id = get_role_info_by_wizard_id(id_number)
 
             request.session['role'] = wizard_info
+            request.session['wizard_type_id'] = wizard_type_id
             
             match wizard_info:
                 case 'student':
@@ -155,13 +157,15 @@ def login_view(request):
 
 @require_http_methods(["POST"])
 def pass_student(request):
-    # Assuming the student's ID is sent in the request
     student_id = request.POST.get('student_id')
-    print(student_id)
+    course_id = request.POST.get('course_id')
+
+    update_is_learning_to_learned(course_id, student_id)
     
+    request.session['professor_info'] = get_professor_info(request.session['wizard_type_id'])
     return redirect("professor_dashboard")
 
 @login_required(redirect_field_name="")
 def logout_view(request):
     logout(request)
-    return redirect('index')  # Update 'home_page_url' to your actual home page URL name
+    return redirect('index')

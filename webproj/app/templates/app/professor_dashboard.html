@@ -59,12 +59,17 @@
             <form id="studentPassStudent" method="post" action="{% url 'pass_student' %}">
                 {% csrf_token %}
                 <input type="hidden" name="student_id" id="hiddenStudentId" value="">
+                <input type="hidden" name="course_id" id="hiddenCourseId" value="">
                 <div class="px-4 pt-5 pb-4 bg-white">
                     <div class="sm:flex sm:items-start">
                         <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
                             <h3 class="text-lg leading-6 font-medium text-gray-900" id="student-modal-title">Student Details</h3>
                             <div class="mt-4">
                                 <div class="flex flex-col space-y-2">
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium text-gray-500">Attending Year:</p>
+                                        <p id="studentAttendingYear" class="text-sm text-gray-900"></p>
+                                    </div>
                                     <div class="flex justify-between">
                                         <p class="text-sm font-medium text-gray-500">Name:</p>
                                         <p id="studentName" class="text-sm text-gray-900"></p>
@@ -192,15 +197,17 @@ document.addEventListener('DOMContentLoaded', function() {
             studentButton.innerText = student.name;
             studentButton.classList.add("text-black");
             studentButton.classList.add("hover:text-amber-600");
-            studentButton.onclick = function() { openStudentModal(student); };
+            studentButton.onclick = function() { openStudentModal(course, student); };
             studentLi.appendChild(studentButton);
             studentsContainer.appendChild(studentLi);
         });
     });
 });
 
-function openStudentModal(student) {
+function openStudentModal(course, student) {
     // Populate the modal with student details
+
+    console.log(student)
     var gender = student.gender ? student.gender : 'Unknown';
     var species = student.species ? student.species : 'Unknown';
     var blood_type = student.blood_type ? student.blood_type : 'Unknown';
@@ -209,6 +216,7 @@ function openStudentModal(student) {
     var patronus = student.patronus ? student.patronus : 'Unknown';
     var skills = student.skills.join(', ') ? student.skills : 'Unknown';
     document.getElementById('studentName').innerText = student.name;
+    document.getElementById('studentAttendingYear').innerText = student.attending_year;
     document.getElementById('studentGender').innerText = gender;
     document.getElementById('studentSpecies').innerText = species;
     document.getElementById('studentBloodType').innerText = blood_type;
@@ -217,7 +225,8 @@ function openStudentModal(student) {
     document.getElementById('studentPatronus').innerText = patronus;
     document.getElementById('studentSkills').innerText = skills;
     
-    document.getElementById('hiddenStudentId').value = student.id;
+    document.getElementById('hiddenStudentId').value = student.student_id;
+    document.getElementById('hiddenCourseId').value = course.id;
     
     // Show the modal
     document.getElementById('studentModal').style.display = 'block';
