@@ -1,6 +1,6 @@
-from SPARQLWrapper import SPARQLWrapper, POST, JSON
 from django.conf import settings
 from rdflib import Graph
+from SPARQLWrapper import JSON, POST, SPARQLWrapper
 
 sparql = SPARQLWrapper(settings.GRAPHDB_ENDPOINT)
 sparql_update = SPARQLWrapper(settings.GRAPHDB_ENDPOINT_UPDATE)

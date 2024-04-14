@@ -1,7 +1,6 @@
-from rdflib import URIRef, Literal
-from app.triplestore.utils import execute_sparql_query
-
 from app.models import Spell
+from app.triplestore.utils import execute_sparql_query
+from rdflib import Literal, URIRef
 
 
 def manage_spells_list(spells_uri):

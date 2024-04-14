@@ -1,15 +1,10 @@
-from rdflib import Literal
-
-from app.models import Professor
-
-from app.triplestore.utils import execute_sparql_query
 from app.triplestore.courses import get_courses_uri_by_professor_uri
+from app.triplestore.get_models import get_course_info, get_professor
 from app.triplestore.names_and_ids import get_school_name
 from app.triplestore.spells import manage_spells_list
 from app.triplestore.students import get_students_enrolled
-from app.triplestore.get_models import get_course_info, get_professor
 
-    
+
 def get_professor_info(professor_id):
     from app.triplestore.wizards import get_wizard_info_by_uri
     

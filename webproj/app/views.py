@@ -1,14 +1,19 @@
-from app.decorators import student_required, professor_required, headmaster_required, logout_required
-from app.triplestore.courses import update_is_learning_to_learned, get_courses_dict
+from app.decorators import (headmaster_required, logout_required,
+                            professor_required, student_required)
+from app.triplestore.courses import (get_courses_dict,
+                                     update_is_learning_to_learned)
 from app.triplestore.professors import get_professor_info
 from app.triplestore.spells import get_len_all_spells
 from app.triplestore.students import students_per_school_year
-from app.triplestore.wizards import get_role_info_by_wizard_id, get_headmaster_info, get_student_view_info, wizard_login, create_new_wizard
+from app.triplestore.wizards import (create_new_wizard, get_headmaster_info,
+                                     get_role_info_by_wizard_id,
+                                     get_student_view_info, wizard_login)
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect, render
 from django.views.decorators.http import require_http_methods
+
 
 def authentication(request):
     return render(request, 'app/login.html')
@@ -71,17 +76,22 @@ def professor_dashboard(request):
 @headmaster_required
 def headmaster_dashboard(request):
     headmaster_info = request.session['headmaster_info']
-    print(headmaster_dashboard)
-    print()
-    print(students_per_school_year())
-    print()
-    courses_dict = get_courses_dict()
-    print(courses_dict)
+    
+    courses = {}
+    courses =  get_courses_dict()
+    courses_in_list = []
+    for id, course in courses.items():
+        course["id"] = id
+        course["number_spells_taught"] = len(course["spells"])
+        courses_in_list.append(course)
+    
+    courses_in_list.sort(key = lambda course : (course["attending_year"], course["name"]))
     
     return render(request, 'app/headmaster_dashboard.html', {
         'headmaster': headmaster_info,
         'students_per_school_year': students_per_school_year(),
-        'courses_dict': courses_dict,
+        'students' : [],
+        'courses': courses_in_list,
     })
 
 

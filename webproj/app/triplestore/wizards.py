@@ -1,16 +1,11 @@
-from rdflib import Literal
-from app.triplestore.names_and_ids import get_house_name, get_school_name, get_professor_name
-
-from app.triplestore.spells import manage_spells_list
-from app.triplestore.students import get_students_enrolled
-from app.triplestore.courses import get_course_info, get_courses_uri_by_professor_uri, get_courses_dict
-from app.triplestore.students import get_student_info
-
-from app.models import Student, Wizard, Professor
-from app.triplestore.utils import execute_sparql_query, check_if_nmec_exists
-
-from app.triplestore.skills import get_skill_info
+from app.triplestore.courses import get_course_info
 from app.triplestore.get_models import get_wizard_info_by_uri
+from app.triplestore.names_and_ids import (get_house_name, get_professor_name,
+                                           get_school_name)
+from app.triplestore.spells import manage_spells_list
+from app.triplestore.students import get_student_info
+from app.triplestore.utils import check_if_nmec_exists, execute_sparql_query
+from rdflib import Literal
 
 
 def create_new_wizard(password: str, blood_type: str, eye_color: str, gender: str,

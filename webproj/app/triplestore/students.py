@@ -1,8 +1,6 @@
-from rdflib import Literal
-
-from app.triplestore.utils import execute_sparql_query
-from app.models import Student
 from app.triplestore.get_models import get_student_info
+from app.triplestore.utils import execute_sparql_query
+
 
 def get_number_students_is_learning_per_course_id():
     """
