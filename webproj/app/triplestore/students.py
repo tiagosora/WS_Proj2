@@ -1,4 +1,8 @@
+from rdflib import Literal
+
 from app.triplestore.utils import execute_sparql_query
+from app.models import Student
+from app.triplestore.get_models import get_student_info
 
 def get_number_students_is_learning_per_course_id():
     """
@@ -52,3 +56,54 @@ def students_per_school_year():
             students_per_year[school_year] = number_students
 
     return students_per_year
+
+def get_students_enrolled(course_id):
+    from app.triplestore.wizards import get_wizard_info_by_uri
+    
+    query_name = "app/queries/get_students_enrolled_course.sparql"
+    results, _ = execute_sparql_query(query_name, format="JSON", course_id=course_id)
+    
+    
+    students_enrolled = []
+    for elem in results["results"]["bindings"]:
+        student_uri = elem["student"]["value"]
+        student = get_student_info(student_uri)
+        wizard = get_wizard_info_by_uri(student.wizard)
+        
+        student_information = {}
+
+        student_information.update({"student_id": student.id})
+        student_information.update({"attending_year": student.school_year})
+        student_information.update(wizard.info())
+        student_information.update({"skills": [skill.name for skill in wizard.skills]})
+
+        students_enrolled.append(student_information)
+
+    return students_enrolled
+
+def get_students_finished_course(course_id):
+    from app.triplestore.wizards import get_wizard_info_by_uri
+    
+    query_name = "app/queries/get_students_made_course.sparql"
+    results, _ = execute_sparql_query(query_name, format="JSON", course_id=course_id)
+    
+    
+    students_finished = []
+    for elem in results["results"]["bindings"]:
+        student_uri = elem["student"]["value"]
+        student = get_student_info(student_uri)
+        wizard = get_wizard_info_by_uri(student.wizard)
+        
+        student_information = {}
+
+        student_information.update({"student_id": student.id})
+        student_information.update({"attending_year": student.school_year})
+        student_information.update(wizard.info())
+        student_information.update({"skills": [skill.name for skill in wizard.skills]})
+
+        students_finished.append(student_information)
+
+    return students_finished
+
+
+

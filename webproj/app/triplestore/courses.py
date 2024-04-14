@@ -2,28 +2,11 @@ from rdflib import URIRef, Literal
 from app.triplestore.utils import execute_sparql_query
 
 from app.models import Course
+from app.triplestore.spells import manage_spells_list
+from app.triplestore.wizards import get_students_enrolled
+from app.triplestore.get_models import get_professor, get_course_info, get_wizard_info_by_uri
+from app.triplestore.students import get_students_finished_course
 
-
-def get_course_info(course_uri):
-    query_name = "app/queries/get_user_info.sparql"
-
-    results, g = execute_sparql_query(query_name, format="turtle", user_uri=course_uri)
-
-    course_attrs = {'teaches_spell': []}
-    for s, p, o in g.triples((URIRef(course_uri), None, None)):
-        prop = p.split('#')[-1]
-        if prop == 'teaches_spell':
-            course_attrs['teaches_spell'].append(str(o))
-        else:
-            if isinstance(o, Literal):
-                value = o.toPython()
-            else:
-                value = str(o)
-            course_attrs[prop] = value
-
-    course = Course(**course_attrs)
-
-    return course
 
 def get_courses_uri_by_professor_uri(professor_uri):
     query_name = "app/queries/get_courses_uri_by_professor_uri.sparql"
@@ -39,6 +22,25 @@ def get_courses_uri_by_professor_uri(professor_uri):
 def update_learned_to_is_learning(course_id, student_id):   #teoricamente, useless
     query_name = "app/queries/update_learned_to_is_learning.sparql"
     execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, student_id=student_id)
+    
+def get_courses_dict():
+    
+    query_name = "app/queries/get_all_by_type.sparql"
+    results, _ = execute_sparql_query(query_name=query_name, format='JSON', type="course")
+    
+    courses = []
+    for elem in results["results"]["bindings"]:
+        courses.append(get_course_info(elem["course"]["value"]))
+        
+    courses_dict = {course.id: course.info_no_id()
+                | {'spells': manage_spells_list(course.teaches_spell)}
+                | {'is_learning': get_students_enrolled(course.id)}
+                | {'learned': get_students_finished_course(course.id)}
+                | {'professor_info': get_wizard_info_by_uri(get_professor(course.professor).wizard).info()}
+                for course in courses}
+    
+    return courses_dict
+
     
 def update_is_learning_to_learned(course_id, student_id):
     query_name = "app/queries/update_is_learning_to_learned.sparql"
