@@ -1,17 +1,13 @@
-from django.contrib.auth import logout
-from django.shortcuts import render, redirect
-from django.contrib.auth.decorators import login_required
-from django.views.decorators.http import require_http_methods
-from django.core.paginator import Paginator
-
-from app.triplestore.wizards import create_new_wizard
-from app.triplestore.wizards import wizard_login
-from app.triplestore.spells import get_len_all_spells
-from app.triplestore.wizards import get_role_info_by_wizard_id, get_student_view_info, get_professor_info
-
 from app.decorators import student_required, professor_required, headmaster_required, logout_required
 from app.triplestore.courses import update_is_learning_to_learned
-
+from app.triplestore.spells import get_len_all_spells
+from app.triplestore.students import students_per_school_year
+from app.triplestore.wizards import get_role_info_by_wizard_id, get_student_view_info, get_professor_info, wizard_login, create_new_wizard
+from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
+from django.shortcuts import render, redirect
+from django.views.decorators.http import require_http_methods
 
 def authentication(request):
     return render(request, 'app/login.html')
@@ -73,7 +69,12 @@ def professor_dashboard(request):
 
 @headmaster_required
 def headmaster_dashboard(request):
-    return render(request, 'app/headmaster_dashboard.html')
+    headmaster_info = request.session['headmaster_info']
+    
+    return render(request, 'app/headmaster_dashboard.html', {
+        'headmaster': headmaster_info,
+        'students_per_school_year': students_per_school_year(),
+    })
 
 
 @logout_required
@@ -139,6 +140,8 @@ def login_view(request):
             request.session['role'] = wizard_info
             request.session['wizard_type_id'] = wizard_type_id
             
+            print(wizard_info)
+            
             match wizard_info:
                 case 'student':
                     request.session['student_info'] = get_student_view_info(wizard_type_id)
@@ -147,6 +150,7 @@ def login_view(request):
                     request.session['professor_info'] = get_professor_info(wizard_type_id)
                     return redirect("professor_dashboard")
                 case 'headmaster':
+                    request.session['headmaster_info'] = get_professor_info(wizard_type_id)
                     return redirect("headmaster_dashboard")
                 case _:
                     logout(request)
