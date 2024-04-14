@@ -30,7 +30,7 @@ def get_courses_dict():
     
     courses = []
     for elem in results["results"]["bindings"]:
-        courses.append(get_course_info(elem["course"]["value"]))
+        courses.append(get_course_info(elem["data"]["value"]))
         
     courses_dict = {course.id: course.info_no_id()
                 | {'spells': manage_spells_list(course.teaches_spell)}

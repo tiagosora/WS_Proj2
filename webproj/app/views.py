@@ -5,7 +5,7 @@ from django.views.decorators.http import require_http_methods
 from django.core.paginator import Paginator
 
 from app.triplestore.wizards import create_new_wizard
-from app.triplestore.wizards import wizard_login
+from app.triplestore.wizards import wizard_login, get_all_students_info
 from app.triplestore.spells import get_len_all_spells
 from app.triplestore.wizards import get_role_info_by_wizard_id, get_student_view_info, get_headmaster_info
 
