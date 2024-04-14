@@ -85,7 +85,8 @@ class Course:
         self.professor = kwargs.get('professor', '')
         self.attending_year = kwargs.get('attending_year', '')
         self.teaches_spell = kwargs.get('teaches_spell', [])
-        self.type = kwargs.get('_type', 'course')
+        self._type = kwargs.get('_type', 'course')
+        self.type = kwargs.get('type', '')
         
     def __str__(self) -> str:
         return f"ID: {self.id}, \n\
@@ -98,6 +99,13 @@ class Course:
     def info(self):
         return {
             'id': self.id,
+            'name': self.name,
+            'attending_year': self.attending_year,
+            'type': self.type
+        }
+        
+    def info_no_id(self):
+        return {
             'name': self.name,
             'attending_year': self.attending_year,
             'type': self.type

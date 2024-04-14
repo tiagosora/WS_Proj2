@@ -1,0 +1,9 @@
+PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+
+SELECT ?student
+WHERE {{
+    ?course hogwarts:_type "course" . 
+    ?course hogwarts:id "{course_id}" .
+    ?student hogwarts:_type "student" .
+    ?student hogwarts:learned ?course .
+}}

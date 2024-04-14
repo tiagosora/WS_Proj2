@@ -1,8 +1,9 @@
 from app.decorators import student_required, professor_required, headmaster_required, logout_required
-from app.triplestore.courses import update_is_learning_to_learned
+from app.triplestore.courses import update_is_learning_to_learned, get_courses_dict
+from app.triplestore.professors import get_professor_info
 from app.triplestore.spells import get_len_all_spells
 from app.triplestore.students import students_per_school_year
-from app.triplestore.wizards import get_role_info_by_wizard_id, get_student_view_info, get_professor_info, wizard_login, create_new_wizard
+from app.triplestore.wizards import get_role_info_by_wizard_id, get_headmaster_info, get_student_view_info, wizard_login, create_new_wizard
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
@@ -70,10 +71,17 @@ def professor_dashboard(request):
 @headmaster_required
 def headmaster_dashboard(request):
     headmaster_info = request.session['headmaster_info']
+    print(headmaster_dashboard)
+    print()
+    print(students_per_school_year())
+    print()
+    courses_dict = get_courses_dict()
+    print(courses_dict)
     
     return render(request, 'app/headmaster_dashboard.html', {
         'headmaster': headmaster_info,
         'students_per_school_year': students_per_school_year(),
+        'courses_dict': courses_dict,
     })
 
 
@@ -150,7 +158,7 @@ def login_view(request):
                     request.session['professor_info'] = get_professor_info(wizard_type_id)
                     return redirect("professor_dashboard")
                 case 'headmaster':
-                    request.session['headmaster_info'] = get_professor_info(wizard_type_id)
+                    request.session['headmaster_info'] = get_headmaster_info(wizard_type_id)
                     return redirect("headmaster_dashboard")
                 case _:
                     logout(request)

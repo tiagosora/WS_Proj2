@@ -2,35 +2,15 @@ from rdflib import Literal
 from app.triplestore.names_and_ids import get_house_name, get_school_name, get_professor_name
 
 from app.triplestore.spells import manage_spells_list
-
-from app.triplestore.courses import get_course_info, get_courses_uri_by_professor_uri
+from app.triplestore.students import get_students_enrolled
+from app.triplestore.courses import get_course_info, get_courses_uri_by_professor_uri, get_courses_dict
+from app.triplestore.students import get_student_info
 
 from app.models import Student, Wizard, Professor
 from app.triplestore.utils import execute_sparql_query, check_if_nmec_exists
 
 from app.triplestore.skills import get_skill_info
-
-
-def get_wizard_info_by_uri(wizard_uri):
-    query_name = "app/queries/get_user_info.sparql"
-
-    results, g = execute_sparql_query(query_name, format="turtle", user_uri=wizard_uri)
-
-    wizard_attrs = {'skills': [], 'spells': []}
-    for s, p, o in g:
-        prop = p.split('#')[-1]
-        if prop == 'has_skill':
-            skill_info = get_skill_info(str(o))
-            wizard_attrs['skills'].append(skill_info)
-        else:
-            if isinstance(o, Literal):
-                value = o.toPython()
-            else:
-                value = str(o)
-            wizard_attrs[prop] = value
-
-    wizard = Wizard(**wizard_attrs)
-    return wizard
+from app.triplestore.get_models import get_wizard_info_by_uri
 
 
 def create_new_wizard(password: str, blood_type: str, eye_color: str, gender: str,
@@ -115,28 +95,6 @@ def get_role_info_by_wizard_id(wizard_id):
     return wizard_type, wizard_role, wizard_type_id
 
 
-def get_student_info(student_uri):
-    query_name = "app/queries/get_user_info.sparql"
-
-    _, g = execute_sparql_query(query_name, format="turtle", user_uri=student_uri)
-
-    student_attrs = {'learned': [], 'is_learning': []}
-    for _, p, o in g:
-        prop = p.split('#')[-1]
-        if prop == 'learned':
-            student_attrs['learned'].append(str(o))
-        elif prop == 'is_learning':
-            student_attrs['is_learning'].append(str(o))
-        else:
-            if isinstance(o, Literal):
-                value = o.toPython()
-            else:
-                value = str(o)
-            student_attrs[prop] = value
-
-    return Student(**student_attrs)
-
-
 def get_student_view_info(student_id):
     
     student_uri = f"http://hogwarts.edu/students/{student_id}"
@@ -182,62 +140,27 @@ def get_student_view_info(student_id):
             'spells_acquired': spells_acquired,
             'skills': skills
             }
-    
-    
-def get_students_enrolled(course_id):
-    query_name = "app/queries/get_students_enrolled_course.sparql"
-    results, _ = execute_sparql_query(query_name, format="JSON", course_id=course_id)
-    
-    
-    students_enrolled = []
-    for elem in results["results"]["bindings"]:
-        student_uri = elem["student"]["value"]
-        student = get_student_info(student_uri)
-        wizard = get_wizard_info_by_uri(student.wizard)
-        
-        student_information = {}
-        print(student.id)
-        student_information.update({"student_id": student.id})
-        student_information.update({"attending_year": student.school_year})
-        student_information.update(wizard.info())
-        student_information.update({"skills": [skill.name for skill in wizard.skills]})
 
-        students_enrolled.append(student_information)
-
-    return students_enrolled
-    
-def get_professor_info(professor_id):
-    professor_uri = f"http://hogwarts.edu/professors/{professor_id}"
+def get_headmaster_info(headmaster_id):
+    headmaster_uri = f"http://hogwarts.edu/headmasters/{headmaster_id}"
     query_name = "app/queries/get_user_info.sparql"
-
-    _, g = execute_sparql_query(query_name, format="turtle", user_uri=professor_uri)
-
-    professor_attrs = {'id': professor_id, 'learned': [], 'is_learning': []}
+    
+    _, g = execute_sparql_query(query_name, format="turtle", user_uri=headmaster_uri)
+    
+    headmaster_attr = {}
     for _, p, o in g:
         prop = p.split('#')[-1]
         if isinstance(o, Literal):
             value = o.toPython()
         else:
             value = str(o)
-        professor_attrs[prop] = value
-
-    professor = Professor(**professor_attrs)
-    wizard = get_wizard_info_by_uri(professor.wizard)
+        headmaster_attr[prop] = value
     
-    professor_courses = get_courses_uri_by_professor_uri(professor_uri)
+    if (not all(key in headmaster_attr for key in ["id", "start_date", "wizard"])):
+        return {}
     
-    total_professor_courses = []
-    for course_uri in professor_courses:
-        total_professor_courses.append(get_course_info(course_uri))
-        
-    professor_courses = [course.info()
-                        | {'spells': manage_spells_list(course.teaches_spell)}
-                        | {'students_enrolled': get_students_enrolled(course.id)}
-                        for course in total_professor_courses]
+    headmaster_start_date = headmaster_attr["start_date"]
     
-    professor_info = {}
-    professor_info.update({"courses": professor_courses})
-    professor_info.update({"professor": wizard.info() | {"school_name": get_school_name(professor.school)} })
-                        
-                        
-    return professor_info
+    headmaster_info = get_wizard_info_by_uri(headmaster_attr["wizard"]).info() | {"start_date": headmaster_start_date} 
+    
+    return headmaster_info
