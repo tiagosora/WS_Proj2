@@ -116,9 +116,9 @@ def get_students_not_learning_course(course_uri):
     students = []
     if len(results["results"]["bindings"]) > 0:
         for elem in results["results"]["bindings"]:
-            students.append({ "id": elem["wizardId"]["value"], "name": elem["name"]["value"]})
+            students.append({"id": elem["wizardId"]["value"], "name": elem["name"]["value"]})
 
-    students.sort(key = lambda student : student["name"])
+    students.sort(key=lambda student: student["name"])
     return students
 
 
@@ -132,7 +132,7 @@ def get_spells_not_taught_in_course(course_id):
     spells = []
     if len(results["results"]["bindings"]) > 0:
         for elem in results["results"]["bindings"]:
-            spells.append({ "id": elem["spellId"]["value"], "name": elem["name"]["value"]})
-    
-    spells.sort(key = lambda spell : spell["name"])
+            spells.append({"id": elem["spellId"]["value"], "name": elem["name"]["value"]})
+
+    spells.sort(key=lambda spell: spell["name"])
     return spells
