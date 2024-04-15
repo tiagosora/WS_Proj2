@@ -8,7 +8,9 @@ from app.triplestore.courses import (add_spell_to_course,
                                      update_is_learning_to_learned)
 from app.triplestore.professors import get_professor_info
 from app.triplestore.spells import get_len_all_spells
-from app.triplestore.students import students_per_school_year
+from app.triplestore.students import (
+    get_number_students_is_learning_per_course_id,
+    get_students_not_learning_course, students_per_school_year)
 from app.triplestore.wizards import (create_new_wizard, get_all_students_info,
                                      get_headmaster_info,
                                      get_role_info_by_wizard_id,
@@ -23,10 +25,15 @@ from django.views.decorators.http import require_http_methods
 def authentication(request):
     return render(request, 'app/login.html')
 
+
 # Create your views here.
 
 @login_required
 def index(request):
+    students = get_students_not_learning_course(5)
+
+    print(students)
+
     return render(request, 'app/index.html')
 
 
@@ -55,7 +62,6 @@ def student_dashboard(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     skills = [skill["name"] for skill in student_info["skills"]]
-    
 
     return render(request, 'app/student_dashboard.html', {
         'student': student,
@@ -107,6 +113,9 @@ def course_view(request):
         course_id = request.session['course_id']
     request.session['course_id'] = course_id
     request.session['back'] = 'back'
+    
+    print(course_id)
+    print(get_students_not_learning_course(course_id))
     
     course_full_info = get_course_by_id_dict(course_id)
     course_full_info['number_students_enrolled'] = len(course_full_info['is_learning'])
@@ -183,7 +192,7 @@ def register_view(request):
         # For example, using your create_new_wizard function
 
         success, id_number = create_new_wizard(password, blood_type, eye_color, gender, house, nmec, name, patronus,
-                                    species, wand)  # Fill in other parameters
+                                               species, wand)  # Fill in other parameters
         if success:
             request.session['nmec'] = nmec
             request.session['wizard_id'] = id_number  # An example of user identification
@@ -244,6 +253,7 @@ def login_view(request):
             
             print(wizard_info)
             
+
             match wizard_info:
                 case 'student':
                     request.session['student_info'] = get_student_view_info(wizard_type_id)
@@ -261,6 +271,7 @@ def login_view(request):
             return render(request, 'registration/login.html', {'error': 'Registration failed.'})
     return render(request, 'registration/login.html')
 
+
 @require_http_methods(["POST"])
 @professor_required
 def pass_student(request):
@@ -268,9 +279,10 @@ def pass_student(request):
     course_id = request.POST.get('course_id')
 
     update_is_learning_to_learned(course_id, student_id)
-    
+
     request.session['professor_info'] = get_professor_info(request.session['wizard_type_id'])
     return redirect("professor_dashboard")
+
 
 @login_required(redirect_field_name="")
 def logout_view(request):
