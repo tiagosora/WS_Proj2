@@ -1,5 +1,4 @@
 PREFIX hogwarts: <http://hogwarts.edu/ontology#>
-    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
     INSERT DATA {{
     GRAPH <http://hogwarts.edu/ontology#> {{
@@ -31,4 +30,4 @@ PREFIX hogwarts: <http://hogwarts.edu/ontology#>
                 hogwarts:school_year "1" ;
                 hogwarts:wizard <http://hogwarts.edu/wizards/{max_wizard_id}> .
     }}
-    }}
+}}
