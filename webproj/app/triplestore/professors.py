@@ -37,9 +37,9 @@ def get_all_teachers_not_teaching_course(professor_id):
     query_name = "app/queries/get_all_teachers_not_teaching_course.sparql"
     results, _ = execute_sparql_query(query_name=query_name, format='JSON', professor_id=professor_id)
 
-    professor = {}
+    professors = []
     if len(results["results"]["bindings"]) > 0:
         for elem in results["results"]["bindings"]:
-            professor[elem["wizardId"]["value"]] = elem["name"]["value"]
+            professors.append({'id': elem["wizardId"]["value"], 'name': elem["name"]["value"]}) 
 
-    return professor
+    return professors   

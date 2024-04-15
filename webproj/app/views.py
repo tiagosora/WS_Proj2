@@ -1,7 +1,7 @@
 from app.decorators import (headmaster_required, logout_required,
                             professor_required, student_required)
 from app.triplestore.courses import (add_spell_to_course,
-                                     add_student_to_course,
+                                     add_student_to_course, change_course_professor,
                                      get_course_by_id_dict, get_courses_dict,
                                      remove_spell_from_course,
                                      remove_student_from_course,
@@ -120,11 +120,14 @@ def course_view(request):
     course_full_info['number_students_enrolled'] = len(course_full_info['is_learning'])
     course_full_info['number_spells_taught'] = len(course_full_info['spells'])
     
+    available_professors = get_all_teachers_not_teaching_course(course_full_info['professor_info']['id'])
+    available_professors.sort(key = lambda professor : professor['name'])
+    
     return render(request, 'app/course.html', {
         'course': course_full_info,
         'available_students': get_students_not_learning_course(course_id),
         'available_spells': get_spells_not_taught_in_course(course_id),
-        'available_professors': [],
+        'available_professors': available_professors,
     })
  
 @require_http_methods(["POST"])   
@@ -182,6 +185,8 @@ def change_professor(request):
     course_id = request.POST.get('course_id')
     print("Professor: ",professor_id)
     print("Course: ",course_id)
+    
+    change_course_professor(course_id, professor_id)
     
     return redirect("course")
 

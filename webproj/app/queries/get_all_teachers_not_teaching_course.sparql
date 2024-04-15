@@ -4,7 +4,7 @@ SELECT ?name ?wizardId
 WHERE {{
     ?professor hogwarts:_type "professor" .
     ?professor hogwarts:wizard ?wizard .
-    ?wizard hogwarts:id ?wizardId .
+    ?professor hogwarts:id ?wizardId .
     ?wizard hogwarts:name ?name
 
     FILTER(?wizardId != "{professor_id}")
