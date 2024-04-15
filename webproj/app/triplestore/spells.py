@@ -12,9 +12,9 @@ def manage_spells_list(spells_uri):
 
 
 def get_spell_info(spell_uri):
-    query_name = "app/queries/get_user_info.sparql"
+    query_name = "app/queries/get_entity_info_by_uri.sparql"
 
-    results, g = execute_sparql_query(query_name, format="turtle", user_uri=spell_uri)
+    results, g = execute_sparql_query(query_name, format="turtle", uri=spell_uri)
 
     spell_attrs = {'teaches_spell': []}
     for s, p, o in g.triples((URIRef(spell_uri), None, None)):

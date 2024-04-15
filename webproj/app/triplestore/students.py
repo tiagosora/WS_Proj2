@@ -103,5 +103,3 @@ def get_students_finished_course(course_id):
 
     return students_finished
 
-
-

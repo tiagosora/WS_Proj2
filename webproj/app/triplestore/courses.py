@@ -39,6 +39,24 @@ def get_courses_dict():
     
     return courses_dict
 
+def get_course_by_id_dict(course_id):
+    
+    course = get_course_info(course_uri=f"http://hogwarts.edu/courses/{course_id}")
+    
+    course_info = course.info()
+    spells = manage_spells_list(course.teaches_spell)
+    is_learning = get_students_enrolled(course.id)
+    learned = get_students_finished_course(course.id)
+    professor_info = get_wizard_info_by_uri(get_professor(course.professor).wizard).info()
+
+    return {
+        **course_info,
+        'spells': spells,
+        'is_learning': is_learning,
+        'learned': learned,
+        'professor_info': professor_info
+    }
+
     
 def update_is_learning_to_learned(course_id, student_id):
     query_name = "app/queries/update_is_learning_to_learned.sparql"

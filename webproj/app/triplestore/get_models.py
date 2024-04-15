@@ -5,9 +5,9 @@ from rdflib import Literal, URIRef
 
 
 def get_professor(professor_uri):
-    query_name = "app/queries/get_user_info.sparql"
+    query_name = "app/queries/get_entity_info_by_uri.sparql"
 
-    _, g = execute_sparql_query(query_name, format="turtle", user_uri=professor_uri)
+    _, g = execute_sparql_query(query_name, format="turtle", uri=professor_uri)
 
     professor_attrs = {'learned': [], 'is_learning': []}
     for _, p, o in g:
@@ -22,9 +22,9 @@ def get_professor(professor_uri):
     return professor
 
 def get_wizard_info_by_uri(wizard_uri):
-    query_name = "app/queries/get_user_info.sparql"
+    query_name = "app/queries/get_entity_info_by_uri.sparql"
 
-    results, g = execute_sparql_query(query_name, format="turtle", user_uri=wizard_uri)
+    results, g = execute_sparql_query(query_name, format="turtle", uri=wizard_uri)
 
     wizard_attrs = {'skills': [], 'spells': []}
     for s, p, o in g:
@@ -43,9 +43,9 @@ def get_wizard_info_by_uri(wizard_uri):
     return wizard
 
 def get_student_info(student_uri):
-    query_name = "app/queries/get_user_info.sparql"
+    query_name = "app/queries/get_entity_info_by_uri.sparql"
 
-    _, g = execute_sparql_query(query_name, format="turtle", user_uri=student_uri)
+    _, g = execute_sparql_query(query_name, format="turtle", uri=student_uri)
 
     student_attrs = {'learned': [], 'is_learning': []}
     for _, p, o in g:
@@ -64,9 +64,9 @@ def get_student_info(student_uri):
     return Student(**student_attrs)
 
 def get_course_info(course_uri):
-    query_name = "app/queries/get_user_info.sparql"
+    query_name = "app/queries/get_entity_info_by_uri.sparql"
 
-    results, g = execute_sparql_query(query_name, format="turtle", user_uri=course_uri)
+    results, g = execute_sparql_query(query_name, format="turtle", uri=course_uri)
 
     course_attrs = {'teaches_spell': []}
     for s, p, o in g.triples((URIRef(course_uri), None, None)):

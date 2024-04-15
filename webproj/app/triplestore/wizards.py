@@ -163,9 +163,9 @@ def get_student_view_info(student_id):
 
 def get_headmaster_info(headmaster_id):
     headmaster_uri = f"http://hogwarts.edu/headmasters/{headmaster_id}"
-    query_name = "app/queries/get_user_info.sparql"
+    query_name = "app/queries/get_entity_info_by_uri.sparql"
     
-    _, g = execute_sparql_query(query_name, format="turtle", user_uri=headmaster_uri)
+    _, g = execute_sparql_query(query_name, format="turtle", uri=headmaster_uri)
     
     headmaster_attr = {}
     for _, p, o in g:
