@@ -18,6 +18,7 @@ urlpatterns = [
     path('add_student', views.add_student, name='add_student'),
     path('remove_spell', views.remove_spell, name='remove_spell'),
     path('add_spell', views.add_spell, name='add_spell'),
+    path('change_professor', views.change_professor, name='change_professor'),
 
     path('professor/', views.professor_dashboard, name='professor_dashboard'),
 

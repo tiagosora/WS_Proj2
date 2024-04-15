@@ -113,9 +113,26 @@ def get_students_not_learning_course(course_uri):
     query_name = "app/queries/get_students_not_learning_course.sparql"
     results, _ = execute_sparql_query(query_name=query_name, format='JSON', course_uri=course_uri)
 
-    students = {}
+    students = []
     if len(results["results"]["bindings"]) > 0:
         for elem in results["results"]["bindings"]:
-            students[elem["wizardId"]["value"]] = elem["name"]["value"]
+            students.append({ "id": elem["wizardId"]["value"], "name": elem["name"]["value"]})
 
+    students.sort(key = lambda student : student["name"])
     return students
+
+
+def get_spells_not_taught_in_course(course_id):
+    """
+        returns the all spells name and wizard_Id that are not taught in the course.
+    """
+    query_name = "app/queries/get_spells_not_taught_in_course.sparql"
+    results, _ = execute_sparql_query(query_name=query_name, format='JSON', course_id=course_id)
+
+    spells = []
+    if len(results["results"]["bindings"]) > 0:
+        for elem in results["results"]["bindings"]:
+            spells.append({ "id": elem["spellId"]["value"], "name": elem["name"]["value"]})
+    
+    spells.sort(key = lambda spell : spell["name"])
+    return spells

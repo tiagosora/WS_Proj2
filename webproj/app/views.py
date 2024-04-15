@@ -8,9 +8,9 @@ from app.triplestore.courses import (add_spell_to_course,
                                      update_is_learning_to_learned)
 from app.triplestore.professors import get_professor_info
 from app.triplestore.spells import get_len_all_spells
-from app.triplestore.students import (
-    get_number_students_is_learning_per_course_id,
-    get_students_not_learning_course, students_per_school_year)
+from app.triplestore.students import (get_spells_not_taught_in_course,
+                                      get_students_not_learning_course,
+                                      students_per_school_year)
 from app.triplestore.wizards import (create_new_wizard, get_all_students_info,
                                      get_headmaster_info,
                                      get_role_info_by_wizard_id,
@@ -30,9 +30,9 @@ def authentication(request):
 
 @login_required
 def index(request):
-    students = get_students_not_learning_course(5)
+    spells = get_spells_not_taught_in_course(2)
 
-    print(students)
+    print(spells)
 
     return render(request, 'app/index.html')
 
@@ -114,16 +114,14 @@ def course_view(request):
     request.session['course_id'] = course_id
     request.session['back'] = 'back'
     
-    print(course_id)
-    print(get_students_not_learning_course(course_id))
-    
     course_full_info = get_course_by_id_dict(course_id)
     course_full_info['number_students_enrolled'] = len(course_full_info['is_learning'])
     
     return render(request, 'app/course.html', {
         'course': course_full_info,
-        'available_students': [],
-        'available_spells': [],
+        'available_students': get_students_not_learning_course(course_id),
+        'available_spells': get_spells_not_taught_in_course(course_id),
+        'available_professors': [],
     })
  
 @require_http_methods(["POST"])   
@@ -171,6 +169,16 @@ def add_spell(request):
     print("Course: ",course_id)
     
     add_spell_to_course(course_id, spell_id)
+    
+    return redirect("course")
+
+@require_http_methods(["POST"])
+@headmaster_required
+def change_professor(request):
+    professor_id = request.POST.get('professor_id')
+    course_id = request.POST.get('course_id')
+    print("Professor: ",professor_id)
+    print("Course: ",course_id)
     
     return redirect("course")
 
