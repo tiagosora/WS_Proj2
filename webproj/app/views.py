@@ -13,7 +13,8 @@ from app.decorators import student_required, professor_required, headmaster_requ
 from app.triplestore.courses import get_course_by_id_dict, update_is_learning_to_learned, change_course_professor
 from app.triplestore.professors import get_professor_info
 
-from app.triplestore.students import get_number_students_is_learning_per_course_id
+
+from app.triplestore.students import get_students_not_learning_course
 
 
 def authentication(request):
@@ -24,6 +25,9 @@ def authentication(request):
 
 @login_required
 def index(request):
+    students = get_students_not_learning_course(5)
+
+    print(students)
 
     return render(request, 'app/index.html')
 

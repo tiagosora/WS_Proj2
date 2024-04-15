@@ -2,7 +2,6 @@ from rdflib import Literal
 
 from app.triplestore.utils import execute_sparql_query
 from app.triplestore.get_models import get_student_info
-from app.triplestore.wizards import get_wizard_info_by_uri
 
 
 def get_number_students_is_learning_per_course_id():
@@ -62,6 +61,7 @@ def students_per_school_year():
 
 
 def get_students_enrolled(course_id):
+    from app.triplestore.wizards import get_wizard_info_by_uri
 
     query_name = "app/queries/get_students_enrolled_course.sparql"
     results, _ = execute_sparql_query(query_name, format="JSON", course_id=course_id)
@@ -85,6 +85,7 @@ def get_students_enrolled(course_id):
 
 
 def get_students_finished_course(course_id):
+    from app.triplestore.wizards import get_wizard_info_by_uri
 
     query_name = "app/queries/get_students_made_course.sparql"
     results, _ = execute_sparql_query(query_name, format="JSON", course_id=course_id)
@@ -107,7 +108,7 @@ def get_students_finished_course(course_id):
     return students_finished
 
 
-def get_number_students_is_learning_per_course_id(course_uri):
+def get_students_not_learning_course(course_uri):
     """
         returns the all students name and wizard_Id that have not learned nor are learning a course.
     """
