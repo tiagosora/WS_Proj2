@@ -1,0 +1,12 @@
+PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+
+SELECT ?spellId ?name
+WHERE {{
+    # Select all spells
+    ?spell hogwarts:_type "spell" .
+    ?spell hogwarts:id ?spellId .
+    ?spell hogwarts:name ?name .
+
+    # Exclude spells that are taught in the specified course
+    FILTER NOT EXISTS {{ <http://hogwarts.edu/courses/{course_id}> hogwarts:teaches_spell ?spell . }}
+}}
