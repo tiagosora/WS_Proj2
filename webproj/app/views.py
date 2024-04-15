@@ -116,6 +116,7 @@ def course_view(request):
     
     course_full_info = get_course_by_id_dict(course_id)
     course_full_info['number_students_enrolled'] = len(course_full_info['is_learning'])
+    course_full_info['number_spells_taught'] = len(course_full_info['spells'])
     
     return render(request, 'app/course.html', {
         'course': course_full_info,
