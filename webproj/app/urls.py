@@ -11,8 +11,13 @@ urlpatterns = [
     path('pass_student/', views.pass_student, name='pass_student'),
 
     path('headmaster/', views.headmaster_dashboard, name='headmaster_dashboard'),
+    
+    # COURSE PAGE
     path('course', views.course_view , name='course'),
     path('remove_student', views.remove_student, name='remove_student'),
+    path('add_student', views.add_student, name='add_student'),
+    path('remove_spell', views.remove_spell, name='remove_spell'),
+    path('add_spell', views.add_spell, name='add_spell'),
 
     path('professor/', views.professor_dashboard, name='professor_dashboard'),
 

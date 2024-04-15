@@ -78,6 +78,10 @@ def remove_student_from_course(course_id, student_id):  #teoricamente, useless
     query_name = "app/queries/remove_student_from_course.sparql"
     execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, student_id=student_id)
     
+def change_course_professor(course_id, professor_id):
+    query_name = "app/queries/change_course_professor.sparql"
+    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, professor_id=professor_id)
+
 def get_len_all_courses():
     query_name = "app/queries/get_len_all_courses.sparql"
     results, _ = execute_sparql_query(query_name=query_name, format='JSON')

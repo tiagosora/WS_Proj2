@@ -1,0 +1,15 @@
+PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+
+DELETE {{
+  ?course hogwarts:professor ?old_professor .
+}}
+INSERT {{
+  ?course hogwarts:professor ?new_professor .
+}}
+WHERE {{
+    ?course hogwarts:_type "course" .
+    ?course hogwarts:id "{course_id}" .
+    ?course hogwarts:professor ?old_professor .
+    ?new_professor hogwarts:_type "professor" .
+    ?new_professor hogwarts:id "{professor_id}" .
+}}

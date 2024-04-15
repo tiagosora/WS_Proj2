@@ -1,6 +1,10 @@
 from app.decorators import (headmaster_required, logout_required,
                             professor_required, student_required)
-from app.triplestore.courses import (get_course_by_id_dict, get_courses_dict,
+from app.triplestore.courses import (add_spell_to_course,
+                                     add_student_to_course,
+                                     get_course_by_id_dict, get_courses_dict,
+                                     remove_spell_from_course,
+                                     remove_student_from_course,
                                      update_is_learning_to_learned)
 from app.triplestore.professors import get_professor_info
 from app.triplestore.spells import get_len_all_spells
@@ -99,23 +103,67 @@ def headmaster_dashboard(request):
 @headmaster_required
 def course_view(request):
     course_id = request.POST.get('course_id')
+    if not course_id:
+        course_id = request.session['course_id']
+    request.session['course_id'] = course_id
     request.session['back'] = 'back'
     
     course_full_info = get_course_by_id_dict(course_id)
     course_full_info['number_students_enrolled'] = len(course_full_info['is_learning'])
-
-
-        
+    
     return render(request, 'app/course.html', {
         'course': course_full_info,
+        'available_students': [],
+        'available_spells': [],
     })
-    
+ 
+@require_http_methods(["POST"])   
 @headmaster_required
 def remove_student(request):
     student_id = request.POST.get('student_id')
     course_id = request.POST.get('course_id')
+    print("Student: ",student_id)
+    print("Course: ",course_id)
     
-    return redirect("course_dashboard")
+    remove_student_from_course(course_id, student_id)
+    
+    return redirect("course")
+
+@require_http_methods(["POST"])
+@headmaster_required
+def add_student(request):
+    student_id = request.POST.get('student_id')
+    course_id = request.POST.get('course_id')
+    print("Student: ",student_id)
+    print("Course: ",course_id)
+    
+    add_student_to_course(course_id, student_id)
+    
+    return redirect("course")
+
+@require_http_methods(["POST"])
+@headmaster_required
+def remove_spell(request):
+    spell_id = request.POST.get('spell_id')
+    course_id = request.POST.get('course_id')
+    print("Spell: ",spell_id)
+    print("Course: ",course_id)
+    
+    remove_spell_from_course(course_id, spell_id)
+    
+    return redirect("course")
+
+@require_http_methods(["POST"])
+@headmaster_required
+def add_spell(request):
+    spell_id = request.POST.get('spell_id')
+    course_id = request.POST.get('course_id')
+    print("Spell: ",spell_id)
+    print("Course: ",course_id)
+    
+    add_spell_to_course(course_id, spell_id)
+    
+    return redirect("course")
 
 @logout_required
 def register_view(request):
@@ -214,6 +262,7 @@ def login_view(request):
     return render(request, 'registration/login.html')
 
 @require_http_methods(["POST"])
+@professor_required
 def pass_student(request):
     student_id = request.POST.get('student_id')
     course_id = request.POST.get('course_id')

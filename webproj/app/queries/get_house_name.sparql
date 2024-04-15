@@ -1,7 +1,7 @@
-    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX hogwarts: <http://hogwarts.edu/ontology#>
-    SELECT
-        ?name
-    WHERE {{
-        <http://hogwarts.edu/houses/{houseId}> hogwarts:name ?name .
-    }}
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+SELECT
+    ?name
+WHERE {{
+    <http://hogwarts.edu/houses/{houseId}> hogwarts:name ?name .
+}}
