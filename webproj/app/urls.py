@@ -11,10 +11,13 @@ urlpatterns = [
     path('pass_student/', views.pass_student, name='pass_student'),
 
     path('headmaster/', views.headmaster_dashboard, name='headmaster_dashboard'),
+    path('course', views.course_view , name='course'),
+    path('remove_student', views.remove_student, name='remove_student'),
 
     path('professor/', views.professor_dashboard, name='professor_dashboard'),
 
     path('accounts/', include('django.contrib.auth.urls')),
+    path('back_to_dashboard', views.back_to_dashboard, name='back_to_dashboard'),
 
     # Register
     path('register/', views.register_view, name='register'),
