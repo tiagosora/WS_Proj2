@@ -89,14 +89,41 @@ def get_role_info_by_wizard_id(wizard_id):
 
     return wizard_type, wizard_role, wizard_type_id
 
+def get_all_students_info():
+    query_name = "app/queries/get_all_by_type.sparql"
 
-def get_student_view_info(student_id):
+    results, _ = execute_sparql_query(query_name=query_name, format='JSON', type="student")
     
-    student_uri = f"http://hogwarts.edu/students/{student_id}"
+    if len(results["results"]["bindings"]) <= 0:
+        return []
+    
+    students = []
+    for elem in results["results"]["bindings"]:
+        wizard, student = student_info(student_uri=elem["data"]["value"])
+        
+        student_information = wizard.info() \
+                            | {'house_name': get_house_name(wizard.house)} \
+                            | {'school_year': student.school_year}
+                            
+        
+        students.append(student_information)
+        
+    return students
+    
+
+def student_info(student_uri):
     
     student = get_student_info(student_uri)
     wizard = get_wizard_info_by_uri(student.wizard)
 
+    return wizard, student
+    
+    
+def get_student_view_info(student_id):
+    student_uri = f"http://hogwarts.edu/students/{student_id}"
+    
+    wizard, student = student_info(student_uri=student_uri)
+    
     courses_is_learning_list = []
     for course in student.is_learning:
         courses_is_learning_list.append(get_course_info(course))
@@ -120,11 +147,9 @@ def get_student_view_info(student_id):
 
     skills = [skill.info() for skill in wizard.skills]
     
-    
-
     spells_acquired = []
     [spells_acquired.extend(spell['spells']) for spell in learned_courses]
-
+    
     return {'student':
                 wizard.info()
                 | {'house_name': get_house_name(wizard.house)}
@@ -134,7 +159,7 @@ def get_student_view_info(student_id):
             'learned_courses': learned_courses,
             'spells_acquired': spells_acquired,
             'skills': skills
-            }
+            }   
 
 def get_headmaster_info(headmaster_id):
     headmaster_uri = f"http://hogwarts.edu/headmasters/{headmaster_id}"

@@ -5,7 +5,8 @@ from app.triplestore.courses import (get_courses_dict,
 from app.triplestore.professors import get_professor_info
 from app.triplestore.spells import get_len_all_spells
 from app.triplestore.students import students_per_school_year
-from app.triplestore.wizards import (create_new_wizard, get_headmaster_info,
+from app.triplestore.wizards import (create_new_wizard, get_all_students_info,
+                                     get_headmaster_info,
                                      get_role_info_by_wizard_id,
                                      get_student_view_info, wizard_login)
 from django.contrib.auth import logout
@@ -76,8 +77,9 @@ def professor_dashboard(request):
 @headmaster_required
 def headmaster_dashboard(request):
     headmaster_info = request.session['headmaster_info']
+    students_list = get_all_students_info()
+    students_list.sort(key = lambda student : (student["name"], student["gender"], student["blood_type"]))
     
-    courses = {}
     courses =  get_courses_dict()
     courses_in_list = []
     for id, course in courses.items():
@@ -90,7 +92,7 @@ def headmaster_dashboard(request):
     return render(request, 'app/headmaster_dashboard.html', {
         'headmaster': headmaster_info,
         'students_per_school_year': students_per_school_year(),
-        'students' : [],
+        'students' : students_list,
         'courses': courses_in_list,
     })
 

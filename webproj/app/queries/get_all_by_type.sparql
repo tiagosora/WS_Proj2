@@ -1,6 +1,6 @@
 PREFIX hogwarts: <http://hogwarts.edu/ontology#>
 
-SELECT ?course
+SELECT ?data
 WHERE {{
-    ?course hogwarts:_type "{type}" .
+    ?data hogwarts:_type "{type}" .
 }}
