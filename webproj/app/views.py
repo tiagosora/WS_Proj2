@@ -13,14 +13,18 @@ from app.decorators import student_required, professor_required, headmaster_requ
 from app.triplestore.courses import get_course_by_id_dict, update_is_learning_to_learned, change_course_professor
 from app.triplestore.professors import get_professor_info
 
+from app.triplestore.students import get_number_students_is_learning_per_course_id
+
 
 def authentication(request):
     return render(request, 'app/login.html')
+
 
 # Create your views here.
 
 @login_required
 def index(request):
+
     return render(request, 'app/index.html')
 
 
@@ -49,7 +53,6 @@ def student_dashboard(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     skills = [skill["name"] for skill in student_info["skills"]]
-    
 
     return render(request, 'app/student_dashboard.html', {
         'student': student,
@@ -95,7 +98,7 @@ def register_view(request):
         # For example, using your create_new_wizard function
 
         success, id_number = create_new_wizard(password, blood_type, eye_color, gender, house, nmec, name, patronus,
-                                    species, wand)  # Fill in other parameters
+                                               species, wand)  # Fill in other parameters
         if success:
             request.session['nmec'] = nmec
             request.session['wizard_id'] = id_number  # An example of user identification
@@ -139,7 +142,7 @@ def login_view(request):
 
             request.session['role'] = wizard_info
             request.session['wizard_type_id'] = wizard_type_id
-            
+
             match wizard_info:
                 case 'student':
                     request.session['student_info'] = get_student_view_info(wizard_type_id)
@@ -156,15 +159,17 @@ def login_view(request):
             return render(request, 'registration/login.html', {'error': 'Registration failed.'})
     return render(request, 'registration/login.html')
 
+
 @require_http_methods(["POST"])
 def pass_student(request):
     student_id = request.POST.get('student_id')
     course_id = request.POST.get('course_id')
 
     update_is_learning_to_learned(course_id, student_id)
-    
+
     request.session['professor_info'] = get_professor_info(request.session['wizard_type_id'])
     return redirect("professor_dashboard")
+
 
 @login_required(redirect_field_name="")
 def logout_view(request):
