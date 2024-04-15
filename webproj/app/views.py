@@ -21,6 +21,8 @@ from django.core.paginator import Paginator
 from django.shortcuts import redirect, render
 from django.views.decorators.http import require_http_methods
 
+from app.triplestore.professors import get_all_teachers_not_teaching_course
+
 
 def authentication(request):
     return render(request, 'app/login.html')
@@ -30,7 +32,7 @@ def authentication(request):
 
 @login_required
 def index(request):
-    spells = get_spells_not_taught_in_course(2)
+    spells = get_all_teachers_not_teaching_course(5)
 
     print(spells)
 

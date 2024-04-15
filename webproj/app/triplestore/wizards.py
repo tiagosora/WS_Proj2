@@ -176,7 +176,7 @@ def get_headmaster_info(headmaster_id):
             value = str(o)
         headmaster_attr[prop] = value
     
-    if (not all(key in headmaster_attr for key in ["id", "start_date", "wizard"])):
+    if not all(key in headmaster_attr for key in ["id", "start_date", "wizard"]):
         return {}
     
     headmaster_start_date = headmaster_attr["start_date"]
