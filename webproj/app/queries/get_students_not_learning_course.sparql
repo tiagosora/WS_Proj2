@@ -3,8 +3,8 @@ PREFIX hogwarts: <http://hogwarts.edu/ontology#>
 SELECT ?wizardId ?name
 WHERE {{
     ?student hogwarts:_type "student" .
+    ?student hogwarts:id ?wizardId .
     ?student hogwarts:wizard ?wizard .
-    ?wizard hogwarts:id ?wizardId .
     ?wizard hogwarts:name ?name .
 
     FILTER NOT EXISTS {{ ?student hogwarts:is_learning <http://hogwarts.edu/courses/{course_uri}> . }}

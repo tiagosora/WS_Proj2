@@ -1,0 +1,221 @@
+{% extends "./base.html" %}
+{% load static %}
+
+
+{% block title %}Headmaster's Dashboard{% endblock %}
+
+{% block content %}
+<style>
+    .dashboard-card, .dashboard-main-card {
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+    }
+    .dashboard-card:hover {
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+    .table-cell-custom {
+        @apply truncate max-w-xs; /* Truncate text and set max width */
+    }
+</style>
+
+<h2 class="text-4xl font-bold text-center mt-10">Headmaster <span class="text-amber-600">{{ headmaster.name }}</span>'s Dashboard</h2>
+<div class="mt-10 flex flex-col items-center justify-center">
+    <div class="container mx-auto px-6 rounded-lg">
+        <div class="dashboard-main-card shadow-xl rounded-lg p-6 mb-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-800 px-4 sm:px-8">
+                <p><strong>Name:</strong> {{ headmaster.name }}</p>
+                <p><strong>Gender:</strong> {{ headmaster.gender }}</p>
+                <p><strong>Species:</strong> {{ headmaster.species }}</p>
+                <p><strong>Blood Type:</strong> {{ headmaster.blood_type }}</p>
+                <p><strong>Wand:</strong> {{ headmaster.wand }}</p>
+                <p><strong>Patronus:</strong> {{ headmaster.patronus }}</p>
+                <p><strong class="text-amber-600">Started headmaster role on:</strong> {{ headmaster.start_date }}</p>
+            </div>
+            <div class="mt-10 px-4 sm:px-8">
+                <div class="dashboard-card bg-white rounded-lg shadow p-4">
+                    <h3 class="text-2xl font-semibold mb-3">Courses</h3>
+                    <div id="coursesContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <!-- Courses will be inserted dynamically -->
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10 flex flex-col items-center justify-center overflow-x-auto">
+                <div class="container mx-auto px-4 sm:px-8">
+                    <div class="dashboard-main-card shadow-xl rounded-lg p-4 mb-8 overflow-hidden">
+                        <h3 class="text-2xl font-semibold mb-3 leading-tight">Students</h3>
+                        <div class="inline-block min-w-full rounded-lg overflow-hidden">
+                            <table class="min-w-full leading-normal">
+                                <thead>
+                                    <tr>
+                                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                                            Name
+                                        </th>
+                                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                                            House
+                                        </th>
+                                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                                            Gender
+                                        </th>
+                                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                                            Blood Type
+                                        </th>
+                                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                                            Species
+                                        </th>
+                                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                                            Wand
+                                        </th>
+                                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                                            Patronus
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="studentsTableBody" class="bg-white">
+                                    <!-- Student rows will be dynamically inserted here -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Pagination Controls -->
+                        <div class="pagination mt-4 text-amber-600 flex justify-center items-center gap-4">
+                            <button onclick="changeStudentsPage(-1)" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">Prev</button>
+                            <span id="studentPageIndicator" class="font-semibold">Page 1</span>
+                            <button onclick="changeStudentsPage(1)" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="courseModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75"></div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full sm:max-w-lg">
+            <form id="courseViewDetails" method="post" action="{% url 'course' %}">
+                {% csrf_token %}
+                <input type="hidden" name="course_id" id="hiddenCourseId" value="">
+                <div class="px-4 pt-5 pb-4 bg-white">
+                    <div class="sm:flex sm:items-start">
+                        <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
+                            <h3 class="text-lg leading-6 font-medium text-gray-900" id="courseName">
+                                <!-- Course name will be inserted here -->
+                            </h3>
+                            <div class="mt-4">
+                                <div class="flex flex-col space-y-2" id="courseDetails">
+                                    <!-- Course details will be dynamically inserted here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <button type="submit" class="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">View/Edit Details</button>
+                    <button type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-amber-600 text-base font-medium text-white hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" onclick="closeModal()">
+                        Close
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    const students = {{ students|safe }}; 
+
+    var currentStudentPage = 1;
+    var studentsPerPage = 10; // Or any other number you prefer
+    
+    function renderStudents() {
+        var container = document.getElementById('studentsTableBody');
+        container.innerHTML = ''; // Clear previous entries
+        var start = (currentStudentPage - 1) * studentsPerPage;
+        var end = start + studentsPerPage;
+        var paginatedStudents = students.slice(start, end);
+    
+        paginatedStudents.forEach(student => {
+            var gender = student.gender ? student.gender : 'Unknown';
+            var blood_type = student.blood_type ? student.blood_type : 'Unknown';
+            var species = student.species ? student.species : 'Unknown';
+            var house = student.house_name ? student.house_name : 'Unknown';
+            var wand = student.wand ? student.wand : 'Unknown';
+            var patronus = student.patronus ? student.patronus : 'Unknown';
+            var row = `<tr>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                    <div class="flex items-center">
+                        <div class="ml-3">
+                            <p class="text-gray-900 whitespace-no-wrap">${student.name}</p>
+                        </div>
+                    </div>
+                </td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">${house}</td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">${gender}</td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">${blood_type}</td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">${species}</td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">${wand}</td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">${patronus}</td>
+            </tr>`;
+            container.innerHTML += row;
+        });
+    
+        document.getElementById('studentPageIndicator').innerText = `Page ${currentStudentPage}`;
+    }
+    
+    function changeStudentsPage(step) {
+        var totalPages = Math.ceil(students.length / studentsPerPage);
+        currentStudentPage += step;
+        if (currentStudentPage < 1) currentStudentPage = 1;
+        else if (currentStudentPage > totalPages) currentStudentPage = totalPages;
+    
+        renderStudents();
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        renderStudents();
+    });
+</script>
+    
+<script>
+    const courses = {{ courses|safe }};
+    
+    function openModal(courseId) {
+        const course = courses.find(c => c.id == courseId);
+        if (!course) return;
+    
+        // Populate modal with course details
+        document.getElementById('courseName').innerText = course.name;
+        const details = document.getElementById('courseDetails');
+        details.innerHTML = `
+            <p><strong>Year:</strong> ${course.attending_year}</p>
+            <p><strong>Type:</strong> ${course.type}</p>
+            <p><strong>Professor:</strong> ${course.professor_info.name}</p>
+            <p><strong>Number of Spells Taught:</strong> ${course.number_spells_taught}</p>
+        `;
+            
+        document.getElementById('hiddenCourseId').value = course.id;
+    
+        // Show the modal
+        document.getElementById('courseModal').style.display = 'block';
+        document.body.classList.add('modal-active');
+    }
+    
+    function closeModal() {
+        document.getElementById('courseModal').style.display = 'none';
+        document.body.classList.remove('modal-active');
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const coursesContainer = document.getElementById('coursesContainer');
+        const courseHtml = courses.map(course => `
+            <div class="bg-[#f7f4f0] hover:bg-[#ede9e5] rounded-lg shadow p-4 cursor-pointer" onclick="openModal('${course.id}')">
+                <h3 class="text-2xl font-semibold mb-3">${course.name}</h3>
+                <p>Type: ${course.type}</p>
+                <p>Year: ${course.attending_year}</p>
+            </div>
+        `).join('');
+        coursesContainer.innerHTML = courseHtml;
+    });
+</script>
+    
+
+{% endblock %}

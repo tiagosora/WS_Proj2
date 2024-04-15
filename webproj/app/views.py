@@ -1,18 +1,25 @@
-from django.contrib.auth import logout
-from django.shortcuts import render, redirect
-from django.contrib.auth.decorators import login_required
-from django.views.decorators.http import require_http_methods
-from django.core.paginator import Paginator
-
-from app.triplestore.wizards import create_new_wizard
-from app.triplestore.wizards import wizard_login, get_all_students_info
-from app.triplestore.spells import get_len_all_spells
-from app.triplestore.wizards import get_role_info_by_wizard_id, get_student_view_info, get_headmaster_info
-
-from app.decorators import student_required, professor_required, headmaster_required, logout_required
-from app.triplestore.courses import get_course_by_id_dict, update_is_learning_to_learned, change_course_professor
+from app.decorators import (headmaster_required, logout_required,
+                            professor_required, student_required)
+from app.triplestore.courses import (add_spell_to_course,
+                                     add_student_to_course,
+                                     get_course_by_id_dict, get_courses_dict,
+                                     remove_spell_from_course,
+                                     remove_student_from_course,
+                                     update_is_learning_to_learned)
 from app.triplestore.professors import get_professor_info
-from app.triplestore.students import get_spells_not_taught_in_course
+from app.triplestore.spells import get_len_all_spells
+from app.triplestore.students import (get_spells_not_taught_in_course,
+                                      get_students_not_learning_course,
+                                      students_per_school_year)
+from app.triplestore.wizards import (create_new_wizard, get_all_students_info,
+                                     get_headmaster_info,
+                                     get_role_info_by_wizard_id,
+                                     get_student_view_info, wizard_login)
+from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
+from django.shortcuts import redirect, render
+from django.views.decorators.http import require_http_methods
 
 
 def authentication(request):
@@ -79,8 +86,101 @@ def professor_dashboard(request):
 
 @headmaster_required
 def headmaster_dashboard(request):
-    return render(request, 'app/headmaster_dashboard.html')
+    headmaster_info = request.session['headmaster_info']
+    students_list = get_all_students_info()
+    students_list.sort(key = lambda student : (student["name"], student["gender"], student["blood_type"]))
+    
+    courses =  get_courses_dict()
+    courses_in_list = []
+    for id, course in courses.items():
+        course["id"] = id
+        course["number_spells_taught"] = len(course["spells"])
+        courses_in_list.append(course)
+    
+    courses_in_list.sort(key = lambda course : (course["attending_year"], course["name"]))
+    
+    return render(request, 'app/headmaster_dashboard.html', {
+        'headmaster': headmaster_info,
+        'students_per_school_year': students_per_school_year(),
+        'students' : students_list,
+        'courses': courses_in_list,
+    })
 
+@headmaster_required
+def course_view(request):
+    course_id = request.POST.get('course_id')
+    if not course_id:
+        course_id = request.session['course_id']
+    request.session['course_id'] = course_id
+    request.session['back'] = 'back'
+    
+    course_full_info = get_course_by_id_dict(course_id)
+    course_full_info['number_students_enrolled'] = len(course_full_info['is_learning'])
+    
+    return render(request, 'app/course.html', {
+        'course': course_full_info,
+        'available_students': get_students_not_learning_course(course_id),
+        'available_spells': get_spells_not_taught_in_course(course_id),
+        'available_professors': [],
+    })
+ 
+@require_http_methods(["POST"])   
+@headmaster_required
+def remove_student(request):
+    student_id = request.POST.get('student_id')
+    course_id = request.POST.get('course_id')
+    print("Student: ",student_id)
+    print("Course: ",course_id)
+    
+    remove_student_from_course(course_id, student_id)
+    
+    return redirect("course")
+
+@require_http_methods(["POST"])
+@headmaster_required
+def add_student(request):
+    student_id = request.POST.get('student_id')
+    course_id = request.POST.get('course_id')
+    print("Student: ",student_id)
+    print("Course: ",course_id)
+    
+    add_student_to_course(course_id, student_id)
+    
+    return redirect("course")
+
+@require_http_methods(["POST"])
+@headmaster_required
+def remove_spell(request):
+    spell_id = request.POST.get('spell_id')
+    course_id = request.POST.get('course_id')
+    print("Spell: ",spell_id)
+    print("Course: ",course_id)
+    
+    remove_spell_from_course(course_id, spell_id)
+    
+    return redirect("course")
+
+@require_http_methods(["POST"])
+@headmaster_required
+def add_spell(request):
+    spell_id = request.POST.get('spell_id')
+    course_id = request.POST.get('course_id')
+    print("Spell: ",spell_id)
+    print("Course: ",course_id)
+    
+    add_spell_to_course(course_id, spell_id)
+    
+    return redirect("course")
+
+@require_http_methods(["POST"])
+@headmaster_required
+def change_professor(request):
+    professor_id = request.POST.get('professor_id')
+    course_id = request.POST.get('course_id')
+    print("Professor: ",professor_id)
+    print("Course: ",course_id)
+    
+    return redirect("course")
 
 @logout_required
 def register_view(request):
@@ -125,6 +225,20 @@ def register_view(request):
 
     return render(request, 'registration/login.html')
 
+@login_required
+def back_to_dashboard(request):
+    wizard_info = request.session['role']
+    del request.session['back']
+    match wizard_info:
+        case 'student':
+            return redirect("student_dashboard")
+        case 'professor':
+            return redirect("professor_dashboard")
+        case 'headmaster':
+            return redirect("headmaster_dashboard")
+        case _:
+            logout(request)
+            return redirect("index")
 
 @logout_required
 def login_view(request):
@@ -144,6 +258,9 @@ def login_view(request):
 
             request.session['role'] = wizard_info
             request.session['wizard_type_id'] = wizard_type_id
+            
+            print(wizard_info)
+            
 
             match wizard_info:
                 case 'student':
@@ -153,6 +270,7 @@ def login_view(request):
                     request.session['professor_info'] = get_professor_info(wizard_type_id)
                     return redirect("professor_dashboard")
                 case 'headmaster':
+                    request.session['headmaster_info'] = get_headmaster_info(wizard_type_id)
                     return redirect("headmaster_dashboard")
                 case _:
                     logout(request)
@@ -163,6 +281,7 @@ def login_view(request):
 
 
 @require_http_methods(["POST"])
+@professor_required
 def pass_student(request):
     student_id = request.POST.get('student_id')
     course_id = request.POST.get('course_id')

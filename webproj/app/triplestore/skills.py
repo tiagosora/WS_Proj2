@@ -1,7 +1,6 @@
-from rdflib import URIRef, Literal
-from app.triplestore.utils import execute_sparql_query
-
 from app.models import Skill
+from app.triplestore.utils import execute_sparql_query
+from rdflib import Literal, URIRef
 
 
 def get_skill_info(skill_uri):

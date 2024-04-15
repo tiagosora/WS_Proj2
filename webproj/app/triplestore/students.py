@@ -1,7 +1,5 @@
-from rdflib import Literal
-
-from app.triplestore.utils import execute_sparql_query
 from app.triplestore.get_models import get_student_info
+from app.triplestore.utils import execute_sparql_query
 
 
 def get_number_students_is_learning_per_course_id():
@@ -115,11 +113,12 @@ def get_students_not_learning_course(course_uri):
     query_name = "app/queries/get_students_not_learning_course.sparql"
     results, _ = execute_sparql_query(query_name=query_name, format='JSON', course_uri=course_uri)
 
-    students = {}
+    students = []
     if len(results["results"]["bindings"]) > 0:
         for elem in results["results"]["bindings"]:
-            students[elem["wizardId"]["value"]] = elem["name"]["value"]
+            students.append({ "id": elem["wizardId"]["value"], "name": elem["name"]["value"]})
 
+    students.sort(key = lambda student : student["name"])
     return students
 
 
@@ -130,9 +129,10 @@ def get_spells_not_taught_in_course(course_id):
     query_name = "app/queries/get_spells_not_taught_in_course.sparql"
     results, _ = execute_sparql_query(query_name=query_name, format='JSON', course_id=course_id)
 
-    spells = {}
+    spells = []
     if len(results["results"]["bindings"]) > 0:
         for elem in results["results"]["bindings"]:
-            spells[elem["spellId"]["value"]] = elem["name"]["value"]
-
+            spells.append({ "id": elem["spellId"]["value"], "name": elem["name"]["value"]})
+    
+    spells.sort(key = lambda spell : spell["name"])
     return spells

@@ -1,7 +1,7 @@
-from rdflib import Literal, URIRef
 from app.models import Course, Professor, Student, Wizard
-from app.triplestore.utils import execute_sparql_query
 from app.triplestore.skills import get_skill_info
+from app.triplestore.utils import execute_sparql_query
+from rdflib import Literal, URIRef
 
 
 def get_professor(professor_uri):

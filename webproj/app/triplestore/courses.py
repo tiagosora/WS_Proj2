@@ -1,11 +1,9 @@
-from rdflib import URIRef, Literal
-from app.triplestore.utils import execute_sparql_query
-
-from app.models import Course
+from app.triplestore.get_models import (get_course_info, get_professor,
+                                        get_wizard_info_by_uri)
 from app.triplestore.spells import manage_spells_list
-from app.triplestore.wizards import get_students_enrolled
-from app.triplestore.get_models import get_professor, get_course_info, get_wizard_info_by_uri
-from app.triplestore.students import get_students_finished_course
+from app.triplestore.students import (get_students_enrolled,
+                                      get_students_finished_course)
+from app.triplestore.utils import execute_sparql_query
 
 
 def get_courses_uri_by_professor_uri(professor_uri):
@@ -34,8 +32,8 @@ def get_courses_dict():
         
     courses_dict = {course.id: course.info_no_id()
                 | {'spells': manage_spells_list(course.teaches_spell)}
-                | {'is_learning': get_students_enrolled(course.id)}
-                | {'learned': get_students_finished_course(course.id)}
+                # | {'is_learning': get_students_enrolled(course.id)}
+                # | {'learned': get_students_finished_course(course.id)}
                 | {'professor_info': get_wizard_info_by_uri(get_professor(course.professor).wizard).info()}
                 for course in courses}
     
