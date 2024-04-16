@@ -1,5 +1,5 @@
-from django.http import HttpResponseForbidden
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseForbidden
 from django.shortcuts import redirect
 
 
@@ -36,10 +36,8 @@ def headmaster_required(view_func):
 
 def logout_required(view_func):
     def _wrapped_view(request, *args, **kwargs):
-        # If user is logged in (authenticated session), redirect to the index page
         if request.session.get('authenticated'):
-            return redirect('index')
-        # Otherwise, proceed with the view
+            return redirect('login')
         return view_func(request, *args, **kwargs)
 
     return _wrapped_view

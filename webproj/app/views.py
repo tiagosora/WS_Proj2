@@ -1,12 +1,14 @@
 from app.decorators import (headmaster_required, logout_required,
                             professor_required, student_required)
 from app.triplestore.courses import (add_spell_to_course,
-                                     add_student_to_course, change_course_professor,
+                                     add_student_to_course,
+                                     change_course_professor,
                                      get_course_by_id_dict, get_courses_dict,
                                      remove_spell_from_course,
                                      remove_student_from_course,
                                      update_is_learning_to_learned)
-from app.triplestore.professors import get_professor_info
+from app.triplestore.professors import (get_all_teachers_not_teaching_course,
+                                        get_professor_info)
 from app.triplestore.spells import get_len_all_spells
 from app.triplestore.students import (get_spells_not_taught_in_course,
                                       get_students_not_learning_course,
@@ -14,32 +16,30 @@ from app.triplestore.students import (get_spells_not_taught_in_course,
 from app.triplestore.wizards import (create_new_wizard, get_all_students_info,
                                      get_headmaster_info,
                                      get_role_info_by_wizard_id,
-                                     get_student_view_info, update_wizard_info, wizard_login)
+                                     get_student_view_info, update_wizard_info,
+                                     wizard_login)
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.shortcuts import redirect, render
 from django.views.decorators.http import require_http_methods
 
-from app.triplestore.professors import get_all_teachers_not_teaching_course
-
 
 def authentication(request):
     return render(request, 'app/login.html')
 
-# Create your views here.
 
 @login_required
 def index(request):
-    spells = get_all_teachers_not_teaching_course(5)
-
-    print(spells)
-
-    return render(request, 'app/index.html')
-
+    return back_to_dashboard(request)
 
 @student_required
 def student_dashboard(request):
+    
+    wizard_type_id = request.session['wizard_type_id']
+    
+    request.session['student_info'] = get_student_view_info(wizard_type_id)
+    
     student_info = request.session['student_info']
 
     student = student_info['student']
@@ -78,7 +78,13 @@ def student_dashboard(request):
 
 @professor_required
 def professor_dashboard(request):
+    
+    wizard_type_id = request.session['wizard_type_id']
+    
+    request.session['professor_info'] = get_professor_info(wizard_type_id)
+    
     professor_info = request.session['professor_info']
+    
     return render(request, 'app/professor_dashboard.html', {
         'professor': professor_info["professor"],
         'courses': professor_info["courses"],
@@ -87,6 +93,11 @@ def professor_dashboard(request):
 
 @headmaster_required
 def headmaster_dashboard(request):
+    
+    wizard_type_id = request.session['wizard_type_id']
+    
+    request.session['headmaster_info'] = get_headmaster_info(wizard_type_id)
+    
     headmaster_info = request.session['headmaster_info']
     students_list = get_all_students_info()
     students_list.sort(key = lambda student : (student["name"], student["gender"], student["blood_type"]))
@@ -124,15 +135,6 @@ def update_wizard(request):
     patronus = request.POST.get('patronus')
     wand = request.POST.get('wand')
     
-    print(wizard_id)
-    print(name)
-    print(blood_type)
-    print(gender)
-    print(species)
-    print(eye_color)
-    print(patronus)
-    print(wand)
-    
     update_wizard_info(wizard_id, name, gender, blood_type, species, eye_color, patronus, wand)
     
     return back_to_dashboard(request)
@@ -164,8 +166,6 @@ def course_view(request):
 def remove_student(request):
     student_id = request.POST.get('student_id')
     course_id = request.POST.get('course_id')
-    print("Student: ",student_id)
-    print("Course: ",course_id)
     
     remove_student_from_course(course_id, student_id)
     
@@ -176,8 +176,6 @@ def remove_student(request):
 def add_student(request):
     student_id = request.POST.get('student_id')
     course_id = request.POST.get('course_id')
-    print("Student: ",student_id)
-    print("Course: ",course_id)
     
     add_student_to_course(course_id, student_id)
     
@@ -188,8 +186,6 @@ def add_student(request):
 def remove_spell(request):
     spell_id = request.POST.get('spell_id')
     course_id = request.POST.get('course_id')
-    print("Spell: ",spell_id)
-    print("Course: ",course_id)
     
     remove_spell_from_course(course_id, spell_id)
     
@@ -200,8 +196,6 @@ def remove_spell(request):
 def add_spell(request):
     spell_id = request.POST.get('spell_id')
     course_id = request.POST.get('course_id')
-    print("Spell: ",spell_id)
-    print("Course: ",course_id)
     
     add_spell_to_course(course_id, spell_id)
     
@@ -212,8 +206,6 @@ def add_spell(request):
 def change_professor(request):
     professor_id = request.POST.get('professor_id')
     course_id = request.POST.get('course_id')
-    print("Professor: ",professor_id)
-    print("Course: ",course_id)
     
     change_course_professor(course_id, professor_id)
     
@@ -222,7 +214,6 @@ def change_professor(request):
 @logout_required
 def register_view(request):
     if request.method == 'POST':
-        # Here you would retrieve form data
         nmec = request.POST.get('id_number')
         password = request.POST.get('password')
         blood_type = request.POST.get('blood_type')
@@ -234,14 +225,12 @@ def register_view(request):
         species = request.POST.get('species')
         wand = request.POST.get('wand')
 
-        # For example, using your create_new_wizard function
-
         success, id_number = create_new_wizard(password, blood_type, eye_color, gender, house, nmec, name, patronus,
-                                               species, wand)  # Fill in other parameters
+                                               species, wand)
         if success:
             request.session['nmec'] = nmec
-            request.session['wizard_id'] = id_number  # An example of user identification
-            request.session['authenticated'] = True  # Indicate the user is logged in
+            request.session['wizard_id'] = id_number
+            request.session['authenticated'] = True
 
             wizard_info, _, wizard_type_id = get_role_info_by_wizard_id(id_number)
 
@@ -249,10 +238,6 @@ def register_view(request):
                 case 'student':
                     request.session['student_info'] = get_student_view_info(wizard_type_id)
                     return redirect("student_dashboard")
-                # case 'profesor':
-                #     return professor_dashboard(request)  # TODO: mudar para pagina do professor
-                # case 'headmaster':
-                #     return professor_dashboard(request)  # TODO: mudar para pagina do professor
                 case _:
                     logout(request)
                     return redirect("index")
@@ -288,27 +273,20 @@ def login_view(request):
 
         if success:
             request.session['nmec'] = nmec
-            request.session['wizard_id'] = id_number  # An example of user identification
-            request.session['authenticated'] = True  # Indicate the user is logged in
+            request.session['wizard_id'] = id_number
+            request.session['authenticated'] = True
 
-            # ver qual o role da pessoa que se autenticou e ir para a pagina correspondente
             wizard_info, _, wizard_type_id = get_role_info_by_wizard_id(id_number)
 
             request.session['role'] = wizard_info
             request.session['wizard_type_id'] = wizard_type_id
             
-            print(wizard_info)
-            
-
             match wizard_info:
                 case 'student':
-                    request.session['student_info'] = get_student_view_info(wizard_type_id)
                     return redirect("student_dashboard")
                 case 'professor':
-                    request.session['professor_info'] = get_professor_info(wizard_type_id)
                     return redirect("professor_dashboard")
                 case 'headmaster':
-                    request.session['headmaster_info'] = get_headmaster_info(wizard_type_id)
                     return redirect("headmaster_dashboard")
                 case _:
                     logout(request)

@@ -1,5 +1,5 @@
-from django.contrib.auth.models import AnonymousUser
 from app.models import WizardAccount
+from django.contrib.auth.models import AnonymousUser
 
 
 class CustomAuthenticationMiddleware:

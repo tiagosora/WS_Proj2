@@ -349,19 +349,17 @@
         carouselContainer.className = 'carousel';
         spellsTaughtDiv.appendChild(carouselContainer);
     
-        // Group spells into batches of four
         const spellGroups = [];
         for (let i = 0; i < course.spells.length; i += 4) {
             spellGroups.push(course.spells.slice(i, i + 4));
         }
     
-        // Create carousel items for each group
         spellGroups.forEach((group, index) => {
             var groupDiv = document.createElement('div');
             groupDiv.className = `carousel-item ${index === 0 ? 'active' : ''}`;
             group.forEach(spell => {
                 var spellDiv = document.createElement('div');
-                spellDiv.className = 'p-4 border rounded shadow m-2'; // Styling for each spell card
+                spellDiv.className = 'p-4 border rounded shadow m-2';
                 spellDiv.innerHTML = `
                     <p><strong>Name:</strong> ${spell.name || 'Unknown'}</p>
                     <p><strong>Effect:</strong> ${spell.effect || 'Unknown'}</p>
@@ -372,9 +370,8 @@
             carouselContainer.appendChild(groupDiv);
         });
     
-        // Add carousel controls
         var controlDiv = document.createElement('div');
-        controlDiv.className = 'flex justify-center items-center gap-4 mt-4'; // Centering the controls
+        controlDiv.className = 'flex justify-center items-center gap-4 mt-4';
         controlDiv.innerHTML = `
             <button onclick="changeSpellGroup(-1)" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">Prev</button>
             <span id="carouselIndicator" class="font-semibold">Page 1</span>
@@ -382,7 +379,6 @@
         `;
         spellsTaughtDiv.appendChild(controlDiv);
     
-        // Carousel interaction logic
         let currentIndex = 0;
         window.changeSpellGroup = (delta) => {
             var items = document.querySelectorAll('.carousel-item');
@@ -391,21 +387,17 @@
             items[currentIndex].classList.add('active');
             document.getElementById('carouselIndicator').innerText = `Page ${currentIndex + 1} of ${spellGroups.length}`;
             
-            // Hide all items except the current one
             items.forEach((item, index) => {
                 item.style.display = index === currentIndex ? 'block' : 'none';
             });
         };
     
-        // Update to show the correct page number on initial load
         document.getElementById('carouselIndicator').innerText = `Page 1 of ${spellGroups.length}`;
     
-        // Initial carousel item visibility
         document.querySelectorAll('.carousel-item').forEach((item, index) => {
             item.style.display = index === 0 ? 'block' : 'none';
         });
     
-        // Display the modal
         document.getElementById('courseModal').style.display = 'block';
     }
     

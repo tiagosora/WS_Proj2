@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:hogwarts="http://hogwarts.edu/ontology#">
-  <rdf:Description rdf:about="http://hogwarts.edu/headmasters/1">
-    <hogwarts:id>1</hogwarts:id>
-    <hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/4" />
-    <hogwarts:start_date>1971</hogwarts:start_date>
-  </rdf:Description>
-</rdf:RDF>

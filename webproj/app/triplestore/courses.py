@@ -28,8 +28,6 @@ def get_courses_dict():
 
     courses_dict = {course.id: course.info_no_id()
                                | {'spells': manage_spells_list(course.teaches_spell)}
-                               # | {'is_learning': get_students_enrolled(course.id)}
-                               # | {'learned': get_students_finished_course(course.id)}
                                | {'professor_info': get_wizard_info_by_uri(
         get_professor(course.professor).wizard).info()}
                     for course in courses}
@@ -75,7 +73,7 @@ def add_student_to_course(course_id, student_id):
     execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, student_id=student_id)
 
 
-def remove_student_from_course(course_id, student_id):  # teoricamente, useless
+def remove_student_from_course(course_id, student_id):
     query_name = "app/queries/remove_student_from_course.sparql"
     execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, student_id=student_id)
 
