@@ -115,7 +115,7 @@ def headmaster_dashboard(request):
     })
     
 def update_wizard(request):
-    student_id = request.POST.get('student_id')
+    wizard_id = request.POST.get('wizard_id')
     name = request.POST.get('name')
     blood_type = request.POST.get('blood_type')
     gender = request.POST.get('gender')
@@ -124,7 +124,7 @@ def update_wizard(request):
     patronus = request.POST.get('patronus')
     wand = request.POST.get('wand')
     
-    print(student_id)
+    print(wizard_id)
     print(name)
     print(blood_type)
     print(gender)
@@ -132,6 +132,8 @@ def update_wizard(request):
     print(eye_color)
     print(patronus)
     print(wand)
+    
+    update_wizard_info(wizard_id, name, gender, blood_type, species, eye_color, patronus, wand)
     
     return back_to_dashboard(request)
 

@@ -149,7 +149,7 @@
             <form id="editPersonalInfoForm" method="post" action="{% url 'update_wizard' %}">
                 {% csrf_token %}
                 <div class="grid grid-cols-2 gap-4 p-4">
-                    <input type="hidden" name="student_id" value="{{ student.id }}">
+                    <input type="hidden" name="wizard_id" value="{{ student.id }}">
                     
                     <div>
                         <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
