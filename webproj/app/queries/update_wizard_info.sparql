@@ -1,0 +1,13 @@
+PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+
+DELETE {{
+    {query_delete}
+}}
+INSERT {{
+    {query_insert}
+}}
+WHERE {{
+    ?wizard hogwarts:_type "wizard" .
+    ?wizard hogwarts:id "{wizard_id}" .
+    {query_delete}
+}}
