@@ -93,20 +93,48 @@ def headmaster_dashboard(request):
     students_list.sort(key = lambda student : (student["name"], student["gender"], student["blood_type"]))
     
     courses =  get_courses_dict()
+    
+    number_spells_per_course = {}
     courses_in_list = []
     for id, course in courses.items():
         course["id"] = id
         course["number_spells_taught"] = len(course["spells"])
         courses_in_list.append(course)
-    
+        
+        number_spells_per_course[course["name"]] = len(course["spells"])
+        
+    number_students_per_school_year = students_per_school_year()
+        
     courses_in_list.sort(key = lambda course : (course["attending_year"], course["name"]))
     
     return render(request, 'app/headmaster_dashboard.html', {
         'headmaster': headmaster_info,
-        'students_per_school_year': students_per_school_year(),
+        'students_per_school_year': number_students_per_school_year,
+        'spells_per_course': number_spells_per_course,
         'students' : students_list,
         'courses': courses_in_list,
     })
+    
+def update_wizard(request):
+    student_id = request.POST.get('student_id')
+    name = request.POST.get('name')
+    blood_type = request.POST.get('blood_type')
+    gender = request.POST.get('gender')
+    species = request.POST.get('species')
+    eye_color = request.POST.get('eye_color')
+    patronus = request.POST.get('patronus')
+    wand = request.POST.get('wand')
+    
+    print(student_id)
+    print(name)
+    print(blood_type)
+    print(gender)
+    print(species)
+    print(eye_color)
+    print(patronus)
+    print(wand)
+    
+    return back_to_dashboard(request)
 
 @headmaster_required
 def course_view(request):
@@ -236,6 +264,7 @@ def register_view(request):
 @login_required
 def back_to_dashboard(request):
     wizard_info = request.session['role']
+    request.session['back'] = 'back'
     del request.session['back']
     match wizard_info:
         case 'student':

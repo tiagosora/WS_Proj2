@@ -1,7 +1,6 @@
 {% extends "./base.html" %}
 {% load static %}
 
-
 {% block title %}Headmaster's Dashboard{% endblock %}
 
 {% block content %}
@@ -16,32 +15,40 @@
     .table-cell-custom {
         @apply truncate max-w-xs; /* Truncate text and set max width */
     }
+    .charts-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .chart-container {
+        flex-basis: 50%; /* Adjust based on the desired width, ensuring both have the same width */
+        height: 400px; /* Define a fixed height or use aspect-ratio property */
+    }
 </style>
 
 <h2 class="text-4xl font-bold text-center mt-10">Headmaster <span class="text-amber-600">{{ headmaster.name }}</span>'s Dashboard</h2>
 <div class="mt-10 flex flex-col items-center justify-center">
     <div class="container mx-auto px-6 rounded-lg">
         <div class="dashboard-main-card shadow-xl rounded-lg p-6 mb-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-800 px-4 sm:px-8">
+            <div class="grid grid-cols-1 shadow dashboard-main-card bg-white rounded-lg p-6 md:grid-cols-2 gap-4 text-gray-800">
                 <p><strong>Name:</strong> {{ headmaster.name }}</p>
-                <p><strong>Gender:</strong> {{ headmaster.gender }}</p>
-                <p><strong>Species:</strong> {{ headmaster.species }}</p>
-                <p><strong>Blood Type:</strong> {{ headmaster.blood_type }}</p>
-                <p><strong>Wand:</strong> {{ headmaster.wand }}</p>
-                <p><strong>Patronus:</strong> {{ headmaster.patronus }}</p>
+                <p><strong>Gender:</strong> {{ headmaster.gender|default:"Unknown" }}</p>
+                <p><strong>Species:</strong> {{ headmaster.species|default:"Unknown" }}</p>
+                <p><strong>Blood Type:</strong> {{ headmaster.blood_type|default:"Unknown" }}</p>
+                <p><strong>Wand:</strong> {{ headmaster.wand|default:"Unknown" }}</p>
+                <p><strong>Patronus:</strong> {{ headmaster.patronus|default:"Unknown" }}</p>
                 <p><strong class="text-amber-600">Started headmaster role on:</strong> {{ headmaster.start_date }}</p>
             </div>
-            <div class="mt-10 px-4 sm:px-8">
+            <div class="mt-10">
                 <div class="dashboard-card bg-white rounded-lg shadow p-4">
                     <h3 class="text-2xl font-semibold mb-3">Courses</h3>
                     <div id="coursesContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <!-- Courses will be inserted dynamically -->
                     </div>
                 </div>
             </div>
             <div class="mt-10 flex flex-col items-center justify-center overflow-x-auto">
-                <div class="container mx-auto px-4 sm:px-8">
-                    <div class="dashboard-main-card shadow-xl rounded-lg p-4 mb-8 overflow-hidden">
+                <div class="container mx-auto">
+                    <div class="dashboard-main-card shadow rounded-lg p-4 mb-8 overflow-hidden">
                         <h3 class="text-2xl font-semibold mb-3 leading-tight">Students</h3>
                         <div class="inline-block min-w-full rounded-lg overflow-hidden">
                             <table class="min-w-full leading-normal">
@@ -71,15 +78,28 @@
                                     </tr>
                                 </thead>
                                 <tbody id="studentsTableBody" class="bg-white">
-                                    <!-- Student rows will be dynamically inserted here -->
                                 </tbody>
                             </table>
                         </div>
-                        <!-- Pagination Controls -->
                         <div class="pagination mt-4 text-amber-600 flex justify-center items-center gap-4">
                             <button onclick="changeStudentsPage(-1)" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">Prev</button>
                             <span id="studentPageIndicator" class="font-semibold">Page 1</span>
                             <button onclick="changeStudentsPage(1)" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-2">
+                <div class="dashboard-main-card shadow-xl rounded-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-3">Statistics</h3>
+                    <div class="flex justify-around items-center relative">
+                        <div class="w-1/2 px-4 flex justify-center">
+                            <canvas id="spellsPerCourseChart" class="w-full"></canvas>
+                        </div>
+                        <div class="w-1/5 px-4 flex justify-center">
+                        </div>
+                        <div class="w-1/2 px-4 flex justify-center">
+                            <canvas id="studentsPerSchoolYearChart" class="w-full"></canvas>
                         </div>
                     </div>
                 </div>
@@ -124,11 +144,11 @@
     const students = {{ students|safe }}; 
 
     var currentStudentPage = 1;
-    var studentsPerPage = 10; // Or any other number you prefer
+    var studentsPerPage = 10; 
     
     function renderStudents() {
         var container = document.getElementById('studentsTableBody');
-        container.innerHTML = ''; // Clear previous entries
+        container.innerHTML = ''; 
         var start = (currentStudentPage - 1) * studentsPerPage;
         var end = start + studentsPerPage;
         var paginatedStudents = students.slice(start, end);
@@ -174,7 +194,6 @@
         renderStudents();
     });
 </script>
-    
 <script>
     const courses = {{ courses|safe }};
     
@@ -182,7 +201,6 @@
         const course = courses.find(c => c.id == courseId);
         if (!course) return;
     
-        // Populate modal with course details
         document.getElementById('courseName').innerText = course.name;
         const details = document.getElementById('courseDetails');
         details.innerHTML = `
@@ -194,7 +212,6 @@
             
         document.getElementById('hiddenCourseId').value = course.id;
     
-        // Show the modal
         document.getElementById('courseModal').style.display = 'block';
         document.body.classList.add('modal-active');
     }
@@ -216,6 +233,88 @@
         coursesContainer.innerHTML = courseHtml;
     });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const spellsPerCourseData = {{ spells_per_course|safe }};
+    const studentsPerSchoolYearData = {{ students_per_school_year|safe }};
+    
+    const ctxBar = document.getElementById('spellsPerCourseChart').getContext('2d');
+    const spellsPerCourseChart = new Chart(ctxBar, {
+        type: 'bar',
+        data: {
+            labels: Object.keys(spellsPerCourseData),
+            datasets: [{
+                label: '# of Spells',
+                data: Object.values(spellsPerCourseData),
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Spells per Course'
+                },
+                legend: {
+                    display: true,
+                    position: 'top'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    
+    const ctxPie = document.getElementById('studentsPerSchoolYearChart').getContext('2d');
+    const studentsPerSchoolYearChart = new Chart(ctxPie, {
+        type: 'pie',
+        data: {
+            labels: Object.keys(studentsPerSchoolYearData),
+            datasets: [{
+                label: '# of Students',
+                data: Object.values(studentsPerSchoolYearData),
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Students per School Year'
+                },
+                legend: {
+                    display: true,
+                    position: 'right'
+                }
+            }
+        }
+    });
+    </script>
     
 
 {% endblock %}
