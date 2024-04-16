@@ -1,7 +1,6 @@
 {% extends "./base.html" %}
 {% load static %}
 
-
 {% block title %}Headmaster's Dashboard{% endblock %}
 
 {% block content %}
@@ -16,32 +15,46 @@
     .table-cell-custom {
         @apply truncate max-w-xs; /* Truncate text and set max width */
     }
+    .charts-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .chart-container {
+        flex-basis: 50%; /* Adjust based on the desired width, ensuring both have the same width */
+        height: 400px; /* Define a fixed height or use aspect-ratio property */
+    }
 </style>
 
 <h2 class="text-4xl font-bold text-center mt-10">Headmaster <span class="text-amber-600">{{ headmaster.name }}</span>'s Dashboard</h2>
 <div class="mt-10 flex flex-col items-center justify-center">
     <div class="container mx-auto px-6 rounded-lg">
         <div class="dashboard-main-card shadow-xl rounded-lg p-6 mb-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-800 px-4 sm:px-8">
+            <div class="grid grid-cols-1 shadow dashboard-main-card bg-white rounded-lg p-6 md:grid-cols-2 gap-4 text-gray-800">
                 <p><strong>Name:</strong> {{ headmaster.name }}</p>
-                <p><strong>Gender:</strong> {{ headmaster.gender }}</p>
-                <p><strong>Species:</strong> {{ headmaster.species }}</p>
-                <p><strong>Blood Type:</strong> {{ headmaster.blood_type }}</p>
-                <p><strong>Wand:</strong> {{ headmaster.wand }}</p>
-                <p><strong>Patronus:</strong> {{ headmaster.patronus }}</p>
+                <p><strong>Gender:</strong> {{ headmaster.gender|default:"Unknown" }}</p>
+                <p><strong>Species:</strong> {{ headmaster.species|default:"Unknown" }}</p>
+                <p><strong>Blood Type:</strong> {{ headmaster.blood_type|default:"Unknown" }}</p>
+                <p><strong>Wand:</strong> {{ headmaster.wand|default:"Unknown" }}</p>
+                <p><strong>Patronus:</strong> {{ headmaster.patronus|default:"Unknown" }}</p>
                 <p><strong class="text-amber-600">Started headmaster role on:</strong> {{ headmaster.start_date }}</p>
+                <p></p>
+                <div>
+                    <button class="text-amber-600 text-left" onclick="openEditPersonalInfoModal()" style="background-color: transparent; border: none; padding: 0; cursor: pointer;">
+                        Edit
+                    </button>
+                </div>
             </div>
-            <div class="mt-10 px-4 sm:px-8">
+            <div class="mt-10">
                 <div class="dashboard-card bg-white rounded-lg shadow p-4">
                     <h3 class="text-2xl font-semibold mb-3">Courses</h3>
                     <div id="coursesContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <!-- Courses will be inserted dynamically -->
                     </div>
                 </div>
             </div>
             <div class="mt-10 flex flex-col items-center justify-center overflow-x-auto">
-                <div class="container mx-auto px-4 sm:px-8">
-                    <div class="dashboard-main-card shadow-xl rounded-lg p-4 mb-8 overflow-hidden">
+                <div class="container mx-auto">
+                    <div class="dashboard-main-card shadow rounded-lg p-4 mb-8 overflow-hidden">
                         <h3 class="text-2xl font-semibold mb-3 leading-tight">Students</h3>
                         <div class="inline-block min-w-full rounded-lg overflow-hidden">
                             <table class="min-w-full leading-normal">
@@ -71,15 +84,28 @@
                                     </tr>
                                 </thead>
                                 <tbody id="studentsTableBody" class="bg-white">
-                                    <!-- Student rows will be dynamically inserted here -->
                                 </tbody>
                             </table>
                         </div>
-                        <!-- Pagination Controls -->
                         <div class="pagination mt-4 text-amber-600 flex justify-center items-center gap-4">
                             <button onclick="changeStudentsPage(-1)" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">Prev</button>
                             <span id="studentPageIndicator" class="font-semibold">Page 1</span>
                             <button onclick="changeStudentsPage(1)" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-2">
+                <div class="dashboard-main-card shadow-xl rounded-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-3">Statistics</h3>
+                    <div class="flex justify-around items-center relative">
+                        <div class="w-1/2 px-4 flex justify-center">
+                            <canvas id="spellsPerCourseChart" class="w-full"></canvas>
+                        </div>
+                        <div class="w-1/5 px-4 flex justify-center">
+                        </div>
+                        <div class="w-1/2 px-4 flex justify-center">
+                            <canvas id="studentsPerSchoolYearChart" class="w-full"></canvas>
                         </div>
                     </div>
                 </div>
@@ -120,15 +146,88 @@
     </div>
 </div>
 
+<!-- Edit Personal Info Modal -->
+<div id="editPersonalInfoModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="edit-personal-info-modal-title" role="dialog" aria-modal="true">
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75"></div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full sm:max-w-lg">
+            <form id="editPersonalInfoForm" method="post" action="{% url 'update_wizard' %}">
+                {% csrf_token %}
+                <div class="grid grid-cols-2 gap-4 p-4">
+                    <input type="hidden" name="wizard_id" value="{{ headmaster.id }}">
+                    
+                    <div>
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                        <input required type="text" name="name" id="name" value="{{ headmaster.name }}" placeholder=""
+                               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    
+                    <div>
+                        <label for="gender" class="block text-gray-700 text-sm font-bold mb-2">Gender</label>
+                        <select name="gender" id="gender" value="{{ headmaster.gender }}" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            <option value="male" {% if headmaster.gender == "male" %} selected {% endif %}>Male</option>
+                            <option value="female" {% if headmaster.gender == "female" %} selected {% endif %}>Female</option>
+                            <option value="undefined" {% if headmaster.gender == "undefined" %} selected {% endif %}>Undefined</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="blood_type" class="block text-gray-700 text-sm font-bold mb-2">Blood Type</label>
+                        <select name="blood_type" id="blood_type" value="{{ headmaster.blood_type }}" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            <option value="half_blood" {% if headmaster.blood_type == "half_blood" %} selected {% endif %}>Half-blood</option>
+                            <option value="pure-blood" {% if headmaster.blood_type == "pure-blood" %} selected {% endif %}>Pure-blood</option>
+                            <option value="muggle-born" {% if headmaster.blood_type == "muggle-born" %} selected {% endif %}>Muggle-born</option>
+                            <option value="part-human" {% if headmaster.blood_type == "part-human" %} selected {% endif %}>Part-Human</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="species" class="block text-gray-700 text-sm font-bold mb-2">Species</label>
+                        <select name="species" id="species" value="{{ headmaster.species }}" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            <option value="human" {% if headmaster.species == "human" %} selected {% endif %}>Human</option>
+                            <option value="half-human" {% if headmaster.species == "half-human" %} selected {% endif %}>Half-Human</option>
+                            <option value="werewolf" {% if headmaster.species == "werewolf" %} selected {% endif %}>Werewolf</option>
+                            <option value="ghost" {% if headmaster.species == "ghost" %} selected {% endif %}>Ghost</option>
+                            <option value="centaur" {% if headmaster.species == "centaur" %} selected {% endif %}>Centaur</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="eye_color" class="block text-gray-700 text-sm font-bold mb-2">Eye Color</label>
+                        <input type="text" name="eye_color" id="eye_color" value="{{ headmaster.eye_color }}" placeholder=""
+                               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    
+                    <div>
+                        <label for="patronus" class="block text-gray-700 text-sm font-bold mb-2">Patronus</label>
+                        <input type="text" name="patronus" id="patronus" value="{{ headmaster.patronus }}" placeholder=""
+                               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    
+                    <div>
+                        <label for="wand" class="block text-gray-700 text-sm font-bold mb-2">Wand</label>
+                        <input type="text" name="wand" id="wand" value="{{ headmaster.wand }}" placeholder=""
+                               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <button type="submit" class="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Update Changes</button>
+                    <button type="button" class="mt-3 mr-2 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-amber-600 text-base font-medium text-white hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 sm:mt-0 sm:w-auto sm:text-sm" onclick="closeEditPersonalInfoModal()">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <script>
     const students = {{ students|safe }}; 
 
     var currentStudentPage = 1;
-    var studentsPerPage = 10; // Or any other number you prefer
+    var studentsPerPage = 10; 
     
     function renderStudents() {
         var container = document.getElementById('studentsTableBody');
-        container.innerHTML = ''; // Clear previous entries
+        container.innerHTML = ''; 
         var start = (currentStudentPage - 1) * studentsPerPage;
         var end = start + studentsPerPage;
         var paginatedStudents = students.slice(start, end);
@@ -174,7 +273,6 @@
         renderStudents();
     });
 </script>
-    
 <script>
     const courses = {{ courses|safe }};
     
@@ -182,7 +280,6 @@
         const course = courses.find(c => c.id == courseId);
         if (!course) return;
     
-        // Populate modal with course details
         document.getElementById('courseName').innerText = course.name;
         const details = document.getElementById('courseDetails');
         details.innerHTML = `
@@ -194,7 +291,6 @@
             
         document.getElementById('hiddenCourseId').value = course.id;
     
-        // Show the modal
         document.getElementById('courseModal').style.display = 'block';
         document.body.classList.add('modal-active');
     }
@@ -216,6 +312,96 @@
         coursesContainer.innerHTML = courseHtml;
     });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const spellsPerCourseData = {{ spells_per_course|safe }};
+    const studentsPerSchoolYearData = {{ students_per_school_year|safe }};
     
+    const ctxBar = document.getElementById('spellsPerCourseChart').getContext('2d');
+    const spellsPerCourseChart = new Chart(ctxBar, {
+        type: 'bar',
+        data: {
+            labels: Object.keys(spellsPerCourseData),
+            datasets: [{
+                label: '# of Spells',
+                data: Object.values(spellsPerCourseData),
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Spells per Course'
+                },
+                legend: {
+                    display: true,
+                    position: 'top'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    
+    const ctxPie = document.getElementById('studentsPerSchoolYearChart').getContext('2d');
+    const studentsPerSchoolYearChart = new Chart(ctxPie, {
+        type: 'pie',
+        data: {
+            labels: Object.keys(studentsPerSchoolYearData),
+            datasets: [{
+                label: '# of Students',
+                data: Object.values(studentsPerSchoolYearData),
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Students per School Year'
+                },
+                legend: {
+                    display: true,
+                    position: 'right'
+                }
+            }
+        }
+    });
+</script>
+<script>
+    function openEditPersonalInfoModal() {
+        document.getElementById('editPersonalInfoModal').style.display = 'block';
+    }
+
+    function closeEditPersonalInfoModal() {
+        document.getElementById('editPersonalInfoModal').style.display = 'none';
+    }
+</script>
 
 {% endblock %}

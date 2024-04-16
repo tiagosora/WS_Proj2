@@ -1,7 +1,7 @@
 from app.decorators import (headmaster_required, logout_required,
                             professor_required, student_required)
 from app.triplestore.courses import (add_spell_to_course,
-                                     add_student_to_course,
+                                     add_student_to_course, change_course_professor,
                                      get_course_by_id_dict, get_courses_dict,
                                      remove_spell_from_course,
                                      remove_student_from_course,
@@ -92,20 +92,50 @@ def headmaster_dashboard(request):
     students_list.sort(key = lambda student : (student["name"], student["gender"], student["blood_type"]))
     
     courses =  get_courses_dict()
+    
+    number_spells_per_course = {}
     courses_in_list = []
     for id, course in courses.items():
         course["id"] = id
         course["number_spells_taught"] = len(course["spells"])
         courses_in_list.append(course)
-    
+        
+        number_spells_per_course[course["name"]] = len(course["spells"])
+        
+    number_students_per_school_year = students_per_school_year()
+        
     courses_in_list.sort(key = lambda course : (course["attending_year"], course["name"]))
     
     return render(request, 'app/headmaster_dashboard.html', {
         'headmaster': headmaster_info,
-        'students_per_school_year': students_per_school_year(),
+        'students_per_school_year': number_students_per_school_year,
+        'spells_per_course': number_spells_per_course,
         'students' : students_list,
         'courses': courses_in_list,
     })
+    
+def update_wizard(request):
+    wizard_id = request.POST.get('wizard_id')
+    name = request.POST.get('name')
+    blood_type = request.POST.get('blood_type')
+    gender = request.POST.get('gender')
+    species = request.POST.get('species')
+    eye_color = request.POST.get('eye_color')
+    patronus = request.POST.get('patronus')
+    wand = request.POST.get('wand')
+    
+    print(wizard_id)
+    print(name)
+    print(blood_type)
+    print(gender)
+    print(species)
+    print(eye_color)
+    print(patronus)
+    print(wand)
+    
+    update_wizard_info(wizard_id, name, gender, blood_type, species, eye_color, patronus, wand)
+    
+    return back_to_dashboard(request)
 
 @headmaster_required
 def course_view(request):
@@ -117,12 +147,16 @@ def course_view(request):
     
     course_full_info = get_course_by_id_dict(course_id)
     course_full_info['number_students_enrolled'] = len(course_full_info['is_learning'])
+    course_full_info['number_spells_taught'] = len(course_full_info['spells'])
+    
+    available_professors = get_all_teachers_not_teaching_course(course_full_info['professor_info']['id'])
+    available_professors.sort(key = lambda professor : professor['name'])
     
     return render(request, 'app/course.html', {
         'course': course_full_info,
         'available_students': get_students_not_learning_course(course_id),
         'available_spells': get_spells_not_taught_in_course(course_id),
-        'available_professors': [],
+        'available_professors': available_professors,
     })
  
 @require_http_methods(["POST"])   
@@ -181,6 +215,8 @@ def change_professor(request):
     print("Professor: ",professor_id)
     print("Course: ",course_id)
     
+    change_course_professor(course_id, professor_id)
+    
     return redirect("course")
 
 @logout_required
@@ -229,6 +265,7 @@ def register_view(request):
 @login_required
 def back_to_dashboard(request):
     wizard_info = request.session['role']
+    request.session['back'] = 'back'
     del request.session['back']
     match wizard_info:
         case 'student':
