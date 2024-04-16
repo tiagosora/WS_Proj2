@@ -14,7 +14,7 @@ from app.triplestore.students import (get_spells_not_taught_in_course,
 from app.triplestore.wizards import (create_new_wizard, get_all_students_info,
                                      get_headmaster_info,
                                      get_role_info_by_wizard_id,
-                                     get_student_view_info, wizard_login)
+                                     get_student_view_info, update_wizard_info, wizard_login)
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
@@ -26,7 +26,6 @@ from app.triplestore.professors import get_all_teachers_not_teaching_course
 
 def authentication(request):
     return render(request, 'app/login.html')
-
 
 # Create your views here.
 

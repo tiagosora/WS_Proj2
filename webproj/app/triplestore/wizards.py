@@ -89,6 +89,7 @@ def get_role_info_by_wizard_id(wizard_id):
 
     return wizard_type, wizard_role, wizard_type_id
 
+
 def get_all_students_info():
     query_name = "app/queries/get_all_by_type.sparql"
 
@@ -161,6 +162,7 @@ def get_student_view_info(student_id):
             'skills': skills
             }   
 
+
 def get_headmaster_info(headmaster_id):
     headmaster_uri = f"http://hogwarts.edu/headmasters/{headmaster_id}"
     query_name = "app/queries/get_entity_info_by_uri.sparql"
@@ -184,3 +186,40 @@ def get_headmaster_info(headmaster_id):
     headmaster_info = get_wizard_info_by_uri(headmaster_attr["wizard"]).info() | {"start_date": headmaster_start_date} 
     
     return headmaster_info
+
+
+def update_wizard_info(wizard_id, name = None, gender = None, blood_type = None, species = None, eye_color = None, patronus = None, wand = None):
+    
+    query_delete = ""
+    query_insert = ""
+    
+    if bool(name): 
+        query_delete += "\t ?wizard hogwarts:name ?old_name .\n"
+        query_insert += f"\t ?wizard hogwarts:name '{name}' .\n"
+        
+    if bool(gender):
+        query_delete += "\t ?wizard hogwarts:gender ?old_gender .\n"
+        query_insert += f"\t ?wizard hogwarts:gender '{gender}' .\n"
+        
+    if bool(blood_type):
+        query_delete += "\t ?wizard hogwarts:blood ?old_blood_type .\n"
+        query_insert += f"\t ?wizard hogwarts:blood '{blood_type}' .\n"
+        
+    if bool(species):
+        query_delete += "\t ?wizard hogwarts:species ?old_species .\n"
+        query_insert += f"\t ?wizard hogwarts:species '{species}' .\n"
+        
+    if bool(eye_color):
+        query_delete += "\t ?wizard hogwarts:eye_color ?old_eye_color .\n"
+        query_insert += f"\t ?wizard hogwarts:eye_color '{eye_color}' .\n"
+        
+    if bool(patronus):
+        query_delete += "\t ?wizard hogwarts:patronus ?old_patronus .\n"
+        query_insert += f"\t ?wizard hogwarts:patronus '{patronus}' .\n"
+        
+    if bool(wand):
+        query_delete += "\t ?wizard hogwarts:wand ?old_wand .\n"
+        query_insert += f"\t ?wizard hogwarts:wand '{wand}' .\n"
+        
+    query_name = "app/queries/update_wizard_info.sparql"
+    execute_sparql_query(query_name=query_name, format='POST', wizard_id=wizard_id, query_delete=query_delete, query_insert=query_insert)
