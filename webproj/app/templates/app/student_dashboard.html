@@ -160,30 +160,30 @@
                     <div>
                         <label for="gender" class="block text-gray-700 text-sm font-bold mb-2">Gender</label>
                         <select name="gender" id="gender" value="{{ student.gender }}" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                            <option value="male" {% if student.gender == "male" %} selected {% endif %}>Male</option>
-                            <option value="female" {% if student.gender == "female" %} selected {% endif %}>Female</option>
-                            <option value="undefined" {% if student.gender == "undefined" %} selected {% endif %}>Undefined</option>
+                            <option value="Male" {% if student.gender == "Male" %} selected {% endif %}>Male</option>
+                            <option value="Female" {% if student.gender == "Female" %} selected {% endif %}>Female</option>
+                            <option value="Undefined" {% if student.gender == "Undefined" %} selected {% endif %}>Undefined</option>
                         </select>
                     </div>
                     
                     <div>
                         <label for="blood_type" class="block text-gray-700 text-sm font-bold mb-2">Blood Type</label>
                         <select name="blood_type" id="blood_type" value="{{ student.blood_type }}" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                            <option value="half_blood" {% if student.blood_type == "half_blood" %} selected {% endif %}>Half-blood</option>
-                            <option value="pure-blood" {% if student.blood_type == "pure-blood" %} selected {% endif %}>Pure-blood</option>
-                            <option value="muggle-born" {% if student.blood_type == "muggle-born" %} selected {% endif %}>Muggle-born</option>
-                            <option value="part-human" {% if student.blood_type == "part-human" %} selected {% endif %}>Part-Human</option>
+                            <option value="Half-blood" {% if student.blood_type == "Half-blood" %} selected {% endif %}>Half-blood</option>
+                            <option value="Pure-blood" {% if student.blood_type == "Pure-blood" %} selected {% endif %}>Pure-blood</option>
+                            <option value="Muggle-born" {% if student.blood_type == "Muggle-born" %} selected {% endif %}>Muggle-born</option>
+                            <option value="Part-human" {% if student.blood_type == "Part-human" %} selected {% endif %}>Part-Human</option>
                         </select>
                     </div>
                     
                     <div>
                         <label for="species" class="block text-gray-700 text-sm font-bold mb-2">Species</label>
                         <select name="species" id="species" value="{{ student.species }}" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                            <option value="human" {% if student.species == "human" %} selected {% endif %}>Human</option>
-                            <option value="half-human" {% if student.species == "half-human" %} selected {% endif %}>Half-Human</option>
-                            <option value="werewolf" {% if student.species == "werewolf" %} selected {% endif %}>Werewolf</option>
-                            <option value="ghost" {% if student.species == "ghost" %} selected {% endif %}>Ghost</option>
-                            <option value="centaur" {% if student.species == "centaur" %} selected {% endif %}>Centaur</option>
+                            <option value="Human" {% if student.species == "Human" %} selected {% endif %}>Human</option>
+                            <option value="Half-human" {% if student.species == "Half-human" %} selected {% endif %}>Half-Human</option>
+                            <option value="Werewolf" {% if student.species == "Werewolf" %} selected {% endif %}>Werewolf</option>
+                            <option value="Ghost" {% if student.species == "Ghost" %} selected {% endif %}>Ghost</option>
+                            <option value="Centaur" {% if student.species == "Centaur" %} selected {% endif %}>Centaur</option>
                         </select>
                     </div>
                     

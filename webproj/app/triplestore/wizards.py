@@ -202,8 +202,8 @@ def update_wizard_info(wizard_id, name = None, gender = None, blood_type = None,
         query_insert += f"\t ?wizard hogwarts:gender '{gender}' .\n"
         
     if bool(blood_type):
-        query_delete += "\t ?wizard hogwarts:blood ?old_blood_type .\n"
-        query_insert += f"\t ?wizard hogwarts:blood '{blood_type}' .\n"
+        query_delete += "\t ?wizard hogwarts:blood-type ?old_blood_type .\n"
+        query_insert += f"\t ?wizard hogwarts:blood-type '{blood_type}' .\n"
         
     if bool(species):
         query_delete += "\t ?wizard hogwarts:species ?old_species .\n"
