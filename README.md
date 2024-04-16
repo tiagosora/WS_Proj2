@@ -71,3 +71,13 @@ To run the application follow these steps:
     |Student|104142|Pass.Muito.Forte123|
     |Professor|103234|Pass.Muito.Forte123|
     |Headmaster|103453|Pass.Muito.Forte123|
+
+## Converting the data
+
+To convert the data from the original CSV files from the original dataset, simply run the following commands:
+
+```bash
+cd data/
+
+python data_converter.py
+```
