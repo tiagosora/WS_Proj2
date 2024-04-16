@@ -43,7 +43,7 @@ To first be able to run the app you must install the requirements:
 
 To run the application follow these steps:
 
-1. Have GraphDB running and the dataset `data/data_.rdf` imported.
+1. Have GraphDB running and the dataset `data/data_.rdf` imported in a repository named `ws_repository`.
 
 2. Create a .env file inside the root folder with the following configuration:
 
