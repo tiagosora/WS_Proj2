@@ -1,4 +1,4 @@
-# Web Semântica - Proj 1
+# Web Semântica - Proj 2
 
 ## Installing the requirements
 
