@@ -20,179 +20,161 @@ with onto:
     class Course(Thing): pass
 
     # Define properties
-    class hasMechanographicalNumber(Account >> int): pass
-    class hasAccount(Wizard >> Account): pass
-    class hasName(Wizard >> str): pass
-    class hasGender(Wizard >> str): pass
-    class hasSpecies(Wizard >> str): pass
-    class hasBloodType(Wizard >> str): pass
-    class hasEyeColor(Wizard >> str): pass
-    class belongsToHouse(Wizard >> House): pass
-    class hasWand(Wizard >> str): pass
-    class hasPatronus(Wizard >> str): pass
-    class hasStudentId(Student >> str): pass
-    class belongsToSchool(Student >> School): pass
-    class hasSchoolYear(Student >> int): pass
-    class learnsCourse(Student >> Course): pass
-    class hasLearnedCourse(Student >> Course): pass
-    class teachesSpell(Course >> Spell): pass
-    class hasProfessor(Course >> Professor): pass
-    class hasName(Spell >> str): pass
-    class hasIncantation(Spell >> str): pass
-    class hasType(Spell >> str): pass
-    class hasEffect(Spell >> str): pass
-    class hasLight(Spell >> str): pass
-    class hasSkillName(Skill >> str): pass
-    class hasSchoolName(School >> str): pass
-    class hasLocation(School >> str): pass
-    class hasDateOfCreation(School >> str): pass
-    class hasHeadmaster(School >> Headmaster): pass
-    class hasHouseName(House >> str): pass
-    class hasSymbol(House >> str): pass
-    class hasFounder(House >> int): pass
-    class hasHouseLocation(House >> str): pass
-    class hasHouseProfessor(House >> Professor): pass
-    class hasStartDate(Headmaster >> int): pass
-    class hasCourseName(Course >> str): pass
-    class hasCourseType(Course >> str): pass
-    class hasAttendingYear(Course >> int): pass
+    class hasMechanographicalNumber(DataProperty, FunctionalProperty):
+        domain = [Account]
+        range = [int]
+
+    class hasPassword(DataProperty, FunctionalProperty):
+        domain = [Account]
+        range = [str]
+
+    class hasWizard(DataProperty, FunctionalProperty):
+        domain = [Account]
+        range = [Wizard]
+    class hasAccount(ObjectProperty, FunctionalProperty):
+        domain = [Wizard]
+        range = [Account]
+
+    class hasName(DataProperty, FunctionalProperty):
+        domain = [Wizard, Spell, Skill, School, House, Course]
+        range = [str]
+
+    class hasId(DataProperty, FunctionalProperty):
+        domain = [Wizard, Spell, Skill, School, House, Course]
+
+    class hasGender(DataProperty, FunctionalProperty):
+        domain = [Wizard]
+        range = [str]
+
+    class hasSpecies(DataProperty, FunctionalProperty):
+        domain = [Wizard]
+        range = [str]
+
+    class hasBloodType(DataProperty, FunctionalProperty):
+        domain = [Wizard]
+        range = [str]
+
+    class hasEyeColor(DataProperty, FunctionalProperty):
+        domain = [Wizard]
+        range = [str]
+
+    class belongsToHouse(ObjectProperty, FunctionalProperty):
+        domain = [Wizard]
+        range = [House]
+
+    class hasWand(DataProperty, FunctionalProperty):
+        domain = [Wizard]
+        range = [str]
+
+    class hasPatronus(DataProperty, FunctionalProperty):
+        domain = [Wizard]
+        range = [str]
+
+    class hasSkill(ObjectProperty):
+        domain = [Wizard]
+        range = [Skill]
+
+    class hasStudentId(DataProperty, FunctionalProperty):
+        domain = [Student]
+        range = [str]
+
+    class belongsToSchool(ObjectProperty, FunctionalProperty):
+        domain = [Student, Professor]
+        range = [School]
+
+    class hasSchoolYear(DataProperty, FunctionalProperty):
+        domain = [Student]
+        range = [int]
+
+    class learnsCourse(ObjectProperty):
+        domain = [Student]
+        range = [Course]
+
+    class hasLearnedCourse(ObjectProperty):
+        domain = [Student]
+        range = [Course]
+
+    class teachesSpell(ObjectProperty):
+        domain = [Course]
+        range = [Spell]
+
+    class hasProfessor(ObjectProperty, FunctionalProperty):
+        domain = [Course]
+        range = [Professor]
+
+    class hasIncantation(DataProperty, FunctionalProperty):
+        domain = [Spell]
+        range = [str]
+
+    class hasType(DataProperty, FunctionalProperty):
+        domain = [Spell]
+        range = [str]
+
+    class hasEffect(DataProperty, FunctionalProperty):
+        domain = [Spell]
+        range = [str]
+
+    class hasLight(DataProperty, FunctionalProperty):
+        domain = [Spell]
+        range = [str]
+
+    class hasSkillName(DataProperty, FunctionalProperty):
+        domain = [Skill]
+        range = [str]
 
 
-    # Define constraints
-    hasMechanographicalNumber.domain = [Account]
-    hasMechanographicalNumber.range = [int]
-    hasMechanographicalNumber.only(int)
-    hasMechanographicalNumber.some(int)
-    hasMechanographicalNumber.exactly(1, int)
 
-    hasAccount.domain = [Wizard]
-    hasAccount.range = [Account]
-    hasAccount.exactly(1, Account)
+    class hasSchoolName(DataProperty, FunctionalProperty):
+        domain = [School]
+        range = [str]
 
-    hasName.domain = [Wizard, Spell, Skill, School, House, Course]
-    hasName.range = [str]
-    hasName.exactly(1, str)
+    class hasLocation(DataProperty, FunctionalProperty):
+        domain = [School, House]
+        range = [str]
 
-    hasGender.domain = [Wizard]
-    hasGender.range = [str]
-    hasGender.exactly(1, str)
+    class hasDateOfCreation(DataProperty, FunctionalProperty):
+        domain = [School]
+        range = [str]
 
-    hasSpecies.domain = [Wizard]
-    hasSpecies.range = [str]
-    hasSpecies.exactly(1, str)
+    class hasHeadmaster(ObjectProperty, FunctionalProperty):
+        domain = [School]
+        range = [Headmaster]
 
-    hasBloodType.domain = [Wizard]
-    hasBloodType.range = [str]
-    hasBloodType.exactly(1, str)
+    class hasHouseName(DataProperty, FunctionalProperty):
+        domain = [House]
+        range = [str]
 
-    hasEyeColor.domain = [Wizard]
-    hasEyeColor.range = [str]
-    hasEyeColor.exactly(1, str)
+    class hasSymbol(DataProperty, FunctionalProperty):
+        domain = [House]
+        range = [str]
 
-    belongsToHouse.domain = [Wizard]
-    belongsToHouse.range = [House]
-    belongsToHouse.exactly(1, House)
+    class hasFounder(DataProperty, FunctionalProperty):
+        domain = [House]
+        range = [int]
 
-    hasWand.domain = [Wizard]
-    hasWand.range = [str]
-    hasWand.exactly(1, str)
+    class hasHouseProfessor(ObjectProperty, FunctionalProperty):
+        domain = [House]
+        range = [Professor]
 
-    hasPatronus.domain = [Wizard]
-    hasPatronus.range = [str]
-    hasPatronus.exactly(1, str)
+    class hasStartDate(DataProperty, FunctionalProperty):
+        domain = [Headmaster]
+        range = [int]
 
-    hasStudentId.domain = [Student]
-    hasStudentId.range = [str]
-    hasStudentId.exactly(1, str)
+    class hasCourseName(DataProperty, FunctionalProperty):
+        domain = [Course]
+        range = [str]
 
-    belongsToSchool.domain = [Student, Professor]
-    belongsToSchool.range = [School]
-    belongsToSchool.exactly(1, School)
+    class hasCourseType(DataProperty, FunctionalProperty):
+        domain = [Course]
+        range = [str]
 
-    hasSchoolYear.domain = [Student]
-    hasSchoolYear.range = [int]
-    hasSchoolYear.exactly(1, int)
+    class hasAttendingYear(DataProperty, FunctionalProperty):
+        domain = [Course]
+        range = [int]
 
-    learnsCourse.domain = [Student]
-    learnsCourse.range = [Course]
-
-    hasLearnedCourse.domain = [Student]
-    hasLearnedCourse.range = [Course]
-
-    teachesSpell.domain = [Course]
-    teachesSpell.range = [Spell]
-
-    hasProfessor.domain = [Course]
-    hasProfessor.range = [Professor]
-    hasProfessor.exactly(1, Professor)
-
-    hasIncantation.domain = [Spell]
-    hasIncantation.range = [str]
-    hasIncantation.exactly(1, str)
-
-    hasType.domain = [Spell]
-    hasType.range = [str]
-    hasType.exactly(1, str)
-
-    hasEffect.domain = [Spell]
-    hasEffect.range = [str]
-    hasEffect.exactly(1, str)
-
-    hasLight.domain = [Spell]
-    hasLight.range = [str]
-    hasLight.exactly(1, str)
-
-    hasSkillName.domain = [Skill]
-    hasSkillName.range = [str]
-    hasSkillName.exactly(1, str)
-
-    hasSchoolName.domain = [School]
-    hasSchoolName.range = [str]
-    hasSchoolName.exactly(1, str)
-
-    hasLocation.domain = [School, House]
-    hasLocation.range = [str]
-    hasLocation.exactly(1, str)
-
-    hasDateOfCreation.domain = [School]
-    hasDateOfCreation.range = [str]
-    hasDateOfCreation.exactly(1, str)
-
-    hasHeadmaster.domain = [School]
-    hasHeadmaster.range = [Headmaster]
-    hasHeadmaster.exactly(1, Headmaster)
-
-    hasHouseName.domain = [House]
-    hasHouseName.range = [str]
-    hasHouseName.exactly(1, str)
-
-    hasSymbol.domain = [House]
-    hasSymbol.range = [str]
-    hasSymbol.exactly(1, str)
-
-    hasFounder.domain = [House]
-    hasFounder.range = [int]
-    hasFounder.exactly(1, int)
-
-    hasHouseProfessor.domain = [House]
-    hasHouseProfessor.range = [Professor]
-    hasHouseProfessor.exactly(1, Professor)
-
-    hasStartDate.domain = [Headmaster]
-    hasStartDate.range = [int]
-    hasStartDate.exactly(1, int)
-
-    hasCourseName.domain = [Course]
-    hasCourseName.range = [str]
-    hasCourseName.exactly(1, str)
-
-    hasCourseType.domain = [Course]
-    hasCourseType.range = [str]
-    hasCourseType.exactly(1, str)
-
-    hasAttendingYear.domain = [Course]
-    hasAttendingYear.range = [int]
-    hasAttendingYear.exactly(1, int)
+    class hasLevel(DataProperty):
+        domain = [Student]
+        range = [str]
 
 # Save the ontology to a file
 onto.save(file="ontology.owl", format="rdfxml")

@@ -4248,7 +4248,7 @@
 		<hogwarts:id>3</hogwarts:id>
 		<hogwarts:_type>house</hogwarts:_type>
 		<hogwarts:name>Hufflepuff</hogwarts:name>
-		<hogwarts:symbol>serpent</hogwarts:symbol>
+		<hogwarts:symbol>badger</hogwarts:symbol>
 		<hogwarts:founder>78</hogwarts:founder>
 		<hogwarts:location>Hufflepuff Basement below ground level behind a stack of barrels near the kitchens</hogwarts:location>
 		<hogwarts:professorInCharge rdf:resource="http://hogwarts.edu/professors/4"/>
@@ -4257,7 +4257,7 @@
 		<hogwarts:id>4</hogwarts:id>
 		<hogwarts:_type>house</hogwarts:_type>
 		<hogwarts:name>Slytherin</hogwarts:name>
-		<hogwarts:symbol>badger</hogwarts:symbol>
+		<hogwarts:symbol>serpent</hogwarts:symbol>
 		<hogwarts:founder>68</hogwarts:founder>
 		<hogwarts:location>Slytherin Dungeon below ground level beyond a stone wall</hogwarts:location>
 		<hogwarts:professorInCharge rdf:resource="http://hogwarts.edu/professors/6"/>
