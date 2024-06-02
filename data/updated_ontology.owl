@@ -27,8 +27,8 @@
 
 <owl:ObjectProperty rdf:about="#belongsToSchool">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  <rdfs:domain rdf:resource="#Professor"/>
   <rdfs:domain rdf:resource="#Student"/>
+  <rdfs:domain rdf:resource="#Professor"/>
   <rdfs:range rdf:resource="#School"/>
 </owl:ObjectProperty>
 
@@ -264,11 +264,11 @@
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 </owl:Class>
 
-<owl:Class rdf:about="#Professor">
+<owl:Class rdf:about="#Student">
   <rdfs:subClassOf rdf:resource="#Wizard"/>
 </owl:Class>
 
-<owl:Class rdf:about="#Student">
+<owl:Class rdf:about="#Professor">
   <rdfs:subClassOf rdf:resource="#Wizard"/>
 </owl:Class>
 
