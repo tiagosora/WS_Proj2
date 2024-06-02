@@ -1,4 +1,5 @@
 import csv
+import random
 
 def accounts():
     rdf = []
@@ -49,7 +50,10 @@ def wizards():
         if wizard_info['Species'] not in ["None", "none", ""]: rdf.append('\t\t<hogwarts:species>{species}</hogwarts:species>'.format(species=wizard_info['Species']))
         if wizard_info['Blood-Type'] not in ["None", "none", ""]: rdf.append('\t\t<hogwarts:blood-type>{blood}</hogwarts:blood-type>'.format(blood=wizard_info['Blood-Type']))
         if wizard_info['Eye Color'] not in ["None", "none", ""]: rdf.append('\t\t<hogwarts:eye_color>{eye_color}</hogwarts:eye_color>'.format(eye_color=wizard_info['Eye Color']))
-        if wizard_info['HouseId'] not in ["None", "none", ""]: rdf.append('\t\t<hogwarts:house>{house}</hogwarts:house>'.format(house=wizard_info['HouseId']))
+        if wizard_info['HouseId'] not in ["None", "none", ""]: 
+            rdf.append('\t\t<hogwarts:house>{house}</hogwarts:house>'.format(house=wizard_info['HouseId'])) 
+        else: 
+            rdf.append('\t\t<hogwarts:house>{house}</hogwarts:house>'.format(house=random.randint(1,4)))
         if wizard_info['Wand'] not in ["None", "none", ""]: rdf.append('\t\t<hogwarts:wand>{wand}</hogwarts:wand>'.format(wand=wizard_info['Wand']))
         if wizard_info['Patronus'] not in ["None", "none", ""]: rdf.append('\t\t<hogwarts:patronus>{patronus}</hogwarts:patronus>'.format(patronus=wizard_info['Patronus']))
         for skill_id in skills.get(wizard_id, []):
