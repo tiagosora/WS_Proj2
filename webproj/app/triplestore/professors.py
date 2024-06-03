@@ -9,7 +9,7 @@ from app.triplestore.utils import execute_sparql_query
 def get_professor_info(professor_id):
     from app.triplestore.wizards import get_wizard_info_by_uri
 
-    professor_uri = f"http://hogwarts.edu/professors/{professor_id}"
+    professor_uri = professor_id
 
     professor = get_professor(professor_uri)
     wizard = get_wizard_info_by_uri(professor.wizard)
@@ -39,6 +39,6 @@ def get_all_teachers_not_teaching_course(professor_id):
     professors = []
     if len(results["results"]["bindings"]) > 0:
         for elem in results["results"]["bindings"]:
-            professors.append({'id': elem["wizardId"]["value"], 'name': elem["name"]["value"]}) 
+            professors.append({'id': elem["professor"]["value"], 'name': elem["name"]["value"]}) 
 
     return professors   

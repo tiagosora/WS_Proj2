@@ -67,8 +67,8 @@ def wizard_login(nmec, password):
     results, _ = execute_sparql_query(query_name, format="JSON", nmec_literal=nmec_literal,
                                       password_literal=password_literal)
 
-    if len(results["results"]["bindings"]) > 0 and results["results"]["bindings"][0]["wizardId"]["value"]:
-        wizard_id = int(results["results"]["bindings"][0]["wizardId"]["value"])
+    if len(results["results"]["bindings"]) > 0 and results["results"]["bindings"][0]["wizard"]["value"]:
+        wizard_id = results["results"]["bindings"][0]["wizard"]["value"]
     else:
         return False, None
 
@@ -83,17 +83,16 @@ def get_role_info_by_wizard_id(wizard_id):
     if len(results["results"]["bindings"]) <= 0:
         return None, None, None
 
-    wizard_type = results["results"]["bindings"][0]["type"]["value"]
-    wizard_role = results["results"]["bindings"][0]["role"]["value"]
-    wizard_type_id = results["results"]["bindings"][0]["type_id"]["value"]
+    wizard_type_id = results["results"]["bindings"][0]["role"]["value"]
+    wizard_role = results["results"]["bindings"][0]["type"]["value"]
 
-    return wizard_type, wizard_role, wizard_type_id
+    return wizard_role, wizard_type_id
 
 
 def get_all_students_info():
     query_name = "app/queries/get_all_by_type.sparql"
 
-    results, _ = execute_sparql_query(query_name=query_name, format='JSON', type="student")
+    results, _ = execute_sparql_query(query_name=query_name, format='JSON', type="Student")
     
     if len(results["results"]["bindings"]) <= 0:
         return []
@@ -113,7 +112,6 @@ def get_all_students_info():
     
 
 def student_info(student_uri):
-    
     student = get_student_info(student_uri)
     wizard = get_wizard_info_by_uri(student.wizard)
 
@@ -121,7 +119,7 @@ def student_info(student_uri):
     
     
 def get_student_view_info(student_id):
-    student_uri = f"http://hogwarts.edu/students/{student_id}"
+    student_uri = student_id
     
     wizard, student = student_info(student_uri=student_uri)
     
@@ -164,7 +162,7 @@ def get_student_view_info(student_id):
 
 
 def get_headmaster_info(headmaster_id):
-    headmaster_uri = f"http://hogwarts.edu/headmasters/{headmaster_id}"
+    headmaster_uri = f"{headmaster_id}"
     query_name = "app/queries/get_entity_info_by_uri.sparql"
     
     _, g = execute_sparql_query(query_name, format="turtle", uri=headmaster_uri)
@@ -178,12 +176,12 @@ def get_headmaster_info(headmaster_id):
             value = str(o)
         headmaster_attr[prop] = value
     
-    if not all(key in headmaster_attr for key in ["id", "start_date", "wizard"]):
+    if not all(key in headmaster_attr for key in ["hasAccount", "hasStartDate", "hasHeadmaster"]):
         return {}
     
-    headmaster_start_date = headmaster_attr["start_date"]
+    headmaster_start_date = headmaster_attr["hasStartDate"]
     
-    headmaster_info = get_wizard_info_by_uri(headmaster_attr["wizard"]).info() | {"start_date": headmaster_start_date} 
+    headmaster_info = get_wizard_info_by_uri(headmaster_attr["hasAccount"]).info() | {"start_date": headmaster_start_date} 
     
     return headmaster_info
 

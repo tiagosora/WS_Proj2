@@ -1,21 +1,21 @@
 # Create your models here.
 class Wizard:
     def __init__(self, **kwargs):
-        self.id = kwargs.get('id')
-        self.name = kwargs.get('name', '')
-        self.gender = kwargs.get('gender', '')
-        self.species = kwargs.get('species', '')
-        self.blood_type = kwargs.get('blood-type', '')
-        self.eye_color = kwargs.get('eye_color', '')
-        self.house = kwargs.get('house', '')
-        self.wand = kwargs.get('wand', '')
-        self.patronus = kwargs.get('patronus', '')
+        self.id = kwargs.get('id', '')
+        self.name = kwargs.get('hasName', '')
+        self.gender = kwargs.get('hasGender', '')
+        self.species = kwargs.get('hasSpecies', '')
+        self.blood_type = kwargs.get('hasBloodType', '')
+        self.eye_color = kwargs.get('hasEyeColor', '')
+        self.house = kwargs.get('belongsToHouse', '')
+        self.wand = kwargs.get('hasWand', '')
+        self.patronus = kwargs.get('hasPatronus', '')
         self.skills = kwargs.get('skills', [])
         self.spells = kwargs.get('spells', [])
-        self.type = kwargs.get('_type', 'wizard')
+        self.type = kwargs.get('type', ':Wizard')
 
     def __str__(self):
-        return f"Wizard: {self.name}"
+        return f"Wizard: {self.name}, house: {self.house}"
     
     def info(self):
         return {
@@ -33,8 +33,8 @@ class Wizard:
 class Skill:
     def __init__(self, **kwargs):
         self.id = kwargs.get('id')
-        self.name = kwargs.get('name', '')
-        self._type = kwargs.get('_type', 'skill')
+        self.name = kwargs.get('hasSkillName', '')
+        self._type = kwargs.get('type', ':Skill')
 
     def __str__(self):
         return f"Skill: {self.name}"
@@ -46,14 +46,14 @@ class Skill:
         }
     
 
-class Spell:
+class Spell:    #TODO: fix to match
     def __init__(self, **kwargs):
-        self.effect = kwargs.get('effect', '')
+        self.effect = kwargs.get('hasEffect', '')
         self.id = kwargs.get('id', '')
-        self.incantation = kwargs.get('incantation', '')
-        self.light = kwargs.get('light', '')
-        self.name = kwargs.get('name', '')
-        self.type = kwargs.get('type', '')
+        self.incantation = kwargs.get('hasIncantation', '')
+        self.light = kwargs.get('hasLight', '')
+        self.name = kwargs.get('hasName', '')
+        self.type = kwargs.get('hasType', '')
         
     def __str__(self) -> str:
         return f"ID: {self.id}, \n\
@@ -77,12 +77,12 @@ class Spell:
 class Course:
     def __init__(self, **kwargs):
         self.id = kwargs.get('id', '')
-        self.name = kwargs.get('name', '')
-        self.professor = kwargs.get('professor', '')
-        self.attending_year = kwargs.get('attending_year', '')
+        self.name = kwargs.get('hasCourseName', '')
+        self.professor = kwargs.get('hasProfessor', '')
+        self.attending_year = kwargs.get('hasAttendingYear', '')
         self.teaches_spell = kwargs.get('teaches_spell', [])
-        self._type = kwargs.get('_type', 'course')
-        self.type = kwargs.get('type', '')
+        self._type = kwargs.get('_type', ':Course')
+        self.type = kwargs.get('hasCourseType', '')
         
     def __str__(self) -> str:
         return f"ID: {self.id}, \n\
@@ -110,17 +110,16 @@ class Course:
 
 class Student:
     def __init__(self, **kwargs):
-        self.id = kwargs.get('id')
+        self.id = kwargs.get('id', '')
         self.is_learning = kwargs.get('is_learning', [])
         self.learned = kwargs.get('learned', [])
-        self.school = kwargs.get('school', '')
-        self.school_year = kwargs.get('school_year', '')
-        self.wizard = kwargs.get('wizard', '')
-        self.type = kwargs.get('_type', 'student')
+        self.school = kwargs.get('belongsToSchool', '')
+        self.school_year = kwargs.get('hasSchoolYear', '')
+        self.wizard = kwargs.get('hasAccount', '')
+        self.type = kwargs.get('type', ':Student')
     
     def __str__(self) -> str:
-        return f"ID: {self.id}, \n\
-                Is Learning: {self.is_learning}, \n\
+        return f"Is Learning: {self.is_learning}, \n\
                 Learned: {self.learned}, \n\
                 School: {self.school}, \n\
                 School Year: {self.school_year}, \n\
@@ -130,14 +129,13 @@ class Student:
 
 class Professor:
     def __init__(self, **kwargs):
-        self.id = kwargs.get('id')
-        self.school = kwargs.get('school', '')
-        self.wizard = kwargs.get('wizard', '')
-        self.type = kwargs.get('_type', 'professor')
+        self.id = kwargs.get('id', '')
+        self.school = kwargs.get('belongsToSchool', '')
+        self.wizard = kwargs.get('hasAccount', '')
+        self.type = kwargs.get('type', 'Professor')
     
     def __str__(self) -> str:
-        return f"ID: {self.id}, \n\
-                School: {self.school}, \n\
+        return f"School: {self.school}, \n\
                 Wizard: {self.wizard}, \n\
                 Type: {self.type} \n"
 

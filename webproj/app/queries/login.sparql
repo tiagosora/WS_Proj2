@@ -4,12 +4,12 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX hogwarts: <http://hogwarts.edu/ontology#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT
-    ?wizard
+SELECT 
+    ?wizard 
 WHERE
 {{
     ?account rdf:type :Account ;
-             :hasMechanographicalNumber {nmec_literal} ;
-             :hasPassword "{password_literal}" ;
+             :hasMechanographicalNumber {nmec_literal}^^xsd:integer ;
+             :hasPassword {password_literal} ;
              :hasAccount ?wizard .
 }}
