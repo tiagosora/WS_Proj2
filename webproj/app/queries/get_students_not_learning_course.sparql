@@ -1,12 +1,15 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <http://hogwarts.edu/ontology.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT ?wizardId ?name
+SELECT ?student ?name
 WHERE {{
-    ?student hogwarts:_type "student" .
-    ?student hogwarts:id ?wizardId .
-    ?student hogwarts:wizard ?wizard .
-    ?wizard hogwarts:name ?name .
-
-    FILTER NOT EXISTS {{ ?student hogwarts:is_learning <http://hogwarts.edu/courses/{course_uri}> . }}
-    FILTER NOT EXISTS {{ ?student hogwarts:learned <http://hogwarts.edu/courses/{course_uri}> . }}
+    ?student rdf:type :Student .
+    ?student :hasAccount ?wizard .
+    ?wizard :hasName ?name .
+    
+    FILTER NOT EXISTS {{ ?student :learnsCourse {course_uri} . }}
+    FILTER NOT EXISTS {{ ?student :hasLearnedCourse {course_uri} . }}
 }}

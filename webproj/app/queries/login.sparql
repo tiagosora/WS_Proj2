@@ -1,12 +1,15 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <http://hogwarts.edu/ontology.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT
-?wizardId
+    ?wizard
 WHERE
 {{
-    ?account hogwarts:_type "account" .
-    ?account hogwarts:number {nmec_literal} .
-    ?account hogwarts:password {password_literal} .
-    ?account hogwarts:wizard ?wizard .
-    ?wizard hogwarts:id ?wizardId
+    ?account rdf:type :Account ;
+             :hasMechanographicalNumber {nmec_literal} ;
+             :hasPassword "{password_literal}" ;
+             :hasAccount ?wizard .
 }}

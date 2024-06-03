@@ -1,11 +1,13 @@
-PREFIX hogwarts: <http://hogwarts.edu/ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <http://hogwarts.edu/ontology.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT
-    ?houseId
+    ?house
 WHERE {{
-    ?house hogwarts:_type "house" .
-    ?house hogwarts:name ?houseName .
-    FILTER(LCASE(?houseName) = LCASE("{house}")) .
-    ?house hogwarts:id ?houseId .
+    ?house rdf:type :House ;
+           :hasHouseName ?houseName .
+    FILTER(LCASE(?houseName) = LCASE({house})) .
 }}

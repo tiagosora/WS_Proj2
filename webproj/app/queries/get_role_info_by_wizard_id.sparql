@@ -1,13 +1,14 @@
+PREFIX : <http://hogwarts.edu/ontology.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?type ?role ?type_id
+SELECT ?type ?role
 WHERE {{
-    ?wizard hogwarts:_type "wizard" .
-    ?wizard hogwarts:id "{wizard_id}" .
     OPTIONAL {{
-        ?role hogwarts:wizard ?wizard .
-        ?role hogwarts:_type ?type .
-        ?role hogwarts:id ?type_id .
-        FILTER (?type IN ("headmaster", "professor", "student"))
+        ?role :hasAccount {wizard_id} .
+        ?role rdf:type ?type .
+        FILTER (?type IN (:Headmaster, :Professor, :Student))
     }}
 }}

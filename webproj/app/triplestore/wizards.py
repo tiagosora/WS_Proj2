@@ -194,32 +194,32 @@ def update_wizard_info(wizard_id, name = None, gender = None, blood_type = None,
     query_insert = ""
     
     if bool(name): 
-        query_delete += "\t ?wizard hogwarts:name ?old_name .\n"
-        query_insert += f"\t ?wizard hogwarts:name '{name}' .\n"
+        query_delete += "\t ?wizard :hasName ?old_name .\n"
+        query_insert += f"\t ?wizard :hasName '{name}' .\n"
         
     if bool(gender):
-        query_delete += "\t ?wizard hogwarts:gender ?old_gender .\n"
-        query_insert += f"\t ?wizard hogwarts:gender '{gender}' .\n"
+        query_delete += "\t ?wizard :hasGender ?old_gender .\n"
+        query_insert += f"\t ?wizard :hasGender '{gender}' .\n"
         
     if bool(blood_type):
-        query_delete += "\t ?wizard hogwarts:blood-type ?old_blood_type .\n"
-        query_insert += f"\t ?wizard hogwarts:blood-type '{blood_type}' .\n"
+        query_delete += "\t ?wizard :hasBloodType ?old_blood_type .\n"
+        query_insert += f"\t ?wizard :hasBloodType '{blood_type}' .\n"
         
     if bool(species):
-        query_delete += "\t ?wizard hogwarts:species ?old_species .\n"
-        query_insert += f"\t ?wizard hogwarts:species '{species}' .\n"
+        query_delete += "\t ?wizard :hasSpecies ?old_species .\n"
+        query_insert += f"\t ?wizard :hasSpecies '{species}' .\n"
         
     if bool(eye_color):
-        query_delete += "\t ?wizard hogwarts:eye_color ?old_eye_color .\n"
-        query_insert += f"\t ?wizard hogwarts:eye_color '{eye_color}' .\n"
+        query_delete += "\t ?wizard :hasEyeColor ?old_eye_color .\n"
+        query_insert += f"\t ?wizard :hasEyeColor '{eye_color}' .\n"
         
     if bool(patronus):
-        query_delete += "\t ?wizard hogwarts:patronus ?old_patronus .\n"
-        query_insert += f"\t ?wizard hogwarts:patronus '{patronus}' .\n"
+        query_delete += "\t ?wizard :hasPatronus ?old_patronus .\n"
+        query_insert += f"\t ?wizard :hasPatronus '{patronus}' .\n"
         
     if bool(wand):
-        query_delete += "\t ?wizard hogwarts:wand ?old_wand .\n"
-        query_insert += f"\t ?wizard hogwarts:wand '{wand}' .\n"
+        query_delete += "\t ?wizard :hasWand ?old_wand .\n"
+        query_insert += f"\t ?wizard :hasWand '{wand}' .\n"
         
     query_name = "app/queries/update_wizard_info.sparql"
     execute_sparql_query(query_name=query_name, format='POST', wizard_id=wizard_id, query_delete=query_delete, query_insert=query_insert)

@@ -1,15 +1,26 @@
-PREFIX hogwarts: <http://hogwarts.edu/ontology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <http://hogwarts.edu/ontology.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT
-    (MAX(xsd:integer(?wizardId)) AS ?nextWizardId)
-    (MAX(xsd:integer(?studentId)) AS ?nextStudentId)
-    (MAX(xsd:integer(?accountId)) AS ?nextAccountId)
+    (COUNT(DISTINCT ?wizard) AS ?nextWizardId)
+    (COUNT(DISTINCT ?student) AS ?nextStudentId)
+    (COUNT(DISTINCT ?account) AS ?nextAccountId)
 WHERE {{
-    ?wizard hogwarts:_type "wizard" .
-    ?wizard hogwarts:id ?wizardId .
-    ?student hogwarts:_type "student" .
-    ?student hogwarts:id ?studentId .
-    ?account hogwarts:_type "account" .
-    ?account hogwarts:id ?accountId .
+    {{
+        ?wizard rdf:type :Wizard .
+        FILTER NOT EXISTS { ?wizard rdf:type :Student }
+        FILTER NOT EXISTS { ?wizard rdf:type :Professor }
+        FILTER NOT EXISTS { ?wizard rdf:type :Headmaster }
+    }}
+    UNION
+    {{ ?student rdf:type :Student . }}
+    UNION
+    {{ ?professor rdf:type :Professor . }}
+    UNION
+    {{ ?headmaster rdf:type :Headmaster . }}
+    UNION
+    {{ ?account rdf:type :Account . }}
 }}

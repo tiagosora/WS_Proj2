@@ -1,7 +1,11 @@
-    PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+PREFIX : <http://hogwarts.edu/ontology.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-    SELECT ?courses
-    WHERE {{
-        ?courses hogwarts:_type "course" . 
-        ?courses hogwarts:professor <{user_uri}> . 
-    }}
+SELECT ?courses
+WHERE {{
+    ?courses rdf:type :Course .
+    ?courses hogwarts:professor <{user_uri}> . 
+}}

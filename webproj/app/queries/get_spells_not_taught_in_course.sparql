@@ -1,12 +1,15 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <http://hogwarts.edu/ontology.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT ?spellId ?name
+SELECT ?name
 WHERE {{
-    # Select all spells
-    ?spell hogwarts:_type "spell" .
-    ?spell hogwarts:id ?spellId .
-    ?spell hogwarts:name ?name .
+    
+    ?spell rdf:type :Spell  .
+    ?spell :hasName ?name .
 
-    # Exclude spells that are taught in the specified course
-    FILTER NOT EXISTS {{ <http://hogwarts.edu/courses/{course_id}> hogwarts:teaches_spell ?spell . }}
+    FILTER NOT EXISTS {{ {course_id} :teachesSpell ?spell . }}
+
 }}

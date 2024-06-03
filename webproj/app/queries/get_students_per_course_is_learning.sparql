@@ -1,9 +1,12 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <http://hogwarts.edu/ontology.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT ?id (COUNT(?student) AS ?numberOfStudents)
+SELECT ?course (COUNT(?student) AS ?numberOfStudents)
 WHERE {{
-    ?student hogwarts:_type "student" ;
-             hogwarts:is_learning ?course .
-    ?course hogwarts:id ?id
+    ?student rdf:type :Student .
+    ?student :learnsCourse ?course
 }}
-GROUP BY ?id
+GROUP BY ?course
