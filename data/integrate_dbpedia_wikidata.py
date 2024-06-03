@@ -2,7 +2,6 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 from rdflib import Graph, URIRef, Literal, RDF, OWL
 import time
 
-# Define namespaces and prefixes for your ontology
 ONTOLOGY_NAMESPACE = "http://hogwarts.edu/ontology.owl#"
 ONTOLOGY_FILE = "updated_ontology.owl"
 DELAY = 5  # Delay in seconds between requests
