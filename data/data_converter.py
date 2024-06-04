@@ -48,7 +48,7 @@ def wizards():
         if wizard_info['Name'] not in ["None", "none", ""]: rdf.append('\t\t<hogwarts:name>{name}</hogwarts:name>'.format(name=wizard_info['Name']))
         if wizard_info['Gender'] not in ["None", "none", ""]: rdf.append('\t\t<hogwarts:gender>{gender}</hogwarts:gender>'.format(gender=wizard_info['Gender']))
         if wizard_info['Species'] not in ["None", "none", ""]: rdf.append('\t\t<hogwarts:species>{species}</hogwarts:species>'.format(species=wizard_info['Species']))
-        if wizard_info['Blood-Type'] not in ["None", "none", ""]: rdf.append('\t\t<hogwarts:blood-type>{blood}</hogwarts:blood-type>'.format(blood=wizard_info['Blood-Type']))
+        if wizard_info['Blood-Type'] not in ["None", "none", ""]: rdf.append('\t\t<hogwarts:blood_type>{blood}</hogwarts:blood_type>'.format(blood=wizard_info['Blood-Type']))
         if wizard_info['Eye Color'] not in ["None", "none", ""]: rdf.append('\t\t<hogwarts:eye_color>{eye_color}</hogwarts:eye_color>'.format(eye_color=wizard_info['Eye Color']))
         if wizard_info['HouseId'] not in ["None", "none", ""]: 
             rdf.append('\t\t<hogwarts:house>{house}</hogwarts:house>'.format(house=wizard_info['HouseId'])) 
