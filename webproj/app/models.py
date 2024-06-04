@@ -120,6 +120,7 @@ class Student:
         self.wizard = kwargs.get('hasAccount', '')
         self.type = kwargs.get('type', ':Student')
         self.points = kwargs.get('hasPoints', '')
+        self.star = kwargs.get('hasStarRating')
 
     def __str__(self) -> str:
         return f"Is Learning: {self.is_learning}, \n\

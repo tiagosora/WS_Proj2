@@ -102,6 +102,7 @@ def get_all_students_info():
         wizard, student = student_info(student_uri=elem["data"]["value"])
         
         student_information = wizard.info() \
+                            | {'star': student.star} \
                             | {'house_name': get_house_name(wizard.house)} \
                             | {'school_year': student.school_year} \
                             | {'points': student.points}

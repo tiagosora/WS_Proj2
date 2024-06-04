@@ -76,6 +76,7 @@ def get_students_enrolled(course_id):
 
         student_information.update({"student_id": student.id})
         student_information.update({"attending_year": student.school_year})
+        student_information.update({"star": student.star_rating})
         student_information.update(wizard.info())
         student_information.update({"skills": [skill.name for skill in wizard.skills]})
 
@@ -100,6 +101,7 @@ def get_students_finished_course(course_id):
 
         student_information.update({"student_id": student.id})
         student_information.update({"attending_year": student.school_year})
+        student_information.update({"star": student.star_rating})
         student_information.update(wizard.info())
         student_information.update({"skills": [skill.name for skill in wizard.skills]})
 
