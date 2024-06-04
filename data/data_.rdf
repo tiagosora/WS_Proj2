@@ -29,7 +29,7 @@
 		<hogwarts:name>Harry James Potter</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Bright green</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:wand>11"  Holly  phoenix feather</hogwarts:wand>
@@ -45,7 +45,7 @@
 		<hogwarts:name>Ronald Bilius Weasley</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Blue</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:wand>12" Ash unicorn tail hair</hogwarts:wand>
@@ -58,7 +58,7 @@
 		<hogwarts:name>Hermione Jean Granger</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Muggle-born</hogwarts:blood-type>
+		<hogwarts:blood_type>Muggle-born</hogwarts:blood_type>
 		<hogwarts:eye_color>Brown</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:wand>10¾"  vine wood dragon heartstring</hogwarts:wand>
@@ -71,7 +71,7 @@
 		<hogwarts:name>Albus Percival Wulfric Brian Dumbledore</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Blue</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:wand>15" Elder Thestral tail hair core</hogwarts:wand>
@@ -84,7 +84,7 @@
 		<hogwarts:name>Rubeus Hagrid</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Half-Human/Half-Giant</hogwarts:species>
-		<hogwarts:blood-type>Part-Human</hogwarts:blood-type>
+		<hogwarts:blood_type>Part-Human</hogwarts:blood_type>
 		<hogwarts:eye_color>Black</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/56"/>
@@ -95,7 +95,7 @@
 		<hogwarts:name>Neville Longbottom</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:wand>13" Cherry unicorn hair</hogwarts:wand>
 		<hogwarts:patronus>Non-corporeal</hogwarts:patronus>
@@ -107,7 +107,7 @@
 		<hogwarts:name>Fred Weasley</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Brown</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 	</rdf:Description>
@@ -117,7 +117,7 @@
 		<hogwarts:name>George Weasley</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Brown</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 	</rdf:Description>
@@ -127,7 +127,7 @@
 		<hogwarts:name>Ginevra Molly Weasley</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Bright brown</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:patronus>Horse</hogwarts:patronus>
@@ -139,7 +139,7 @@
 		<hogwarts:name>Dean Thomas</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Muggle-born</hogwarts:blood-type>
+		<hogwarts:blood_type>Muggle-born</hogwarts:blood_type>
 		<hogwarts:eye_color>Brown</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 	</rdf:Description>
@@ -149,7 +149,7 @@
 		<hogwarts:name>Seamus Finnigan</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:patronus>Fox</hogwarts:patronus>
 		<hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/12"/>
@@ -160,7 +160,7 @@
 		<hogwarts:name>Lily J. Potter</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Muggle-born</hogwarts:blood-type>
+		<hogwarts:blood_type>Muggle-born</hogwarts:blood_type>
 		<hogwarts:eye_color>Bright green</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:patronus>Doe</hogwarts:patronus>
@@ -171,7 +171,7 @@
 		<hogwarts:name>James Potter</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Hazel</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:patronus>Stag</hogwarts:patronus>
@@ -182,7 +182,7 @@
 		<hogwarts:name>Sirius Black</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Grey</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 	</rdf:Description>
@@ -192,7 +192,7 @@
 		<hogwarts:name>Remus John Lupin</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Werewolf</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Green</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:wand>10¼" Cypress unicorn hair</hogwarts:wand>
@@ -204,7 +204,7 @@
 		<hogwarts:name>Peter Pettigrew</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Blue</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:wand>9¼" Chestnut dragon heartstring</hogwarts:wand>
@@ -215,7 +215,7 @@
 		<hogwarts:name>Percy Ignatius Weasley</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Blue</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 	</rdf:Description>
@@ -225,7 +225,7 @@
 		<hogwarts:name>William Arthur Weasley</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Blue</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 	</rdf:Description>
@@ -235,7 +235,7 @@
 		<hogwarts:name>Charles Weasley</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Grey</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:wand>12"  Ash unicorn tail hair</hogwarts:wand>
@@ -246,7 +246,7 @@
 		<hogwarts:name>Lee Jordan</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Brown</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 	</rdf:Description>
@@ -256,7 +256,7 @@
 		<hogwarts:name>Oliver Wood</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:house>1</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/22">
@@ -274,7 +274,7 @@
 		<hogwarts:name>Katie Bell</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Brown</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 	</rdf:Description>
@@ -284,7 +284,7 @@
 		<hogwarts:name>Alicia Spinnet</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Brown</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 	</rdf:Description>
@@ -294,7 +294,7 @@
 		<hogwarts:name>Lavender Brown</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Blue</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/14"/>
@@ -305,7 +305,7 @@
 		<hogwarts:name>Parvati Patil</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Dark</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/14"/>
@@ -316,7 +316,7 @@
 		<hogwarts:name>Romilda Vane</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Dark</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 	</rdf:Description>
@@ -326,7 +326,7 @@
 		<hogwarts:name>Colin Creevey</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Muggle-born</hogwarts:blood-type>
+		<hogwarts:blood_type>Muggle-born</hogwarts:blood_type>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/15"/>
 	</rdf:Description>
@@ -336,7 +336,7 @@
 		<hogwarts:name>Cormac McLaggen</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:house>1</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/30">
@@ -345,7 +345,7 @@
 		<hogwarts:name>Minerva McGonagall</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Green</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:wand>9½" Fir dragon heartstring</hogwarts:wand>
@@ -358,7 +358,7 @@
 		<hogwarts:name>Molly Weasley</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Bright brown</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/18"/>
@@ -371,7 +371,7 @@
 		<hogwarts:name>Arthur Weasley</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Green</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 		<hogwarts:patronus>Weasel</hogwarts:patronus>
@@ -383,7 +383,7 @@
 		<hogwarts:name>Quirinus Quirrell</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:house>2</hogwarts:house>
 		<hogwarts:wand>9" Alder unicorn hair bendy</hogwarts:wand>
 		<hogwarts:patronus>Non-corporeal</hogwarts:patronus>
@@ -394,7 +394,7 @@
 		<hogwarts:name>Cho Chang</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Dark</hogwarts:eye_color>
 		<hogwarts:house>2</hogwarts:house>
 		<hogwarts:patronus>Swan</hogwarts:patronus>
@@ -406,7 +406,7 @@
 		<hogwarts:name>Luna Lovegood</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Pale silvery</hogwarts:eye_color>
 		<hogwarts:house>2</hogwarts:house>
 		<hogwarts:patronus>Hare</hogwarts:patronus>
@@ -418,7 +418,7 @@
 		<hogwarts:name>Gilderoy Lockhart</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Blue</hogwarts:eye_color>
 		<hogwarts:house>2</hogwarts:house>
 		<hogwarts:wand>9" Cherry dragon heartstring</hogwarts:wand>
@@ -430,7 +430,7 @@
 		<hogwarts:name>Filius Flitwick</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Part-Goblin</hogwarts:blood-type>
+		<hogwarts:blood_type>Part-Goblin</hogwarts:blood_type>
 		<hogwarts:house>2</hogwarts:house>
 		<hogwarts:patronus>Non-corporeal</hogwarts:patronus>
 		<hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/23"/>
@@ -441,7 +441,7 @@
 		<hogwarts:name>Sybill Patricia Trelawney</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:house>2</hogwarts:house>
 		<hogwarts:wand>9 ½” hazel unicorn hair core</hogwarts:wand>
 		<hogwarts:patronus>Non-corporeal</hogwarts:patronus>
@@ -452,7 +452,7 @@
 		<hogwarts:name>Garrick Ollivander</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Silvery</hogwarts:eye_color>
 		<hogwarts:house>2</hogwarts:house>
 		<hogwarts:wand>12¾" Hornbeam dragon heartstring</hogwarts:wand>
@@ -464,7 +464,7 @@
 		<hogwarts:name>Myrtle Elizabeth Warren (Moaning Myrtle)</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Ghost</hogwarts:species>
-		<hogwarts:blood-type>Muggle-born</hogwarts:blood-type>
+		<hogwarts:blood_type>Muggle-born</hogwarts:blood_type>
 		<hogwarts:house>2</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/41">
@@ -473,7 +473,7 @@
 		<hogwarts:name>Padma Patil</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Dark</hogwarts:eye_color>
 		<hogwarts:house>2</hogwarts:house>
 		<hogwarts:patronus>Non-corporeal</hogwarts:patronus>
@@ -485,7 +485,7 @@
 		<hogwarts:name>Michael Corner</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Brown</hogwarts:eye_color>
 		<hogwarts:house>2</hogwarts:house>
 		<hogwarts:patronus>Squirrel</hogwarts:patronus>
@@ -497,7 +497,7 @@
 		<hogwarts:name>Marietta Edgecombe</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Grey</hogwarts:eye_color>
 		<hogwarts:house>2</hogwarts:house>
 	</rdf:Description>
@@ -507,7 +507,7 @@
 		<hogwarts:name>Terry Boot</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:house>2</hogwarts:house>
 		<hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/27"/>
 	</rdf:Description>
@@ -517,7 +517,7 @@
 		<hogwarts:name>Anthony Goldstein</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Grey</hogwarts:eye_color>
 		<hogwarts:house>2</hogwarts:house>
 		<hogwarts:patronus>Non-corporeal</hogwarts:patronus>
@@ -529,7 +529,7 @@
 		<hogwarts:name>Severus Snape</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Black</hogwarts:eye_color>
 		<hogwarts:house>4</hogwarts:house>
 		<hogwarts:patronus>Doe</hogwarts:patronus>
@@ -540,7 +540,7 @@
 		<hogwarts:name>Draco Malfoy</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Grey</hogwarts:eye_color>
 		<hogwarts:house>4</hogwarts:house>
 		<hogwarts:wand>10" Hawthorn unicorn hair</hogwarts:wand>
@@ -552,7 +552,7 @@
 		<hogwarts:name>Vincent Crabbe</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Black</hogwarts:eye_color>
 		<hogwarts:house>4</hogwarts:house>
 	</rdf:Description>
@@ -562,7 +562,7 @@
 		<hogwarts:name>Gregory Goyle</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:house>4</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/50">
@@ -571,7 +571,7 @@
 		<hogwarts:name>Bellatrix Lestrange</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:house>4</hogwarts:house>
 		<hogwarts:wand>12¾" Walnut dragon heartstring</hogwarts:wand>
 	</rdf:Description>
@@ -581,7 +581,7 @@
 		<hogwarts:name>Dolores Jane Umbridge</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:house>4</hogwarts:house>
 		<hogwarts:wand>8" Birch dragon heartstring</hogwarts:wand>
 		<hogwarts:patronus>Cat</hogwarts:patronus>
@@ -591,7 +591,7 @@
 		<hogwarts:_type>wizard</hogwarts:_type>
 		<hogwarts:name>Horace Eugene Flaccus Slughorn</hogwarts:name>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Gooseberry</hogwarts:eye_color>
 		<hogwarts:house>4</hogwarts:house>
 		<hogwarts:wand>10¼" Cedar dragon heartstring fairly flexible</hogwarts:wand>
@@ -603,7 +603,7 @@
 		<hogwarts:name>Lucius Malfoy</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Grey</hogwarts:eye_color>
 		<hogwarts:house>4</hogwarts:house>
 		<hogwarts:wand>Elm and dragon heartstring</hogwarts:wand>
@@ -614,7 +614,7 @@
 		<hogwarts:name>Narcissa Malfoy</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Blue</hogwarts:eye_color>
 		<hogwarts:house>4</hogwarts:house>
 	</rdf:Description>
@@ -624,7 +624,7 @@
 		<hogwarts:name>Regulus Arcturus Black</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:house>4</hogwarts:house>
 		<hogwarts:patronus>Non-corporeal</hogwarts:patronus>
 		<hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/3"/>
@@ -635,7 +635,7 @@
 		<hogwarts:name>Pansy Parkinson</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:house>4</hogwarts:house>
 		<hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/26"/>
 	</rdf:Description>
@@ -645,7 +645,7 @@
 		<hogwarts:name>Blaise Zabini</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Brown</hogwarts:eye_color>
 		<hogwarts:house>4</hogwarts:house>
 	</rdf:Description>
@@ -655,7 +655,7 @@
 		<hogwarts:name>Tom Marvolo Riddle</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Scarlet</hogwarts:eye_color>
 		<hogwarts:house>4</hogwarts:house>
 		<hogwarts:wand>13½" Yew phoenix feather core</hogwarts:wand>
@@ -666,7 +666,7 @@
 		<hogwarts:name>Theodore Nott</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:house>4</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/60">
@@ -675,7 +675,7 @@
 		<hogwarts:name>Rodolphus Lestrange</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Dark</hogwarts:eye_color>
 		<hogwarts:house>4</hogwarts:house>
 	</rdf:Description>
@@ -685,7 +685,7 @@
 		<hogwarts:name>Millicent Bulstrode</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:house>4</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/62">
@@ -694,7 +694,7 @@
 		<hogwarts:name>Graham Montague</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Brown</hogwarts:eye_color>
 		<hogwarts:house>4</hogwarts:house>
 	</rdf:Description>
@@ -704,7 +704,7 @@
 		<hogwarts:name>Bloody Baron</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Ghost</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:house>4</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/64">
@@ -713,7 +713,7 @@
 		<hogwarts:name>Marcus Flint</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:house>4</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/65">
@@ -722,7 +722,7 @@
 		<hogwarts:name>Penelope Clearwater</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Muggle-born or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Muggle-born or half-blood</hogwarts:blood_type>
 		<hogwarts:house>2</hogwarts:house>
 		<hogwarts:patronus>Non-corporeal</hogwarts:patronus>
 		<hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/26"/>
@@ -742,7 +742,7 @@
 		<hogwarts:name>Marcus Belby</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Dark</hogwarts:eye_color>
 		<hogwarts:house>2</hogwarts:house>
 	</rdf:Description>
@@ -752,7 +752,7 @@
 		<hogwarts:name>Salazar Slytherin</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Dark</hogwarts:eye_color>
 		<hogwarts:house>4</hogwarts:house>
 		<hogwarts:wand>snakewood, Basilisk horn</hogwarts:wand>
@@ -763,7 +763,7 @@
 		<hogwarts:name>Godric Gryffindor</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Green</hogwarts:eye_color>
 		<hogwarts:house>1</hogwarts:house>
 	</rdf:Description>
@@ -773,7 +773,7 @@
 		<hogwarts:name>Rowena Ravenclaw</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Dark</hogwarts:eye_color>
 		<hogwarts:house>2</hogwarts:house>
 		<hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/6"/>
@@ -795,6 +795,7 @@
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Ghost</hogwarts:species>
 		<hogwarts:eye_color>Black</hogwarts:eye_color>
+		<hogwarts:house>3</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/73">
 		<hogwarts:id>73</hogwarts:id>
@@ -802,8 +803,9 @@
 		<hogwarts:name>Barty Crouch Jr.</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Pale, freckled</hogwarts:eye_color>
+		<hogwarts:house>1</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/74">
 		<hogwarts:id>74</hogwarts:id>
@@ -811,7 +813,8 @@
 		<hogwarts:name>Charity Burbage</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
+		<hogwarts:house>4</hogwarts:house>
 		<hogwarts:patronus>Non-corporeal</hogwarts:patronus>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/75">
@@ -821,6 +824,7 @@
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Centaur</hogwarts:species>
 		<hogwarts:eye_color>Astonishingly blue</hogwarts:eye_color>
+		<hogwarts:house>4</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/76">
 		<hogwarts:id>76</hogwarts:id>
@@ -828,7 +832,7 @@
 		<hogwarts:name>Alecto Carrow</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:house>4</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/77">
@@ -837,7 +841,7 @@
 		<hogwarts:name>Amycus Carrow</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:house>4</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/78">
@@ -846,7 +850,7 @@
 		<hogwarts:name>Helga Hufflepuff</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Blue</hogwarts:eye_color>
 		<hogwarts:house>3</hogwarts:house>
 	</rdf:Description>
@@ -865,7 +869,7 @@
 		<hogwarts:name>Helena Ravenclaw</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Ghost</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Grey</hogwarts:eye_color>
 		<hogwarts:house>2</hogwarts:house>
 	</rdf:Description>
@@ -875,7 +879,7 @@
 		<hogwarts:name>Pomona Sprout</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Grey</hogwarts:eye_color>
 		<hogwarts:house>3</hogwarts:house>
 		<hogwarts:patronus>Non-corporeal</hogwarts:patronus>
@@ -886,7 +890,7 @@
 		<hogwarts:name>Newton Scamander</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Blue</hogwarts:eye_color>
 		<hogwarts:house>3</hogwarts:house>
 		<hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/10"/>
@@ -897,7 +901,7 @@
 		<hogwarts:name>Cedric Diggory</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Grey</hogwarts:eye_color>
 		<hogwarts:house>3</hogwarts:house>
 		<hogwarts:wand>12¼", Ash, unicorn hair</hogwarts:wand>
@@ -908,7 +912,7 @@
 		<hogwarts:name>Justin Finch-Fletchley</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Muggle-born</hogwarts:blood-type>
+		<hogwarts:blood_type>Muggle-born</hogwarts:blood_type>
 		<hogwarts:house>3</hogwarts:house>
 		<hogwarts:patronus>Non-corporeal</hogwarts:patronus>
 	</rdf:Description>
@@ -918,7 +922,7 @@
 		<hogwarts:name>Zacharias Smith</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:house>3</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/86">
@@ -927,7 +931,7 @@
 		<hogwarts:name>Hannah Abbott</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Brown</hogwarts:eye_color>
 		<hogwarts:house>3</hogwarts:house>
 		<hogwarts:patronus>Non-corporeal</hogwarts:patronus>
@@ -938,7 +942,7 @@
 		<hogwarts:name>Ernest Macmillan</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:house>3</hogwarts:house>
 		<hogwarts:patronus>Boar</hogwarts:patronus>
 	</rdf:Description>
@@ -948,7 +952,7 @@
 		<hogwarts:name>Susan Bones</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:house>3</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/89">
@@ -957,7 +961,7 @@
 		<hogwarts:name>Dennis Creevey</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Muggle-born</hogwarts:blood-type>
+		<hogwarts:blood_type>Muggle-born</hogwarts:blood_type>
 		<hogwarts:house>1</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/90">
@@ -966,7 +970,7 @@
 		<hogwarts:name>Albus Severus Potter</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Bright green</hogwarts:eye_color>
 		<hogwarts:house>4</hogwarts:house>
 		<hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/38"/>
@@ -977,7 +981,7 @@
 		<hogwarts:name>Scorpius Hyperion Malfoy</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Grey</hogwarts:eye_color>
 		<hogwarts:house>4</hogwarts:house>
 	</rdf:Description>
@@ -987,7 +991,7 @@
 		<hogwarts:name>Edward Remus Lupin</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Variable</hogwarts:eye_color>
 		<hogwarts:house>3</hogwarts:house>
 		<hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/50"/>
@@ -998,7 +1002,7 @@
 		<hogwarts:name>James Sirius Potter</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:house>1</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/94">
@@ -1007,7 +1011,7 @@
 		<hogwarts:name>Rose Granger-Weasley</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Half-blood</hogwarts:blood_type>
 		<hogwarts:house>1</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/95">
@@ -1016,8 +1020,9 @@
 		<hogwarts:name>Argus Filch</hogwarts:name>
 		<hogwarts:gender>Male</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Squib</hogwarts:blood-type>
+		<hogwarts:blood_type>Squib</hogwarts:blood_type>
 		<hogwarts:eye_color>Pale</hogwarts:eye_color>
+		<hogwarts:house>4</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/96">
 		<hogwarts:id>96</hogwarts:id>
@@ -1025,7 +1030,8 @@
 		<hogwarts:name>Poppy Pomfrey</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
+		<hogwarts:house>2</hogwarts:house>
 		<hogwarts:patronus>Non-corporeal</hogwarts:patronus>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/97">
@@ -1035,6 +1041,7 @@
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
 		<hogwarts:eye_color>Yellow</hogwarts:eye_color>
+		<hogwarts:house>4</hogwarts:house>
 		<hogwarts:patronus>Non-corporeal</hogwarts:patronus>
 		<hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/41"/>
 	</rdf:Description>
@@ -1044,6 +1051,7 @@
 		<hogwarts:name>Irma Pince</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
+		<hogwarts:house>4</hogwarts:house>
 		<hogwarts:patronus>Non-corporeal</hogwarts:patronus>
 		<hogwarts:has_skill rdf:resource="http://hogwarts.edu/skills/41"/>
 	</rdf:Description>
@@ -1053,8 +1061,9 @@
 		<hogwarts:name>Aurora Sinistra</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
-		<hogwarts:blood-type>Pure-blood or half-blood</hogwarts:blood-type>
+		<hogwarts:blood_type>Pure-blood or half-blood</hogwarts:blood_type>
 		<hogwarts:eye_color>Dark</hogwarts:eye_color>
+		<hogwarts:house>4</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/100">
 		<hogwarts:id>100</hogwarts:id>
@@ -1062,6 +1071,7 @@
 		<hogwarts:name>Septima Vector</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
+		<hogwarts:house>4</hogwarts:house>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/wizards/101">
 		<hogwarts:id>101</hogwarts:id>
@@ -1069,6 +1079,7 @@
 		<hogwarts:name>Wilhelmina Grubbly-Plank</hogwarts:name>
 		<hogwarts:gender>Female</hogwarts:gender>
 		<hogwarts:species>Human</hogwarts:species>
+		<hogwarts:house>2</hogwarts:house>
 		<hogwarts:patronus>Non-corporeal</hogwarts:patronus>
 	</rdf:Description>
 
@@ -1078,12 +1089,12 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/1"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>2</hogwarts:school_year>
+		<hogwarts:has_points>62</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>93</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/2">
 		<hogwarts:id>2</hogwarts:id>
@@ -1091,12 +1102,12 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/2"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>2</hogwarts:school_year>
+		<hogwarts:has_points>83</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>46</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/3">
 		<hogwarts:id>3</hogwarts:id>
@@ -1104,6 +1115,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/3"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>4</hogwarts:school_year>
+		<hogwarts:has_points>47</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
@@ -1112,7 +1124,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
-		<hogwarts:has_points>91</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/4">
 		<hogwarts:id>4</hogwarts:id>
@@ -1120,6 +1131,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/6"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>5</hogwarts:school_year>
+		<hogwarts:has_points>30</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
@@ -1131,7 +1143,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
-		<hogwarts:has_points>29</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/5">
 		<hogwarts:id>5</hogwarts:id>
@@ -1139,10 +1150,10 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/7"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>1</hogwarts:school_year>
+		<hogwarts:has_points>96</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>85</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/6">
 		<hogwarts:id>6</hogwarts:id>
@@ -1150,10 +1161,10 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/8"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>1</hogwarts:school_year>
+		<hogwarts:has_points>7</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>55</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/7">
 		<hogwarts:id>7</hogwarts:id>
@@ -1161,12 +1172,12 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/9"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>2</hogwarts:school_year>
+		<hogwarts:has_points>17</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>16</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/8">
 		<hogwarts:id>8</hogwarts:id>
@@ -1174,6 +1185,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/10"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>4</hogwarts:school_year>
+		<hogwarts:has_points>62</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
@@ -1182,7 +1194,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
-		<hogwarts:has_points>23</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/9">
 		<hogwarts:id>9</hogwarts:id>
@@ -1190,13 +1201,13 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/11"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>3</hogwarts:school_year>
+		<hogwarts:has_points>39</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>48</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/10">
 		<hogwarts:id>10</hogwarts:id>
@@ -1204,12 +1215,12 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/12"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>2</hogwarts:school_year>
+		<hogwarts:has_points>52</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>71</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/11">
 		<hogwarts:id>11</hogwarts:id>
@@ -1217,10 +1228,10 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/13"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>1</hogwarts:school_year>
+		<hogwarts:has_points>49</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>86</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/12">
 		<hogwarts:id>12</hogwarts:id>
@@ -1228,6 +1239,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/14"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>4</hogwarts:school_year>
+		<hogwarts:has_points>78</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
@@ -1236,7 +1248,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
-		<hogwarts:has_points>75</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/13">
 		<hogwarts:id>13</hogwarts:id>
@@ -1244,6 +1255,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/16"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>5</hogwarts:school_year>
+		<hogwarts:has_points>79</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
@@ -1255,7 +1267,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
-		<hogwarts:has_points>19</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/14">
 		<hogwarts:id>14</hogwarts:id>
@@ -1263,6 +1274,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/17"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>5</hogwarts:school_year>
+		<hogwarts:has_points>86</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
@@ -1274,7 +1286,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
-		<hogwarts:has_points>56</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/15">
 		<hogwarts:id>15</hogwarts:id>
@@ -1282,10 +1293,10 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/18"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>1</hogwarts:school_year>
+		<hogwarts:has_points>85</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>97</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/16">
 		<hogwarts:id>16</hogwarts:id>
@@ -1293,13 +1304,13 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/19"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>3</hogwarts:school_year>
+		<hogwarts:has_points>2</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>77</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/17">
 		<hogwarts:id>17</hogwarts:id>
@@ -1307,12 +1318,12 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/20"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>2</hogwarts:school_year>
+		<hogwarts:has_points>64</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>37</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/18">
 		<hogwarts:id>18</hogwarts:id>
@@ -1320,10 +1331,10 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/21"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>1</hogwarts:school_year>
+		<hogwarts:has_points>51</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>67</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/19">
 		<hogwarts:id>19</hogwarts:id>
@@ -1331,10 +1342,10 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/22"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>1</hogwarts:school_year>
+		<hogwarts:has_points>39</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>71</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/20">
 		<hogwarts:id>20</hogwarts:id>
@@ -1342,6 +1353,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/23"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>5</hogwarts:school_year>
+		<hogwarts:has_points>51</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
@@ -1353,7 +1365,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
-		<hogwarts:has_points>18</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/21">
 		<hogwarts:id>21</hogwarts:id>
@@ -1361,12 +1372,12 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/24"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>2</hogwarts:school_year>
+		<hogwarts:has_points>57</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>1</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/22">
 		<hogwarts:id>22</hogwarts:id>
@@ -1374,12 +1385,12 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/25"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>2</hogwarts:school_year>
+		<hogwarts:has_points>73</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>74</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/23">
 		<hogwarts:id>23</hogwarts:id>
@@ -1387,6 +1398,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/26"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>5</hogwarts:school_year>
+		<hogwarts:has_points>4</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
@@ -1398,7 +1410,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
-		<hogwarts:has_points>36</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/24">
 		<hogwarts:id>24</hogwarts:id>
@@ -1406,6 +1417,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/27"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>5</hogwarts:school_year>
+		<hogwarts:has_points>77</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
@@ -1417,7 +1429,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
-		<hogwarts:has_points>23</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/25">
 		<hogwarts:id>25</hogwarts:id>
@@ -1425,6 +1436,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/28"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>5</hogwarts:school_year>
+		<hogwarts:has_points>62</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
@@ -1436,7 +1448,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
-		<hogwarts:has_points>17</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/26">
 		<hogwarts:id>26</hogwarts:id>
@@ -1444,13 +1455,13 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/29"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>3</hogwarts:school_year>
+		<hogwarts:has_points>28</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>84</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/27">
 		<hogwarts:id>27</hogwarts:id>
@@ -1458,12 +1469,12 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/31"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>2</hogwarts:school_year>
+		<hogwarts:has_points>28</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>40</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/28">
 		<hogwarts:id>28</hogwarts:id>
@@ -1471,12 +1482,12 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/32"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>2</hogwarts:school_year>
+		<hogwarts:has_points>36</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>96</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/29">
 		<hogwarts:id>29</hogwarts:id>
@@ -1484,10 +1495,10 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/33"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>1</hogwarts:school_year>
+		<hogwarts:has_points>91</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>17</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/30">
 		<hogwarts:id>30</hogwarts:id>
@@ -1495,13 +1506,13 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/34"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>3</hogwarts:school_year>
+		<hogwarts:has_points>5</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>16</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/31">
 		<hogwarts:id>31</hogwarts:id>
@@ -1509,13 +1520,13 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/35"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>3</hogwarts:school_year>
+		<hogwarts:has_points>70</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>15</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/32">
 		<hogwarts:id>32</hogwarts:id>
@@ -1523,13 +1534,13 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/36"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>3</hogwarts:school_year>
+		<hogwarts:has_points>52</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>72</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/33">
 		<hogwarts:id>33</hogwarts:id>
@@ -1537,13 +1548,13 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/39"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>3</hogwarts:school_year>
+		<hogwarts:has_points>39</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>41</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/34">
 		<hogwarts:id>34</hogwarts:id>
@@ -1551,13 +1562,13 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/40"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>3</hogwarts:school_year>
+		<hogwarts:has_points>20</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>84</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/35">
 		<hogwarts:id>35</hogwarts:id>
@@ -1565,10 +1576,10 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/41"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>1</hogwarts:school_year>
+		<hogwarts:has_points>84</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>87</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/36">
 		<hogwarts:id>36</hogwarts:id>
@@ -1576,10 +1587,10 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/42"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>1</hogwarts:school_year>
+		<hogwarts:has_points>58</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>89</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/37">
 		<hogwarts:id>37</hogwarts:id>
@@ -1587,10 +1598,10 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/43"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>1</hogwarts:school_year>
+		<hogwarts:has_points>9</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>16</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/38">
 		<hogwarts:id>38</hogwarts:id>
@@ -1598,10 +1609,10 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/44"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>1</hogwarts:school_year>
+		<hogwarts:has_points>97</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>82</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/39">
 		<hogwarts:id>39</hogwarts:id>
@@ -1609,13 +1620,13 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/45"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>3</hogwarts:school_year>
+		<hogwarts:has_points>63</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>27</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/40">
 		<hogwarts:id>40</hogwarts:id>
@@ -1623,13 +1634,13 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/47"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>3</hogwarts:school_year>
+		<hogwarts:has_points>79</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>13</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/41">
 		<hogwarts:id>41</hogwarts:id>
@@ -1637,12 +1648,12 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/48"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>2</hogwarts:school_year>
+		<hogwarts:has_points>20</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>51</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/42">
 		<hogwarts:id>42</hogwarts:id>
@@ -1650,10 +1661,10 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/49"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>1</hogwarts:school_year>
+		<hogwarts:has_points>50</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>45</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/43">
 		<hogwarts:id>43</hogwarts:id>
@@ -1661,6 +1672,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/50"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>5</hogwarts:school_year>
+		<hogwarts:has_points>40</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
@@ -1672,7 +1684,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
-		<hogwarts:has_points>20</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/44">
 		<hogwarts:id>44</hogwarts:id>
@@ -1680,12 +1691,12 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/53"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>2</hogwarts:school_year>
+		<hogwarts:has_points>84</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>84</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/45">
 		<hogwarts:id>45</hogwarts:id>
@@ -1693,10 +1704,10 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/54"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>1</hogwarts:school_year>
+		<hogwarts:has_points>52</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>82</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/46">
 		<hogwarts:id>46</hogwarts:id>
@@ -1704,13 +1715,13 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/55"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>3</hogwarts:school_year>
+		<hogwarts:has_points>98</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>26</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/47">
 		<hogwarts:id>47</hogwarts:id>
@@ -1718,6 +1729,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/56"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>5</hogwarts:school_year>
+		<hogwarts:has_points>4</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
@@ -1729,7 +1741,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
-		<hogwarts:has_points>23</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/48">
 		<hogwarts:id>48</hogwarts:id>
@@ -1737,6 +1748,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/57"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>4</hogwarts:school_year>
+		<hogwarts:has_points>6</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
@@ -1745,7 +1757,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
-		<hogwarts:has_points>55</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/49">
 		<hogwarts:id>49</hogwarts:id>
@@ -1753,6 +1764,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/58"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>4</hogwarts:school_year>
+		<hogwarts:has_points>14</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
@@ -1761,7 +1773,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
-		<hogwarts:has_points>29</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/50">
 		<hogwarts:id>50</hogwarts:id>
@@ -1769,12 +1780,12 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/59"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>2</hogwarts:school_year>
+		<hogwarts:has_points>46</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>36</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/51">
 		<hogwarts:id>51</hogwarts:id>
@@ -1782,12 +1793,12 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/60"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>2</hogwarts:school_year>
+		<hogwarts:has_points>40</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>19</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/52">
 		<hogwarts:id>52</hogwarts:id>
@@ -1795,10 +1806,10 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/61"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>1</hogwarts:school_year>
+		<hogwarts:has_points>94</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>36</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/53">
 		<hogwarts:id>53</hogwarts:id>
@@ -1806,6 +1817,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/62"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>5</hogwarts:school_year>
+		<hogwarts:has_points>98</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
@@ -1817,7 +1829,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
-		<hogwarts:has_points>77</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/54">
 		<hogwarts:id>54</hogwarts:id>
@@ -1825,13 +1836,13 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/63"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>3</hogwarts:school_year>
+		<hogwarts:has_points>44</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>32</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/55">
 		<hogwarts:id>55</hogwarts:id>
@@ -1839,6 +1850,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/64"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>4</hogwarts:school_year>
+		<hogwarts:has_points>8</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
@@ -1847,7 +1859,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
-		<hogwarts:has_points>12</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/56">
 		<hogwarts:id>56</hogwarts:id>
@@ -1855,13 +1866,13 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/65"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>3</hogwarts:school_year>
+		<hogwarts:has_points>95</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>66</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/57">
 		<hogwarts:id>57</hogwarts:id>
@@ -1869,6 +1880,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/66"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>5</hogwarts:school_year>
+		<hogwarts:has_points>17</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
@@ -1880,7 +1892,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
-		<hogwarts:has_points>31</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/58">
 		<hogwarts:id>58</hogwarts:id>
@@ -1888,6 +1899,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/67"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>5</hogwarts:school_year>
+		<hogwarts:has_points>24</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
@@ -1899,7 +1911,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
-		<hogwarts:has_points>53</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/59">
 		<hogwarts:id>59</hogwarts:id>
@@ -1907,12 +1918,12 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/71"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>2</hogwarts:school_year>
+		<hogwarts:has_points>8</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>38</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/60">
 		<hogwarts:id>60</hogwarts:id>
@@ -1920,6 +1931,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/73"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>4</hogwarts:school_year>
+		<hogwarts:has_points>56</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
@@ -1928,7 +1940,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
-		<hogwarts:has_points>20</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/61">
 		<hogwarts:id>61</hogwarts:id>
@@ -1936,6 +1947,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/76"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>5</hogwarts:school_year>
+		<hogwarts:has_points>57</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
@@ -1947,7 +1959,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
-		<hogwarts:has_points>50</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/62">
 		<hogwarts:id>62</hogwarts:id>
@@ -1955,6 +1966,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/77"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>4</hogwarts:school_year>
+		<hogwarts:has_points>35</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
@@ -1963,7 +1975,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
-		<hogwarts:has_points>31</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/63">
 		<hogwarts:id>63</hogwarts:id>
@@ -1971,10 +1982,10 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/79"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>1</hogwarts:school_year>
+		<hogwarts:has_points>66</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>13</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/64">
 		<hogwarts:id>64</hogwarts:id>
@@ -1982,12 +1993,12 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/80"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>2</hogwarts:school_year>
+		<hogwarts:has_points>72</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>50</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/65">
 		<hogwarts:id>65</hogwarts:id>
@@ -1995,6 +2006,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/83"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>4</hogwarts:school_year>
+		<hogwarts:has_points>61</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
@@ -2003,7 +2015,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
-		<hogwarts:has_points>0</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/66">
 		<hogwarts:id>66</hogwarts:id>
@@ -2011,6 +2022,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/84"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>4</hogwarts:school_year>
+		<hogwarts:has_points>28</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
@@ -2019,7 +2031,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
-		<hogwarts:has_points>83</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/67">
 		<hogwarts:id>67</hogwarts:id>
@@ -2027,6 +2038,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/85"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>5</hogwarts:school_year>
+		<hogwarts:has_points>52</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
@@ -2038,7 +2050,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
-		<hogwarts:has_points>26</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/68">
 		<hogwarts:id>68</hogwarts:id>
@@ -2046,6 +2057,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/86"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>4</hogwarts:school_year>
+		<hogwarts:has_points>91</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
@@ -2054,7 +2066,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
-		<hogwarts:has_points>40</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/69">
 		<hogwarts:id>69</hogwarts:id>
@@ -2062,6 +2073,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/87"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>4</hogwarts:school_year>
+		<hogwarts:has_points>25</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
@@ -2070,7 +2082,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
-		<hogwarts:has_points>73</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/70">
 		<hogwarts:id>70</hogwarts:id>
@@ -2078,13 +2089,13 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/88"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>3</hogwarts:school_year>
+		<hogwarts:has_points>77</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>41</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/71">
 		<hogwarts:id>71</hogwarts:id>
@@ -2092,10 +2103,10 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/89"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>1</hogwarts:school_year>
+		<hogwarts:has_points>93</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>13</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/72">
 		<hogwarts:id>72</hogwarts:id>
@@ -2103,12 +2114,12 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/90"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>2</hogwarts:school_year>
+		<hogwarts:has_points>60</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>15</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/73">
 		<hogwarts:id>73</hogwarts:id>
@@ -2116,6 +2127,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/91"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>5</hogwarts:school_year>
+		<hogwarts:has_points>66</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
@@ -2127,7 +2139,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
-		<hogwarts:has_points>79</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/74">
 		<hogwarts:id>74</hogwarts:id>
@@ -2135,13 +2146,13 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/92"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>3</hogwarts:school_year>
+		<hogwarts:has_points>89</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>38</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/75">
 		<hogwarts:id>75</hogwarts:id>
@@ -2149,6 +2160,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/93"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>4</hogwarts:school_year>
+		<hogwarts:has_points>56</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
@@ -2157,7 +2169,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
-		<hogwarts:has_points>33</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/76">
 		<hogwarts:id>76</hogwarts:id>
@@ -2165,10 +2176,10 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/94"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>1</hogwarts:school_year>
+		<hogwarts:has_points>75</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>54</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/77">
 		<hogwarts:id>77</hogwarts:id>
@@ -2176,6 +2187,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/95"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>5</hogwarts:school_year>
+		<hogwarts:has_points>82</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/4"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/5"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/10"/>
@@ -2187,7 +2199,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/11"/>
-		<hogwarts:has_points>79</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/78">
 		<hogwarts:id>78</hogwarts:id>
@@ -2195,6 +2206,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/96"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>4</hogwarts:school_year>
+		<hogwarts:has_points>8</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
@@ -2203,7 +2215,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
-		<hogwarts:has_points>24</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/79">
 		<hogwarts:id>79</hogwarts:id>
@@ -2211,13 +2222,13 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/97"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>3</hogwarts:school_year>
+		<hogwarts:has_points>18</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>69</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/80">
 		<hogwarts:id>80</hogwarts:id>
@@ -2225,13 +2236,13 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/98"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>3</hogwarts:school_year>
+		<hogwarts:has_points>3</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/8"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/2"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/3"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
-		<hogwarts:has_points>88</hogwarts:has_points>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://hogwarts.edu/students/81">
 		<hogwarts:id>81</hogwarts:id>
@@ -2239,6 +2250,7 @@
 		<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/101"/>
 		<hogwarts:school rdf:resource="http://hogwarts.edu/schools/1"/>
 		<hogwarts:school_year>4</hogwarts:school_year>
+		<hogwarts:has_points>56</hogwarts:has_points>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/9"/>
 		<hogwarts:is_learning rdf:resource="http://hogwarts.edu/courses/11"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/1"/>
@@ -2247,7 +2259,6 @@
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/6"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/7"/>
 		<hogwarts:learned rdf:resource="http://hogwarts.edu/courses/8"/>
-		<hogwarts:has_points>61</hogwarts:has_points>
 	</rdf:Description>
 
 	<rdf:Description rdf:about="http://hogwarts.edu/spells/1">
@@ -4248,7 +4259,7 @@
 		<hogwarts:id>3</hogwarts:id>
 		<hogwarts:_type>house</hogwarts:_type>
 		<hogwarts:name>Hufflepuff</hogwarts:name>
-		<hogwarts:symbol>badger</hogwarts:symbol>
+		<hogwarts:symbol>serpent</hogwarts:symbol>
 		<hogwarts:founder>78</hogwarts:founder>
 		<hogwarts:location>Hufflepuff Basement below ground level behind a stack of barrels near the kitchens</hogwarts:location>
 		<hogwarts:professorInCharge rdf:resource="http://hogwarts.edu/professors/4"/>
@@ -4257,7 +4268,7 @@
 		<hogwarts:id>4</hogwarts:id>
 		<hogwarts:_type>house</hogwarts:_type>
 		<hogwarts:name>Slytherin</hogwarts:name>
-		<hogwarts:symbol>serpent</hogwarts:symbol>
+		<hogwarts:symbol>badger</hogwarts:symbol>
 		<hogwarts:founder>68</hogwarts:founder>
 		<hogwarts:location>Slytherin Dungeon below ground level beyond a stone wall</hogwarts:location>
 		<hogwarts:professorInCharge rdf:resource="http://hogwarts.edu/professors/6"/>
