@@ -1,0 +1,14 @@
+PREFIX : <http://hogwarts.edu/ontology.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+DELETE {{
+  ?student :hasPoints ?currentPoints .
+}}
+INSERT {{
+  ?student :hasPoints ?newPoints .
+}}
+WHERE {{
+  BIND(<{student_uri}> AS ?student)
+  ?student :hasPoints ?currentPoints .
+  BIND((?currentPoints + '{points}'^^xsd:integer) AS ?newPoints).
+}}

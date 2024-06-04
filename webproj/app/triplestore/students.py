@@ -76,6 +76,7 @@ def get_students_enrolled(course_id):
 
         student_information.update({"student_id": student.id})
         student_information.update({"attending_year": student.school_year})
+        student_information.update({"star": student.star_rating})
         student_information.update(wizard.info())
         student_information.update({"skills": [skill.name for skill in wizard.skills]})
 
@@ -100,6 +101,7 @@ def get_students_finished_course(course_id):
 
         student_information.update({"student_id": student.id})
         student_information.update({"attending_year": student.school_year})
+        student_information.update({"star": student.star_rating})
         student_information.update(wizard.info())
         student_information.update({"skills": [skill.name for skill in wizard.skills]})
 
@@ -138,3 +140,7 @@ def get_spells_not_taught_in_course(course_id):
 
     spells.sort(key=lambda spell: spell["name"])
     return spells
+
+def remove_points(student_uri, points):
+    query_name = "app/inferences/attribute_points.sparql"
+    execute_sparql_query(query_name=query_name, format='POST', student_uri=student_uri, points=points)
