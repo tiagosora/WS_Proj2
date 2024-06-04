@@ -145,7 +145,13 @@ def headmaster_dashboard(request):
     })
 
 def give_points(request):
-    pass
+    if request.method == 'POST':
+        student_id = request.POST.get('student_id')
+        points = request.POST.get('points')
+        
+        print(student_id, points)
+    
+    return redirect("points_banners")
 
 def update_wizard(request):
     wizard_id = request.POST.get('wizard_id')
