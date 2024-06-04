@@ -37,6 +37,8 @@ To first be able to run the app you must install the requirements:
 
     ```bash
     python manage.py tailwind install
+    
+    python manage.py migrate
     ```
 
 ## How to run the app

@@ -3538,7 +3538,7 @@
 <owl:NamedIndividual rdf:about="#School_1">
   <rdf:type rdf:resource="#School"/>
   <hasHeadmaster rdf:resource="#Headmaster_1"/>
-  <hasSchoolName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hogwarts School of Wizards</hasSchoolName>
+  <hasSchoolName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hogwarts</hasSchoolName>
   <hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scotland</hasLocation>
   <hasDateOfCreation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9th/10th Century</hasDateOfCreation>
 </owl:NamedIndividual>
