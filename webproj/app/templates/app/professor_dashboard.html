@@ -80,6 +80,10 @@
                                         <p id="studentName" class="text-sm text-gray-900"></p>
                                     </div>
                                     <div class="flex justify-between">
+                                        <p class="text-sm font-medium text-gray-500">House Points:</p>
+                                        <p id="studentPoints" class="text-sm text-gray-900"></p>
+                                    </div>
+                                    <div class="flex justify-between">
                                         <p class="text-sm font-medium text-gray-500">Gender:</p>
                                         <p id="studentGender" class="text-sm text-gray-900"></p>
                                     </div>
@@ -292,6 +296,7 @@
         var wand = student.wand ? student.wand : 'Unknown';
         var patronus = student.patronus ? student.patronus : 'Unknown';
         var skills = student.skills.join(', ') ? student.skills : 'Unknown';
+        var points = student.points ? student.points : 'Not Determined';
         document.getElementById('studentName').innerText = student.name;
         document.getElementById('studentAttendingYear').innerText = student.attending_year;
         document.getElementById('studentGender').innerText = gender;
@@ -301,6 +306,7 @@
         document.getElementById('studentWand').innerText = wand;
         document.getElementById('studentPatronus').innerText = patronus;
         document.getElementById('studentSkills').innerText = skills;
+        document.getElementById('studentPoints').innerText = points;
         
         document.getElementById('hiddenStudentId').value = student.student_id;
         document.getElementById('hiddenCourseId').value = course.id;

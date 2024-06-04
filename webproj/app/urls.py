@@ -8,10 +8,10 @@ urlpatterns = [
     path('student/', views.student_dashboard, name='student_dashboard'),
     path('professor/', views.professor_dashboard, name='professor_dashboard'),
     path('headmaster/', views.headmaster_dashboard, name='headmaster_dashboard'),
-    path('course', views.course_view , name='course'),
+    path('course', views.course_view, name='course'),
 
     path('back_to_dashboard', views.back_to_dashboard, name='back_to_dashboard'),
-    
+
     path('pass_student/', views.pass_student, name='pass_student'),
     path('remove_student', views.remove_student, name='remove_student'),
     path('add_student', views.add_student, name='add_student'),

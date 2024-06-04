@@ -33,13 +33,13 @@ def authentication(request):
 def index(request):
     return back_to_dashboard(request)
 
+
 @student_required
 def student_dashboard(request):
-    
     wizard_type_id = request.session['wizard_type_id']
     print(wizard_type_id)
     request.session['student_info'] = get_student_view_info(wizard_type_id)
-    
+
     student_info = request.session['student_info']
 
     student = student_info['student']
@@ -78,13 +78,12 @@ def student_dashboard(request):
 
 @professor_required
 def professor_dashboard(request):
-    
     wizard_type_id = request.session['wizard_type_id']
-    
+
     request.session['professor_info'] = get_professor_info(wizard_type_id)
-    
+
     professor_info = request.session['professor_info']
-    
+
     return render(request, 'app/professor_dashboard.html', {
         'professor': professor_info["professor"],
         'courses': professor_info["courses"],
@@ -93,38 +92,38 @@ def professor_dashboard(request):
 
 @headmaster_required
 def headmaster_dashboard(request):
-    
     wizard_type_id = request.session['wizard_type_id']
-    
+
     request.session['headmaster_info'] = get_headmaster_info(wizard_type_id)
-    
+
     headmaster_info = request.session['headmaster_info']
 
     students_list = get_all_students_info()
-    students_list.sort(key = lambda student : (student["name"], student["gender"], student["blood_type"]))
-    
-    courses =  get_courses_dict()
+    students_list.sort(key=lambda student: (student["name"], student["gender"], student["blood_type"]))
+
+    courses = get_courses_dict()
     number_spells_per_course = {}
     courses_in_list = []
     for id, course in courses.items():
         course["id"] = id
         course["number_spells_taught"] = len(course["spells"])
         courses_in_list.append(course)
-        
+
         number_spells_per_course[course["name"]] = len(course["spells"])
-        
+
     number_students_per_school_year = students_per_school_year()
-        
-    courses_in_list.sort(key = lambda course : (course["attending_year"], course["name"]))
-    
+
+    courses_in_list.sort(key=lambda course: (course["attending_year"], course["name"]))
+
     return render(request, 'app/headmaster_dashboard.html', {
         'headmaster': headmaster_info,
         'students_per_school_year': number_students_per_school_year,
         'spells_per_course': number_spells_per_course,
-        'students' : students_list,
+        'students': students_list,
         'courses': courses_in_list,
     })
-    
+
+
 def update_wizard(request):
     wizard_id = request.POST.get('wizard_id')
     name = request.POST.get('name')
@@ -134,10 +133,11 @@ def update_wizard(request):
     eye_color = request.POST.get('eye_color')
     patronus = request.POST.get('patronus')
     wand = request.POST.get('wand')
-    
+
     update_wizard_info(wizard_id, name, gender, blood_type, species, eye_color, patronus, wand)
-    
+
     return back_to_dashboard(request)
+
 
 @headmaster_required
 def course_view(request):
@@ -146,71 +146,77 @@ def course_view(request):
         course_id = request.session['course_id']
     request.session['course_id'] = course_id
     request.session['back'] = 'back'
-    
+
     course_full_info = get_course_by_id_dict(course_id)
 
     course_full_info['number_students_enrolled'] = len(course_full_info['is_learning'])
     course_full_info['number_spells_taught'] = len(course_full_info['spells'])
-    
+
     available_professors = get_all_teachers_not_teaching_course(course_full_info['professor_info']['id'])
-    available_professors.sort(key = lambda professor : professor['name'])
-    
+    available_professors.sort(key=lambda professor: professor['name'])
+
     return render(request, 'app/course.html', {
         'course': course_full_info,
         'available_students': get_students_not_learning_course(course_id),
         'available_spells': get_spells_not_taught_in_course(course_id),
         'available_professors': available_professors,
     })
- 
-@require_http_methods(["POST"])   
+
+
+@require_http_methods(["POST"])
 @headmaster_required
 def remove_student(request):
     student_id = request.POST.get('student_id')
     course_id = request.POST.get('course_id')
-    
+
     remove_student_from_course(course_id, student_id)
-    
+
     return redirect("course")
+
 
 @require_http_methods(["POST"])
 @headmaster_required
 def add_student(request):
     student_id = request.POST.get('student_id')
     course_id = request.POST.get('course_id')
-    
+
     add_student_to_course(course_id, student_id)
-    
+
     return redirect("course")
+
 
 @require_http_methods(["POST"])
 @headmaster_required
 def remove_spell(request):
     spell_id = request.POST.get('spell_id')
     course_id = request.POST.get('course_id')
-    
+
     remove_spell_from_course(course_id, spell_id)
-    
+
     return redirect("course")
+
 
 @require_http_methods(["POST"])
 @headmaster_required
 def add_spell(request):
     spell_id = request.POST.get('spell_id')
     course_id = request.POST.get('course_id')
-    
+
     add_spell_to_course(course_id, spell_id)
-    
+
     return redirect("course")
+
 
 @require_http_methods(["POST"])
 @headmaster_required
 def change_professor(request):
     professor_id = request.POST.get('professor_id')
     course_id = request.POST.get('course_id')
-    
+
     change_course_professor(course_id, professor_id)
-    
+
     return redirect("course")
+
 
 @logout_required
 def register_view(request):
@@ -248,6 +254,7 @@ def register_view(request):
 
     return render(request, 'registration/login.html')
 
+
 @login_required
 def back_to_dashboard(request):
     wizard_info = request.session['role']
@@ -264,6 +271,7 @@ def back_to_dashboard(request):
             logout(request)
             return redirect("index")
 
+
 @logout_required
 def login_view(request):
     if request.method == 'POST':
@@ -279,9 +287,10 @@ def login_view(request):
 
             wizard_role, wizard_type_id = get_role_info_by_wizard_id(id_number)
 
+            print(wizard_role)
             request.session['role'] = wizard_role
             request.session['wizard_type_id'] = wizard_type_id
-            
+
             match wizard_role:
                 case 'http://hogwarts.edu/ontology.owl#Student':
                     return redirect("student_dashboard")
