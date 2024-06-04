@@ -11,6 +11,6 @@ INSERT {{
     {query_insert}
 }}
 WHERE {{
-    BIND({wizard_id} AS ?wizard)
+    BIND(<{wizard_id}> AS ?wizard)
     {query_delete}
 }}

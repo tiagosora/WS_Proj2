@@ -1,0 +1,21 @@
+PREFIX : <http://hogwarts.edu/ontology.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+DELETE {
+  ?student rdf:type :Student .
+}
+INSERT {
+  ?student rdf:type :AdvancedStudent .
+}
+WHERE {
+  ?student rdf:type :Student .
+  {
+    SELECT ?student (COUNT(?spell) AS ?spellCount)
+    WHERE {
+      ?student :hasLearnedCourse ?course .
+      ?course :teachesSpell ?spell .
+    }
+    GROUP BY ?student
+    HAVING (COUNT(?spell) >= 75)
+  }
+}

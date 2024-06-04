@@ -9,7 +9,7 @@ def get_professor(professor_uri):
 
     _, g = execute_sparql_query(query_name, format="turtle", uri=professor_uri)
 
-    professor_attrs = {'learned': [], 'is_learning': []}
+    professor_attrs = {'id': professor_uri, 'learned': [], 'is_learning': []}
     for _, p, o in g:
         prop = p.split('#')[-1]
         if isinstance(o, Literal):
@@ -26,10 +26,10 @@ def get_wizard_info_by_uri(wizard_uri):
 
     results, g = execute_sparql_query(query_name, format="turtle", uri=wizard_uri)
 
-    wizard_attrs = {'skills': [], 'spells': []}
+    wizard_attrs = {'id': wizard_uri, 'skills': [], 'spells': []}
     for s, p, o in g:
         prop = p.split('#')[-1]
-        if prop == 'has_skill':
+        if prop == 'hasSkill':
             skill_info = get_skill_info(str(o))
             wizard_attrs['skills'].append(skill_info)
         else:
@@ -47,12 +47,12 @@ def get_student_info(student_uri):
 
     _, g = execute_sparql_query(query_name, format="turtle", uri=student_uri)
 
-    student_attrs = {'learned': [], 'is_learning': []}
+    student_attrs = {'id': student_uri, 'learned': [], 'is_learning': []}
     for _, p, o in g:
         prop = p.split('#')[-1]
-        if prop == 'learned':
+        if prop == 'hasLearnedCourse':
             student_attrs['learned'].append(str(o))
-        elif prop == 'is_learning':
+        elif prop == 'learnsCourse':
             student_attrs['is_learning'].append(str(o))
         else:
             if isinstance(o, Literal):
@@ -68,10 +68,10 @@ def get_course_info(course_uri):
 
     results, g = execute_sparql_query(query_name, format="turtle", uri=course_uri)
 
-    course_attrs = {'teaches_spell': []}
+    course_attrs = {'id': course_uri, 'teaches_spell': []}
     for s, p, o in g.triples((URIRef(course_uri), None, None)):
         prop = p.split('#')[-1]
-        if prop == 'teaches_spell':
+        if prop == 'teachesSpell':
             course_attrs['teaches_spell'].append(str(o))
         else:
             if isinstance(o, Literal):

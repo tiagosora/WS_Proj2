@@ -20,7 +20,7 @@ def get_courses_uri_by_professor_uri(professor_uri):
 
 def get_courses_dict():
     query_name = "app/queries/get_all_by_type.sparql"
-    results, _ = execute_sparql_query(query_name=query_name, format='JSON', type="course")
+    results, _ = execute_sparql_query(query_name=query_name, format='JSON', type="Course")
 
     courses = []
     for elem in results["results"]["bindings"]:
@@ -28,15 +28,14 @@ def get_courses_dict():
 
     courses_dict = {course.id: course.info_no_id()
                                | {'spells': manage_spells_list(course.teaches_spell)}
-                               | {'professor_info': get_wizard_info_by_uri(
-        get_professor(course.professor).wizard).info()}
+                               | {'professor_info': get_wizard_info_by_uri(get_professor(course.professor).wizard).info()}
                     for course in courses}
 
     return courses_dict
 
 
 def get_course_by_id_dict(course_id):
-    course = get_course_info(course_uri=f"http://hogwarts.edu/courses/{course_id}")
+    course = get_course_info(course_uri=course_id)
 
     course_info = course.info()
     spells = manage_spells_list(course.teaches_spell)
@@ -54,6 +53,7 @@ def get_course_by_id_dict(course_id):
 
 
 def update_is_learning_to_learned(course_id, student_id):
+    print("here")
     query_name = "app/queries/update_is_learning_to_learned.sparql"
     execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, student_id=student_id)
 

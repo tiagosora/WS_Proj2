@@ -1,14 +1,18 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <http://hogwarts.edu/ontology.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 DELETE
 {{
-    {student_id} :learnsCourse {course_id}
+    <{student_id}> :learnsCourse <{course_id}>
 }}
 INSERT
 {{
-    {student_id} :hasLearnedCourse {course_id}
+    <{student_id}> :hasLearnedCourse <{course_id}>
 }}
 WHERE {{
-    {student_id} rdf:type :Student .
-    {course_id} rdf:type :Course .
+    <{student_id}> rdf:type :Student .
+    <{course_id}> rdf:type :Course .
 }}
