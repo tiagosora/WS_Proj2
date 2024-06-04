@@ -81,12 +81,25 @@ def professor_dashboard(request):
     wizard_type_id = request.session['wizard_type_id']
 
     request.session['professor_info'] = get_professor_info(wizard_type_id)
+    
+    students_list = get_all_students_info()
+    students_list.sort(key=lambda student: (student["name"], student["gender"], student["blood_type"]))
 
     professor_info = request.session['professor_info']
 
     return render(request, 'app/professor_dashboard.html', {
         'professor': professor_info["professor"],
         'courses': professor_info["courses"],
+        'students': students_list,
+    })
+    
+def points_banners(request):
+    request.session['back'] = 'back'
+    
+    students = get_all_students_info()
+    students.sort(key=lambda student: (student["points"], student["name"], student["gender"]), reverse=True)
+    return render(request, 'app/points_banners.html', {
+        'students': students
     })
 
 
@@ -123,6 +136,8 @@ def headmaster_dashboard(request):
         'courses': courses_in_list,
     })
 
+def give_points(request):
+    pass
 
 def update_wizard(request):
     wizard_id = request.POST.get('wizard_id')

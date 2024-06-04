@@ -19,6 +19,8 @@ urlpatterns = [
     path('add_spell', views.add_spell, name='add_spell'),
     path('change_professor', views.change_professor, name='change_professor'),
     path('update_wizard', views.update_wizard, name="update_wizard"),
+    path('give_points', views.give_points, name='give_points'),
+    path('points_banners', views.points_banners, name='points_banners'),
 
     path('accounts/', include('django.contrib.auth.urls')),
     path('register/', views.register_view, name='register'),

@@ -119,6 +119,7 @@ class Student:
         self.school_year = kwargs.get('hasSchoolYear', '')
         self.wizard = kwargs.get('hasAccount', '')
         self.type = kwargs.get('type', ':Student')
+        self.points = kwargs.get('hasPoints', '')
 
     def __str__(self) -> str:
         return f"Is Learning: {self.is_learning}, \n\
@@ -126,7 +127,8 @@ class Student:
                 School: {self.school}, \n\
                 School Year: {self.school_year}, \n\
                 Wizard: {self.wizard}, \n\
-                Type: {self.type} \n"
+                Type: {self.type} \n\
+                Point: {self.points} \n"
 
 
 class Professor:

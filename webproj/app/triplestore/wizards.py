@@ -101,13 +101,10 @@ def get_all_students_info():
     for elem in results["results"]["bindings"]:
         wizard, student = student_info(student_uri=elem["data"]["value"])
         
-        if wizard.house == "":
-            print(f"Student {student.id} has no house")
-        
         student_information = wizard.info() \
                             | {'house_name': get_house_name(wizard.house)} \
-                            | {'school_year': student.school_year}
-                            
+                            | {'school_year': student.school_year} \
+                            | {'points': student.points}
         
         students.append(student_information)
         
