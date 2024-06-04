@@ -98,6 +98,14 @@ with onto:
         domain = [Student]
         range = [Professor]
 
+    class hasStarRating(DataProperty):
+        domain = [Student]
+        range = [int]
+
+    class hasPoints(DataProperty, FunctionalProperty):
+        domain = [Student]
+        range = [int]
+
     class teachesSpell(ObjectProperty):
         domain = [Course]
         range = [Spell]
