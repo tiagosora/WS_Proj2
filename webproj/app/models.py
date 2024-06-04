@@ -152,3 +152,36 @@ class WizardAccount:
     @property
     def is_authenticated(self):
         return True
+
+
+class House:
+    def __init__(self, **kwargs):
+        self.id = kwargs.get('id', '')
+        self.name = kwargs.get('hasHouseName', '')
+        self.professor = kwargs.get('hasHouseProfessor', '')
+        self.location = kwargs.get('hasLocation', '')
+        self.symbol = kwargs.get('hasSymbol', '')
+        self.type = kwargs.get('type', ':House')
+        self.totalPoints = kwargs.get('hasTotalPoints', '')
+        
+    def info(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'professor': self.professor,
+            'location': self.location,
+            'symbol': self.symbol,
+            'totalPoints': self.totalPoints,
+            'type': self.type,
+            'totalPoints': self.totalPoints
+        }
+    
+
+    # def __str__(self) -> str:
+    #     return f"Is Learning: {self.is_learning}, \n\
+    #             Learned: {self.learned}, \n\
+    #             School: {self.school}, \n\
+    #             School Year: {self.school_year}, \n\
+    #             Wizard: {self.wizard}, \n\
+    #             Type: {self.type} \n\
+    #             Point: {self.points} \n"

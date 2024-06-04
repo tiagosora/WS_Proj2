@@ -7,6 +7,7 @@ from app.triplestore.courses import (add_spell_to_course,
                                      remove_spell_from_course,
                                      remove_student_from_course,
                                      update_is_learning_to_learned)
+from app.triplestore.houses import get_house_info
 from app.triplestore.professors import (get_all_teachers_not_teaching_course,
                                         get_professor_info)
 from app.triplestore.spells import get_len_all_spells
@@ -98,9 +99,16 @@ def points_banners(request):
     
     students = get_all_students_info()
     students.sort(key=lambda student: (student["points"], student["name"], student["gender"]), reverse=True)
+    
+    houses = get_house_info()
+    print(houses)
+    
     return render(request, 'app/points_banners.html', {
-        'students': students
+        'students': students,
+        'houses': houses
     })
+    
+    
 
 
 @headmaster_required
