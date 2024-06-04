@@ -42,6 +42,10 @@ with onto:
     class hasId(DataProperty, FunctionalProperty):
         domain = [Wizard, Spell, Skill, School, House, Course]
 
+    class hasTotalPoints(DataProperty, FunctionalProperty):
+        domain = [House]
+        range = [int]
+
     class hasGender(DataProperty, FunctionalProperty):
         domain = [Wizard]
         range = [str]
@@ -98,7 +102,7 @@ with onto:
         domain = [Student]
         range = [Professor]
 
-    class hasStarRating(DataProperty):
+    class hasStarRating(DataProperty, FunctionalProperty):
         domain = [Student]
         range = [int]
 
