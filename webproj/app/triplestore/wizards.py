@@ -103,8 +103,8 @@ def get_all_students_info():
         
         student_information = wizard.info() \
                             | {'house_name': get_house_name(wizard.house)} \
-                            | {'school_year': student.school_year}
-                            
+                            | {'school_year': student.school_year} \
+                            | {'points': student.points}
         
         students.append(student_information)
         

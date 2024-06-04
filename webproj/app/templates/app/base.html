@@ -19,31 +19,45 @@
     <body class="bg-[#edeae5]">
         {% if not 'account' in request.path %}
         <header class="flex justify-between items-center pt-5 px-5">
-            <form action="{% url 'back_to_dashboard' %}" method="post" class="flex-1">
-                {% csrf_token %}
+            <div class="flex-1 flex justify space-x-8">
+                {% if 'back' not in request.session %}
+                <form action="{% url 'points_banners' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded">
+                        Points Dashboard
+                    </button>
+                </form>
+                {% endif %}
                 {% if 'back' in request.session %}
-                    <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded">
+                <form action="{% url 'back_to_dashboard' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded">
                         Back to Wizard Dashboard
                     </button>
+                </form>
                 {% endif %}
-            </form>
-            <form action="{% url 'logout' %}" method="post" class="flex-1 text-right">
-                {% csrf_token %}
-                <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded">
-                    Logout
+                {% if 'Professor' in request.session.role or 'Headmaster' in request.session.role %}
+                <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded" onclick="openStudentPointsModal()">
+                    Score a Student
                 </button>
-            </form>
+                {% endif %}
+            </div>
+            <div class="flex-1 text-right">
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 rounded">
+                        Logout
+                    </button>
+                </form>
+            </div>
         </header>
-        
         {% endif %}
-
-
+    
         <main>
             {% block content %}
             {% endblock %}
         </main>
-
-
+    
         {% comment %} <footer class="text-gray-600 body-font">
             <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
                 <p class="text-gray-500 text-sm text-center sm:text-left">
@@ -51,5 +65,69 @@
                 </p>
             </div>
         </footer> {% endcomment %}
+    
+        <div id="studentPointsModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div class="flex items-center justify-center min-h-screen">
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-75"></div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full sm:max-w-lg">
+                    <form id="studentPoints" method="post" action="{% url 'give_points' %}">
+                        {% csrf_token %}
+                        <div class="px-4 pt-5 pb-4 bg-white">
+                            <div class="sm:flex sm:items-start">
+                                <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
+                                    {% if students|length > 0 %}
+                                        <h3 class="text-lg leading-6 font-medium text-gray-900" id="student-modal-title">Available Students</h3>
+                                        <select name="student_id" class="mt-2 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
+                                            {% for student in students %}
+                                            <option value="{{ student.id }}">{{ student.name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <div class="mt-4">
+                                            <label for="points" class="block text-sm font-medium text-gray-700">Points</label>
+                                            <input type="number" name="points" id="points" class="mt-1 block px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
+                                        </div>
+                                    {% else %}
+                                        <h3 class="text-lg leading-6 font-medium text-gray-900" id="student-modal-title">No available students to give points.</h3>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                            {% if students|length > 0 %}
+                                <button type="submit" id="givePointsButton" class="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-500 text-base font-medium text-white hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400 sm:mt-0 sm:w-auto sm:text-sm">Give Points</button>
+                            {% endif %}
+                            <button type="button" class="mt-3 mr-2 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-amber-600 text-base font-medium text-white hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 sm:mt-0 sm:w-auto sm:text-sm" onclick="closeStudentPointsModal()">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
     </body>
+    <script>
+        function openStudentPointsModal() {
+            document.getElementById('studentPointsModal').style.display = 'block';
+        }
+    
+        function closeStudentPointsModal() {
+            document.getElementById('studentPointsModal').style.display = 'none';
+        }
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            const pointsInput = document.getElementById('points');
+            const givePointsButton = document.getElementById('givePointsButton');
+    
+            pointsInput.addEventListener('input', function() {
+                if (pointsInput.value < 0) {
+                    givePointsButton.textContent = 'Remove Points';
+                    givePointsButton.classList.remove('bg-green-500', 'hover:bg-green-600');
+                    givePointsButton.classList.add('bg-red-500', 'hover:bg-red-600');
+                } else {
+                    givePointsButton.textContent = 'Give Points';
+                    givePointsButton.classList.remove('bg-red-500', 'hover:bg-red-600');
+                    givePointsButton.classList.add('bg-green-500', 'hover:bg-green-600');
+                }
+            });
+        });
+    </script>
 </html>
