@@ -140,3 +140,7 @@ def get_spells_not_taught_in_course(course_id):
 
     spells.sort(key=lambda spell: spell["name"])
     return spells
+
+def remove_points(student_uri, points):
+    query_name = "app/inferences/attribute_points.sparql"
+    execute_sparql_query(query_name=query_name, format='POST', student_uri=student_uri, points=points)
