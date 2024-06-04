@@ -8,7 +8,7 @@ def get_skill_info(skill_uri):
 
     results, g = execute_sparql_query(query_name, format="turtle", uri=skill_uri)
 
-    skill_attrs = {}
+    skill_attrs = {'id': skill_uri}
     for s, p, o in g.triples((URIRef(skill_uri), None, None)):
         prop = p.split('#')[-1]
         if isinstance(o, Literal):

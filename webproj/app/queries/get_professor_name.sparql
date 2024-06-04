@@ -7,6 +7,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT
     ?name
 WHERE {{
-    {professor_uri} :hasAccount ?wizard .
+    <{professor_uri}> :hasAccount ?wizard .
     ?wizard :hasName ?name
 }}
