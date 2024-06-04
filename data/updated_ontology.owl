@@ -2272,7 +2272,7 @@
   <rdf:type rdf:resource="#House"/>
   <hasHouseProfessor rdf:resource="#Professor_4"/>
   <hasHouseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hufflepuff</hasHouseName>
-  <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">badger</hasSymbol>
+  <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">serpent</hasSymbol>
   <hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hufflepuff Basement below ground level behind a stack of barrels near the kitchens</hasLocation>
 </owl:NamedIndividual>
 
@@ -2280,7 +2280,7 @@
   <rdf:type rdf:resource="#House"/>
   <hasHouseProfessor rdf:resource="#Professor_6"/>
   <hasHouseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slytherin</hasHouseName>
-  <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">serpent</hasSymbol>
+  <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">badger</hasSymbol>
   <hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slytherin Dungeon below ground level beyond a stone wall</hasLocation>
 </owl:NamedIndividual>
 
@@ -2294,8 +2294,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry James Potter</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bright green</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11"  Holly  phoenix feather</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stag</hasPatronus>
 </owl:NamedIndividual>
@@ -2307,8 +2307,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ronald Bilius Weasley</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12" Ash unicorn tail hair</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jack Russell terrier</hasPatronus>
 </owl:NamedIndividual>
@@ -2320,8 +2320,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hermione Jean Granger</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muggle-born</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10¾"  vine wood dragon heartstring</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Otter</hasPatronus>
 </owl:NamedIndividual>
@@ -2333,8 +2333,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Albus Percival Wulfric Brian Dumbledore</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15" Elder Thestral tail hair core</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phoenix</hasPatronus>
 </owl:NamedIndividual>
@@ -2346,8 +2346,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rubeus Hagrid</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-Human/Half-Giant</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Part-Human</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2359,7 +2359,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neville Longbottom</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13" Cherry unicorn hair</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-corporeal</hasPatronus>
@@ -2371,8 +2371,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fred Weasley</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2383,8 +2383,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George Weasley</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2396,8 +2396,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ginevra Molly Weasley</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bright brown</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horse</hasPatronus>
 </owl:NamedIndividual>
@@ -2408,8 +2408,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dean Thomas</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muggle-born</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2421,7 +2421,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seamus Finnigan</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fox</hasPatronus>
@@ -2433,8 +2433,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lily J. Potter</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muggle-born</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bright green</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doe</hasPatronus>
 </owl:NamedIndividual>
@@ -2445,8 +2445,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Potter</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hazel</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stag</hasPatronus>
 </owl:NamedIndividual>
@@ -2457,8 +2457,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sirius Black</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grey</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2469,8 +2469,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remus John Lupin</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Werewolf</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Green</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10¼" Cypress unicorn hair</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wolf</hasPatronus>
 </owl:NamedIndividual>
@@ -2481,8 +2481,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter Pettigrew</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9¼" Chestnut dragon heartstring</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2493,8 +2493,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Percy Ignatius Weasley</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2505,8 +2505,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">William Arthur Weasley</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2517,8 +2517,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles Weasley</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grey</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12"  Ash unicorn tail hair</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2529,8 +2529,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee Jordan</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2541,7 +2541,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oliver Wood</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -2554,7 +2554,7 @@
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
   <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2565,8 +2565,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Katie Bell</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2577,8 +2577,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alicia Spinnet</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2590,8 +2590,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lavender Brown</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2603,8 +2603,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parvati Patil</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dark</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2615,8 +2615,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Romilda Vane</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dark</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2628,7 +2628,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colin Creevey</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muggle-born</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -2640,7 +2640,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cormac McLaggen</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -2653,8 +2653,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minerva McGonagall</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Green</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9½" Fir dragon heartstring</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cat</hasPatronus>
 </owl:NamedIndividual>
@@ -2668,8 +2668,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molly Weasley</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bright brown</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2681,8 +2681,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arthur Weasley</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Green</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weasel</hasPatronus>
 </owl:NamedIndividual>
@@ -2693,7 +2693,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quirinus Quirrell</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9" Alder unicorn hair bendy</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-corporeal</hasPatronus>
@@ -2706,8 +2706,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cho Chang</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dark</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swan</hasPatronus>
 </owl:NamedIndividual>
@@ -2719,8 +2719,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luna Lovegood</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pale silvery</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hare</hasPatronus>
 </owl:NamedIndividual>
@@ -2731,8 +2731,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gilderoy Lockhart</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9" Cherry dragon heartstring</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-corporeal</hasPatronus>
 </owl:NamedIndividual>
@@ -2744,7 +2744,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Filius Flitwick</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Part-Goblin</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-corporeal</hasPatronus>
@@ -2756,7 +2756,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sybill Patricia Trelawney</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9 ½” hazel unicorn hair core</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-corporeal</hasPatronus>
@@ -2768,8 +2768,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garrick Ollivander</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvery</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12¾" Hornbeam dragon heartstring</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-corporeal</hasPatronus>
 </owl:NamedIndividual>
@@ -2780,7 +2780,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Myrtle Elizabeth Warren (Moaning Myrtle)</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ghost</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muggle-born</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -2793,8 +2793,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Padma Patil</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dark</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-corporeal</hasPatronus>
 </owl:NamedIndividual>
@@ -2806,8 +2806,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Corner</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Squirrel</hasPatronus>
 </owl:NamedIndividual>
@@ -2818,8 +2818,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marietta Edgecombe</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grey</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2831,7 +2831,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terry Boot</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -2844,8 +2844,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anthony Goldstein</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grey</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-corporeal</hasPatronus>
 </owl:NamedIndividual>
@@ -2856,8 +2856,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Severus Snape</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doe</hasPatronus>
 </owl:NamedIndividual>
@@ -2869,8 +2869,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Draco Malfoy</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grey</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10" Hawthorn unicorn hair</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2881,8 +2881,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vincent Crabbe</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2893,7 +2893,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gregory Goyle</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -2905,7 +2905,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bellatrix Lestrange</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12¾" Walnut dragon heartstring</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -2917,7 +2917,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dolores Jane Umbridge</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8" Birch dragon heartstring</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cat</hasPatronus>
@@ -2929,8 +2929,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horace Eugene Flaccus Slughorn</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gooseberry</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10¼" Cedar dragon heartstring fairly flexible</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-corporeal</hasPatronus>
 </owl:NamedIndividual>
@@ -2941,8 +2941,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lucius Malfoy</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grey</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elm and dragon heartstring</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2953,8 +2953,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Narcissa Malfoy</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -2966,7 +2966,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regulus Arcturus Black</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-corporeal</hasPatronus>
@@ -2979,7 +2979,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pansy Parkinson</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -2991,8 +2991,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blaise Zabini</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -3003,8 +3003,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom Marvolo Riddle</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scarlet</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13½" Yew phoenix feather core</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -3015,7 +3015,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theodore Nott</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -3027,8 +3027,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rodolphus Lestrange</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dark</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -3039,7 +3039,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Millicent Bulstrode</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -3051,8 +3051,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Graham Montague</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -3063,7 +3063,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bloody Baron</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ghost</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -3075,7 +3075,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marcus Flint</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -3088,7 +3088,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Penelope Clearwater</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muggle-born or half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-corporeal</hasPatronus>
@@ -3101,7 +3101,7 @@
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
   <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dark</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -3112,8 +3112,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marcus Belby</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dark</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -3124,8 +3124,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salazar Slytherin</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dark</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snakewood, Basilisk horn</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -3136,8 +3136,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Godric Gryffindor</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Green</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -3151,8 +3151,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rowena Ravenclaw</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dark</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -3171,32 +3171,35 @@
 
 <owl:NamedIndividual rdf:about="#Wizard_72">
   <rdf:type rdf:resource="#Wizard"/>
+  <belongsToHouse rdf:resource="#House_3"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuthbert Binns</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ghost</hasSpecies>
   <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Wizard_73">
   <rdf:type rdf:resource="#Wizard"/>
+  <belongsToHouse rdf:resource="#House_1"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barty Crouch Jr.</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pale, freckled</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Wizard_74">
   <rdf:type rdf:resource="#Wizard"/>
+  <belongsToHouse rdf:resource="#House_4"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charity Burbage</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-corporeal</hasPatronus>
@@ -3204,11 +3207,12 @@
 
 <owl:NamedIndividual rdf:about="#Wizard_75">
   <rdf:type rdf:resource="#Wizard"/>
+  <belongsToHouse rdf:resource="#House_4"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Firenze</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Centaur</hasSpecies>
   <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Astonishingly blue</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -3219,7 +3223,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alecto Carrow</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -3231,7 +3235,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amycus Carrow</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -3243,8 +3247,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helga Hufflepuff</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -3268,8 +3272,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helena Ravenclaw</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ghost</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grey</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -3280,8 +3284,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pomona Sprout</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grey</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-corporeal</hasPatronus>
 </owl:NamedIndividual>
@@ -3293,8 +3297,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Newton Scamander</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -3305,8 +3309,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cedric Diggory</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grey</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12¼", Ash, unicorn hair</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -3317,7 +3321,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Justin Finch-Fletchley</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muggle-born</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-corporeal</hasPatronus>
@@ -3329,7 +3333,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zacharias Smith</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -3341,8 +3345,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hannah Abbott</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-corporeal</hasPatronus>
 </owl:NamedIndividual>
@@ -3353,7 +3357,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ernest Macmillan</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boar</hasPatronus>
@@ -3365,7 +3369,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Susan Bones</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -3377,7 +3381,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dennis Creevey</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muggle-born</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -3390,8 +3394,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Albus Severus Potter</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bright green</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -3402,8 +3406,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scorpius Hyperion Malfoy</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grey</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -3415,8 +3419,8 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edward Remus Lupin</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variable</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
@@ -3427,7 +3431,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Sirius Potter</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -3439,7 +3443,7 @@
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rose Granger-Weasley</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
@@ -3447,21 +3451,23 @@
 
 <owl:NamedIndividual rdf:about="#Wizard_95">
   <rdf:type rdf:resource="#Wizard"/>
+  <belongsToHouse rdf:resource="#House_4"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Argus Filch</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Squib</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pale</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Wizard_96">
   <rdf:type rdf:resource="#Wizard"/>
+  <belongsToHouse rdf:resource="#House_2"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poppy Pomfrey</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
   <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-corporeal</hasPatronus>
@@ -3469,18 +3475,20 @@
 
 <owl:NamedIndividual rdf:about="#Wizard_97">
   <rdf:type rdf:resource="#Wizard"/>
+  <belongsToHouse rdf:resource="#House_4"/>
   <hasSkill rdf:resource="#Skill_41"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rolanda Hooch</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
   <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yellow</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-corporeal</hasPatronus>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Wizard_98">
   <rdf:type rdf:resource="#Wizard"/>
+  <belongsToHouse rdf:resource="#House_4"/>
   <hasSkill rdf:resource="#Skill_41"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Irma Pince</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
@@ -3493,17 +3501,19 @@
 
 <owl:NamedIndividual rdf:about="#Wizard_99">
   <rdf:type rdf:resource="#Wizard"/>
+  <belongsToHouse rdf:resource="#House_4"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aurora Sinistra</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
-  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasBloodType>
-  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasEyeColor>
+  <hasBloodType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure-blood or half-blood</hasBloodType>
+  <hasEyeColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dark</hasEyeColor>
   <hasWand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasWand>
   <hasPatronus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</hasPatronus>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Wizard_100">
   <rdf:type rdf:resource="#Wizard"/>
+  <belongsToHouse rdf:resource="#House_4"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Septima Vector</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
@@ -3515,6 +3525,7 @@
 
 <owl:NamedIndividual rdf:about="#Wizard_101">
   <rdf:type rdf:resource="#Wizard"/>
+  <belongsToHouse rdf:resource="#House_2"/>
   <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilhelmina Grubbly-Plank</hasName>
   <hasGender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</hasGender>
   <hasSpecies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human</hasSpecies>
@@ -3910,7 +3921,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">93</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_2">
@@ -3924,7 +3935,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_3">
@@ -3941,7 +3952,7 @@
   <hasLearnedCourse rdf:resource="#Course_8"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">91</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_4">
@@ -3961,7 +3972,7 @@
   <hasLearnedCourse rdf:resource="#Course_11"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_5">
@@ -3973,7 +3984,7 @@
   <learnsCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_6">
@@ -3985,7 +3996,7 @@
   <learnsCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_7">
@@ -3999,7 +4010,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_8">
@@ -4016,7 +4027,7 @@
   <hasLearnedCourse rdf:resource="#Course_8"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_9">
@@ -4031,7 +4042,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_10">
@@ -4045,7 +4056,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">71</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_11">
@@ -4057,7 +4068,7 @@
   <learnsCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">86</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_12">
@@ -4074,7 +4085,7 @@
   <hasLearnedCourse rdf:resource="#Course_8"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">78</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_13">
@@ -4094,7 +4105,7 @@
   <hasLearnedCourse rdf:resource="#Course_11"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_14">
@@ -4114,7 +4125,7 @@
   <hasLearnedCourse rdf:resource="#Course_11"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">86</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_15">
@@ -4126,7 +4137,7 @@
   <learnsCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">97</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_16">
@@ -4141,7 +4152,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_17">
@@ -4155,7 +4166,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_18">
@@ -4167,7 +4178,7 @@
   <learnsCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">67</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_19">
@@ -4179,7 +4190,7 @@
   <learnsCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">71</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_20">
@@ -4199,7 +4210,7 @@
   <hasLearnedCourse rdf:resource="#Course_11"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_21">
@@ -4213,7 +4224,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">57</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_22">
@@ -4227,7 +4238,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">74</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">73</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_23">
@@ -4247,7 +4258,7 @@
   <hasLearnedCourse rdf:resource="#Course_11"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_24">
@@ -4267,7 +4278,7 @@
   <hasLearnedCourse rdf:resource="#Course_11"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_25">
@@ -4287,7 +4298,7 @@
   <hasLearnedCourse rdf:resource="#Course_11"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_26">
@@ -4302,7 +4313,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_27">
@@ -4316,7 +4327,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_28">
@@ -4330,7 +4341,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_29">
@@ -4342,7 +4353,7 @@
   <learnsCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">91</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_30">
@@ -4357,7 +4368,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_31">
@@ -4372,7 +4383,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_32">
@@ -4387,7 +4398,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_33">
@@ -4402,7 +4413,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_34">
@@ -4417,7 +4428,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_35">
@@ -4429,7 +4440,7 @@
   <learnsCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">87</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_36">
@@ -4441,7 +4452,7 @@
   <learnsCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">36</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_37">
@@ -4453,7 +4464,7 @@
   <learnsCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">37</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_38">
@@ -4465,7 +4476,7 @@
   <learnsCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">38</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">97</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_39">
@@ -4480,7 +4491,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">39</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">63</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_40">
@@ -4495,7 +4506,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_41">
@@ -4509,7 +4520,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">41</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_42">
@@ -4521,7 +4532,7 @@
   <learnsCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">42</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_43">
@@ -4541,7 +4552,7 @@
   <hasLearnedCourse rdf:resource="#Course_11"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">43</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_44">
@@ -4567,7 +4578,7 @@
   <learnsCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">45</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_46">
@@ -4582,7 +4593,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">46</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">98</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_47">
@@ -4602,7 +4613,7 @@
   <hasLearnedCourse rdf:resource="#Course_11"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">47</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_48">
@@ -4619,7 +4630,7 @@
   <hasLearnedCourse rdf:resource="#Course_8"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">48</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_49">
@@ -4636,7 +4647,7 @@
   <hasLearnedCourse rdf:resource="#Course_8"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">49</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_50">
@@ -4650,7 +4661,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_51">
@@ -4664,7 +4675,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">51</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_52">
@@ -4676,7 +4687,7 @@
   <learnsCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">52</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">94</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_53">
@@ -4696,7 +4707,7 @@
   <hasLearnedCourse rdf:resource="#Course_11"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">98</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_54">
@@ -4711,7 +4722,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">54</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">44</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_55">
@@ -4728,7 +4739,7 @@
   <hasLearnedCourse rdf:resource="#Course_8"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">55</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_56">
@@ -4743,7 +4754,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">56</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_57">
@@ -4763,7 +4774,7 @@
   <hasLearnedCourse rdf:resource="#Course_11"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">57</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_58">
@@ -4783,7 +4794,7 @@
   <hasLearnedCourse rdf:resource="#Course_11"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">58</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">53</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_59">
@@ -4797,7 +4808,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">59</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_60">
@@ -4814,7 +4825,7 @@
   <hasLearnedCourse rdf:resource="#Course_8"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_61">
@@ -4834,7 +4845,7 @@
   <hasLearnedCourse rdf:resource="#Course_11"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">57</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_62">
@@ -4851,7 +4862,7 @@
   <hasLearnedCourse rdf:resource="#Course_8"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">62</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_63">
@@ -4863,7 +4874,7 @@
   <learnsCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">63</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_64">
@@ -4877,7 +4888,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">64</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_65">
@@ -4894,7 +4905,7 @@
   <hasLearnedCourse rdf:resource="#Course_8"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">65</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">61</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_66">
@@ -4911,7 +4922,7 @@
   <hasLearnedCourse rdf:resource="#Course_8"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">66</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_67">
@@ -4931,7 +4942,7 @@
   <hasLearnedCourse rdf:resource="#Course_11"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">67</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_68">
@@ -4948,7 +4959,7 @@
   <hasLearnedCourse rdf:resource="#Course_8"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">68</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">91</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_69">
@@ -4965,7 +4976,7 @@
   <hasLearnedCourse rdf:resource="#Course_8"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">69</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">73</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_70">
@@ -4980,7 +4991,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">70</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_71">
@@ -4992,7 +5003,7 @@
   <learnsCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">71</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">93</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_72">
@@ -5006,7 +5017,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">72</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_73">
@@ -5026,7 +5037,7 @@
   <hasLearnedCourse rdf:resource="#Course_11"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">73</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_74">
@@ -5041,7 +5052,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">74</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_75">
@@ -5058,7 +5069,7 @@
   <hasLearnedCourse rdf:resource="#Course_8"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">75</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_76">
@@ -5070,7 +5081,7 @@
   <learnsCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">76</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_77">
@@ -5090,7 +5101,7 @@
   <hasLearnedCourse rdf:resource="#Course_11"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">77</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_78">
@@ -5107,7 +5118,7 @@
   <hasLearnedCourse rdf:resource="#Course_8"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">78</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_79">
@@ -5122,7 +5133,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">79</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">69</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_80">
@@ -5137,7 +5148,7 @@
   <hasLearnedCourse rdf:resource="#Course_7"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasPoints>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Student_81">
@@ -5154,7 +5165,7 @@
   <hasLearnedCourse rdf:resource="#Course_8"/>
   <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">81</hasStudentId>
   <hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSchoolYear>
-  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">61</hasPoints>
+  <hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</hasPoints>
 </owl:NamedIndividual>
 
 

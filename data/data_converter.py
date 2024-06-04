@@ -84,6 +84,7 @@ def students():
             rdf.append(f'\t\t<hogwarts:wizard rdf:resource="http://hogwarts.edu/wizards/{row["WizardId"]}"/>')
             rdf.append(f'\t\t<hogwarts:school rdf:resource="http://hogwarts.edu/schools/{row["SchoolId"]}"/>')
             rdf.append(f'\t\t<hogwarts:school_year>{row["SchoolYear"]}</hogwarts:school_year>')
+            rdf.append('\t\t<hogwarts:has_points>{points}</hogwarts:has_points>'.format(points=random.randint(1,100)))
 
             attending_courses = [course_id for course_id, course_info in courses.items() if course_info['year'] == int(row['SchoolYear'])]
             for course_id in attending_courses:
