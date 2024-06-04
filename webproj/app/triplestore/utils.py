@@ -19,10 +19,8 @@ def execute_sparql_query(query_name, format="JSON", infer=False, **kwargs):
     results = None
 
     if format == "POST":
-        if not infer:
-            from app.triplestore.inferences import infer_queries
-            infer_queries()
         query = load_sparql_query(query_name, **kwargs)
+        # print(query)
         sparql_update.setMethod(POST)
         sparql_update.setQuery(query)
         sparql_update.query()
@@ -37,6 +35,10 @@ def execute_sparql_query(query_name, format="JSON", infer=False, **kwargs):
             sparql.setReturnFormat('turtle')
             results = sparql.query().convert()
             g.parse(data=results, format='turtle')
+
+    if not infer and format == "POST":
+        from app.triplestore.inferences import infer_queries
+        infer_queries()
 
     return results, g
 

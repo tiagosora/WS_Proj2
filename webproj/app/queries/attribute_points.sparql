@@ -8,7 +8,8 @@ INSERT {{
   ?student :hasPoints ?newPoints .
 }}
 WHERE {{
-  BIND(<{student_uri}> AS ?student)
+  BIND(<{student_uri}> AS ?wizard)
+  ?student :hasAccount ?wizard .
   ?student :hasPoints ?currentPoints .
   BIND((?currentPoints + '{points}'^^xsd:integer) AS ?newPoints).
 }}

@@ -13,7 +13,7 @@ from app.triplestore.professors import (get_all_teachers_not_teaching_course,
 from app.triplestore.spells import get_len_all_spells
 from app.triplestore.students import (get_spells_not_taught_in_course,
                                       get_students_not_learning_course,
-                                      students_per_school_year)
+                                      remove_points, students_per_school_year)
 from app.triplestore.wizards import (create_new_wizard, get_all_students_info,
                                      get_headmaster_info,
                                      get_role_info_by_wizard_id,
@@ -98,10 +98,9 @@ def points_banners(request):
     request.session['back'] = 'back'
     
     students = get_all_students_info()
-    print(students)
-    students.sort(key=lambda student: (student["points"], student["name"], student["gender"], student["star"]), reverse=True)
-    
+    students.sort(key=lambda student: (student["points"], student["star"], student["name"], student["gender"]), reverse=True)
     houses = get_house_info()
+    
     print(houses)
     
     return render(request, 'app/points_banners.html', {
@@ -151,6 +150,8 @@ def give_points(request):
         points = request.POST.get('points')
         
         print(student_id, points)
+        
+        remove_points(student_id, points)
     
     return redirect("points_banners")
 
