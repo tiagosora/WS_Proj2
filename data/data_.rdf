@@ -4129,7 +4129,7 @@
 	<rdf:Description rdf:about="http://hogwarts.edu/schools/1">
 		<hogwarts:id>1</hogwarts:id>
 		<hogwarts:_type>school</hogwarts:_type>
-		<hogwarts:name>Hogwarts School of Wizards</hogwarts:name>
+		<hogwarts:name>Hogwarts</hogwarts:name>
 		<hogwarts:location>Scotland</hogwarts:location>
 		<hogwarts:dateOfCreation>9th/10th Century</hogwarts:dateOfCreation>
 		<hogwarts:headmaster rdf:resource="http://hogwarts.edu/wizards/4"/>
