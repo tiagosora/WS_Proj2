@@ -1,15 +1,17 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <http://hogwarts.edu/ontology.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 DELETE {{
-  ?course hogwarts:professor ?old_professor .
+  ?course :hasProfessor ?old_professor .
 }}
 INSERT {{
-  ?course hogwarts:professor ?new_professor .
+  ?course :hasProfessor ?new_professor .
 }}
 WHERE {{
-    ?course hogwarts:_type "course" .
-    ?course hogwarts:id "{course_id}" .
-    ?course hogwarts:professor ?old_professor .
-    ?new_professor hogwarts:_type "professor" .
-    ?new_professor hogwarts:id "{professor_id}" .
+    BIND({course_id} AS ?course) .
+    ?course :hasProfessor ?old_professor .
+    BIND({professor_id} AS ?new_professor) .
 }}

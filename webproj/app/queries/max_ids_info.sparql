@@ -4,23 +4,17 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX hogwarts: <http://hogwarts.edu/ontology#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT
-    (COUNT(DISTINCT ?wizard) AS ?nextWizardId)
-    (COUNT(DISTINCT ?student) AS ?nextStudentId)
-    (COUNT(DISTINCT ?account) AS ?nextAccountId)
+SELECT 
+ 	(MAX(?wizardId) AS ?nextWizardId) 
+    (MAX(?studentId) AS ?nextStudentId)
+    (MAX(?accountId) AS ?nextAccountId)
 WHERE {{
-    {{
-        ?wizard rdf:type :Wizard .
-        FILTER NOT EXISTS { ?wizard rdf:type :Student }
-        FILTER NOT EXISTS { ?wizard rdf:type :Professor }
-        FILTER NOT EXISTS { ?wizard rdf:type :Headmaster }
-    }}
-    UNION
-    {{ ?student rdf:type :Student . }}
-    UNION
-    {{ ?professor rdf:type :Professor . }}
-    UNION
-    {{ ?headmaster rdf:type :Headmaster . }}
-    UNION
-    {{ ?account rdf:type :Account . }}
+    ?wizard rdf:type :Wizard .
+    BIND(xsd:integer(SUBSTR(STR(?wizard), STRLEN(STR(:Wizard_))+1)) AS ?wizardId) .
+    
+    ?student rdf:type :Student .
+    BIND(xsd:integer(SUBSTR(STR(?student), STRLEN(STR(:Student_))+1)) AS ?studentId) .
+                
+    ?account rdf:type :Account .
+    BIND(xsd:integer(SUBSTR(STR(?account), STRLEN(STR(:Account_))+1)) AS ?accountId) .
 }}
