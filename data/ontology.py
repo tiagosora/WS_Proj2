@@ -98,7 +98,7 @@ with onto:
         domain = [Student]
         range = [Professor]
 
-    class hasStarRating(DataProperty):
+    class hasStarRating(DataProperty, FunctionalProperty):
         domain = [Student]
         range = [int]
 
