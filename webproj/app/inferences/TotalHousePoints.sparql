@@ -2,18 +2,21 @@ PREFIX : <http://hogwarts.edu/ontology.owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-INSERT {
+DELETE {{
+  ?house :hasTotalPoints ?a . 
+}}
+INSERT {{
   ?house :hasTotalPoints ?totalPoints .
-}
-WHERE {
-  {
+}}
+WHERE {{
+  {{
     SELECT ?house (SUM(?points) AS ?totalPoints)
-    WHERE {
+    WHERE {{
       ?student rdf:type :Student .
       ?student :hasPoints ?points .
       ?student :hasAccount ?wizard .
       ?wizard :belongsToHouse ?house .
-    }
+    }}
     GROUP BY ?house
-  }
-}
+  }}
+}}

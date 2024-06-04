@@ -14,11 +14,14 @@ def load_sparql_query(filename, **kwargs):
     return query
 
 
-def execute_sparql_query(query_name, format="JSON", **kwargs):
+def execute_sparql_query(query_name, format="JSON", infer=False, **kwargs):
     g = Graph()
     results = None
 
     if format == "POST":
+        if not infer:
+            from app.triplestore.inferences import infer_queries
+            infer_queries()
         query = load_sparql_query(query_name, **kwargs)
         sparql_update.setMethod(POST)
         sparql_update.setQuery(query)
