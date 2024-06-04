@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts RDFa</title>
+</head>
+<body>
+    <div xmlns="http://www.w3.org/1999/xhtml"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:sp="http://spinrdf.org/sp#"
+         xmlns="http://hogwarts.edu/ontology#">
+        <div typeof="owl:Ontology">
+            <span property="rdfs:comment" lang="en">Hogwarts Ontology.</span>
+            <span property="rdfs:label" lang="en">Hogwarts Ontology</span>
+            <span property="owl:versionInfo">1.0</span>
+        </div>
+<div typeof=":Account" about="http://hogwarts.edu/ontology.owl#Account_1">
+    <a property="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" href="http://www.w3.org/2002/07/owl#NamedIndividual">http://www.w3.org/2002/07/owl#NamedIndividual</a>
+    <a property="http://hogwarts.edu/ontology.owl#hasAccount" href="http://hogwarts.edu/ontology.owl#Wizard_1">http://hogwarts.edu/ontology.owl#Wizard_1</a>
+    <span property="http://hogwarts.edu/ontology.owl#hasMechanographicalNumber">104142</span>
+    <span property="http://hogwarts.edu/ontology.owl#hasPassword">Pass.Muito.Forte123</span>
+</div>
+<div typeof=":Account" about="http://hogwarts.edu/ontology.owl#Account_2">
+    <a property="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" href="http://www.w3.org/2002/07/owl#NamedIndividual">http://www.w3.org/2002/07/owl#NamedIndividual</a>
+    <a property="http://hogwarts.edu/ontology.owl#hasAccount" href="http://hogwarts.edu/ontology.owl#Wizard_46">http://hogwarts.edu/ontology.owl#Wizard_46</a>
+    <span property="http://hogwarts.edu/ontology.owl#hasMechanographicalNumber">103234</span>
+    <span property="http://hogwarts.edu/ontology.owl#hasPassword">Pass.Muito.Forte123</span>
+</div>
+<div typeof=":Wizard" about="http://hogwarts.edu/ontology.owl#Professor_3">
+    <a property="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" href="http://www.w3.org/2002/07/owl#NamedIndividual">http://www.w3.org/2002/07/owl#NamedIndividual</a>
+    <a property="http://hogwarts.edu/ontology.owl#hasAccount" href="http://hogwarts.edu/ontology.owl#Wizard_30">http://hogwarts.edu/ontology.owl#Wizard_30</a>
+    <a property="http://hogwarts.edu/ontology.owl#belongsToSchool" href="http://hogwarts.edu/ontology.owl#School_1">http://hogwarts.edu/ontology.owl#School_1</a>
+</div>
+<div typeof=":Wizard" about="http://hogwarts.edu/ontology.owl#Professor_12">
+    <a property="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" href="http://www.w3.org/2002/07/owl#NamedIndividual">http://www.w3.org/2002/07/owl#NamedIndividual</a>
+    <a property="http://hogwarts.edu/ontology.owl#hasAccount" href="http://hogwarts.edu/ontology.owl#Wizard_81">http://hogwarts.edu/ontology.owl#Wizard_81</a>
+    <a property="http://hogwarts.edu/ontology.owl#belongsToSchool" href="http://hogwarts.edu/ontology.owl#School_1">http://hogwarts.edu/ontology.owl#School_1</a>
+</div>
+<div typeof=":Professor" about="http://hogwarts.edu/ontology.owl#Professor_3">
+    <a property="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" href="http://www.w3.org/2002/07/owl#NamedIndividual">http://www.w3.org/2002/07/owl#NamedIndividual</a>
+    <a property="http://hogwarts.edu/ontology.owl#hasAccount" href="http://hogwarts.edu/ontology.owl#Wizard_30">http://hogwarts.edu/ontology.owl#Wizard_30</a>
+    <a property="http://hogwarts.edu/ontology.owl#belongsToSchool" href="http://hogwarts.edu/ontology.owl#School_1">http://hogwarts.edu/ontology.owl#School_1</a>
+</div>
+<div typeof=":Professor" about="http://hogwarts.edu/ontology.owl#Professor_12">
+    <a property="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" href="http://www.w3.org/2002/07/owl#NamedIndividual">http://www.w3.org/2002/07/owl#NamedIndividual</a>
+    <a property="http://hogwarts.edu/ontology.owl#hasAccount" href="http://hogwarts.edu/ontology.owl#Wizard_81">http://hogwarts.edu/ontology.owl#Wizard_81</a>
+    <a property="http://hogwarts.edu/ontology.owl#belongsToSchool" href="http://hogwarts.edu/ontology.owl#School_1">http://hogwarts.edu/ontology.owl#School_1</a>
+</div>
+<div typeof=":Headmaster" about="http://hogwarts.edu/ontology.owl#Headmaster_1">
+    <a property="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" href="http://www.w3.org/2002/07/owl#NamedIndividual">http://www.w3.org/2002/07/owl#NamedIndividual</a>
+    <a property="http://hogwarts.edu/ontology.owl#hasAccount" href="http://hogwarts.edu/ontology.owl#Wizard_4">http://hogwarts.edu/ontology.owl#Wizard_4</a>
+    <span property="http://hogwarts.edu/ontology.owl#hasStartDate">1971</span>
+</div>
+<div typeof=":Course" about="http://hogwarts.edu/ontology.owl#Course_1">
+    <a property="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" href="http://www.w3.org/2002/07/owl#NamedIndividual">http://www.w3.org/2002/07/owl#NamedIndividual</a>
+    <a property="http://hogwarts.edu/ontology.owl#teachesSpell" href="http://hogwarts.edu/ontology.owl#Spell_174">http://hogwarts.edu/ontology.owl#Spell_174</a>
+    <a property="http://hogwarts.edu/ontology.owl#hasProfessor" href="http://hogwarts.edu/ontology.owl#Professor_3">http://hogwarts.edu/ontology.owl#Professor_3</a>
+    <span property="http://hogwarts.edu/ontology.owl#hasCourseName">Transfiguration</span>
+    <span property="http://hogwarts.edu/ontology.owl#hasCourseType">Core</span>
+    <span property="http://hogwarts.edu/ontology.owl#hasAttendingYear">1</span>
+</div>
+<div typeof=":Course" about="http://hogwarts.edu/ontology.owl#Course_2">
+    <a property="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" href="http://www.w3.org/2002/07/owl#NamedIndividual">http://www.w3.org/2002/07/owl#NamedIndividual</a>
+    <a property="http://hogwarts.edu/ontology.owl#teachesSpell" href="http://hogwarts.edu/ontology.owl#Spell_175">http://hogwarts.edu/ontology.owl#Spell_175</a>
+    <a property="http://hogwarts.edu/ontology.owl#hasProfessor" href="http://hogwarts.edu/ontology.owl#Professor_4">http://hogwarts.edu/ontology.owl#Professor_4</a>
+    <span property="http://hogwarts.edu/ontology.owl#hasCourseName">Charms</span>
+    <span property="http://hogwarts.edu/ontology.owl#hasCourseType">Core</span>
+    <span property="http://hogwarts.edu/ontology.owl#hasAttendingYear">2</span>
+</div>
+<div typeof=":Spell" about="http://hogwarts.edu/ontology.owl#Spell_1">
+    <a property="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" href="http://www.w3.org/2002/07/owl#NamedIndividual">http://www.w3.org/2002/07/owl#NamedIndividual</a>
+    <span property="http://hogwarts.edu/ontology.owl#hasName">Summoning Charm</span>
+    <span property="http://hogwarts.edu/ontology.owl#hasIncantation">Accio</span>
+    <span property="http://hogwarts.edu/ontology.owl#hasType">Charm</span>
+    <span property="http://hogwarts.edu/ontology.owl#hasEffect">Summons an object</span>
+    <span property="http://hogwarts.edu/ontology.owl#hasLight">None</span>
+</div>
+<div typeof=":Spell" about="http://hogwarts.edu/ontology.owl#Spell_2">
+    <a property="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" href="http://www.w3.org/2002/07/owl#NamedIndividual">http://www.w3.org/2002/07/owl#NamedIndividual</a>
+    <span property="http://hogwarts.edu/ontology.owl#hasName">Water-Making Spell</span>
+    <span property="http://hogwarts.edu/ontology.owl#hasIncantation">Aguamenti</span>
+    <span property="http://hogwarts.edu/ontology.owl#hasType">Conjuration</span>
+    <span property="http://hogwarts.edu/ontology.owl#hasEffect">Conjures water</span>
+    <span property="http://hogwarts.edu/ontology.owl#hasLight">Icy blue</span>
+</div>
+</div>
+</body>
+</html>
