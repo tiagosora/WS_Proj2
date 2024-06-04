@@ -94,6 +94,10 @@ with onto:
         domain = [Student]
         range = [Course]
 
+    class hasLearnedFrom(ObjectProperty):
+        domain = [Student]
+        range = [Professor]
+
     class teachesSpell(ObjectProperty):
         domain = [Course]
         range = [Spell]

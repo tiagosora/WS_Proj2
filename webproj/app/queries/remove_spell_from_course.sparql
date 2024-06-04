@@ -6,9 +6,9 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 DELETE
 {{
-    {course_id} :teachesSpell {spell_id}
+    <{course_id}> :teachesSpell <{spell_id}>
 }}
 WHERE {{
-    {spell_id} rdf:type :Spell .
-    {course_id} rdf:type :Course .
+    <{spell_id}> rdf:type :Spell .
+    <{course_id}> rdf:type :Course .
 }}

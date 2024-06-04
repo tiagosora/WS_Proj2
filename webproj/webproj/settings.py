@@ -147,6 +147,7 @@ load_dotenv()
 GRAPHDB_ENDPOINT = os.getenv('REPO_URL')
 GRAPHDB_ENDPOINT_UPDATE = os.getenv('REPO_URL_UPDATE')
 
+NPM_BIN_PATH = 'npm.cmd'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'

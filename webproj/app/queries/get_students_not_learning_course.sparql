@@ -10,6 +10,6 @@ WHERE {{
     ?student :hasAccount ?wizard .
     ?wizard :hasName ?name .
     
-    FILTER NOT EXISTS {{ ?student :learnsCourse {course_uri} . }}
-    FILTER NOT EXISTS {{ ?student :hasLearnedCourse {course_uri} . }}
+    FILTER NOT EXISTS {{ ?student :learnsCourse <{course_uri}> . }}
+    FILTER NOT EXISTS {{ ?student :hasLearnedCourse <{course_uri}> . }}
 }}

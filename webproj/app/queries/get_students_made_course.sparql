@@ -7,5 +7,5 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 SELECT ?student
 WHERE {{
     ?student rdf:type :Student .
-    ?student :hasLearnedCourse {course_id} .
+    ?student :hasLearnedCourse <{course_id}> .
 }}

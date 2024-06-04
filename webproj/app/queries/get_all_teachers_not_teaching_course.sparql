@@ -10,5 +10,5 @@ WHERE {{
    ?professor :hasAccount ?wizardId .
    ?wizardId :hasName ?name 
     
-    FILTER(?professor != {professor_id})
+    FILTER(?professor != <{professor_id}>)
 }}

@@ -7,7 +7,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?type ?role
 WHERE {{
     OPTIONAL {{
-        ?role :hasAccount {wizard_id} .
+        ?role :hasAccount <{wizard_id}> .
         ?role rdf:type ?type .
         FILTER (?type IN (:Headmaster, :Professor, :Student))
     }}

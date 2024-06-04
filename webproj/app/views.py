@@ -37,7 +37,7 @@ def index(request):
 def student_dashboard(request):
     
     wizard_type_id = request.session['wizard_type_id']
-    
+    print(wizard_type_id)
     request.session['student_info'] = get_student_view_info(wizard_type_id)
     
     student_info = request.session['student_info']
@@ -99,11 +99,11 @@ def headmaster_dashboard(request):
     request.session['headmaster_info'] = get_headmaster_info(wizard_type_id)
     
     headmaster_info = request.session['headmaster_info']
+
     students_list = get_all_students_info()
     students_list.sort(key = lambda student : (student["name"], student["gender"], student["blood_type"]))
     
     courses =  get_courses_dict()
-    
     number_spells_per_course = {}
     courses_in_list = []
     for id, course in courses.items():
@@ -148,6 +148,7 @@ def course_view(request):
     request.session['back'] = 'back'
     
     course_full_info = get_course_by_id_dict(course_id)
+
     course_full_info['number_students_enrolled'] = len(course_full_info['is_learning'])
     course_full_info['number_spells_taught'] = len(course_full_info['spells'])
     
@@ -232,9 +233,9 @@ def register_view(request):
             request.session['wizard_id'] = id_number
             request.session['authenticated'] = True
 
-            wizard_info, _, wizard_type_id = get_role_info_by_wizard_id(id_number)
+            wizard_role, wizard_type_id = get_role_info_by_wizard_id(id_number)
 
-            match wizard_info:
+            match wizard_role:
                 case 'student':
                     request.session['student_info'] = get_student_view_info(wizard_type_id)
                     return redirect("student_dashboard")
@@ -253,11 +254,11 @@ def back_to_dashboard(request):
     request.session['back'] = 'back'
     del request.session['back']
     match wizard_info:
-        case 'student':
+        case 'http://hogwarts.edu/ontology.owl#Student':
             return redirect("student_dashboard")
-        case 'professor':
+        case 'http://hogwarts.edu/ontology.owl#Professor':
             return redirect("professor_dashboard")
-        case 'headmaster':
+        case 'http://hogwarts.edu/ontology.owl#Headmaster':
             return redirect("headmaster_dashboard")
         case _:
             logout(request)
@@ -266,7 +267,7 @@ def back_to_dashboard(request):
 @logout_required
 def login_view(request):
     if request.method == 'POST':
-        nmec = request.POST.get('id_number')
+        nmec = int(request.POST.get('id_number'))
         password = request.POST.get('password')
 
         success, id_number = wizard_login(nmec, password)
@@ -276,17 +277,17 @@ def login_view(request):
             request.session['wizard_id'] = id_number
             request.session['authenticated'] = True
 
-            wizard_info, _, wizard_type_id = get_role_info_by_wizard_id(id_number)
+            wizard_role, wizard_type_id = get_role_info_by_wizard_id(id_number)
 
-            request.session['role'] = wizard_info
+            request.session['role'] = wizard_role
             request.session['wizard_type_id'] = wizard_type_id
             
-            match wizard_info:
-                case 'student':
+            match wizard_role:
+                case 'http://hogwarts.edu/ontology.owl#Student':
                     return redirect("student_dashboard")
-                case 'professor':
+                case 'http://hogwarts.edu/ontology.owl#Professor':
                     return redirect("professor_dashboard")
-                case 'headmaster':
+                case 'http://hogwarts.edu/ontology.owl#Headmaster':
                     return redirect("headmaster_dashboard")
                 case _:
                     logout(request)

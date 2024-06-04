@@ -42,6 +42,11 @@
   <rdfs:range rdf:resource="#Course"/>
 </owl:ObjectProperty>
 
+<owl:ObjectProperty rdf:about="#hasLearnedFrom">
+  <rdfs:domain rdf:resource="#Student"/>
+  <rdfs:range rdf:resource="#Professor"/>
+</owl:ObjectProperty>
+
 <owl:ObjectProperty rdf:about="#teachesSpell">
   <rdfs:domain rdf:resource="#Course"/>
   <rdfs:range rdf:resource="#Spell"/>
@@ -85,23 +90,23 @@
 
 <owl:DatatypeProperty rdf:about="#hasName">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  <rdfs:domain rdf:resource="#House"/>
   <rdfs:domain rdf:resource="#School"/>
   <rdfs:domain rdf:resource="#Wizard"/>
   <rdfs:domain rdf:resource="#Skill"/>
   <rdfs:domain rdf:resource="#Spell"/>
   <rdfs:domain rdf:resource="#Course"/>
+  <rdfs:domain rdf:resource="#House"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="#hasId">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  <rdfs:domain rdf:resource="#House"/>
   <rdfs:domain rdf:resource="#School"/>
   <rdfs:domain rdf:resource="#Wizard"/>
   <rdfs:domain rdf:resource="#Skill"/>
   <rdfs:domain rdf:resource="#Spell"/>
   <rdfs:domain rdf:resource="#Course"/>
+  <rdfs:domain rdf:resource="#House"/>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="#hasGender">
@@ -190,8 +195,8 @@
 
 <owl:DatatypeProperty rdf:about="#hasLocation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  <rdfs:domain rdf:resource="#House"/>
   <rdfs:domain rdf:resource="#School"/>
+  <rdfs:domain rdf:resource="#House"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </owl:DatatypeProperty>
 

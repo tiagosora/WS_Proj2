@@ -16,7 +16,7 @@ def get_spell_info(spell_uri):
 
     _, g = execute_sparql_query(query_name, format="turtle", uri=spell_uri)
 
-    spell_attrs = {'teaches_spell': []}
+    spell_attrs = {'id': spell_uri, 'teaches_spell': []}
     for s, p, o in g.triples((URIRef(spell_uri), None, None)):
         prop = p.split('#')[-1]
         if isinstance(o, Literal):
