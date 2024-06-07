@@ -5,7 +5,7 @@ PREFIX hogwarts: <http://hogwarts.edu/ontology#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 INSERT {
-	?course :learnsCourse ?spell
+	?course :teachesSpell ?spell
 }
 WHERE {{
     BIND({spell_id} AS ?spell)

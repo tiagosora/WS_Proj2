@@ -17,7 +17,7 @@ INSERT DATA {{
 
         :Account_{max_account_id}
             rdf:type :Account ;
-            :hasMechanographicalNumber {nmec} ;
+            :hasMechanographicalNumber {nmec}^^xsd:integer;
             :hasPassword "{password}" ;
             :hasAccount :Wizard_{max_wizard_id} .
 

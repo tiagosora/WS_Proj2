@@ -49,4 +49,3 @@ def get_information_about_uri(uri: str):
         uri_information[uri][predicate] = object_value
     
     return uri_information
-
