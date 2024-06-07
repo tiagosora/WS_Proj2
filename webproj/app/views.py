@@ -99,6 +99,7 @@ def points_banners(request):
     
     students = get_all_students_info()
     students.sort(key=lambda student: (student["points"], student["star"], student["name"], student["gender"]), reverse=True)
+    print(students)
     houses = get_house_info()
     
     print(houses)

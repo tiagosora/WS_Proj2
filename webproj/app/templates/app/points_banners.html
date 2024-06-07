@@ -248,7 +248,7 @@
                     4: '⭐⭐\n⭐⭐',
                     5: '⭐⭐\n⭐⭐⭐'
                 };
-                var stars = stars_mapping[student.star];
+                var stars = stars_mapping[student.star] || 1;
                 var row = `<tr> 
                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-center">${stars}</td>
                     </td>

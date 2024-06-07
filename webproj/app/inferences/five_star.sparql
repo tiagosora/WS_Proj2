@@ -9,16 +9,16 @@ WHERE {{
   {{
     SELECT ?house ((SUM(?points) / 25) AS ?baseValue)
     WHERE {{
-      ?student rdf:type :Student .
+      ?student a :Student .
       ?student :hasPoints ?points .
       ?student :hasAccount ?wizard .
       ?wizard :belongsToHouse ?house .
     }}
     GROUP BY ?house
   }}
-  ?student rdf:type :Student .
+  ?student a :Student .
   ?student :hasPoints ?points .
   ?student :hasAccount ?wizard .
   ?wizard :belongsToHouse ?house .
-    FILTER (?points > (?baseValue * 4))
+  FILTER (?points > (?baseValue * 4))
 }}

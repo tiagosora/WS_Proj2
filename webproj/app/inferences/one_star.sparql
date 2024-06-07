@@ -2,7 +2,6 @@ PREFIX : <http://hogwarts.edu/ontology.owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-
 INSERT {{
   ?student :hasStarRating 1 .
 }}
@@ -10,14 +9,14 @@ WHERE {{
   {{
     SELECT ?house ((SUM(?points) / 25) AS ?baseValue)
     WHERE {{
-      ?student rdf:type :Student .
+      ?student a :Student .
       ?student :hasPoints ?points .
       ?student :hasAccount ?wizard .
       ?wizard :belongsToHouse ?house .
     }}
     GROUP BY ?house
   }}
-  ?student rdf:type :Student .
+  ?student a :Student .
   ?student :hasPoints ?points .
   ?student :hasAccount ?wizard .
   ?wizard :belongsToHouse ?house .
