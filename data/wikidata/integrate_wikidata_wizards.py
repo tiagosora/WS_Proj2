@@ -25,6 +25,7 @@ def generate_wikidata_queries(resources):
         query = f"""
         SELECT ?wizard ?p ?pLabel ?o ?oLabel
         WHERE {{
+            ?wizard wdt:P31 wd:Q15298259 .
             ?wizard wdt:P1559 ?name ;
                 ?p ?o .
             FILTER regex(?name, "{resource_name}", "i")  
