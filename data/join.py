@@ -5,7 +5,7 @@ from rdflib import Graph, Namespace, Literal
 onto = get_ontology("ontology.owl").load()
 
 # Define the namespace for the ontology
-HOGWARTS = Namespace("http://hogwarts.edu/ontology#")
+HOGWARTS = Namespace("http://hogwarts.edu/ontology.owl#")
 
 # Load RDF data
 rdf_data_graph = Graph()
