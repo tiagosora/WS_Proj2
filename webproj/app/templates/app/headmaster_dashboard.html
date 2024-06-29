@@ -56,6 +56,21 @@
                 <div class="container mx-auto">
                     <div class="dashboard-main-card shadow rounded-lg p-4 mb-8 overflow-hidden">
                         <h3 class="text-2xl font-semibold mb-3 leading-tight">Students</h3>
+                        <div class="flex mb-4">
+                            <input type="text" id="filterName" placeholder="Filter by Name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            <select id="filterHouse" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ml-2">
+                                <option value="">Filter by House</option>
+                                <option value="Gryffindor">Gryffindor</option>
+                                <option value="Hufflepuff">Hufflepuff</option>
+                                <option value="Ravenclaw">Ravenclaw</option>
+                                <option value="Slytherin">Slytherin</option>
+                            </select>
+                            <select id="filterGender" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ml-2">
+                                <option value="">Filter by Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
                         <div class="inline-block min-w-full rounded-lg overflow-hidden">
                             <table class="min-w-full leading-normal">
                                 <thead>
@@ -89,7 +104,7 @@
                         </div>
                         <div class="pagination mt-4 text-amber-600 flex justify-center items-center gap-4">
                             <button onclick="changeStudentsPage(-1)" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">Prev</button>
-                            <span id="studentPageIndicator" class="font-semibold">Page 1</span>
+                            <span id="studentPageIndicator" class="font-semibold">Page 1/1</span>
                             <button onclick="changeStudentsPage(1)" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">Next</button>
                         </div>
                     </div>
@@ -217,6 +232,14 @@
 </div>
 
 <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        renderStudents();
+    
+        document.getElementById('filterName').addEventListener('input', renderStudents);
+        document.getElementById('filterHouse').addEventListener('input', renderStudents);
+        document.getElementById('filterGender').addEventListener('input', renderStudents);
+    });
+
     const students = {{ students|safe }}; 
 
     var currentStudentPage = 1;
@@ -227,7 +250,18 @@
         container.innerHTML = ''; 
         var start = (currentStudentPage - 1) * studentsPerPage;
         var end = start + studentsPerPage;
-        var paginatedStudents = students.slice(start, end);
+    
+        var filteredStudents = students.filter(student => {
+            var nameFilter = document.getElementById('filterName').value.toLowerCase();
+            var houseFilter = document.getElementById('filterHouse').value.toLowerCase();
+            var genderFilter = document.getElementById('filterGender').value.toLowerCase();
+    
+            return (student.name.toLowerCase().includes(nameFilter) &&
+                    student.house_name.toLowerCase().includes(houseFilter) &&
+                    student.gender.toLowerCase().includes(genderFilter));
+        });
+    
+        var paginatedStudents = filteredStudents.slice(start, end);
     
         paginatedStudents.forEach(student => {
             var gender = student.gender ? student.gender : 'Unknown';
@@ -254,11 +288,21 @@
             container.innerHTML += row;
         });
     
-        document.getElementById('studentPageIndicator').innerText = `Page ${currentStudentPage}`;
+        var totalPages = Math.ceil(filteredStudents.length / studentsPerPage);
+        document.getElementById('studentPageIndicator').innerText = `Page ${currentStudentPage}/${totalPages}`;
     }
     
     function changeStudentsPage(step) {
-        var totalPages = Math.ceil(students.length / studentsPerPage);
+        var totalPages = Math.ceil(students.filter(student => {
+            var nameFilter = document.getElementById('filterName').value.toLowerCase();
+            var houseFilter = document.getElementById('filterHouse').value.toLowerCase();
+            var genderFilter = document.getElementById('filterGender').value.toLowerCase();
+    
+            return  (student.name.toLowerCase().includes(nameFilter) &&
+                    (houseFilter === '' || student.house_name.toLowerCase() === houseFilter) &&
+                    (genderFilter === '' || student.gender.toLowerCase() === genderFilter));
+        }).length / studentsPerPage);
+    
         currentStudentPage += step;
         if (currentStudentPage < 1) currentStudentPage = 1;
         else if (currentStudentPage > totalPages) currentStudentPage = totalPages;
