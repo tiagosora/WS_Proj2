@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    volumes:
+      - .:/django
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      graphdb-init:
+        condition: service_completed_successfully
+
+  graphdb:
+    image: ontotext/graphdb:10.6.4-arm64
+    ports:
+      - "7200:7200"
+    volumes:
+      - graphdb_data:/opt/graphdb/home
+    environment:
+      - GRAPHDB_HOME=/opt/graphdb/home
+      - GRAPHDB_LOGS=/opt/graphdb/logs
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f -H 'Accept: text/html' http://localhost:7200 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  graphdb-init:
+    image: alpine:latest
+    depends_on:
+      graphdb:
+        condition: service_healthy
+    volumes:
+      - ./create_repository.sh:/create_repository.sh
+      - ./repo-config.ttl:/repo-config.ttl
+      - ./data/data.rdf:/data.rdf
+    entrypoint: ["sh", "-c", "apk add --no-cache curl && sh /create_repository.sh"]
+
+volumes:
+  graphdb_data:

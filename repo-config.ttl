@@ -1,0 +1,15 @@
+@prefix rep: <http://www.openrdf.org/config/repository#> .
+@prefix sr: <http://www.openrdf.org/config/repository/sail#> .
+@prefix sail: <http://www.openrdf.org/config/sail#> .
+
+[] a rep:Repository ;
+   rep:repositoryID "ws_project" ;
+   rep:repositoryImpl [
+      rep:repositoryType "openrdf:SailRepository" ;
+      sr:sailImpl [
+         sail:sailType "openrdf:NativeStore" ;
+         sail:params [
+           sail:tripleIndexes "spoc,posc" ;
+         ]
+      ]
+   ] .

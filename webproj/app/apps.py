@@ -1,9 +1,12 @@
-from django.apps import AppConfig
-from app.triplestore.inferences import infer_queries
+# webproj/app/apps.py
 
+import os
+from django.apps import AppConfig
 
 class AppConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
     name = 'app'
+
     def ready(self):
-        infer_queries()
+        if os.environ.get('RUN_SPARQL_QUERIES', 'true') == 'true':
+            from .triplestore.inferences import infer_queries
+            infer_queries()
