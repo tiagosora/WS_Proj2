@@ -31,18 +31,22 @@
     <div class="container mx-auto px-6 rounded-lg">
         <div class="dashboard-main-card shadow-xl rounded-lg p-6 mb-10">
             <div class="grid grid-cols-1 shadow dashboard-main-card bg-white rounded-lg p-6 md:grid-cols-2 gap-4 text-gray-800">
-                <p><strong>Name:</strong> {{ headmaster.name }}</p>
-                <p><strong>Gender:</strong> {{ headmaster.gender|default:"Unknown" }}</p>
-                <p><strong>Species:</strong> {{ headmaster.species|default:"Unknown" }}</p>
-                <p><strong>Blood Type:</strong> {{ headmaster.blood_type|default:"Unknown" }}</p>
-                <p><strong>Wand:</strong> {{ headmaster.wand|default:"Unknown" }}</p>
-                <p><strong>Patronus:</strong> {{ headmaster.patronus|default:"Unknown" }}</p>
-                <p><strong class="text-amber-600">Started headmaster role on:</strong> {{ headmaster.start_date }}</p>
-                <p></p>
-                <div>
-                    <button class="text-amber-600 text-left" onclick="openEditPersonalInfoModal()" style="background-color: transparent; border: none; padding: 0; cursor: pointer;">
-                        Edit
-                    </button>
+                <div about="{{ headmaster_id }}" typeof="hogwarts:Headmaster">
+                    <div rel="hogwarts:hasAccount" resource="{{ headmaster.id }}">
+                        <p><strong>Name:</strong><span property="hogwarts:hasName"> {{ headmaster.name }}</span></p>
+                        <p><strong>Gender:</strong><span property="hogwarts:hasGender"> {{ headmaster.gender|default:"Unknown" }}</span></p>
+                        <p><strong>Species:</strong><span property="hogwarts:hasSpecies"> {{ headmaster.species|default:"Unknown" }}</span></p>
+                        <p><strong>Blood Type:</strong><span property="hogwarts:hasBloodType">{{ headmaster.blood_type|default:"Unknown" }}</span></p>
+                        <p><strong>Wand:</strong><span property="hogwarts:hasWand"> {{ headmaster.wand|default:"Unknown" }}</span></p>
+                        <p><strong>Patronus:</strong><span property="hogwarts:hasPatronus"> {{ headmaster.patronus|default:"Unknown" }}</span></p>
+                    </div>
+                    <p><strong class="text-amber-600">Started headmaster role on:</strong><span property="hogwarts:hasStartDate">{{ headmaster.start_date }}</span></p>
+                    <p></p>
+                    <div>
+                        <button class="text-amber-600 text-left" onclick="openEditPersonalInfoModal()" style="background-color: transparent; border: none; padding: 0; cursor: pointer;">
+                            Edit
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="mt-10">
@@ -250,7 +254,21 @@
                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">${species}</td>
                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">${wand}</td>
                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">${patronus}</td>
-            </tr>`;
+            </tr>
+            <div about="${student.student_id}" typeof="hogwarts:Student" style="display:none;">
+                <div rel="hogwarts:hasAccount" resource="${student.id}">
+                    <div property="hogwarts:hasName">${student.name}</div>
+                    <div property="hogwarts:hasGender">${gender}</div>
+                    <div property="hogwarts:hasBloodType">${blood_type}</div>
+                    <div property="hogwarts:hasSpecies">${species}</div>
+                    <div property="hogwarts:hasWand">${wand}</div>
+                    <div property="hogwarts:hasPatronus">${patronus}</div>
+                    <div property="hogwarts:hasEyeColor" content="${student.eye_color}"></div>
+                </div>
+                <div property="hogwarts:hasPoints">${student.points}</div>
+                <div property="hogwarts:hasSchoolYear">${student.school_year}</div>
+                <div property="hogwarts:hasStarRating">${student.star}</div>
+            </div>`;
             container.innerHTML += row;
         });
     
@@ -273,6 +291,8 @@
 <script>
     const courses = {{ courses|safe }};
     
+    console.log(courses);
+
     function openModal(courseId) {
         const course = courses.find(c => c.id == courseId);
         if (!course) return;
@@ -300,10 +320,10 @@
     document.addEventListener('DOMContentLoaded', () => {
         const coursesContainer = document.getElementById('coursesContainer');
         const courseHtml = courses.map(course => `
-            <div class="bg-[#f7f4f0] hover:bg-[#ede9e5] rounded-lg shadow p-4 cursor-pointer" onclick="openModal('${course.id}')">
-                <h3 class="text-2xl font-semibold mb-3">${course.name}</h3>
-                <p>Type: ${course.type}</p>
-                <p>Year: ${course.attending_year}</p>
+            <div about="${course.id}" typeof="hogwarts:Course" class="bg-[#f7f4f0] hover:bg-[#ede9e5] rounded-lg shadow p-4 cursor-pointer" onclick="openModal('${course.id}')">
+                <h3 class="text-2xl font-semibold mb-3"><span property="hogwarts:hasCourseName">${course.name}</span></h3>
+                <p>Type: <span property="hogwarts:hasCourseType">${course.type}</span></p>
+                <p>Year: <span property="hogwarts:hasAttendingYear">${course.attending_year}</span></p>
             </div>
         `).join('');
         coursesContainer.innerHTML = courseHtml;

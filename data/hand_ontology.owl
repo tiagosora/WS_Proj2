@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://hogwarts.edu/ontology.owl#"
+     xml:base="http://hogwarts.edu/ontology.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:hogwarts="http://hogwarts.edu/ontology.owl#">
+     
+    <owl:Ontology rdf:about="http://hogwarts.edu/ontology.owl"/>
+
+    <owl:Class rdf:about="http://hogwarts.edu/ontology.owl#Account"/>
+    <owl:Class rdf:about="http://hogwarts.edu/ontology.owl#Wizard"/>
+    <owl:Class rdf:about="http://hogwarts.edu/ontology.owl#House"/>
+    <owl:Class rdf:about="http://hogwarts.edu/ontology.owl#Spell"/>
+    <owl:Class rdf:about="http://hogwarts.edu/ontology.owl#Course"/>
+    <owl:Class rdf:about="http://hogwarts.edu/ontology.owl#School"/>
+    <owl:Class rdf:about="http://hogwarts.edu/ontology.owl#Skill"/>
+
+    <owl:Class rdf:about="http://hogwarts.edu/ontology.owl#Student">
+        <rdfs:subClassOf rdf:resource="http://hogwarts.edu/ontology.owl#Wizard"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://hogwarts.edu/ontology.owl#Professor">
+        <rdfs:subClassOf rdf:resource="http://hogwarts.edu/ontology.owl#Wizard"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://hogwarts.edu/ontology.owl#Headmaster">
+        <rdfs:subClassOf rdf:resource="http://hogwarts.edu/ontology.owl#Wizard"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://hogwarts.edu/ontology.owl#BasicStudent">
+        <rdfs:subClassOf rdf:resource="http://hogwarts.edu/ontology.owl#Student"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://hogwarts.edu/ontology.owl#MediumStudent">
+        <rdfs:subClassOf rdf:resource="http://hogwarts.edu/ontology.owl#Student"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://hogwarts.edu/ontology.owl#AdvancedStudent">
+        <rdfs:subClassOf rdf:resource="http://hogwarts.edu/ontology.owl#Student"/>
+    </owl:Class>
+
+    <owl:ObjectProperty rdf:about="http://hogwarts.edu/ontology.owl#hasLearnedCourse">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Student"/>
+        <rdfs:range rdf:resource="http://hogwarts.edu/ontology.owl#Course"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://hogwarts.edu/ontology.owl#belongsToSchool">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Student"/>
+                    <rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Headmaster"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://hogwarts.edu/ontology.owl#School"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://hogwarts.edu/ontology.owl#hasAccount">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Account"/>
+                    <rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Student"/>
+                    <rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Headmaster"/>
+                    <rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Professor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://hogwarts.edu/ontology.owl#Wizard"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://hogwarts.edu/ontology.owl#hasProfessor">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Course"/>
+        <rdfs:range rdf:resource="http://hogwarts.edu/ontology.owl#Professor"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://hogwarts.edu/ontology.owl#teachesAtSchool">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Professor"/>
+        <rdfs:range rdf:resource="http://hogwarts.edu/ontology.owl#School"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://hogwarts.edu/ontology.owl#hasStartDate">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Headmaster"/>
+        <rdfs:range rdf:resource="http://hogwarts.edu/ontology.owl#Spell"/>
+    </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="http://hogwarts.edu/ontology.owl#hasName">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Wizard"/>
+                    <rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Spell"/>
+                    <rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#House"/>
+                    <rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Student"/>
+                    <rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Professor"/>
+                    <rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Headmaster"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://hogwarts.edu/ontology.owl#hasSchoolYear">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://hogwarts.edu/ontology.owl#hasPoints">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://hogwarts.edu/ontology.owl#hasEffect">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Spell"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://hogwarts.edu/ontology.owl#hasIncantation">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Spell"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://hogwarts.edu/ontology.owl#hasSpecies">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Wizard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://hogwarts.edu/ontology.owl#hasHouseName">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#House"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://hogwarts.edu/ontology.owl#hasMechanographicalNumber">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Account"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://hogwarts.edu/ontology.owl#hasPassword">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Account"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://hogwarts.edu/ontology.owl#teachesSpell">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#integer"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://hogwarts.edu/ontology.owl#hasCourseName">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://hogwarts.edu/ontology.owl#hasCourseType">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://hogwarts.edu/ontology.owl#hasAttendingYear">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://hogwarts.edu/ontology.owl#hasSkillName">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Skill"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://hogwarts.edu/ontology.owl#hasWizardSkill">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Wizard"/>
+        <rdfs:range rdf:resource="http://hogwarts.edu/ontology.owl#Skill"/>
+    </owl:DatatypeProperty>
+</rdf:RDF>

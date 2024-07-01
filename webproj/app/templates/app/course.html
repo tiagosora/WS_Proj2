@@ -19,15 +19,14 @@
 <div class="mt-10 flex flex-col items-center justify-center">
     <div class="container mx-auto px-6 rounded-lg">
         <div class="dashboard-main-card shadow-xl rounded-lg p-6 mb-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-800">
-                <p><strong>Name:</strong> {{ course.name }}</p>
-                <p><strong>Attending Year:</strong> {{ course.attending_year }}</p>
-                <p><strong>Type:</strong> {{ course.type }}</p>
+            <div about="{{ course.id }}" typeof="hogwarts:Course" class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-800">
+                <p><strong>Name:</strong><div property="hogwarts:hasCourseName"> {{ course.name }}</div></p>
+                <p><strong>Attending Year:</strong><div property="hogwarts:hasAttendingYear">{{ course.attending_year }}</div></p>
+                <p><strong>Type:</strong><div property="hogwarts:hasCourseType"> {{ course.type }}</div></p>
                 <p><strong>Number of Students Enrolled</strong> {{ course.number_students_enrolled }}</p>
                 <div>
-                    <button class="text-amber-600 text-left" onclick="openProfessorModal()" style="background-color: transparent; border: none; padding: 0; cursor: pointer;">
-                        <strong class="text-black">Professor: </strong>
-                        {{ course.professor_info.name }}
+                    <button class="text-amber-600 text-left" onclick="openProfessorModal('{{ course.professor_info.id }}')" style="background-color: transparent; border: none; padding: 0; cursor: pointer;">
+                        <strong class="text-black">Professor: </strong> <span property="hogwarts:hasProfessor" resource="{{ course.professor_info.id }}">{{ course.professor_info.name }}</span>
                     </button>
                 </div>
                 <p><strong>Number of Spells Taught</strong> {{ course.number_spells_taught }}</p>
@@ -166,35 +165,35 @@
                 <div class="sm:flex sm:items-start">
                     <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
                         <h3 class="text-lg leading-6 font-medium text-gray-900" id="professor-modal-title">Professor Details</h3>
-                        <div class="mt-4">
+                        <div class="mt-4" about="{{ course.professor_info.id }}" typeof="hogwarts:Wizard">
                             <div class="flex flex-col space-y-2">
                                 <div class="flex justify-between">
                                     <p class="text-sm font-medium text-gray-500">Name:</p>
-                                    <p class="text-sm text-gray-900">{{ course.professor_info.name }}</p>
+                                    <p class="text-sm text-gray-900" property="hogwarts:hasName">{{ course.professor_info.name }}</p>
                                 </div>
                                 <div class="flex justify-between">
                                     <p class="text-sm font-medium text-gray-500">Gender:</p>
-                                    <p class="text-sm text-gray-900">{{ course.professor_info.gender }}</p>
+                                    <p class="text-sm text-gray-900" property="hogwarts:hasGender">{{ course.professor_info.gender }}</p>
                                 </div>
                                 <div class="flex justify-between">
                                     <p class="text-sm font-medium text-gray-500">Species:</p>
-                                    <p class="text-sm text-gray-900">{{ course.professor_info.species }}</p>
+                                    <p class="text-sm text-gray-900" property="hogwarts:hasSpecies">{{ course.professor_info.species }}</p>
                                 </div>
                                 <div class="flex justify-between">
                                     <p class="text-sm font-medium text-gray-500">Blood Type:</p>
-                                    <p class="text-sm text-gray-900">{{ course.professor_info.blood_type }}</p>
+                                    <p class="text-sm text-gray-900" property="hogwarts:hasBloodType">{{ course.professor_info.blood_type }}</p>
                                 </div>
                                 <div class="flex justify-between">
                                     <p class="text-sm font-medium text-gray-500">Eye Color:</p>
-                                    <p class="text-sm text-gray-900">{{ course.professor_info.eye_color }}</p>
+                                    <p class="text-sm text-gray-900" property="hogwarts:hasEyeColor">{{ course.professor_info.eye_color }}</p>
                                 </div>
                                 <div class="flex justify-between">
                                     <p class="text-sm font-medium text-gray-500">Wand:</p>
-                                    <p class="text-sm text-gray-900">{{ course.professor_info.wand }}</p>
+                                    <p class="text-sm text-gray-900" property="hogwarts:hasWand">{{ course.professor_info.wand }}</p>
                                 </div>
                                 <div class="flex justify-between">
                                     <p class="text-sm font-medium text-gray-500">Patronus:</p>
-                                    <p class="text-sm text-gray-900">{{ course.professor_info.patronus }}</p>
+                                    <p class="text-sm text-gray-900" property="hogwarts:hasPatronus">{{ course.professor_info.patronus }}</p>
                                 </div>
                             </div>
                         </div>
@@ -323,14 +322,49 @@
         
         var container = document.getElementById(`spellsContainer`);
         course.spells.forEach(spell => {
+
+            //rdfa stuff
+            var spellDiv = document.createElement('div');
+            spellDiv.setAttribute('about', course.id);
+            spellDiv.setAttribute('typeof', "hogwarts:Course");
+            spellDiv.setAttribute('rel', 'hogwarts:teachesSpell');
+            spellDiv.setAttribute('resource', spell.id);
+    
+            var spellInnerDiv = document.createElement('div');
+            spellInnerDiv.setAttribute('about', spell.id);
+            spellInnerDiv.setAttribute('typeof', "hogwarts:Spell");
+    
+            var nameSpan = document.createElement('span');
+            nameSpan.setAttribute('property', "hogwarts:hasName");
+            nameSpan.textContent = spell.name;
+            spellInnerDiv.appendChild(nameSpan);
+    
+            var effectSpan = document.createElement('span');
+            effectSpan.setAttribute('property', "hogwarts:hasEffect");
+            effectSpan.textContent = spell.effect;
+            spellInnerDiv.appendChild(effectSpan);
+    
+            var incantationSpan = document.createElement('span');
+            incantationSpan.setAttribute('property', "hogwarts:hasIncantation");
+            incantationSpan.textContent = spell.incantation;
+            spellInnerDiv.appendChild(incantationSpan);
+    
+            var lightSpan = document.createElement('span');
+            lightSpan.setAttribute('property', "hogwarts:hasLight");
+            lightSpan.textContent = spell.light;
+            spellInnerDiv.appendChild(lightSpan);
+    
             var spellButton = document.createElement('button');
             spellButton.innerText = spell.name;
             spellButton.classList.add("text-black");
             spellButton.classList.add("text-left");
             spellButton.classList.add("hover:text-amber-600");
             spellButton.onclick = function() { openModal(spell); };
-            container.appendChild(spellButton);
-        });
+            
+            spellInnerDiv.appendChild(spellButton);
+            spellDiv.appendChild(spellInnerDiv);
+            container.appendChild(spellDiv);
+        });    
     });
 
     function openModal(spell) {
@@ -364,6 +398,81 @@
             studentButton.onclick = function() { openStudentModal(course, student); };
             studentLi.appendChild(studentButton);
             studentsContainer.appendChild(studentLi);
+
+            //rdfa stuff
+            var studentDiv = document.createElement('div');
+            studentDiv.setAttribute('about', course.id);
+            studentDiv.setAttribute('typeof', 'hogwarts:Course');
+            studentDiv.setAttribute('rel', 'hogwarts:isLearnedBy');
+            studentDiv.setAttribute('resource', student.student_id);
+
+            var studentInnerDiv = document.createElement('div');
+            studentInnerDiv.setAttribute('about', student.student_id);
+            studentInnerDiv.setAttribute('typeof','hogwarts:Student');
+            
+            var hasSchoolYear = document.createElement('div');
+            hasSchoolYear.setAttribute('property', "hogwarts:hasSchoolYear");
+            hasSchoolYear.setAttribute('content', student.attending_year);
+
+            studentInnerDiv.appendChild(hasSchoolYear);
+
+            var hasStarRating = document.createElement('div');
+            hasStarRating.setAttribute('property', "hogwarts:hasStarRating");
+            hasStarRating.setAttribute('content', student.star);
+
+            studentInnerDiv.appendChild(hasStarRating);
+
+            var wizardDiv = document.createElement('div');
+            wizardDiv.setAttribute('rel', "hogwarts:hasAccount");
+            wizardDiv.setAttribute('typeof', 'hogwarts:Wizard');
+            wizardDiv.setAttribute('resource', student.id);
+
+            var hasSpecies = document.createElement('div');
+            hasSpecies.setAttribute('property', "hogwarts:hasSpecies");
+            hasSpecies.setAttribute('content', student.species);
+
+            wizardDiv.appendChild(hasSpecies);
+
+            var hasBloodType = document.createElement('div');
+            hasBloodType.setAttribute('property', "hogwarts:hasBloodType");
+            hasBloodType.setAttribute('content', student.blood_type);
+
+            wizardDiv.appendChild(hasBloodType);
+
+            var hasName = document.createElement('div');
+            hasName.setAttribute('property', "hogwarts:hasName");
+            hasName.setAttribute('content', student.name);
+
+            wizardDiv.appendChild(hasName);
+
+            var hasEyeColor = document.createElement('div');
+            hasEyeColor.setAttribute('property', "hogwarts:hasEyeColor");
+            hasEyeColor.setAttribute('content', student.eye_color);
+
+            wizardDiv.appendChild(hasEyeColor);
+
+            var hasGender = document.createElement('div');
+            hasGender.setAttribute('property', "hogwarts:hasGender");
+            hasGender.setAttribute('content', student.gender);
+
+            wizardDiv.appendChild(hasGender);
+
+            var hasPatronus = document.createElement('div');
+            hasPatronus.setAttribute('property', "hogwarts:hasPatronus");
+            hasPatronus.setAttribute('content', student.patronus);
+
+            wizardDiv.appendChild(hasPatronus);
+
+            var hasWand = document.createElement('div');
+            hasWand.setAttribute('property', "hogwarts:hasWand");
+            hasWand.setAttribute('content', student.wand);
+
+            wizardDiv.appendChild(hasWand);
+
+            studentInnerDiv.appendChild(wizardDiv);
+            studentDiv.appendChild(studentInnerDiv);
+            studentsContainer.appendChild(studentDiv);
+            
         });
     });
 
