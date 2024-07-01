@@ -14,6 +14,10 @@ RUN apt-get update && apt-get install -y curl gnupg \
     && curl -sL https://deb.nodesource.com/setup_16.x | bash - \
     && apt-get install -y nodejs supervisor
 
+# Verify Node.js and npm installation
+RUN node -v
+RUN npm -v
+
 # Copy project
 COPY webproj /django/webproj
 
@@ -24,6 +28,9 @@ RUN npm install
 
 # Set environment variable to skip SPARQL queries during build
 ENV RUN_SPARQL_QUERIES=false
+
+# Set NPM_BIN_PATH environment variable
+ENV NPM_BIN_PATH="/usr/bin/npm"
 
 # Install Tailwind and migrate the database
 RUN python manage.py tailwind install
