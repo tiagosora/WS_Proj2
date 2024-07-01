@@ -41,9 +41,28 @@
         <rdfs:subClassOf rdf:resource="http://hogwarts.edu/ontology.owl#Student"/>
     </owl:Class>
 
-    <owl:ObjectProperty rdf:about="http://hogwarts.edu/ontology.owl#hasLearnedCourse">
+        <owl:ObjectProperty rdf:about="http://hogwarts.edu/ontology.owl#hasLearnedCourse">
         <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Student"/>
         <rdfs:range rdf:resource="http://hogwarts.edu/ontology.owl#Course"/>
+        <owl:inverseOf rdf:resource="http://hogwarts.edu/ontology.owl#wasLearnedBy"/> 
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://hogwarts.edu/ontology.owl#wasLearnedBy">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Course"/>
+        <rdfs:range rdf:resource="http://hogwarts.edu/ontology.owl#Student"/>
+        <owl:inverseOf rdf:resource="http://hogwarts.edu/ontology.owl#hasLearnedCourse"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://hogwarts.edu/ontology.owl#learnsCourse">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Student"/>
+        <rdfs:range rdf:resource="http://hogwarts.edu/ontology.owl#Course"/>
+        <owl:inverseOf rdf:resource="http://hogwarts.edu/ontology.owl#isLearnedBy"/> 
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://hogwarts.edu/ontology.owl#isLearnedBy">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Course"/>
+        <rdfs:range rdf:resource="http://hogwarts.edu/ontology.owl#Student"/>
+        <owl:inverseOf rdf:resource="http://hogwarts.edu/ontology.owl#learnsCourse"/>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="http://hogwarts.edu/ontology.owl#belongsToSchool">
@@ -75,6 +94,13 @@
     <owl:ObjectProperty rdf:about="http://hogwarts.edu/ontology.owl#hasProfessor">
         <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Course"/>
         <rdfs:range rdf:resource="http://hogwarts.edu/ontology.owl#Professor"/>
+        <owl:inverseOf rdf:resource="http://hogwarts.edu/ontology.owl#teaches"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://hogwarts.edu/ontology.owl#teaches">
+        <rdfs:domain rdf:resource="http://hogwarts.edu/ontology.owl#Professor"/>
+        <rdfs:range rdf:resource="http://hogwarts.edu/ontology.owl#Course"/>
+        <owl:inverseOf rdf:resource="http://hogwarts.edu/ontology.owl#hasProfessor"/>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="http://hogwarts.edu/ontology.owl#teachesAtSchool">

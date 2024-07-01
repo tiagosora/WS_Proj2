@@ -59,6 +59,9 @@ def professor_dashboard(request):
 
     professor_info = request.session['professor_info']
 
+    print("a")
+    print(professor_info)
+
     return render(request, 'app/professor_dashboard.html', {
         'professor': professor_info["professor"],
         'courses': professor_info["courses"],

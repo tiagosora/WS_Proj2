@@ -27,7 +27,7 @@ def get_professor_info(professor_id):
 
     professor_info = {}
     professor_info.update({"courses": professor_courses})
-    professor_info.update({"professor": wizard.info() | {"school_name": get_school_name(professor.school)}})
+    professor_info.update({"professor": wizard.info() | {"school_name": get_school_name(professor.school)} | {"school_uri": professor.school} | {"professor_id": professor_id} })
 
     return professor_info
 

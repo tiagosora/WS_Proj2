@@ -135,7 +135,7 @@ class Student:
 class Professor:
     def __init__(self, **kwargs):
         self.id = kwargs.get('id', '')
-        self.school = kwargs.get('belongsToSchool', '')
+        self.school = kwargs.get('teachesAtSchool', '')
         self.wizard = kwargs.get('hasAccount', '')
         self.type = kwargs.get('type', 'Professor')
 

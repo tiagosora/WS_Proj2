@@ -38,15 +38,15 @@ def create_new_wizard(password: str, blood_type: str, eye_color: str, gender: st
     if len(results["results"]["bindings"]) > 0 and "houseId" in results["results"]["bindings"][0].keys():
         house_id = results["results"]["bindings"][0]["houseId"]["value"]
 
-    house = "hogwarts:house \"" + house_id + "\" ;" if bool(house_id) else ""
+    house = "hogwarts:belongsToHouse \"" + house_id + "\" ;" if bool(house_id) else ""
 
     name = name if bool(name) else ""
-    gender = "hogwarts:gender \"" + gender + "\" ;" if bool(gender) else ""
-    species = "hogwarts:species \"" + species + "\" ;" if bool(species) else ""
-    blood_type = "hogwarts:blood-type \"" + blood_type + "\" ;" if bool(blood_type) else ""
-    eye_color = "hogwarts:eye_color \"" + eye_color + "\" ;" if bool(eye_color) else ""
-    wand = "hogwarts:wand \"" + wand + "\" ;" if bool(wand) else ""
-    patronus = "hogwarts:patronus \"" + patronus + "\" ;" if bool(patronus) else ""
+    gender = "hogwarts:hasGender \"" + gender + "\" ;" if bool(gender) else ""
+    species = "hogwarts:hasSpecies \"" + species + "\" ;" if bool(species) else ""
+    blood_type = "hogwarts:hasBloodType \"" + blood_type + "\" ;" if bool(blood_type) else ""
+    eye_color = "hogwarts:hasEyeColor \"" + eye_color + "\" ;" if bool(eye_color) else ""
+    wand = "hogwarts:hasWand \"" + wand + "\" ;" if bool(wand) else ""
+    patronus = "hogwarts:hasPatronus \"" + patronus + "\" ;" if bool(patronus) else ""
 
     query_name = "app/queries/add_wizard.sparql"
     _, _ = execute_sparql_query(query_name, format="POST", name=name, gender=gender,
