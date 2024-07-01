@@ -11,7 +11,6 @@ from django.shortcuts import render
 
 def student_dashboard(request):
     wizard_type_id = request.session['wizard_type_id']
-    print(wizard_type_id)
     request.session['student_info'] = get_student_view_info(wizard_type_id)
 
     student_info = request.session['student_info']
@@ -109,4 +108,5 @@ def update_wizard(request):
     patronus = request.POST.get('patronus')
     wand = request.POST.get('wand')
 
-    update_wizard_info(wizard_id, name, gender, blood_type, species, eye_color, patronus, wand)
+    update_wizard_info(wizard_id, not request.session.get('infering', True),
+                       name, gender, blood_type, species, eye_color, patronus, wand)

@@ -4,6 +4,8 @@ from app.views_functions import (authentication_views, course_views, dashboard_v
                        points_views, utility_views)
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods
+from django.views.decorators.http import require_POST
+from django.views.decorators.csrf import csrf_exempt
 
 # Authentication views
 
@@ -87,9 +89,16 @@ def change_professor(request):
 def pass_student(request):
     return course_views.pass_student(request)
 
-
 def points_banners(request):
     return points_views.points_banners(request)
 
 def give_points(request):
     return points_views.give_points(request)
+
+@csrf_exempt
+@require_POST
+def toggle_infering(request):
+    return utility_views.toggle_infering(request)
+
+def initialize_infering(request):
+    return utility_views.initialize_infering(request)

@@ -38,7 +38,7 @@ def remove_student(request):
     student_id = request.POST.get('student_id')
     course_id = request.POST.get('course_id')
 
-    remove_student_from_course(course_id, student_id)
+    remove_student_from_course(course_id, student_id, not request.session.get('infering', True))
 
     return redirect("course")
 
@@ -47,7 +47,7 @@ def add_student(request):
     student_id = request.POST.get('student_id')
     course_id = request.POST.get('course_id')
 
-    add_student_to_course(course_id, student_id)
+    add_student_to_course(course_id, student_id, not request.session.get('infering', True))
 
     return redirect("course")
 
@@ -56,7 +56,7 @@ def remove_spell(request):
     spell_id = request.POST.get('spell_id')
     course_id = request.POST.get('course_id')
 
-    remove_spell_from_course(course_id, spell_id)
+    remove_spell_from_course(course_id, spell_id, not request.session.get('infering', True))
 
     return redirect("course")
 
@@ -65,7 +65,7 @@ def add_spell(request):
     spell_id = request.POST.get('spell_id')
     course_id = request.POST.get('course_id')
 
-    add_spell_to_course(course_id, spell_id)
+    add_spell_to_course(course_id, spell_id, not request.session.get('infering', True))
 
     return redirect("course")
 
@@ -74,7 +74,7 @@ def change_professor(request):
     professor_id = request.POST.get('professor_id')
     course_id = request.POST.get('course_id')
 
-    change_course_professor(course_id, professor_id)
+    change_course_professor(course_id, professor_id, not request.session.get('infering', True))
 
     return redirect("course")
 
@@ -83,7 +83,7 @@ def pass_student(request):
     student_id = request.POST.get('student_id')
     course_id = request.POST.get('course_id')
 
-    update_is_learning_to_learned(course_id, student_id)
+    update_is_learning_to_learned(course_id, student_id, not request.session.get('infering', True))
 
     request.session['professor_info'] = get_professor_info(request.session['wizard_type_id'])
     return redirect("professor_dashboard")

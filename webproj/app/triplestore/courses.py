@@ -52,35 +52,34 @@ def get_course_by_id_dict(course_id):
     }
 
 
-def update_is_learning_to_learned(course_id, student_id):
-    print("here")
+def update_is_learning_to_learned(course_id, student_id, blocking_infering):
     query_name = "app/queries/update_is_learning_to_learned.sparql"
-    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, student_id=student_id)
+    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, student_id=student_id, infer=blocking_infering)
 
 
-def add_spell_to_course(course_id, spell_id):
+def add_spell_to_course(course_id, spell_id, blocking_infering):
     query_name = "app/queries/add_spell_to_course.sparql"
-    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, spell_id=spell_id)
+    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, spell_id=spell_id, infer=blocking_infering)
 
 
-def remove_spell_from_course(course_id, spell_id):
+def remove_spell_from_course(course_id, spell_id, blocking_infering):
     query_name = "app/queries/remove_spell_from_course.sparql"
-    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, spell_id=spell_id)
+    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, spell_id=spell_id, infer=blocking_infering)
 
 
-def add_student_to_course(course_id, student_id):
+def add_student_to_course(course_id, student_id, blocking_infering):
     query_name = "app/queries/add_student_to_course.sparql"
-    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, student_id=student_id)
+    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, student_id=student_id, infer=blocking_infering)
 
 
-def remove_student_from_course(course_id, student_id):
+def remove_student_from_course(course_id, student_id, blocking_infering):
     query_name = "app/queries/remove_student_from_course.sparql"
-    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, student_id=student_id)
+    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, student_id=student_id, infer=blocking_infering)
 
 
-def change_course_professor(course_id, professor_id):
+def change_course_professor(course_id, professor_id, blocking_infering):
     query_name = "app/queries/change_course_professor.sparql"
-    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, professor_id=professor_id)
+    execute_sparql_query(query_name=query_name, format='POST', course_id=course_id, professor_id=professor_id, infer=blocking_infering)
 
 
 def get_len_all_courses():

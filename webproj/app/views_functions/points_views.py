@@ -9,10 +9,7 @@ def points_banners(request):
     
     students = get_all_students_info()
     students.sort(key=lambda student: (student["points"], student["star"], student["name"], student["gender"]), reverse=True)
-    print(students)
     houses = get_house_info()
-    
-    print(houses)
     
     return render(request, 'app/points_banners.html', {
         'students': students,
@@ -24,8 +21,6 @@ def give_points(request):
         student_id = request.POST.get('student_id')
         points = request.POST.get('points')
         
-        print(student_id, points)
-        
-        remove_points(student_id, points)
+        remove_points(student_id, points, not request.session.get('infering', True))
     
     return redirect("points_banners")

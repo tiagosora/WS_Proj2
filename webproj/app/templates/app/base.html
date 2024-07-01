@@ -1,34 +1,21 @@
 {% load static tailwind_tags %}
 
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}Hogwarts Management System{% endblock %}</title>
-        <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}" >
+        <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
             body {
                 font-family: 'Cinzel', serif;
-                
             }
-            
         </style>
         {% tailwind_css %}
     </head>
     <body class="bg-[#edeae5]">
-
-        <div xmlns="http://www.w3.org/1999/xhtml"
-         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-         xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-         xmlns="http://hogwarts.edu/ontology#">
-        <div typeof="owl:Ontology">
-            <span property="rdfs:comment" lang="en">Hogwarts Ontology.</span>
-            <span property="rdfs:label" lang="en">Hogwarts Ontology</span>
-            <span property="owl:versionInfo">1.0</span>
-        </div>
 
         {% if not 'account' in request.path %}
         <header class="flex justify-between items-center pt-5 px-5">
@@ -55,7 +42,9 @@
                 </button>
                 {% endif %}
             </div>
-            <div class="flex-1 text-right">
+            <div class="flex items-center space-x-4">
+                <button id="inferingButton" class="text-white font-bold py-2 px-4 rounded" onclick="toggleInfering()">
+                </button>
                 <form action="{% url 'logout' %}" method="post">
                     {% csrf_token %}
                     <button type="submit" class="bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 rounded">
@@ -70,14 +59,6 @@
             {% block content %}
             {% endblock %}
         </main>
-    
-        {% comment %} <footer class="text-gray-600 body-font">
-            <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                <p class="text-gray-500 text-sm text-center sm:text-left">
-                    © Hogwarts Management System — All rights reserved
-                </p>
-            </div>
-        </footer> {% endcomment %}
     
         <div id="studentPointsModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
             <div class="flex items-center justify-center min-h-screen">
@@ -115,7 +96,6 @@
                 </div>
             </div>
         </div>
-    
     </body>
     <script>
         function openStudentPointsModal() {
@@ -125,22 +105,62 @@
         function closeStudentPointsModal() {
             document.getElementById('studentPointsModal').style.display = 'none';
         }
-    
-        document.addEventListener('DOMContentLoaded', function() {
-            const pointsInput = document.getElementById('points');
-            const givePointsButton = document.getElementById('givePointsButton');
-    
-            pointsInput.addEventListener('input', function() {
-                if (pointsInput.value < 0) {
-                    givePointsButton.textContent = 'Remove Points';
-                    givePointsButton.classList.remove('bg-green-500', 'hover:bg-green-600');
-                    givePointsButton.classList.add('bg-red-500', 'hover:bg-red-600');
-                } else {
-                    givePointsButton.textContent = 'Give Points';
-                    givePointsButton.classList.remove('bg-red-500', 'hover:bg-red-600');
-                    givePointsButton.classList.add('bg-green-500', 'hover:bg-green-600');
-                }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                initializeInfering();
+
+                const pointsInput = document.getElementById('points');
+                const givePointsButton = document.getElementById('givePointsButton');
+
+                pointsInput.addEventListener('input', function() {
+                    if (pointsInput.value < 0) {
+                        givePointsButton.textContent = 'Remove Points';
+                        givePointsButton.classList.remove('bg-green-500', 'hover:bg-green-600');
+                        givePointsButton.classList.add('bg-red-500', 'hover:bg-red-600');
+                    } else {
+                        givePointsButton.textContent = 'Give Points';
+                        givePointsButton.classList.remove('bg-red-500', 'hover:bg-red-600');
+                        givePointsButton.classList.add('bg-green-500', 'hover:bg-green-600');
+                    }
+                });
+
+                
             });
-        });
+
+            function toggleInfering() {
+                fetch("{% url 'toggle_infering' %}", {
+                    method: "POST",
+                    headers: {
+                        "X-CSRFToken": "{{ csrf_token }}",
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({})
+                })
+                .then(response => response.json())
+                .then(data => {
+                    updateInferingButton(data.infering);
+                });
+            }
+
+            function initializeInfering() {
+                fetch("{% url 'initialize_infering' %}")
+                .then(response => response.json())
+                .then(data => {
+                    updateInferingButton(data.infering);
+                });
+            }
+
+            function updateInferingButton(state) {
+                const inferingButton = document.getElementById('inferingButton');
+                if (state) {
+                    inferingButton.classList.remove('bg-gray-600', 'hover:bg-gray-700');
+                    inferingButton.classList.add('bg-green-600', 'hover:bg-green-700');
+                    inferingButton.textContent = 'Infering ON';
+                } else {
+                    inferingButton.classList.remove('bg-green-600', 'hover:bg-green-700');
+                    inferingButton.classList.add('bg-gray-600', 'hover:bg-gray-700');
+                    inferingButton.textContent = 'Infering OFF';
+                }
+            }
     </script>
 </html>

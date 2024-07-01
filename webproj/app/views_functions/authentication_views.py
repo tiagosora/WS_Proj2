@@ -57,7 +57,6 @@ def login_view(request):
 
             wizard_role, wizard_type_id = get_role_info_by_wizard_id(id_number)
 
-            print(wizard_role)
             request.session['role'] = wizard_role
             request.session['wizard_type_id'] = wizard_type_id
 
