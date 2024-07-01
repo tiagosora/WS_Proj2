@@ -13,6 +13,24 @@ class Wizard:
         self.skills = kwargs.get('skills', [])
         self.spells = kwargs.get('spells', [])
         self.type = kwargs.get('type', 'Wizard')
+        self.educatedAt = kwargs.get('educatedAt', '')
+        self.residentOf = kwargs.get('residentOf', '')
+        self.workLocation = kwargs.get('workLocation', '')
+        self.wears = kwargs.get('wears', '')
+        self.memberOf = kwargs.get('memberOf', '')
+        self.relative = kwargs.get('relative', '')
+        self.citizenship = kwargs.get('citizenship', '')
+        self.image = kwargs.get('image', '')
+        self.birthDate = kwargs.get('birthDate', '')
+        self.birthPlace = kwargs.get('birthPlace', '')
+        self.occupation = kwargs.get('occupation', '')
+        self.title = kwargs.get('title', '')
+        self.children = kwargs.get('children', '')
+        self.father = kwargs.get('father', '')
+        self.mother = kwargs.get('mother', '')
+        self.spouse = kwargs.get('spouse', '')
+        self.sibling = kwargs.get('sibling', '')
+        self.deathDate = kwargs.get('deathDate', '')
 
     def __str__(self):
         return f"Wizard: {self.name}, house: {self.house}"
@@ -26,7 +44,26 @@ class Wizard:
             'blood_type': self.blood_type,
             'eye_color': self.eye_color,
             'wand': self.wand,
-            'patronus': self.patronus
+            'patronus': self.patronus,
+            'house': self.house,
+            'educatedAt': self.educatedAt,
+            'residentOf': self.residentOf,
+            'workLocation': self.workLocation,
+            'wears': self.wears,
+            'memberOf': self.memberOf,
+            'relative': self.relative,
+            'citizenship': self.citizenship,
+            'image': self.image,
+            'birthDate': self.birthDate,
+            'birthPlace': self.birthPlace,
+            'occupation': self.occupation,
+            'title': self.title,
+            'children': self.children,
+            'father': self.father,
+            'mother': self.mother,
+            'spouse': self.spouse,
+            'sibling': self.sibling,
+            'deathDate': self.deathDate
         }
 
 
@@ -37,7 +74,9 @@ class Skill:
         self._type = kwargs.get('type', 'Skill')
 
     def __str__(self):
-        return f"Skill: {self.name}"
+        return f"ID: {self.id}, \
+            Name: {self.name}, \
+            Type: {self._type}"
 
     def info(self):  #TODO: pode dar erro no frontend
         return {
@@ -55,15 +94,21 @@ class Spell:  #TODO: fix to match
         self.name = kwargs.get('hasName', '')
         self.type = kwargs.get('hasType', '')
         self._type = kwargs.get('type', 'Spell')
+        self.partOf = kwargs.get('partOf', '')
+        self.hasUse = kwargs.get('hasUse', '')
+        self.causeOf = kwargs.get('causeOf', '')
 
     def __str__(self) -> str:
         return f"ID: {self.id}, \n\
-                Effect: {self.effect}, \n\
-                Incantation: {self.incantation}, \n\
-                Light: {self.light}, \n\
-                Name: {self.name}, \n \
-                Type: {self.type}, \n \
-                Hogwarts_type: {self.hogwarts_type}, \n "
+            Effect: {self.effect}, \n\
+            Incantation: {self.incantation}, \n\
+            Light: {self.light}, \n\
+            Name: {self.name}, \n \
+            Type: {self.type}, \n \
+            _type: {self._type}, \n \
+            partOf: {self.partOf}, \n \
+            hasUse: {self.hasUse}, \n \
+            causeOf: {self.causeOf} \n"
 
     def info(self):
         return {
@@ -73,6 +118,10 @@ class Spell:  #TODO: fix to match
             'light': self.light,
             'name': self.name,
             'type': self.type,
+            '_type': self._type,
+            'partOf': self.partOf,
+            'hasUse': self.hasUse,
+            'causeOf': self.causeOf
         }
 
 
@@ -85,21 +134,31 @@ class Course:
         self.teaches_spell = kwargs.get('teaches_spell', [])
         self.type = kwargs.get('hasCourseType', '')
         self._type = kwargs.get('_type', 'Course')
-
+        self.participatedBy = kwargs.get('participatedBy', '')
+        self.isTheStudyOf = kwargs.get('isTheStudyOf', '')
+        
     def __str__(self) -> str:
         return f"ID: {self.id}, \n\
                 Name: {self.name}, \n\
                 Professor: {self.professor}, \n\
                 Attending_year: {self.attending_year}, \n\
                 Teaches_spell: {self.teaches_spell}, \n \
-                Type: {self.type} \n "
+                Type: {self.type} \n \
+                _type: {self._type} \n \
+                participatedBy: {self.participatedBy} \n \
+                isTheStudyOf: {self.isTheStudyOf} \n"
 
     def info(self):
         return {
             'id': self.id,
             'name': self.name,
             'attending_year': self.attending_year,
-            'type': self.type
+            'type': self.type,
+            'professor': self.professor,
+            'teaches_spell': self.teaches_spell,
+            'participatedBy': self.participatedBy,
+            'isTheStudyOf': self.isTheStudyOf,
+            
         }
 
     def info_no_id(self):
@@ -164,6 +223,12 @@ class House:
         self.symbol = kwargs.get('hasSymbol', '')
         self.type = kwargs.get('type', ':House')
         self.totalPoints = kwargs.get('hasTotalPoints', '')
+        self.partOf = kwargs.get('partOf', '')
+        self.namedAfter = kwargs.get('namedAfter', '')
+        self.foundedBy = kwargs.get('foundedBy', '')
+        self.coatOfArms = kwargs.get('coatOfArms', '')
+        self.officialColor = kwargs.get('officialColor', '')
+        self.hasParts = kwargs.get('hasParts', '')
         
     def info(self):
         return {
@@ -174,15 +239,12 @@ class House:
             'symbol': self.symbol,
             'totalPoints': self.totalPoints,
             'type': self.type,
-            'totalPoints': self.totalPoints
+            'totalPoints': self.totalPoints,
+            'partOf': self.partOf,
+            'namedAfter': self.namedAfter,
+            'foundedBy': self.foundedBy,
+            'coatOfArms': self.coatOfArms,
+            'officialColor': self.officialColor,
+            'hasParts': self.hasParts
         }
     
-
-    # def __str__(self) -> str:
-    #     return f"Is Learning: {self.is_learning}, \n\
-    #             Learned: {self.learned}, \n\
-    #             School: {self.school}, \n\
-    #             School Year: {self.school_year}, \n\
-    #             Wizard: {self.wizard}, \n\
-    #             Type: {self.type} \n\
-    #             Point: {self.points} \n"

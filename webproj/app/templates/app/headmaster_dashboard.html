@@ -30,20 +30,47 @@
 <div class="mt-10 flex flex-col items-center justify-center">
     <div class="container mx-auto px-6 rounded-lg">
         <div class="dashboard-main-card shadow-xl rounded-lg p-6 mb-10">
-            <div class="grid grid-cols-1 shadow dashboard-main-card bg-white rounded-lg p-6 md:grid-cols-2 gap-4 text-gray-800">
-                <p><strong>Name:</strong> {{ headmaster.name }}</p>
-                <p><strong>Gender:</strong> {{ headmaster.gender|default:"Unknown" }}</p>
-                <p><strong>Species:</strong> {{ headmaster.species|default:"Unknown" }}</p>
-                <p><strong>Blood Type:</strong> {{ headmaster.blood_type|default:"Unknown" }}</p>
-                <p><strong>Wand:</strong> {{ headmaster.wand|default:"Unknown" }}</p>
-                <p><strong>Patronus:</strong> {{ headmaster.patronus|default:"Unknown" }}</p>
-                <p><strong class="text-amber-600">Started headmaster role on:</strong> {{ headmaster.start_date }}</p>
-                <p></p>
-                <div>
-                    <button class="text-amber-600 text-left" onclick="openEditPersonalInfoModal()" style="background-color: transparent; border: none; padding: 0; cursor: pointer;">
-                        Edit
-                    </button>
+            {% comment %} <div class="grid grid-cols-1 shadow dashboard-main-card bg-white rounded-lg p-6 md:grid-cols-2 gap-4 text-gray-800"> {% endcomment %}
+            <div class="grid grid-cols-1 shadow dashboard-main-card bg-white rounded-lg p-6 {% if headmaster.image %}md:grid-cols-4{% else %}md:grid-cols-2{% endif %} gap-4 text-gray-800">
+                <div class="col-span-3">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-8">
+                        {% if headmaster.species %} <p><strong>Species:</strong> <span class="text-amber-600">{{ headmaster.species }}</span></p> {% endif %}
+                        {% if headmaster.blood_type %} <p><strong>Blood Type:</strong> <span class="text-amber-600">{{ headmaster.blood_type }}</span></p> {% endif %}
+                        {% if headmaster.gender %} <p><strong>Gender:</strong> <span class="text-amber-600">{{ headmaster.gender }}</span></p> {% endif %}
+                        {% if headmaster.house_name %} <p><strong>House:</strong> <span class="text-amber-600">{{ headmaster.house_name }}</span></p> {% endif %}
+                        {% if headmaster.school_name %} <p><strong>School:</strong> <span class="text-amber-600">{{ headmaster.school_name }}{% if headmaster.school_year %}, Year {{ headmaster.school_year }}</span></p>{% endif %}{% endif %}
+                        {% if skills %} <p><strong>Skills:</strong> <span class="text-amber-600">{{ skills }}</span></p> {% endif %}
+                        {% if headmaster.patronus %} <p><strong>Patronus:</strong> <span class="text-amber-600">{{ headmaster.patronus }}</span></p> {% endif %}
+                        {% if headmaster.eye_color %} <p><strong>Eye Color:</strong> <span class="text-amber-600">{{ headmaster.eye_color }}</span></p> {% endif %}
+                        {% if headmaster.educatedAt %} <p><strong>Educated At:</strong> <span class="text-amber-600">{{ headmaster.educatedAt }}</span></p> {% endif %}
+                        {% if headmaster.residentOf %} <p><strong>Resident Of:</strong> <span class="text-amber-600">{{ headmaster.residentOf }}</span></p> {% endif %}
+                        {% if headmaster.workLocation %} <p><strong>Work Location:</strong> <span class="text-amber-600">{{ headmaster.workLocation }}</span></p> {% endif %}
+                        {% if headmaster.wears %} <p><strong>Wears:</strong> <span class="text-amber-600">{{ headmaster.wears }}</span></p> {% endif %}
+                        {% if headmaster.memberOf %} <p><strong>Member Of:</strong> <span class="text-amber-600">{{ headmaster.memberOf }}</span></p> {% endif %}
+                        {% if headmaster.relative %} <p><strong>Relative:</strong> <span class="text-amber-600">{{ headmaster.relative }}</span></p> {% endif %}
+                        {% if headmaster.citizenship %} <p><strong>Citizenship:</strong> <span class="text-amber-600">{{ headmaster.citizenship }}</span></p> {% endif %}
+                        {% if headmaster.birthDate %} <p><strong>Birth Date:</strong> <span class="text-amber-600">{{ headmaster.birthDate }}</span></p> {% endif %}
+                        {% if headmaster.birthPlace %} <p><strong>Birth Place:</strong> <span class="text-amber-600">{{ headmaster.birthPlace }}</span></p> {% endif %}
+                        {% if headmaster.occupation %} <p><strong>Occupation:</strong> <span class="text-amber-600">{{ headmaster.occupation }}</span></p> {% endif %}
+                        {% if headmaster.title %} <p><strong>Title:</strong> <span class="text-amber-600">{{ headmaster.title }}</span></p> {% endif %}
+                        {% if headmaster.children %} <p><strong>Children:</strong> <span class="text-amber-600">{{ headmaster.children }}</span></p> {% endif %}
+                        {% if headmaster.father %} <p><strong>Father:</strong> <span class="text-amber-600">{{ headmaster.father }}</span></p> {% endif %}
+                        {% if headmaster.mother %} <p><strong>Mother:</strong> <span class="text-amber-600">{{ headmaster.mother }}</span></p> {% endif %}
+                        {% if headmaster.spouse %} <p><strong>Spouse:</strong> <span class="text-amber-600">{{ headmaster.spouse }}</span></p> {% endif %}
+                        {% if headmaster.sibling %} <p><strong>Sibling:</strong> <span class="text-amber-600">{{ headmaster.sibling }}</span></p> {% endif %}
+                        {% if headmaster.deathDate %} <p><strong>Death Date:</strong> <span class="text-amber-600">{{ headmaster.deathDate }}</span></p> {% endif %}
+                    </div>
+                    <div class="col-span-2 mt-4">
+                        <button class="text-amber-600 text-left" onclick="openEditPersonalInfoModal()" style="background-color: transparent; border: none; padding: 0; cursor: pointer;">
+                            Edit
+                        </button>
+                    </div>
                 </div>
+                {% if headmaster.image %}
+                <div class="col-span-1 flex justify-center">
+                    <img src="{{ headmaster.image }}" alt="{{ headmaster.name }}'s image" class="rounded-lg mx-auto shadow-md">
+                </div>
+                {% endif %}
             </div>
             <div class="mt-10">
                 <div class="dashboard-card bg-white rounded-lg shadow p-4">

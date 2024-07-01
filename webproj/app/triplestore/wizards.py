@@ -166,7 +166,11 @@ def get_headmaster_info(headmaster_id):
     headmaster_uri = f"{headmaster_id}"
     query_name = "app/queries/get_entity_info_by_uri.sparql"
     
+    print(headmaster_uri)
+    
     _, g = execute_sparql_query(query_name, format="turtle", uri=headmaster_uri)
+    
+    print(g)
     
     headmaster_attr = {}
     for _, p, o in g:
@@ -176,13 +180,19 @@ def get_headmaster_info(headmaster_id):
         else:
             value = str(o)
         headmaster_attr[prop] = value
+        
+    print(headmaster_attr)
     
-    if not all(key in headmaster_attr for key in ["hasAccount", "hasStartDate", "hasHeadmaster"]):
+    if not all(key in headmaster_attr for key in ["hasAccount", "hasStartDate"]):
         return {}
+    
+    print(headmaster_attr)
     
     headmaster_start_date = headmaster_attr["hasStartDate"]
     
     headmaster_info = get_wizard_info_by_uri(headmaster_attr["hasAccount"]).info() | {"start_date": headmaster_start_date} 
+    
+    
     
     return headmaster_info
 

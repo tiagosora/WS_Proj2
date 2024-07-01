@@ -14,7 +14,7 @@
         backdrop-filter: blur(10px);
     }
     .dashboard-card:hover {
-        background-color: rgba(255, 255, 255, 0.6x);
+        background-color: rgba(255, 255, 255, 0.6);
     }
     .body {
         background-color: black;
@@ -27,20 +27,46 @@
 <div class="mt-10 flex flex-col items-center justify-center">
     <div class="container mx-auto px-6 rounded-lg">
         <div class="dashboard-main-card shadow-xl rounded-lg p-6 mb-10">
-            <div class="grid grid-cols-1 shadow dashboard-main-card bg-white rounded-lg p-6 md:grid-cols-2 gap-4 text-gray-800">
-                <p><strong>Species:</strong class="text-amber-600"> {{ student.species|default:"Unknown" }}</p>
-                <p><strong>Blood Type:</strong class="text-amber-600"> {{ student.blood_type|default:"Unknown" }}</p>
-                <p><strong>Gender:</strong class="text-amber-600"> {{ student.gender|default:"Unknown" }}</p>
-                <p><strong>House:</strong class="text-amber-600"> {{ student.house_name|default:"Unknown" }}</p>
-                <p><strong>School:</strong class="text-amber-600"> {{ student.school_name|default:"Unknown" }}, Year {{ student.school_year|default:"Unknown" }}</p>
-                <p><strong>Skills:</strong class="text-amber-600"> {{ skills |default:"None" }}</p>
-                <p><strong>Patronus:</strong class="text-amber-600"> {{ student.patronus|default:"Unknown" }}</p>
-                <p><strong>Eye Color:</strong class="text-amber-600"> {{ student.eye_color|default:"Unknown" }}</p>
-                <div>
-                    <button class="text-amber-600 text-left" onclick="openEditPersonalInfoModal()" style="background-color: transparent; border: none; padding: 0; cursor: pointer;">
-                        Edit
-                    </button>
+            <div class="grid grid-cols-1 {% if student.image %}md:grid-cols-4{% else %}md:grid-cols-2{% endif %} gap-4 text-gray-800">
+                <div class="col-span-3">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-8">
+                        {% if student.species %} <p><strong>Species:</strong> <span class="text-amber-600">{{ student.species }}</span></p> {% endif %}
+                        {% if student.blood_type %} <p><strong>Blood Type:</strong> <span class="text-amber-600">{{ student.blood_type }}</span></p> {% endif %}
+                        {% if student.gender %} <p><strong>Gender:</strong> <span class="text-amber-600">{{ student.gender }}</span></p> {% endif %}
+                        {% if student.house_name %} <p><strong>House:</strong> <span class="text-amber-600">{{ student.house_name }}</span></p> {% endif %}
+                        {% if student.school_name %} <p><strong>School:</strong> <span class="text-amber-600">{{ student.school_name }}{% if student.school_year %}, Year {{ student.school_year }}</span></p>{% endif %}{% endif %}
+                        {% if skills %} <p><strong>Skills:</strong> <span class="text-amber-600">{{ skills }}</span></p> {% endif %}
+                        {% if student.patronus %} <p><strong>Patronus:</strong> <span class="text-amber-600">{{ student.patronus }}</span></p> {% endif %}
+                        {% if student.eye_color %} <p><strong>Eye Color:</strong> <span class="text-amber-600">{{ student.eye_color }}</span></p> {% endif %}
+                        {% if student.educatedAt %} <p><strong>Educated At:</strong> <span class="text-amber-600">{{ student.educatedAt }}</span></p> {% endif %}
+                        {% if student.residentOf %} <p><strong>Resident Of:</strong> <span class="text-amber-600">{{ student.residentOf }}</span></p> {% endif %}
+                        {% if student.workLocation %} <p><strong>Work Location:</strong> <span class="text-amber-600">{{ student.workLocation }}</span></p> {% endif %}
+                        {% if student.wears %} <p><strong>Wears:</strong> <span class="text-amber-600">{{ student.wears }}</span></p> {% endif %}
+                        {% if student.memberOf %} <p><strong>Member Of:</strong> <span class="text-amber-600">{{ student.memberOf }}</span></p> {% endif %}
+                        {% if student.relative %} <p><strong>Relative:</strong> <span class="text-amber-600">{{ student.relative }}</span></p> {% endif %}
+                        {% if student.citizenship %} <p><strong>Citizenship:</strong> <span class="text-amber-600">{{ student.citizenship }}</span></p> {% endif %}
+                        {% if student.birthDate %} <p><strong>Birth Date:</strong> <span class="text-amber-600">{{ student.birthDate }}</span></p> {% endif %}
+                        {% if student.birthPlace %} <p><strong>Birth Place:</strong> <span class="text-amber-600">{{ student.birthPlace }}</span></p> {% endif %}
+                        {% if student.occupation %} <p><strong>Occupation:</strong> <span class="text-amber-600">{{ student.occupation }}</span></p> {% endif %}
+                        {% if student.title %} <p><strong>Title:</strong> <span class="text-amber-600">{{ student.title }}</span></p> {% endif %}
+                        {% if student.children %} <p><strong>Children:</strong> <span class="text-amber-600">{{ student.children }}</span></p> {% endif %}
+                        {% if student.father %} <p><strong>Father:</strong> <span class="text-amber-600">{{ student.father }}</span></p> {% endif %}
+                        {% if student.mother %} <p><strong>Mother:</strong> <span class="text-amber-600">{{ student.mother }}</span></p> {% endif %}
+                        {% if student.spouse %} <p><strong>Spouse:</strong> <span class="text-amber-600">{{ student.spouse }}</span></p> {% endif %}
+                        {% if student.sibling %} <p><strong>Sibling:</strong> <span class="text-amber-600">{{ student.sibling }}</span></p> {% endif %}
+                        {% if student.deathDate %} <p><strong>Death Date:</strong> <span class="text-amber-600">{{ student.deathDate }}</span></p> {% endif %}
+                    </div>
+                    <div class="col-span-2 mt-4">
+                        <button class="text-amber-600 text-left" onclick="openEditPersonalInfoModal()" style="background-color: transparent; border: none; padding: 0; cursor: pointer;">
+                            Edit
+                        </button>
+                    </div>
                 </div>
+                {% if student.image %}
+                <div class="col-span-1 flex justify-center">
+                    <img src="{{ student.image }}" alt="{{ student.name }}'s image" class="rounded-lg mx-auto shadow-md">
+                </div>
+                {% endif %}
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">

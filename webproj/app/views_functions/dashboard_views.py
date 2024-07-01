@@ -14,12 +14,7 @@ def student_dashboard(request):
     request.session['student_info'] = get_student_view_info(wizard_type_id)
 
     student_info = request.session['student_info']
-
-    student = student_info['student']
-    is_learning_courses = student_info['is_learning_courses']
     learned_courses = student_info['learned_courses']
-
-    total_number_of_spells = get_len_all_spells()
 
     spells_per_course = {}
     for course in learned_courses:
@@ -30,16 +25,18 @@ def student_dashboard(request):
         for spell in course["spells"]:
             spells_acquired.append(spell)
 
-    number_of_spells_not_acquired = total_number_of_spells - len(spells_acquired)
+    number_of_spells_not_acquired = get_len_all_spells() - len(spells_acquired)
 
     paginator = Paginator(spells_acquired, 24)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     skills = [skill["name"] for skill in student_info["skills"]]
+    
+    print(student_info['student'])
 
     return render(request, 'app/student_dashboard.html', {
-        'student': student,
-        'is_learning_courses': is_learning_courses,
+        'student': student_info['student'],
+        'is_learning_courses': student_info['is_learning_courses'],
         'learned_courses': learned_courses,
         'spells_acquired': spells_acquired,
         'skills': ", ".join(skills),
@@ -89,6 +86,7 @@ def headmaster_dashboard(request):
     number_students_per_school_year = students_per_school_year()
 
     courses_in_list.sort(key=lambda course: (course["attending_year"], course["name"]))
+    
 
     return render(request, 'app/headmaster_dashboard.html', {
         'headmaster': headmaster_info,
