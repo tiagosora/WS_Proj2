@@ -1,6 +1,5 @@
 from app.triplestore.get_models import get_student_info
 from app.triplestore.utils import execute_sparql_query
-from app.triplestore.inferences import infer_queries
 
 
 def get_number_students_is_learning_per_course_id():
@@ -61,8 +60,6 @@ def students_per_school_year():
 
 def get_students_enrolled(course_id):
     from app.triplestore.wizards import get_wizard_info_by_uri
-
-    print(course_id)
 
     query_name = "app/queries/get_students_enrolled_course.sparql"
     results, _ = execute_sparql_query(query_name, format="JSON", course_id=course_id.strip())
@@ -142,6 +139,6 @@ def get_spells_not_taught_in_course(course_id):
     spells.sort(key=lambda spell: spell["name"])
     return spells
 
-def remove_points(student_uri, points):
+def remove_points(student_uri, points, blocking_infering):
     query_name = "app/queries/attribute_points.sparql"
-    execute_sparql_query(query_name=query_name, format='POST', student_uri=student_uri, points=points)
+    execute_sparql_query(query_name=query_name, format='POST', infer=blocking_infering, student_uri=student_uri, points=points)

@@ -188,7 +188,7 @@ def get_headmaster_info(headmaster_id):
     return headmaster_info
 
 
-def update_wizard_info(wizard_id, name = None, gender = None, blood_type = None, species = None, eye_color = None, patronus = None, wand = None):
+def update_wizard_info(wizard_id, blocking_infering, name = None, gender = None, blood_type = None, species = None, eye_color = None, patronus = None, wand = None):
     
     query_delete = ""
     query_insert = ""
@@ -222,4 +222,4 @@ def update_wizard_info(wizard_id, name = None, gender = None, blood_type = None,
         query_insert += f"\t ?wizard :hasWand '{wand}' .\n"
         
     query_name = "app/queries/update_wizard_info.sparql"
-    execute_sparql_query(query_name=query_name, format='POST', wizard_id=wizard_id, query_delete=query_delete, query_insert=query_insert)
+    execute_sparql_query(query_name=query_name, format='POST', infer=blocking_infering, wizard_id=wizard_id, query_delete=query_delete, query_insert=query_insert)

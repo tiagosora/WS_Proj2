@@ -10,6 +10,8 @@ urlpatterns = [
     path('course', views.course_view, name='course'),
 
     path('back_to_dashboard', views.back_to_dashboard, name='back_to_dashboard'),
+    path('toggle_infering', views.toggle_infering, name='toggle_infering'),
+    path('initialize_infering', views.initialize_infering, name='initialize_infering'),
 
     path('pass_student/', views.pass_student, name='pass_student'),
     path('remove_student', views.remove_student, name='remove_student'),

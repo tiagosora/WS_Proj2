@@ -57,7 +57,8 @@
                 
                 <div class="dashboard-card bg-white rounded-lg shadow p-4 col-span-1 md:col-span-2">
                     <h3 class="text-2xl font-semibold mb-3 text-amber-600">Spells Acquired</h3>
-                    <div class="flex flex-col md:flex-row mt-8">
+                    <input type="text" id="filterSpells" placeholder="Filter by Spell Name" class="shadow appearance-none border rounded pt-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4">
+                    <div class="flex flex-col md:flex-row mt-4">
                         <div id="spellsContainer" class="grid grid-cols-1 md:grid-cols-4 flex-grow">
                             <!-- Spells will be dynamically inserted here -->
                         </div>
@@ -71,7 +72,7 @@
                     <!-- Pagination Controls -->
                     <div class="pagination mt-4 text-amber-600 flex justify-center items-center gap-4">
                         <button onclick="changePage(-1)" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">Prev</button>
-                        <span id="pageIndicator" class="font-semibold">Page 1</span>
+                        <span id="pageIndicator" class="font-semibold">Page 1/1</span>
                         <button onclick="changePage(1)" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">Next</button>
                     </div>
                 </div>
@@ -216,59 +217,11 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-    var spells = [
-        {% for spell in spells_acquired %}
-        {
-            name: "{{ spell.name|escapejs|default:'Unknown' }}",
-            effect: "{{ spell.effect|escapejs|default:'Unknown' }}",
-            incantation: "{{ spell.incantation|escapejs|default:'Unknown' }}",
-            light: "{{ spell.light|escapejs|default:'Unknown' }}"
-        }{% if not forloop.last %},{% endif %}
-        {% endfor %}
-    ];
-    var currentPage = 1;
-    var spellsPerPage = 24;
-
-    function renderSpells() {
-        var container = document.getElementById('spellsContainer');
-        container.innerHTML = '';
-        var start = (currentPage - 1) * spellsPerPage;
-        var end = start + spellsPerPage;
-        var paginatedSpells = spells.slice(start, end);
-        console.log(paginatedSpells)
-
-        paginatedSpells.forEach(spell => {
-            var div = document.createElement('div');
-            div.innerHTML = `<button class="text-black text-left hover:text-amber-600" onclick="openModal(${JSON.stringify(spell).split('"').join("&quot;")})">${spell.name}</button>`;
-            container.appendChild(div);
-        });
-
-        document.getElementById('pageIndicator').innerText = `Page ${currentPage}`;
-    }
-
-    function openModal(spell) {
-        document.getElementById('spellModal').style.display = 'block';
-        document.getElementById('spellName').innerText = `${spell.name}`;
-        document.getElementById('spellEffect').innerText = `${spell.effect}`;
-        document.getElementById('spellIncantation').innerText = `${spell.incantation}`;
-        document.getElementById('spellLight').innerText = `${spell.light}`;
-    }
-
-    function closeModal() {
-        document.getElementById('spellModal').style.display = 'none';
-    }
-
-    function changePage(step) {
-        var totalPages = Math.ceil(spells.length / spellsPerPage);
-        currentPage += step;
-        if (currentPage < 1) currentPage = 1;
-        else if (currentPage > totalPages) currentPage = totalPages;
-        
-        renderSpells();
-    }
-
     document.addEventListener('DOMContentLoaded', function() {
         renderSpells();
+        
+        document.getElementById('filterSpells').addEventListener('input', renderSpells);
+    
         var ctx = document.getElementById('spellsChart').getContext('2d');
         var chart = new Chart(ctx, {
             type: 'pie',
@@ -310,6 +263,63 @@
             },
         });
     });
+    
+    var spells = [
+        {% for spell in spells_acquired %}
+        {
+            name: "{{ spell.name|escapejs|default:'Unknown' }}",
+            effect: "{{ spell.effect|escapejs|default:'Unknown' }}",
+            incantation: "{{ spell.incantation|escapejs|default:'Unknown' }}",
+            light: "{{ spell.light|escapejs|default:'Unknown' }}"
+        }{% if not forloop.last %},{% endif %}
+        {% endfor %}
+    ];
+    var currentPage = 1;
+    var spellsPerPage = 24;
+    
+    function renderSpells() {
+        var container = document.getElementById('spellsContainer');
+        container.innerHTML = '';
+        var start = (currentPage - 1) * spellsPerPage;
+        var end = start + spellsPerPage;
+    
+        var filterText = document.getElementById('filterSpells').value.toLowerCase();
+        var filteredSpells = spells.filter(spell => spell.name.toLowerCase().includes(filterText));
+    
+        var paginatedSpells = filteredSpells.slice(start, end);
+        paginatedSpells.forEach(spell => {
+            var div = document.createElement('div');
+            div.innerHTML = `<button class="text-black text-left hover:text-amber-600" onclick="openModal(${JSON.stringify(spell).split('"').join("&quot;")})">${spell.name}</button>`;
+            container.appendChild(div);
+        });
+    
+        var totalPages = Math.ceil(filteredSpells.length / spellsPerPage);
+        document.getElementById('pageIndicator').innerText = `Page ${currentPage} of ${totalPages}`;
+    }
+    
+    function openModal(spell) {
+        document.getElementById('spellModal').style.display = 'block';
+        document.getElementById('spellName').innerText = `${spell.name}`;
+        document.getElementById('spellEffect').innerText = `${spell.effect}`;
+        document.getElementById('spellIncantation').innerText = `${spell.incantation}`;
+        document.getElementById('spellLight').innerText = `${spell.light}`;
+    }
+    
+    function closeModal() {
+        document.getElementById('spellModal').style.display = 'none';
+    }
+    
+    function changePage(step) {
+        var filterText = document.getElementById('filterSpells').value.toLowerCase();
+        var filteredSpells = spells.filter(spell => spell.name.toLowerCase().includes(filterText));
+        var totalPages = Math.ceil(filteredSpells.length / spellsPerPage);
+    
+        currentPage += step;
+        if (currentPage < 1) currentPage = 1;
+        else if (currentPage > totalPages) currentPage = totalPages;
+    
+        renderSpells();
+    }
 </script>
 <script>
     // Example course data, replace with dynamic data from your backend

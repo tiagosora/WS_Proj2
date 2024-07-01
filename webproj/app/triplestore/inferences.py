@@ -2,37 +2,21 @@ from app.triplestore.utils import execute_sparql_query
 
 
 def infer_queries():
-    print("infering....")
+    print("Infering queries...")
 
-    query_name = "app/inferences/remove_all_stars.sparql"
-    execute_sparql_query(query_name=query_name, infer=True, format='POST')
-    
-    query_name = "app/inferences/AdvancedStudent.sparql"
-    execute_sparql_query(query_name=query_name, infer=True, format='POST')
-    
-    query_name = "app/inferences/MediumStudent.sparql"
-    execute_sparql_query(query_name=query_name, infer=True, format='POST')
-    
-    query_name = "app/inferences/BasicStudent.sparql"
-    execute_sparql_query(query_name=query_name, infer=True, format='POST')
+    queries = [
+        "app/inferences/remove_all_stars.sparql",
+        "app/inferences/AdvancedStudent.sparql",
+        "app/inferences/MediumStudent.sparql",
+        "app/inferences/BasicStudent.sparql",
+        "app/inferences/deleteTotalHousePoints.sparql",
+        "app/inferences/inferHousePoints.sparql",
+        "app/inferences/one_star.sparql",
+        "app/inferences/two_star.sparql",
+        "app/inferences/three_star.sparql",
+        "app/inferences/four_star.sparql",
+        "app/inferences/five_star.sparql"
+    ]
 
-    query_name = "app/inferences/deleteTotalHousePoints.sparql"
-    execute_sparql_query(query_name=query_name, infer=True, format='POST')
-
-    query_name = "app/inferences/inferHousePoints.sparql"
-    execute_sparql_query(query_name=query_name, infer=True, format='POST')
-    
-    query_name = "app/inferences/one_star.sparql"
-    execute_sparql_query(query_name=query_name, infer=True, format='POST')
-    
-    query_name = "app/inferences/two_star.sparql"
-    execute_sparql_query(query_name=query_name, infer=True, format='POST')
-        
-    query_name = "app/inferences/three_star.sparql"
-    execute_sparql_query(query_name=query_name, infer=True, format='POST')
-    
-    query_name = "app/inferences/four_star.sparql"
-    execute_sparql_query(query_name=query_name, infer=True, format='POST')
-    
-    query_name = "app/inferences/five_star.sparql"
-    execute_sparql_query(query_name=query_name, infer=True, format='POST')
+    for query_name in queries:
+        execute_sparql_query(query_name=query_name, infer=True, format='POST')
