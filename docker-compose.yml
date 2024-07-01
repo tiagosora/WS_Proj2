@@ -37,6 +37,7 @@ services:
       - ./create_repository.sh:/create_repository.sh
       - ./repo-config.ttl:/repo-config.ttl
       - ./data/data.rdf:/data.rdf
+      - ./data/ontology.owl:/ontology.owl
     entrypoint: ["sh", "-c", "apk add --no-cache curl && sh /create_repository.sh"]
 
 volumes:
