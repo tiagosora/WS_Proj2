@@ -2,7 +2,7 @@ PREFIX : <http://hogwarts.edu/ontology.owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?name ?totalPoints
+SELECT ?name ?totalPoints ?house
 WHERE {{
   ?house :hasTotalPoints ?totalPoints .
   ?house :hasHouseName ?name
