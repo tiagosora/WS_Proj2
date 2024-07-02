@@ -32,7 +32,6 @@ def student_dashboard(request):
     page_obj = paginator.get_page(page_number)
     skills = [skill["name"] for skill in student_info["skills"]]
     
-
     return render(request, 'app/student_dashboard.html', {
         'student': student_info['student'],
         'is_learning_courses': student_info['is_learning_courses'],
