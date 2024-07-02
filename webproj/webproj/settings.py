@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# NPM_BIN_PATH = 'npm.cmd'
+NPM_BIN_PATH = 'npm.cmd'
 
 # Application definition
 

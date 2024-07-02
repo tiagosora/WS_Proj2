@@ -25,7 +25,7 @@ def register_view(request):
                                                species, wand)
         if success:
             request.session['nmec'] = nmec
-            request.session['wizard_id'] = id_number
+            request.session['wizard_id'] = "Wizard_" + id_number
             request.session['authenticated'] = True
 
             wizard_role, wizard_type_id = get_role_info_by_wizard_id(id_number)

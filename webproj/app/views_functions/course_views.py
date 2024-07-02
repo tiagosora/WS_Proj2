@@ -70,6 +70,7 @@ def add_spell(request):
     spell_id = request.POST.get('spell_id')
     course_id = request.POST.get('course_id')
 
+
     add_spell_to_course(course_id, spell_id, not request.session.get('infering', True))
 
     return redirect("course")

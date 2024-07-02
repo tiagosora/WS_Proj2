@@ -16,37 +16,37 @@
 </style>
 
 <h2 class="text-4xl font-bold text-center mt-10">Professor <span class="text-amber-600">{{ professor.name }}</span>'s Dashboard</h2>
-<div class="mt-10 flex flex-col items-center justify-center">
+<div about="{{ professor.professor_id }}" typeof="hogwarts:Professor" class="mt-10 flex flex-col items-center justify-center">
     <div class="container mx-auto px-6 rounded-lg">
         <div class="dashboard-main-card shadow-xl rounded-lg p-6 mb-10">
             <div class="grid grid-cols-1 {% if professor.image %}md:grid-cols-4{% else %}md:grid-cols-2{% endif %} gap-4 text-gray-800">
                 <div class="col-span-3">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-8">
-                        {% if professor.species %} <p><strong>Species:</strong> <span class="text-amber-600">{{ professor.species }}</span></p> {% endif %}
-                        {% if professor.blood_type %} <p><strong>Blood Type:</strong> <span class="text-amber-600">{{ professor.blood_type }}</span></p> {% endif %}
-                        {% if professor.gender %} <p><strong>Gender:</strong> <span class="text-amber-600">{{ professor.gender }}</span></p> {% endif %}
+                    <div rel="hogwarts:hasAccount" typeof="hogwarts:Wizard" resource="{{ professor.id }}" class="grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-8">
+                        {% if professor.species %} <p><strong>Species:</strong> <span property="hogwarts:hasSpecies" class="text-amber-600">{{ professor.species }}</span></p> {% endif %}
+                        {% if professor.blood_type %} <p><strong>Blood Type:</strong> <span property="hogwarts:hasBloodType" class="text-amber-600">{{ professor.blood_type }}</span></p> {% endif %}
+                        {% if professor.gender %} <p><strong>Gender:</strong> <span property="hogwarts:hasGender" class="text-amber-600">{{ professor.gender }}</span></p> {% endif %}
                         {% if professor.house_name %} <p><strong>House:</strong> <span class="text-amber-600">{{ professor.house_name }}</span></p> {% endif %}
                         {% if professor.school_name %} <p><strong>School:</strong> <span class="text-amber-600">{{ professor.school_name }}{% if professor.school_year %}, Year {{ professor.school_year }}</span></p>{% endif %}{% endif %}
                         {% if skills %} <p><strong>Skills:</strong> <span class="text-amber-600">{{ skills }}</span></p> {% endif %}
-                        {% if professor.patronus %} <p><strong>Patronus:</strong> <span class="text-amber-600">{{ professor.patronus }}</span></p> {% endif %}
-                        {% if professor.eye_color %} <p><strong>Eye Color:</strong> <span class="text-amber-600">{{ professor.eye_color }}</span></p> {% endif %}
-                        {% if professor.educatedAt %} <p><strong>Educated At:</strong> <span class="text-amber-600">{{ professor.educatedAt }}</span></p> {% endif %}
-                        {% if professor.residentOf %} <p><strong>Resident Of:</strong> <span class="text-amber-600">{{ professor.residentOf }}</span></p> {% endif %}
+                        {% if professor.patronus %} <p><strong>Patronus:</strong> <span property="hogwarts:hasPatronus" class="text-amber-600">{{ professor.patronus }}</span></p> {% endif %}
+                        {% if professor.eye_color %} <p><strong>Eye Color:</strong> <span property="hogwarts:hasEyeColor" class="text-amber-600">{{ professor.eye_color }}</span></p> {% endif %}
+                        {% if professor.educatedAt %} <p><strong>Educated At:</strong> <span property="hogwarts:hasGender" class="text-amber-600">{{ professor.educatedAt }}</span></p> {% endif %}
+                        {% if professor.residentOf %} <p><strong>Resident Of:</strong> <span property="hogwarts:residentOf" class="text-amber-600">{{ professor.residentOf }}</span></p> {% endif %}
                         {% if professor.workLocation %} <p><strong>Work Location:</strong> <span class="text-amber-600">{{ professor.workLocation }}</span></p> {% endif %}
                         {% if professor.wears %} <p><strong>Wears:</strong> <span class="text-amber-600">{{ professor.wears }}</span></p> {% endif %}
-                        {% if professor.memberOf %} <p><strong>Member Of:</strong> <span class="text-amber-600">{{ professor.memberOf }}</span></p> {% endif %}
+                        {% if professor.memberOf %} <p><strong>Member Of:</strong> <span property="hogwarts:memberOf" class="text-amber-600">{{ professor.memberOf }}</span></p> {% endif %}
                         {% if professor.relative %} <p><strong>Relative:</strong> <span class="text-amber-600">{{ professor.relative }}</span></p> {% endif %}
-                        {% if professor.citizenship %} <p><strong>Citizenship:</strong> <span class="text-amber-600">{{ professor.citizenship }}</span></p> {% endif %}
-                        {% if professor.birthDate %} <p><strong>Birth Date:</strong> <span class="text-amber-600">{{ professor.birthDate }}</span></p> {% endif %}
-                        {% if professor.birthPlace %} <p><strong>Birth Place:</strong> <span class="text-amber-600">{{ professor.birthPlace }}</span></p> {% endif %}
-                        {% if professor.occupation %} <p><strong>Occupation:</strong> <span class="text-amber-600">{{ professor.occupation }}</span></p> {% endif %}
+                        {% if professor.citizenship %} <p><strong>Citizenship:</strong> <span property="hogwarts:citizenship" class="text-amber-600">{{ professor.citizenship }}</span></p> {% endif %}
+                        {% if professor.birthDate %} <p><strong>Birth Date:</strong> <span property="hogwarts:birthDate" class="text-amber-600">{{ professor.birthDate }}</span></p> {% endif %}
+                        {% if professor.birthPlace %} <p><strong>Birth Place:</strong> <span property="hogwarts:birthDate" class="text-amber-600">{{ professor.birthPlace }}</span></p> {% endif %}
+                        {% if professor.occupation %} <p><strong>Occupation:</strong> <span property="hogwarts:occupation" class="text-amber-600">{{ professor.occupation }}</span></p> {% endif %}
                         {% if professor.title %} <p><strong>Title:</strong> <span class="text-amber-600">{{ professor.title }}</span></p> {% endif %}
                         {% if professor.children %} <p><strong>Children:</strong> <span class="text-amber-600">{{ professor.children }}</span></p> {% endif %}
-                        {% if professor.father %} <p><strong>Father:</strong> <span class="text-amber-600">{{ professor.father }}</span></p> {% endif %}
-                        {% if professor.mother %} <p><strong>Mother:</strong> <span class="text-amber-600">{{ professor.mother }}</span></p> {% endif %}
+                        {% if professor.father %} <p><strong>Father:</strong> <span property="hogwarts:father" class="text-amber-600">{{ professor.father }}</span></p> {% endif %}
+                        {% if professor.mother %} <p><strong>Mother:</strong> <span property="hogwarts:mother" class="text-amber-600">{{ professor.mother }}</span></p> {% endif %}
                         {% if professor.spouse %} <p><strong>Spouse:</strong> <span class="text-amber-600">{{ professor.spouse }}</span></p> {% endif %}
                         {% if professor.sibling %} <p><strong>Sibling:</strong> <span class="text-amber-600">{{ professor.sibling }}</span></p> {% endif %}
-                        {% if professor.deathDate %} <p><strong>Death Date:</strong> <span class="text-amber-600">{{ professor.deathDate }}</span></p> {% endif %}
+                        {% if professor.deathDate %} <p><strong>Death Date:</strong> <span property="hogwarts:deathDate" class="text-amber-600">{{ professor.deathDate }}</span></p> {% endif %}
                     </div>
                     <div class="col-span-2 mt-4">
                         <button class="text-amber-600 text-left" onclick="openEditPersonalInfoModal()" style="background-color: transparent; border: none; padding: 0; cursor: pointer;">

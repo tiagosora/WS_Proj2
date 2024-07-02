@@ -91,30 +91,28 @@
     <div class="container mx-auto px-6 rounded-lg">
         <div class="dashboard-main-card shadow-xl rounded-lg p-6 mb-10">
             <div class="mt-10 flex flex-row justify-center items-center ">
-                
-
                 <!-- Gryffindor -->
-                <div about="{{ houses.Gryffindor.id }}" typeof="hogwarts:House" class="banner gryffindor text-center py-8 shadow-lg">
-                    <h3 property="hogwarts:hasHouseName" class="text-3xl font-bold">Gryffindor</h3>
-                    <p property="hogwarts:hasTotalPoints" class="text-6xl font-bold mt-4">{{ houses.Gryffindor.totalPoints }}</p>
+                <div about="{{ houses.Gryffindor.id }}" typeof="hogwarts:House" class="banner gryffindor text-center py-8 shadow-lg h-card">
+                    <h3 property="hogwarts:hasHouseName p-name" class="text-3xl font-bold">Gryffindor</h3>
+                    <p property="hogwarts:hasTotalPoints p-category" class="text-6xl font-bold mt-4">{{ houses.Gryffindor.totalPoints }}</p>
                 </div>
 
                 <!-- Hufflepuff -->
-                <div about="{{ houses.Hufflepuff.id }}" typeof="hogwarts:House" class="banner hufflepuff text-center py-8 shadow-lg">
-                    <h3 property="hogwarts:hasHouseName" class="text-3xl font-bold">Hufflepuff</h3>
-                    <p property="hogwarts:hasTotalPoints" class="text-6xl font-bold mt-4">{{ houses.Hufflepuff.totalPoints }}</p>
+                <div about="{{ houses.Hufflepuff.id }}" typeof="hogwarts:House" class="banner hufflepuff text-center py-8 shadow-lg h-card">
+                    <h3 property="hogwarts:hasHouseName p-name" class="text-3xl font-bold">Hufflepuff</h3>
+                    <p property="hogwarts:hasTotalPoints p-category" class="text-6xl font-bold mt-4">{{ houses.Hufflepuff.totalPoints }}</p>
                 </div>
 
                 <!-- Ravenclaw -->
-                <div about="{{ houses.Ravenclaw.id }}" typeof="hogwarts:House" class="banner ravenclaw text-center py-8 shadow-lg">
-                    <h3 property="hogwarts:hasHouseName" class="text-3xl font-bold">Ravenclaw</h3>
-                    <p property="hogwarts:hasTotalPoints" class="text-6xl font-bold mt-4">{{ houses.Ravenclaw.totalPoints }}</p>
+                <div about="{{ houses.Ravenclaw.id }}" typeof="hogwarts:House" class="banner ravenclaw text-center py-8 shadow-lg h-card">
+                    <h3 property="hogwarts:hasHouseName p-name" class="text-3xl font-bold">Ravenclaw</h3>
+                    <p property="hogwarts:hasTotalPoints p-category" class="text-6xl font-bold mt-4">{{ houses.Ravenclaw.totalPoints }}</p>
                 </div>
 
                 <!-- Slytherin -->
-                <div about="{{ houses.Slytherin.id }}" typeof="hogwarts:House" class="banner slytherin text-center py-8 shadow-lg">
-                    <h3 property="hogwarts:hasHouseName" class="text-3xl font-bold">Slytherin</h3>
-                    <p property="hogwarts:hasTotalPoints" class="text-6xl font-bold mt-4">{{ houses.Slytherin.totalPoints }}</p>
+                <div about="{{ houses.Slytherin.id }}" typeof="hogwarts:House" class="banner slytherin text-center py-8 shadow-lg h-card">
+                    <h3 property="hogwarts:hasHouseName p-name" class="text-3xl font-bold">Slytherin</h3>
+                    <p property="hogwarts:hasTotalPoints p-category" class="text-6xl font-bold mt-4">{{ houses.Slytherin.totalPoints }}</p>
                 </div>
             </div>
 
@@ -124,14 +122,14 @@
                         <h3 class="text-2xl font-semibold mb-3 leading-tight">Students</h3>
                         <div class="flex flex-row space-x-4">
                             <!-- Table 1 -->
-                            <div about="{{houses.Gryffindor.id}}" typeof="hogwarts:House" class="flex-1 rounded-lg overflow-hidden">
+                            <div about="{{houses.Gryffindor.id}}" typeof="hogwarts:House" class="w-1/4 flex-1 rounded-lg overflow-hidden">
                                 <table class="min-w-full leading-normal table-fixed">
                                     <thead>
                                         <tr>
                                             <th class="w-1/5 px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
                                                 ★
                                             </th>
-                                            <th class="w-2/5 px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                                            <th class="w-1/4 px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
                                                 Name
                                             </th>
                                             <th class="w-1/5 px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-center text-xs font-semibold text-white uppercase tracking-wider">
@@ -142,19 +140,18 @@
                                             </th>
                                         </tr>
                                     </thead>
-                                    <tbody id="studentsTableBody1" class="bg-white">
-                                    </tbody>
+                                    <tbody id="studentsTableBody1" class="bg-white"></tbody>
                                 </table>
                             </div>
                             <!-- Table 2 -->
-                            <div about="{{houses.Hufflepuff.id}}" typeof="hogwarts:House" class="flex-1 rounded-lg overflow-hidden">
+                            <div about="{{houses.Hufflepuff.id}}" typeof="hogwarts:House" class="w-1/4 flex-1 rounded-lg overflow-hidden">
                                 <table class="min-w-full leading-normal table-fixed">
                                     <thead>
                                         <tr>
                                             <th class="w-1/5 px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
                                                 ★
                                             </th>
-                                            <th class="w-2/5 px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                                            <th class="w-1/4 px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
                                                 Name
                                             </th>
                                             <th class="w-1/5 px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-center text-xs font-semibold text-white uppercase tracking-wider">
@@ -165,19 +162,18 @@
                                             </th>
                                         </tr>
                                     </thead>
-                                    <tbody id="studentsTableBody2" class="bg-white" style="height: 100%">
-                                    </tbody>
+                                    <tbody id="studentsTableBody2" class="bg-white" style="height: 100%"></tbody>
                                 </table>
                             </div>
                             <!-- Table 3 -->
-                            <div about="{{houses.Ravenclaw.id}}" typeof="hogwarts:House" class="flex-1 rounded-lg overflow-hidden">
+                            <div about="{{houses.Ravenclaw.id}}" typeof="hogwarts:House" class="w-1/4 flex-1 rounded-lg overflow-hidden">
                                 <table class="min-w-full leading-normal table-fixed">
                                     <thead>
                                         <tr>
                                             <th class="w-1/5 px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
                                                 ★
                                             </th>
-                                            <th class="w-2/5 px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                                            <th class="w-1/4 px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
                                                 Name
                                             </th>
                                             <th class="w-1/5 px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-center text-xs font-semibold text-white uppercase tracking-wider">
@@ -188,19 +184,18 @@
                                             </th>
                                         </tr>
                                     </thead>
-                                    <tbody id="studentsTableBody3" class="bg-white" style="height: 100%">
-                                    </tbody>
+                                    <tbody id="studentsTableBody3" class="bg-white" style="height: 100%"></tbody>
                                 </table>
                             </div>
                             <!-- Table 4 -->
-                            <div about="{{houses.Slytherin.id}}" typeof="hogwarts:House" class="flex-1 rounded-lg overflow-hidden">
+                            <div about="{{houses.Slytherin.id}}" typeof="hogwarts:House" class="w-1/4 flex-1 rounded-lg overflow-hidden">
                                 <table class="min-w-full leading-normal table-fixed">
                                     <thead>
                                         <tr>
                                             <th class="w-1/5 px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
                                                 ★
                                             </th>
-                                            <th class="w-2/5 px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                                            <th class="w-1/4 px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-left text-xs font-semibold text-white uppercase tracking-wider">
                                                 Name
                                             </th>
                                             <th class="w-1/5 px-5 py-3 border-b-2 border-gray-200 bg-amber-600 text-center text-xs font-semibold text-white uppercase tracking-wider">
@@ -211,8 +206,7 @@
                                             </th>
                                         </tr>
                                     </thead>
-                                    <tbody id="studentsTableBody4" class="bg-white" style="height: 100%">
-                                    </tbody>
+                                    <tbody id="studentsTableBody4" class="bg-white" style="height: 100%"></tbody>
                                 </table>
                             </div>
                         </div>
@@ -265,23 +259,23 @@
                     'medium_student': 'M',
                     'advanced_student': 'A'
                 };
-                student_type = type_mapping[student.student_type] || 'N/A';
+                student_type = type_mapping[student.student_type] || 'M';
                 var row = `
-                        <tr rel="hogwarts:includesWizard" typeof="hogwarts:Wizard" resource="${student.id}">
+                        <tr class="h-card" rel="hogwarts:includesWizard" typeof="hogwarts:Wizard" resource="${student.id}">
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-center">
                                 <div typeof="hogwarts:Student" resource="${student.student_id}" rel="hogwarts:isAccountOf">
-                                    <span property="hogwarts:hasStarRating" content="${student.star}">${stars}</span>
+                                    <span class="p-rating" property="hogwarts:hasStarRating" content="${student.star}">${stars}</span>
                                 </div>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                <p property="hogwarts:hasName" class="text-gray-900 whitespace-no-wrap">${student.name}</p>
+                                <p class="p-name" property="hogwarts:hasName" class="text-gray-900 whitespace-no-wrap">${student.name}</p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-center">
                                 <div property="hogwarts:hasTotalPoints" content="${points}">
                                     ${points}
                                 </div>
                             </td>
-                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-left">
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-left font-bold">
                                 <div property="hogwarts:hasStudentType" content="${student_type}">
                                     ${student_type}
                                 </div>

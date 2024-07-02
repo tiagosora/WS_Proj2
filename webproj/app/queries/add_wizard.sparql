@@ -1,12 +1,12 @@
-PREFIX hogwarts: <http://hogwarts.edu/ontology#>
+PREFIX : <http://hogwarts.edu/ontology.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 INSERT DATA {{
 
-    GRAPH <http://hogwarts.edu/ontology#> {{
+    GRAPH <http://hogwarts.edu/ontology.owl#> {{
 
         :Wizard_{max_wizard_id}
-            rdf:type :Wizard ;
-            :hasName "{name}" .
+            :hasName "{name}" ;
             {gender}
             {species}
             {blood_type}
@@ -16,16 +16,14 @@ INSERT DATA {{
             {patronus} .
 
         :Account_{max_account_id}
-            rdf:type :Account ;
-            :hasMechanographicalNumber {nmec}^^xsd:integer;
+            :hasMechanographicalNumber {nmec};
             :hasPassword "{password}" ;
             :hasAccount :Wizard_{max_wizard_id} .
 
         :Student_{max_student_id}
-            rdf:type :Student ;
             :belongsToSchool :School_1 ;
             :hasSchoolYear 1 ;
-            hogwarts:wizard :Wizard_{max_wizard_id} .
+            :hasAccount :Wizard_{max_wizard_id} .
 
     }}
 }}

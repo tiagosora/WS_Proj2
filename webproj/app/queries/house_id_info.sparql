@@ -9,5 +9,5 @@ SELECT
 WHERE {{
     ?house rdf:type :House ;
            :hasHouseName ?houseName .
-    FILTER(LCASE(?houseName) = LCASE({house})) .
+    FILTER(LCASE(?houseName) = LCASE("{house}")) .
 }}
