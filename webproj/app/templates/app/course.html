@@ -336,22 +336,23 @@
     
             var nameSpan = document.createElement('span');
             nameSpan.setAttribute('property', "hogwarts:hasName");
-            nameSpan.textContent = spell.name;
+            nameSpan.setAttribute('content', spell.name);
             spellInnerDiv.appendChild(nameSpan);
     
             var effectSpan = document.createElement('span');
             effectSpan.setAttribute('property', "hogwarts:hasEffect");
-            effectSpan.textContent = spell.effect;
+            effectSpan.setAttribute('content', spell.effect);
             spellInnerDiv.appendChild(effectSpan);
     
             var incantationSpan = document.createElement('span');
             incantationSpan.setAttribute('property', "hogwarts:hasIncantation");
-            incantationSpan.textContent = spell.incantation;
+            incantationSpan.setAttribute('content', spell.incantation);
+
             spellInnerDiv.appendChild(incantationSpan);
     
             var lightSpan = document.createElement('span');
             lightSpan.setAttribute('property', "hogwarts:hasLight");
-            lightSpan.textContent = spell.light;
+            lightSpan.setAttribute('content', spell.light);
             spellInnerDiv.appendChild(lightSpan);
     
             var spellButton = document.createElement('button');
