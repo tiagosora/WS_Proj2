@@ -12,6 +12,11 @@ services:
     depends_on:
       graphdb-init:
         condition: service_completed_successfully
+    healthcheck:
+      test: [ "CMD-SHELL", "curl -f http://localhost:8000 || exit 1" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
   graphdb:
     image: ontotext/graphdb:10.6.4-arm64
