@@ -38,8 +38,6 @@ def create_new_wizard(password: str, blood_type: str, eye_color: str, gender: st
     if len(results["results"]["bindings"]) > 0 and "house" in results["results"]["bindings"][0].keys():
         house_id = results["results"]["bindings"][0]["house"]["value"]
 
-    print("HOUSE ID:", house_id)
-
     house = ":belongsToHouse <" + house_id + "> ;" if bool(house_id) else ""
 
     name = name if bool(name) else ""
@@ -87,8 +85,6 @@ def get_role_info_by_wizard_id(wizard_id):
 
     wizard_type_id = results["results"]["bindings"][0]["role"]["value"]
     wizard_role = results["results"]["bindings"][0]["type"]["value"]
-    print(wizard_type_id)
-    print(wizard_role)
 
     return wizard_role, wizard_type_id
 
@@ -228,9 +224,7 @@ def get_student_view_info(student_id):
     
     spells_acquired = []
     [spells_acquired.extend(spell['spells']) for spell in learned_courses]
-    
-    print("aaaaaaaaaaaaa")
-    print(wizard)
+
     return {'student':
                 wizard.info()
                 | {'house_name': get_house_name(wizard.house)}
