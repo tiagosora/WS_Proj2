@@ -121,7 +121,7 @@ DELAY = 5  # Delay in seconds between requests
 RETRIES = 3  # Number of retries for failed requests
 
 # File paths
-input_file = "../updated_ontology.owl"
+input_file = "../hogwarts_data.rdf"
 output_file = "../dbpedia_completed_ontology.owl"
 
 # Define the classes and their corresponding DBpedia types

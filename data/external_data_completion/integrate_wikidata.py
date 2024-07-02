@@ -33,7 +33,7 @@ def generate_wikidata_queries(resources, class_name, code):
         SELECT ?{class_name} ?p ?pLabel ?o ?oLabel
         WHERE {{
         ?{class_name} wdt:P31 wd:{code} .
-        ?{class_name} rdfs:label ?label ;
+        ?{class_name} skos:altLabel ?label ;
             ?p ?o .
         FILTER regex(?label, "{resource_name}", "i")  
         SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
@@ -72,30 +72,40 @@ def process_results(results_list, namespace):
     processed_data = []
     prop_mapping = {
         # Wikidata properties
-        # Houses
+        # Course
+        "http://www.wikidata.org/prop/direct/P3095": namespace + "participatedBy",
+        "http://www.wikidata.org/prop/direct/P2578": namespace + "isTheStudyOf",
+        
+        # House
         "http://www.wikidata.org/prop/direct/P361": namespace + "partOf",
         "http://www.wikidata.org/prop/direct/P138": namespace + "namedAfter",
         "http://www.wikidata.org/prop/direct/P112": namespace + "foundedBy",
         "http://www.wikidata.org/prop/direct/P94": namespace + "coatOfArms",
         "http://www.wikidata.org/prop/direct/P6364": namespace + "officialColor",
         "http://www.wikidata.org/prop/direct/P527": namespace + "hasParts",
-        "http://www.wikidata.org/prop/direct/P3095": namespace + "participatedBy",
-        "http://www.wikidata.org/prop/direct/P2578": namespace + "isTheStudyOf",
-        "http://www.wikidata.org/prop/direct/P1074": namespace + "fictionalOrMythicalAnalogOf",
+        
+        # School
         "http://www.wikidata.org/prop/direct/P571": namespace + "inception",
         "http://www.wikidata.org/prop/direct/P18": namespace + "image",
         "http://www.wikidata.org/prop/direct/P1448": namespace + "officialName",
         "http://www.wikidata.org/prop/direct/P1705": namespace + "nativeName",
         "http://www.wikidata.org/prop/direct/P1416": namespace + "affiliation",
+        "http://www.wikidata.org/prop/direct/P112": namespace + "foundedBy",
+        
+        # Spell
+        "http://www.wikidata.org/prop/direct/P361": namespace + "partOf",
         "http://www.wikidata.org/prop/direct/P366": namespace + "hasUse",
         "http://www.wikidata.org/prop/direct/P1536": namespace + "causeOf",
+        
+        # Wizard
         "http://www.wikidata.org/prop/direct/P69": namespace + "educatedAt",
         "http://www.wikidata.org/prop/direct/P551": namespace + "residentOf",
         "http://www.wikidata.org/prop/direct/P937": namespace + "workLocation",
         "http://www.wikidata.org/prop/direct/P3828": namespace + "wears",
         "http://www.wikidata.org/prop/direct/P463": namespace + "memberOf",
         "http://www.wikidata.org/prop/direct/P1038": namespace + "relative",
-        "http://www.wikidata.org/prop/direct/P27": namespace + "citizebnship",
+        "http://www.wikidata.org/prop/direct/P27": namespace + "citizenship",
+        "http://www.wikidata.org/prop/direct/P18": namespace + "image",
         "http://www.wikidata.org/prop/direct/P569": namespace + "birthDate",
         "http://www.wikidata.org/prop/direct/P19": namespace + "birthPlace",
         "http://www.wikidata.org/prop/direct/P106": namespace + "occupation",
@@ -141,14 +151,14 @@ def save_graph(graph, destination):
 ONTOLOGY_NAMESPACE = "http://hogwarts.edu/ontology.owl#"
 DELAY = 5  # Delay in seconds between requests
 RETRIES = 3  # Number of retries for failed requests
-input_file = "../updated_ontology.owl"
+input_file = "../hogwarts_data.rdf"
 output_file = f"../wikidata_completed_ontology.owl"
 
 classes_data = [("Course", "Q1647221"),
                 ("House", "Q933971"),
                 ("School", "Q2043034"),
                 ("Spell", "Q28872880"),
-                ("Wizard", "Q15298259")]
+                ("Wizard", "Q117289741")]
 
 # Integrate data for each class
 for (class_name, code) in classes_data:
