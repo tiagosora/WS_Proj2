@@ -9,5 +9,5 @@ INSERT {
 }
 WHERE {{
     BIND({student_id} AS ?student)
-    BIND(:{course_id} AS ?course)
+    BIND({course_id} AS ?course)
 }}

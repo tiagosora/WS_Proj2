@@ -20,12 +20,14 @@ def execute_sparql_query(query_name, format="JSON", infer=False, **kwargs):
 
     if format == "POST":
         query = load_sparql_query(query_name, **kwargs)
+        print(query)
         sparql_update.setMethod(POST)
         sparql_update.setQuery(query)
         sparql_update.query()
 
     else:
         query = load_sparql_query(query_name, **kwargs)
+        print(query)
         sparql.setQuery(query)
         if format == 'JSON':
             sparql.setReturnFormat(JSON)

@@ -35,18 +35,20 @@ def create_new_wizard(password: str, blood_type: str, eye_color: str, gender: st
 
     results, _ = execute_sparql_query(query_name, format="JSON", house=house)
 
-    if len(results["results"]["bindings"]) > 0 and "houseId" in results["results"]["bindings"][0].keys():
-        house_id = results["results"]["bindings"][0]["houseId"]["value"]
+    if len(results["results"]["bindings"]) > 0 and "house" in results["results"]["bindings"][0].keys():
+        house_id = results["results"]["bindings"][0]["house"]["value"]
 
-    house = "hogwarts:belongsToHouse \"" + house_id + "\" ;" if bool(house_id) else ""
+    print("HOUSE ID:", house_id)
+
+    house = ":belongsToHouse <" + house_id + "> ;" if bool(house_id) else ""
 
     name = name if bool(name) else ""
-    gender = "hogwarts:hasGender \"" + gender + "\" ;" if bool(gender) else ""
-    species = "hogwarts:hasSpecies \"" + species + "\" ;" if bool(species) else ""
-    blood_type = "hogwarts:hasBloodType \"" + blood_type + "\" ;" if bool(blood_type) else ""
-    eye_color = "hogwarts:hasEyeColor \"" + eye_color + "\" ;" if bool(eye_color) else ""
-    wand = "hogwarts:hasWand \"" + wand + "\" ;" if bool(wand) else ""
-    patronus = "hogwarts:hasPatronus \"" + patronus + "\" ;" if bool(patronus) else ""
+    gender = ":hasGender \"" + gender + "\" ;" if bool(gender) else ""
+    species = ":hasSpecies \"" + species + "\" ;" if bool(species) else ""
+    blood_type = ":hasBloodType \"" + blood_type + "\" ;" if bool(blood_type) else ""
+    eye_color = ":hasEyeColor \"" + eye_color + "\" ;" if bool(eye_color) else ""
+    wand = ":hasWand \"" + wand + "\" ;" if bool(wand) else ""
+    patronus = ":hasPatronus \"" + patronus + "\" ;" if bool(patronus) else ""
 
     query_name = "app/queries/add_wizard.sparql"
     _, _ = execute_sparql_query(query_name, format="POST", name=name, gender=gender,
@@ -77,19 +79,16 @@ def wizard_login(nmec, password):
 
 def get_role_info_by_wizard_id(wizard_id):
     query_name = "app/queries/get_role_info_by_wizard_id.sparql"
-    
-    print("Wizard ID: ", wizard_id)
 
     results, _ = execute_sparql_query(query_name, format="JSON", wizard_id=wizard_id)
 
-    print("Results: ", results)
     if len(results["results"]["bindings"]) <= 0:
         return None, None, None
-    
-    print(results)
 
     wizard_type_id = results["results"]["bindings"][0]["role"]["value"]
     wizard_role = results["results"]["bindings"][0]["type"]["value"]
+    print(wizard_type_id)
+    print(wizard_role)
 
     return wizard_role, wizard_type_id
 
@@ -112,6 +111,78 @@ def get_all_students_info():
                             | {'house_name': get_house_name(wizard.house)} \
                             | {'school_year': student.school_year} \
                             | {'points': student.points}
+        
+        students.append(student_information)
+        
+    return students
+
+def get_all_basic_students_info():
+    query_name = "app/queries/get_all_by_type.sparql"
+
+    results, _ = execute_sparql_query(query_name=query_name, format='JSON', type="BasicStudent")
+    
+    if len(results["results"]["bindings"]) <= 0:
+        return []
+    
+    students = []
+    for elem in results["results"]["bindings"]:
+        wizard, student = student_info(student_uri=elem["data"]["value"])
+        
+        student_information = wizard.info() \
+                            | {'star': student.star} \
+                            | {'student_id': student.id} \
+                            | {'house_name': get_house_name(wizard.house)} \
+                            | {'school_year': student.school_year} \
+                            | {'points': student.points} \
+                            | {'student_type': 'basic_student'}
+        
+        students.append(student_information)
+        
+    return students
+
+def get_all_medium_students():
+    query_name = "app/queries/get_all_by_type.sparql"
+
+    results, _ = execute_sparql_query(query_name=query_name, format='JSON', type="MediumStudent")
+    
+    if len(results["results"]["bindings"]) <= 0:
+        return []
+    
+    students = []
+    for elem in results["results"]["bindings"]:
+        wizard, student = student_info(student_uri=elem["data"]["value"])
+        
+        student_information = wizard.info() \
+                            | {'star': student.star} \
+                            | {'student_id': student.id} \
+                            | {'house_name': get_house_name(wizard.house)} \
+                            | {'school_year': student.school_year} \
+                            | {'points': student.points} \
+                            | {'student_type': 'medium_student'}
+        
+        students.append(student_information)
+        
+    return students
+
+def get_all_advanced_students_info():
+    query_name = "app/queries/get_all_by_type.sparql"
+
+    results, _ = execute_sparql_query(query_name=query_name, format='JSON', type="AdvancedStudent")
+    
+    if len(results["results"]["bindings"]) <= 0:
+        return []
+    
+    students = []
+    for elem in results["results"]["bindings"]:
+        wizard, student = student_info(student_uri=elem["data"]["value"])
+        
+        student_information = wizard.info() \
+                            | {'star': student.star} \
+                            | {'student_id': student.id} \
+                            | {'house_name': get_house_name(wizard.house)} \
+                            | {'school_year': student.school_year} \
+                            | {'points': student.points} \
+                            | {'student_type': 'advanced_student'}
         
         students.append(student_information)
         
@@ -158,6 +229,8 @@ def get_student_view_info(student_id):
     spells_acquired = []
     [spells_acquired.extend(spell['spells']) for spell in learned_courses]
     
+    print("aaaaaaaaaaaaa")
+    print(wizard)
     return {'student':
                 wizard.info()
                 | {'house_name': get_house_name(wizard.house)}
