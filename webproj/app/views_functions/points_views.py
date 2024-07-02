@@ -11,6 +11,8 @@ def points_banners(request):
     students.sort(key=lambda student: (student["points"], student["star"], student["name"], student["gender"]), reverse=True)
     houses = get_house_info()
     
+    print(students)
+    
     return render(request, 'app/points_banners.html', {
         'students': students,
         'houses': houses
