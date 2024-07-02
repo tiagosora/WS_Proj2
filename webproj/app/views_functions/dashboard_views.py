@@ -90,6 +90,7 @@ def headmaster_dashboard(request):
 
     return render(request, 'app/headmaster_dashboard.html', {
         'headmaster': headmaster_info,
+        'headmaster_id': wizard_type_id,
         'students_per_school_year': number_students_per_school_year,
         'spells_per_course': number_spells_per_course,
         'students': students_list,

@@ -361,6 +361,20 @@
             var courseDiv = document.createElement('div');
             courseDiv.innerHTML = `<button class="text-black hover:text-amber-600" onclick="openCourseModal(${JSON.stringify(course).split('"').join("&quot;")})">${course.name}</button>`;
             learningContainer.appendChild(courseDiv);
+
+            var courseDiv = document.createElement('div');
+            courseDiv.setAttribute('typeof', 'hogwarts:Course');
+            courseDiv.setAttribute('rel', 'hogwarts:learnsCourse');
+            courseDiv.setAttribute('resource', course.id);
+
+            var hasName = document.createElement('div');
+            hasName.setAttribute('property', "hogwarts:hasName");
+            hasName.setAttribute('content', course.name);
+
+            courseDiv.appendChild(hasName);
+
+            learningContainer.appendChild(courseDiv);
+
         });
     
         // Repeat for 'learned_courses'
@@ -368,6 +382,20 @@
             var courseDiv = document.createElement('div');
             courseDiv.innerHTML = `<button class="text-black hover:text-amber-600" onclick="openCourseModal(${JSON.stringify(course).split('"').join("&quot;")})">${course.name}</button>`;
             learnedContainer.appendChild(courseDiv);
+   
+            var courseDiv = document.createElement('div');
+            courseDiv.setAttribute('typeof', 'hogwarts:Course');
+            courseDiv.setAttribute('rel', 'hogwarts:hasLearnedCourse');
+            courseDiv.setAttribute('resource', course.id);
+
+            var hasName = document.createElement('div');
+            hasName.setAttribute('property', "hogwarts:hasName");
+            hasName.setAttribute('content', course.name);
+
+            courseDiv.appendChild(hasName);
+
+            learningContainer.appendChild(courseDiv);
+
         });
     }
     
@@ -397,9 +425,13 @@
                 var spellDiv = document.createElement('div');
                 spellDiv.className = 'p-4 border rounded shadow m-2';
                 spellDiv.innerHTML = `
-                    <p><strong>Name:</strong> ${spell.name || 'Unknown'}</p>
-                    <p><strong>Effect:</strong> ${spell.effect || 'Unknown'}</p>
-                    <p><strong>Type:</strong> ${spell.type || 'Unknown'}</p>
+                    <div about=${course.id}>
+                        <div rel="hogwarts:teachesSpell" typeof="hogwarts:Spell" resource=${spell.id}>
+                            <p><strong>Name:</strong><span property="hogwarts:hasName"> ${spell.name || 'Unknown'}</span></p>
+                            <p><strong>Effect:</strong><span property="hogwarts:hasEffect"> ${spell.effect || 'Unknown'}</span></p>
+                            <p><strong>Type:</strong><span property="hogwarts:hasType"> ${spell.type || 'Unknown'}</span></p>
+                        </div>
+                    </div>
                 `;
                 groupDiv.appendChild(spellDiv);
             });

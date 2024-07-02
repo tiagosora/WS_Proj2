@@ -21,6 +21,11 @@ if ! curl -f -s -X GET -H "Accept: application/json" "http://graphdb:7200/rest/r
     http://graphdb:7200/repositories/ws_project/statements \
     -H "Content-Type: application/rdf+xml" \
     --data-binary @/data.rdf
+
+  curl -X POST \
+    http://graphdb:7200/repositories/ws_project/statements \
+    -H "Content-Type: application/rdf+xml" \
+    --data-binary @/ontology.owl
   echo "Data loaded successfully"
 
 else

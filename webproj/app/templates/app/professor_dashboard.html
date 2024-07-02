@@ -60,10 +60,13 @@
                 </div>
                 {% endif %}
             </div>
-            
+            <div rel="hogwarts:teachesAtSchool" typeof="hogwarts:School" resource="{{ professor.school_uri }}">
+                <span property="hogwarts:hasSchoolName" content="{{ professor.school_name }}"></span>
+            </div>
+
             {% for course in courses %}
-            <div class="dashboard-main-card shadow rounded-lg p-6 mt-10">
-                <h3 class="text-2xl font-semibold mb-3 text-amber-600">{{ course.name }} Course</h3>
+            <div rel="hogwarts:teaches" typeof="hogwarts:Course" resource="{{ course.id }}" class="dashboard-main-card shadow rounded-lg p-6 mt-10">
+                <h3 property="hogwarts:hasCourseName" class="text-2xl font-semibold mb-3 text-amber-600">{{ course.name }} Course</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="dashboard-card bg-white rounded-lg shadow p-4">
                         <h4 class="font-semibold">Spells Taught:</h4>
@@ -81,6 +84,7 @@
                 </div>
             </div>
             {% endfor %}
+            
         </div>
     </div>
 </div>
@@ -162,7 +166,7 @@
                     <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
                         <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">Spell Details</h3>
                         <div class="mt-4">
-                            <div class="flex flex-col space-y-2">
+                            <div  class="flex flex-col space-y-2">
                                 <div class="flex justify-between">
                                     <p class="text-sm font-medium text-gray-500">Name:</p>
                                     <p id="spellName" class="text-sm text-gray-900"></p>
@@ -278,6 +282,43 @@
                 spellButton.classList.add("hover:text-amber-600");
                 spellButton.onclick = function() { openModal(spell); };
                 container.appendChild(spellButton);
+
+                var spellDiv = document.createElement('div');
+                spellDiv.setAttribute('typeof', 'hogwarts:Spell');
+                spellDiv.setAttribute('rel', 'hogwarts:teachesSpell');
+                spellDiv.setAttribute('resource', spell.id);
+
+                var hasEffect = document.createElement('div');
+                hasEffect.setAttribute('property', "hogwarts:hasEffect");
+                hasEffect.setAttribute('content', spell.effect);
+
+                spellDiv.appendChild(hasEffect);
+
+                var hasIncantation = document.createElement('div');
+                hasIncantation.setAttribute('property', "hogwarts:hasIncantation");
+                hasIncantation.setAttribute('content', spell.incantation);
+
+                spellDiv.appendChild(hasIncantation);
+
+                var hasLight = document.createElement('div');
+                hasLight.setAttribute('property', "hogwarts:hasLight");
+                hasLight.setAttribute('content', spell.light);
+
+                spellDiv.appendChild(hasLight);
+
+                var hasName = document.createElement('div');
+                hasName.setAttribute('property', "hogwarts:hasName");
+                hasName.setAttribute('content', spell.name);
+
+                spellDiv.appendChild(hasName);
+
+                var hasType = document.createElement('div');
+                hasType.setAttribute('property', "hogwarts:hasType");
+                hasType.setAttribute('content', spell.type);
+
+                spellDiv.appendChild(hasType);
+                container.appendChild(spellDiv);
+
             });
         });
     });
@@ -289,6 +330,7 @@
         var light = spell.light ? spell.light : 'Unknown';
         document.getElementById('spellLight').innerText = light;
         document.getElementById('spellModal').style.display = 'block';
+
     }
 
     function closeModal() {
@@ -310,6 +352,74 @@
                 studentButton.onclick = function() { openStudentModal(course, student); };
                 studentLi.appendChild(studentButton);
                 studentsContainer.appendChild(studentLi);
+
+                var studentDiv = document.createElement('div');
+                studentDiv.setAttribute('typeof', 'hogwarts:Student');
+                studentDiv.setAttribute('rel', 'hogwarts:isLearnedBy');
+                studentDiv.setAttribute('resource', student.student_id);
+
+                var hasSchoolYear = document.createElement('div');
+                hasSchoolYear.setAttribute('property', "hogwarts:hasSchoolYear");
+                hasSchoolYear.setAttribute('content', student.attending_year);
+
+                studentDiv.appendChild(hasSchoolYear);
+
+                var hasStarRating = document.createElement('div');
+                hasStarRating.setAttribute('property', "hogwarts:hasStarRating");
+                hasStarRating.setAttribute('content', student.star);
+
+                studentDiv.appendChild(hasStarRating);
+
+                var wizardDiv = document.createElement('div');
+                wizardDiv.setAttribute('typeof', 'hogwarts:Wizard')
+                wizardDiv.setAttribute('rel', "hogwarts:hasAccount");
+                wizardDiv.setAttribute('resource', student.id);
+
+                var hasSpecies = document.createElement('div');
+                hasSpecies.setAttribute('property', "hogwarts:hasSpecies");
+                hasSpecies.setAttribute('content', student.species);
+
+                wizardDiv.appendChild(hasSpecies);
+
+                var hasBloodType = document.createElement('div');
+                hasBloodType.setAttribute('property', "hogwarts:hasBloodType");
+                hasBloodType.setAttribute('content', student.blood_type);
+
+                wizardDiv.appendChild(hasBloodType);
+
+                var hasName = document.createElement('div');
+                hasName.setAttribute('property', "hogwarts:hasName");
+                hasName.setAttribute('content', student.name);
+
+                wizardDiv.appendChild(hasName);
+
+                var hasEyeColor = document.createElement('div');
+                hasEyeColor.setAttribute('property', "hogwarts:hasEyeColor");
+                hasEyeColor.setAttribute('content', student.eye_color);
+
+                wizardDiv.appendChild(hasEyeColor);
+
+                var hasGender = document.createElement('div');
+                hasGender.setAttribute('property', "hogwarts:hasGender");
+                hasGender.setAttribute('content', student.gender);
+
+                wizardDiv.appendChild(hasGender);
+
+                var hasPatronus = document.createElement('div');
+                hasPatronus.setAttribute('property', "hogwarts:hasPatronus");
+                hasPatronus.setAttribute('content', student.patronus);
+
+                wizardDiv.appendChild(hasPatronus);
+
+                var hasWand = document.createElement('div');
+                hasWand.setAttribute('property', "hogwarts:hasWand");
+                hasWand.setAttribute('content', student.wand);
+
+                wizardDiv.appendChild(hasWand);
+
+                studentDiv.appendChild(wizardDiv);
+                studentsContainer.appendChild(studentDiv);
+
             });
         });
     });

@@ -8,9 +8,8 @@ def accounts():
         accounts_reader = csv.DictReader(accounts_file)
         for account_row in accounts_reader:
             rdf.append(f'\t<rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Account_{account_row['Id']}">')
-            rdf.append(f'\t\t<rdf:type rdf:resource="http://hogwarts.edu/ontology.owl#Account"/>')
             rdf.append(f'\t\t<hogwarts:hasAccount rdf:resource="http://hogwarts.edu/ontology.owl#Wizard_{account_row["wizardId"]}"/>')
-            rdf.append(f'\t\t<hogwarts:hasMechanographicalNumber>{account_row["nmec"]}</hogwarts:hasMechanographicalNumber>')
+            rdf.append(f'\t\t<hogwarts:hasMechanographicalNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">{account_row["nmec"]}</hogwarts:hasMechanographicalNumber>')
             rdf.append(f'\t\t<hogwarts:hasPassword>{account_row["password"]}</hogwarts:hasPassword>')
             rdf.append('\t</rdf:Description>')
     
@@ -42,7 +41,6 @@ def wizards():
     rdf = []
     for wizard_id, wizard_info in wizards.items():
         rdf.append('\t<rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Wizard_{id}">'.format(id=wizard_info['Id']))
-        rdf.append(f'\t\t<rdf:type rdf:resource="http://hogwarts.edu/ontology.owl#Wizard"/>')
         if wizard_info['Name'] not in ["None", "none", ""]: rdf.append('\t\t<hogwarts:hasName>{name}</hogwarts:hasName>'.format(name=wizard_info['Name']))
         if wizard_info['Gender'] not in ["None", "none", ""]: rdf.append('\t\t<hogwarts:hasGender>{gender}</hogwarts:hasGender>'.format(gender=wizard_info['Gender']))
         if wizard_info['Species'] not in ["None", "none", ""]: rdf.append('\t\t<hogwarts:hasSpecies>{species}</hogwarts:hasSpecies>'.format(species=wizard_info['Species']))
@@ -76,11 +74,10 @@ def students():
         students_reader = csv.DictReader(students_file)
         for row in students_reader:
             rdf.append(f'\t<rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Student_{row['Id']}">')
-            rdf.append(f'\t\t<rdf:type rdf:resource="http://hogwarts.edu/ontology.owl#Student"/>')
             rdf.append(f'\t\t<hogwarts:hasAccount rdf:resource="http://hogwarts.edu/ontology.owl#Wizard_{row["WizardId"]}"/>')
             rdf.append(f'\t\t<hogwarts:belongsToSchool rdf:resource="http://hogwarts.edu/ontology.owl#School_{row["SchoolId"]}"/>')
-            rdf.append(f'\t\t<hogwarts:hasSchoolYear>{row["SchoolYear"]}</hogwarts:hasSchoolYear>')
-            rdf.append('\t\t<hogwarts:hasPoints>{points}</hogwarts:hasPoints>'.format(points=random.randint(1,100)))
+            rdf.append(f'\t\t<hogwarts:hasSchoolYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">{row["SchoolYear"]}</hogwarts:hasSchoolYear>')
+            rdf.append('\t\t<hogwarts:hasPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">{points}</hogwarts:hasPoints>'.format(points=random.randint(1,100)))
 
             attending_courses = [course_id for course_id, course_info in courses.items() if course_info['year'] == int(row['SchoolYear'])]
             for course_id in attending_courses:
@@ -104,7 +101,6 @@ def spells():
         for row in spells_reader:
             spell_id = row['Id']
             rdf.append(f'\t<rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Spell_{spell_id}">')
-            rdf.append('\t\t<rdf:type rdf:resource="http://hogwarts.edu/ontology.owl#Spell"/>')
             rdf.append(f'\t\t<hogwarts:hasName>{row["Name"]}</hogwarts:hasName>')
             rdf.append(f'\t\t<hogwarts:hasIncantation>{row["Incantation"]}</hogwarts:hasIncantation>')
             rdf.append(f'\t\t<hogwarts:hasType>{row["Type"]}</hogwarts:hasType>')
@@ -125,7 +121,6 @@ def skills():
         for row in skills_reader:
             skill_id = row['Id']
             rdf.append(f'\t<rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Skill_{skill_id}">')
-            rdf.append('\t\t<rdf:type rdf:resource="http://hogwarts.edu/ontology.owl#Skill"/>')
             rdf.append(f'\t\t<hogwarts:hasSkillName>{row["Name"]}</hogwarts:hasSkillName>')
             rdf.append('\t</rdf:Description>')
     
@@ -139,7 +134,6 @@ def school():
         reader = csv.DictReader(file)
         for row in reader:
             rdf.append('\t<rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#School_{id}">'.format(id=row['Id']))
-            rdf.append('\t\t<rdf:type rdf:resource="http://hogwarts.edu/ontology.owl#School"/>')
             rdf.append('\t\t<hogwarts:hasSchoolName>{name}</hogwarts:hasSchoolName>'.format(name=row['Name']))
             rdf.append('\t\t<hogwarts:hasLocation>{location}</hogwarts:hasLocation>'.format(location=row['Location']))
             rdf.append('\t\t<hogwarts:hasDateOfCreation>{date}</hogwarts:hasDateOfCreation>'.format(date=row['DateOfCreation']))
@@ -160,9 +154,8 @@ def professors():
             wizard_id = row['WizardId']
             school_id = row['SchoolId']
             rdf.append(f'\t<rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Professor_{professor_id}">')
-            rdf.append('\t\t<rdf:type rdf:resource="http://hogwarts.edu/ontology.owl#Professor"/>')
             rdf.append(f'\t\t<hogwarts:hasAccount rdf:resource="http://hogwarts.edu/ontology.owl#Wizard_{wizard_id}"/>')
-            rdf.append(f'\t\t<hogwarts:belongsToSchool rdf:resource="http://hogwarts.edu/ontology.owl#School_{school_id}"/>')
+            rdf.append(f'\t\t<hogwarts:teachesAtSchool rdf:resource="http://hogwarts.edu/ontology.owl#School_{school_id}"/>')
             rdf.append('\t</rdf:Description>')
     
     rdf.append("")
@@ -177,10 +170,9 @@ def houses():
         for row in houses_reader:
             house_id = row['Id']
             rdf.append(f'\t<rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#House_{house_id}">')
-            rdf.append('\t\t<rdf:type rdf:resource="http://hogwarts.edu/ontology.owl#House"/>')
             rdf.append(f'\t\t<hogwarts:hasHouseName>{row["Name"]}</hogwarts:hasHouseName>')
             rdf.append(f'\t\t<hogwarts:hasSymbol>{row["Symbol"]}</hogwarts:hasSymbol>')
-            rdf.append(f'\t\t<hogwarts:hasFounder>{row["FounderId"]}</hogwarts:hasFounder>')
+            rdf.append(f'\t\t<hogwarts:hasFounder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">{row["FounderId"]}</hogwarts:hasFounder>')
             rdf.append(f'\t\t<hogwarts:hasLocation>{row["Location"]}</hogwarts:hasLocation>')
             rdf.append(f'\t\t<hogwarts:hasHouseProfessor rdf:resource="http://hogwarts.edu/ontology.owl#Professor_{row["ProfessorInCharge"]}"/>')
             rdf.append('\t</rdf:Description>')
@@ -199,9 +191,8 @@ def headmaster():
             wizard_id = row['WizardId']
             start_date = row['Start_date']
             rdf.append(f'\t<rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Headmaster_{headmaster_id}">')
-            rdf.append('\t\t<rdf:type rdf:resource="http://hogwarts.edu/ontology.owl#Headmaster"/>')
             rdf.append(f'\t\t<hogwarts:hasAccount rdf:resource="http://hogwarts.edu/ontology.owl#Wizard_{wizard_id}"/>')
-            rdf.append(f'\t\t<hogwarts:hasStartDate>{start_date}</hogwarts:hasStartDate>')
+            rdf.append(f'\t\t<hogwarts:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">{start_date}</hogwarts:hasStartDate>')
             rdf.append('\t</rdf:Description>')
     
     rdf.append("")
@@ -216,10 +207,9 @@ def courses():
         for course_row in courses_reader:
             course_id = course_row['Id']
             rdf.append(f'\t<rdf:Description rdf:about="http://hogwarts.edu/ontology.owl#Course_{course_id}">')
-            rdf.append('\t\t<rdf:type rdf:resource="http://hogwarts.edu/ontology.owl#Course"/>')
             rdf.append(f'\t\t<hogwarts:hasCourseName>{course_row["Name"]}</hogwarts:hasCourseName>')
             rdf.append(f'\t\t<hogwarts:hasCourseType>{course_row["Type"]}</hogwarts:hasCourseType>')
-            rdf.append(f'\t\t<hogwarts:hasAttendingYear>{course_row["AttendingYear"]}</hogwarts:hasAttendingYear>')
+            rdf.append(f'\t\t<hogwarts:hasAttendingYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">{course_row["AttendingYear"]}</hogwarts:hasAttendingYear>')
             rdf.append(f'\t\t<hogwarts:hasProfessor rdf:resource="http://hogwarts.edu/ontology.owl#Professor_{course_row["ProfessorId"]}"/>')
             
             with open('./original_db/RelationCourseSpell.csv', 'r') as course_spell_file:
