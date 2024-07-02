@@ -138,11 +138,13 @@ def get_student_view_info(student_id):
 
     is_learning_courses = [course.info()
                            | {'spells': manage_spells_list(course.teaches_spell)}
+                           | {'professor_id': course.professor }
                            | {'professor_name': get_professor_name(course.professor)}
                            for course in courses_is_learning_list]
 
     learned_courses = [course.info()
                        | {'spells': manage_spells_list(course.teaches_spell)}
+                       | {'professor_id': course.professor }
                        | {'professor_name': get_professor_name(course.professor)}
                        for course in courses_learned_list]
 
@@ -155,7 +157,8 @@ def get_student_view_info(student_id):
                 wizard.info()
                 | {'house_name': get_house_name(wizard.house)}
                 | {'school_year': student.school_year}
-                | {'school_name': get_school_name(student.school)},
+                | {'school_name': get_school_name(student.school)}
+                | {'student_id': student_id},
             'is_learning_courses': is_learning_courses,
             'learned_courses': learned_courses,
             'spells_acquired': spells_acquired,

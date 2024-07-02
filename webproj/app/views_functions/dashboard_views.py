@@ -36,6 +36,14 @@ def student_dashboard(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     skills = [skill["name"] for skill in student_info["skills"]]
+    print({
+        'student': student,
+        'is_learning_courses': is_learning_courses,
+        'learned_courses': learned_courses,
+        'spells_acquired': spells_acquired,
+        'skills': ", ".join(skills),
+        'number_of_spells_not_acquired': number_of_spells_not_acquired,
+        'spells_per_course': spells_per_course})
 
     return render(request, 'app/student_dashboard.html', {
         'student': student,
@@ -58,9 +66,6 @@ def professor_dashboard(request):
     students_list.sort(key=lambda student: (student["name"], student["gender"], student["blood_type"]))
 
     professor_info = request.session['professor_info']
-
-    print("a")
-    print(professor_info)
 
     return render(request, 'app/professor_dashboard.html', {
         'professor': professor_info["professor"],

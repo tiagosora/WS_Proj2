@@ -255,10 +255,6 @@
                 spellButton.onclick = function() { openModal(spell); };
                 container.appendChild(spellButton);
 
-                /*
-                rel="hogwarts:teaches" typeof="hogwarts:Course" resource="{{ course.id }}"
-                */
-
                 var spellDiv = document.createElement('div');
                 spellDiv.setAttribute('typeof', 'hogwarts:Spell');
                 spellDiv.setAttribute('rel', 'hogwarts:teachesSpell');
@@ -295,7 +291,6 @@
                 spellDiv.appendChild(hasType);
                 container.appendChild(spellDiv);
 
-                console.log(course);
             });
         });
     });
@@ -329,6 +324,74 @@
                 studentButton.onclick = function() { openStudentModal(course, student); };
                 studentLi.appendChild(studentButton);
                 studentsContainer.appendChild(studentLi);
+
+                var studentDiv = document.createElement('div');
+                studentDiv.setAttribute('typeof', 'hogwarts:Student');
+                studentDiv.setAttribute('rel', 'hogwarts:isLearnedBy');
+                studentDiv.setAttribute('resource', student.student_id);
+
+                var hasSchoolYear = document.createElement('div');
+                hasSchoolYear.setAttribute('property', "hogwarts:hasSchoolYear");
+                hasSchoolYear.setAttribute('content', student.attending_year);
+
+                studentDiv.appendChild(hasSchoolYear);
+
+                var hasStarRating = document.createElement('div');
+                hasStarRating.setAttribute('property', "hogwarts:hasStarRating");
+                hasStarRating.setAttribute('content', student.star);
+
+                studentDiv.appendChild(hasStarRating);
+
+                var wizardDiv = document.createElement('div');
+                wizardDiv.setAttribute('typeof', 'hogwarts:Wizard')
+                wizardDiv.setAttribute('rel', "hogwarts:hasAccount");
+                wizardDiv.setAttribute('resource', student.id);
+
+                var hasSpecies = document.createElement('div');
+                hasSpecies.setAttribute('property', "hogwarts:hasSpecies");
+                hasSpecies.setAttribute('content', student.species);
+
+                wizardDiv.appendChild(hasSpecies);
+
+                var hasBloodType = document.createElement('div');
+                hasBloodType.setAttribute('property', "hogwarts:hasBloodType");
+                hasBloodType.setAttribute('content', student.blood_type);
+
+                wizardDiv.appendChild(hasBloodType);
+
+                var hasName = document.createElement('div');
+                hasName.setAttribute('property', "hogwarts:hasName");
+                hasName.setAttribute('content', student.name);
+
+                wizardDiv.appendChild(hasName);
+
+                var hasEyeColor = document.createElement('div');
+                hasEyeColor.setAttribute('property', "hogwarts:hasEyeColor");
+                hasEyeColor.setAttribute('content', student.eye_color);
+
+                wizardDiv.appendChild(hasEyeColor);
+
+                var hasGender = document.createElement('div');
+                hasGender.setAttribute('property', "hogwarts:hasGender");
+                hasGender.setAttribute('content', student.gender);
+
+                wizardDiv.appendChild(hasGender);
+
+                var hasPatronus = document.createElement('div');
+                hasPatronus.setAttribute('property', "hogwarts:hasPatronus");
+                hasPatronus.setAttribute('content', student.patronus);
+
+                wizardDiv.appendChild(hasPatronus);
+
+                var hasWand = document.createElement('div');
+                hasWand.setAttribute('property', "hogwarts:hasWand");
+                hasWand.setAttribute('content', student.wand);
+
+                wizardDiv.appendChild(hasWand);
+
+                studentDiv.appendChild(wizardDiv);
+                studentsContainer.appendChild(studentDiv);
+
             });
         });
     });
