@@ -20,9 +20,9 @@
     <div class="container mx-auto px-6 rounded-lg">
         <div class="dashboard-main-card shadow-xl rounded-lg p-6 mb-10">
             <div about="{{ course.id }}" typeof="hogwarts:Course" class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-800">
-                <p><strong>Name:</strong><div property="hogwarts:hasCourseName"> {{ course.name }}</div></p>
-                <p><strong>Attending Year:</strong><div property="hogwarts:hasAttendingYear">{{ course.attending_year }}</div></p>
-                <p><strong>Type:</strong><div property="hogwarts:hasCourseType"> {{ course.type }}</div></p>
+                <p><strong>Name:</strong><span property="hogwarts:hasCourseName"> {{ course.name }}</span></p>
+                <p><strong>Attending Year:</strong><span property="hogwarts:hasAttendingYear">{{ course.attending_year }}</span></p>
+                <p><strong>Type:</strong><span property="hogwarts:hasCourseType"> {{ course.type }}</span></p>
                 <p><strong>Number of Students Enrolled</strong> {{ course.number_students_enrolled }}</p>
                 <div>
                     <button class="text-amber-600 text-left" onclick="openProfessorModal('{{ course.professor_info.id }}')" style="background-color: transparent; border: none; padding: 0; cursor: pointer;">
