@@ -49,7 +49,7 @@ def login_view(request):
         password = request.POST.get('password')
 
         success, id_number = wizard_login(nmec, password)
-
+        
         if success:
             request.session['nmec'] = nmec
             request.session['wizard_id'] = id_number

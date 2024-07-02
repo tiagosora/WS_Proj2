@@ -77,11 +77,16 @@ def wizard_login(nmec, password):
 
 def get_role_info_by_wizard_id(wizard_id):
     query_name = "app/queries/get_role_info_by_wizard_id.sparql"
+    
+    print("Wizard ID: ", wizard_id)
 
     results, _ = execute_sparql_query(query_name, format="JSON", wizard_id=wizard_id)
 
+    print("Results: ", results)
     if len(results["results"]["bindings"]) <= 0:
         return None, None, None
+    
+    print(results)
 
     wizard_type_id = results["results"]["bindings"][0]["role"]["value"]
     wizard_role = results["results"]["bindings"][0]["type"]["value"]
@@ -170,11 +175,7 @@ def get_headmaster_info(headmaster_id):
     headmaster_uri = f"{headmaster_id}"
     query_name = "app/queries/get_entity_info_by_uri.sparql"
     
-    print(headmaster_uri)
-    
     _, g = execute_sparql_query(query_name, format="turtle", uri=headmaster_uri)
-    
-    print(g)
     
     headmaster_attr = {}
     for _, p, o in g:
@@ -185,12 +186,8 @@ def get_headmaster_info(headmaster_id):
             value = str(o)
         headmaster_attr[prop] = value
         
-    print(headmaster_attr)
-    
     if not all(key in headmaster_attr for key in ["hasAccount", "hasStartDate"]):
         return {}
-    
-    print(headmaster_attr)
     
     headmaster_start_date = headmaster_attr["hasStartDate"]
     

@@ -12,21 +12,19 @@ def load_ontology(file_path):
     return g
 
 def get_existing_resources_and_names(g, class_name):
-    """
-    Retrieve existing resources and their names from the ontology graph.
-    """
+    property_mapping = {
+        "Course": "hasCourseName",
+        "House": "hasHouseName",
+        "School": "hasSchoolName",
+        "Wizard": "hasName",
+        "Spell": "hasIncantation"
+    }
+    
     resources = []
-    for s, _, _ in g.triples((None, RDF.type, URIRef(ONTOLOGY_NAMESPACE + class_name))):
-        for _, _, name in g.triples((s, URIRef(ONTOLOGY_NAMESPACE + "hasCourseName"), None)):
-            resources.append((str(s), str(name)))
-        for _, _, name in g.triples((s, URIRef(ONTOLOGY_NAMESPACE + "hasHouseName"), None)):
-            resources.append((str(s), str(name)))
-        for _, _, name in g.triples((s, URIRef(ONTOLOGY_NAMESPACE + "hasSchoolName"), None)):
-            resources.append((str(s), str(name)))
-        for _, _, name in g.triples((s, URIRef(ONTOLOGY_NAMESPACE + "hasName"), None)):
-            resources.append((str(s), str(name)))
-        for _, _, name in g.triples((s, URIRef(ONTOLOGY_NAMESPACE + "hasIncantation"), None)):
-            resources.append((str(s), str(name)))
+    if class_name in property_mapping:
+        property_uri = URIRef(ONTOLOGY_NAMESPACE + property_mapping[class_name])
+        for s, _, o in g.triples((None, property_uri, None)):
+            resources.append((str(s), str(o)))
     return resources
 
 def generate_dbpedia_queries(resources, class_name, code):
@@ -121,8 +119,8 @@ DELAY = 5  # Delay in seconds between requests
 RETRIES = 3  # Number of retries for failed requests
 
 # File paths
-input_file = "../hogwarts_data.rdf"
-output_file = "../dbpedia_completed_ontology.owl"
+input_file = "../data.rdf"
+output_file = "../dbpedia_completed_data.rdf"
 
 # Define the classes and their corresponding DBpedia types
 classes_data = [

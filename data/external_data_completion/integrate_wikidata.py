@@ -1,4 +1,5 @@
 import time
+from urllib.error import HTTPError
 
 from rdflib import RDF, Graph, Literal, URIRef
 from SPARQLWrapper import JSON, SPARQLWrapper
@@ -10,20 +11,19 @@ def load_ontology(file_path):
     return g
 
 def get_existing_resources_and_names(g, class_name):
+    property_mapping = {
+        "Course": "hasCourseName",
+        "House": "hasHouseName",
+        "School": "hasSchoolName",
+        "Wizard": "hasName",
+        "Spell": "hasIncantation"
+    }
+    
     resources = []
-    for s, _, _ in g.triples((None, RDF.type, URIRef(ONTOLOGY_NAMESPACE + class_name))):
-        for _, _, name in g.triples((s, URIRef(ONTOLOGY_NAMESPACE + "hasCourseName"), None)):
-            resources.append((str(s), str(name)))
-        for _, _, name in g.triples((s, URIRef(ONTOLOGY_NAMESPACE + "hasHouseName"), None)):
-            resources.append((str(s), str(name)))
-        for _, _, name in g.triples((s, URIRef(ONTOLOGY_NAMESPACE + "hasSchoolName"), None)):
-            resources.append((str(s), str(name)))
-        for _, _, name in g.triples((s, URIRef(ONTOLOGY_NAMESPACE + "hasName"), None)):
-            resources.append((str(s), str(name)))
-        for _, _, name in g.triples((s, URIRef(ONTOLOGY_NAMESPACE + "hasIncantation"), None)):
-            resources.append((str(s), str(name)))
-        for _, _, name in g.triples((s, URIRef(ONTOLOGY_NAMESPACE + "hasName"), None)):
-            resources.append((str(s), str(name)))
+    if class_name in property_mapping:
+        property_uri = URIRef(ONTOLOGY_NAMESPACE + property_mapping[class_name])
+        for s, _, o in g.triples((None, property_uri, None)):
+            resources.append((str(s), str(o)))
     return resources
 
 def generate_wikidata_queries(resources, class_name, code):
@@ -45,23 +45,30 @@ def generate_wikidata_queries(resources, class_name, code):
 def run_queries(sparql_endpoint, queries):
     results = []
     sparql = SPARQLWrapper(sparql_endpoint)
+    sparql.agent = "Mozilla/5.0"
     i = 1
     for (source, query) in queries:
         print(f"Running query {i}/{len(queries)}...")
         i += 1
         success = False
         
-        for _ in range(RETRIES):
+        for attempt in range(RETRIES):
             try:
                 sparql.setQuery(query)
                 sparql.setReturnFormat(JSON)
                 query_results = sparql.query().convert()
-                results.append({"source": source, 
-                                "results": query_results["results"]["bindings"]})
+                results.append({"source": source, "results": query_results["results"]["bindings"]})
                 success = True
                 break
+            except HTTPError as e:
+                if e.code == 403:
+                    print(f"HTTP Error 403: Forbidden. Retrying in {DELAY * (attempt + 1)} seconds...")
+                    time.sleep(DELAY * (attempt + 1))  # Exponential backoff
+                else:
+                    print(f"Error: {e}. Retrying in {DELAY} seconds...")
+                    time.sleep(DELAY)
             except Exception as e:
-                print(f"Error: {e}. Retrying in {DELAY} seconds...")
+                print(f"Unexpected Error: {e}. Retrying in {DELAY} seconds...")
                 time.sleep(DELAY)
         if not success:
             print(f"Failed to retrieve results after {RETRIES} attempts.")
@@ -151,8 +158,8 @@ def save_graph(graph, destination):
 ONTOLOGY_NAMESPACE = "http://hogwarts.edu/ontology.owl#"
 DELAY = 5  # Delay in seconds between requests
 RETRIES = 3  # Number of retries for failed requests
-input_file = "../hogwarts_data.rdf"
-output_file = f"../wikidata_completed_ontology.owl"
+input_file = "../data.rdf"
+output_file = f"../wikidata_completed_data.rdf"
 
 classes_data = [("Course", "Q1647221"),
                 ("House", "Q933971"),
