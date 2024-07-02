@@ -1,5 +1,4 @@
 FROM python:3.11-slim
-LABEL authors="pjnp5"
 
 # Set work directory
 WORKDIR /django
@@ -10,7 +9,7 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Install Node.js and npm
-RUN apt-get update && apt-get install -y curl gnupg \
+RUN apt-get update && apt-get install -y curl \
     && curl -sL https://deb.nodesource.com/setup_16.x | bash - \
     && apt-get install -y nodejs supervisor
 

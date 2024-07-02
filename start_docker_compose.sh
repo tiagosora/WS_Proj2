@@ -60,4 +60,4 @@ else
   echo "Please open the following URLs in your browser in order to use the app and see the database interface:"
   echo "http://localhost:7200"
   echo "http://localhost:8000"
-fi
+fi 
