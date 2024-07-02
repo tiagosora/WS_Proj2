@@ -9,6 +9,7 @@ from app.triplestore.professors import (get_all_teachers_not_teaching_course,
                                         get_professor_info)
 from app.triplestore.students import (get_spells_not_taught_in_course,
                                       get_students_not_learning_course)
+from app.triplestore.wizards import get_all_students_info
 from django.shortcuts import redirect, render
 
 
@@ -18,6 +19,9 @@ def course_view(request):
         course_id = request.session['course_id']
     request.session['course_id'] = course_id
     request.session['back'] = 'back'
+    
+    students_list = get_all_students_info()
+    students_list.sort(key=lambda student: (student["name"], student["gender"], student["blood_type"]))
 
     course_full_info = get_course_by_id_dict(course_id)
 
@@ -29,6 +33,7 @@ def course_view(request):
 
     return render(request, 'app/course.html', {
         'course': course_full_info,
+        'students': students_list,
         'available_students': get_students_not_learning_course(course_id),
         'available_spells': get_spells_not_taught_in_course(course_id),
         'available_professors': available_professors,
