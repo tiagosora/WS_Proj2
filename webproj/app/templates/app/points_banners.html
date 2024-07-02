@@ -94,27 +94,27 @@
                 
 
                 <!-- Gryffindor -->
-                <div class="banner gryffindor text-center py-8 shadow-lg">
-                    <h3 class="text-3xl font-bold">Gryffindor</h3>
-                    <p class="text-6xl font-bold mt-4">{{ houses.Gryffindor }}</p>
+                <div about="{{ houses.Gryffindor.id }}" typeof="hogwarts:House" class="banner gryffindor text-center py-8 shadow-lg">
+                    <h3 property="hogwarts:hasHouseName" class="text-3xl font-bold">Gryffindor</h3>
+                    <p property="hogwarts:hasTotalPoints" class="text-6xl font-bold mt-4">{{ houses.Gryffindor.totalPoints }}</p>
                 </div>
 
                 <!-- Hufflepuff -->
-                <div class="banner hufflepuff text-center py-8 shadow-lg">
-                    <h3 class="text-3xl font-bold">Hufflepuff</h3>
-                    <p class="text-6xl font-bold mt-4">{{ houses.Hufflepuff }}</p>
+                <div about="{{ houses.Hufflepuff.id }}" typeof="hogwarts:House" class="banner hufflepuff text-center py-8 shadow-lg">
+                    <h3 property="hogwarts:hasHouseName" class="text-3xl font-bold">Hufflepuff</h3>
+                    <p property="hogwarts:hasTotalPoints" class="text-6xl font-bold mt-4">{{ houses.Hufflepuff.totalPoints }}</p>
                 </div>
 
                 <!-- Ravenclaw -->
-                <div class="banner ravenclaw text-center py-8 shadow-lg">
-                    <h3 class="text-3xl font-bold">Ravenclaw</h3>
-                    <p class="text-6xl font-bold mt-4">{{ houses.Ravenclaw }}</p>
+                <div about="{{ houses.Ravenclaw.id }}" typeof="hogwarts:House" class="banner ravenclaw text-center py-8 shadow-lg">
+                    <h3 property="hogwarts:hasHouseName" class="text-3xl font-bold">Ravenclaw</h3>
+                    <p property="hogwarts:hasTotalPoints" class="text-6xl font-bold mt-4">{{ houses.Ravenclaw.totalPoints }}</p>
                 </div>
 
                 <!-- Slytherin -->
-                <div class="banner slytherin text-center py-8 shadow-lg">
-                    <h3 class="text-3xl font-bold">Slytherin</h3>
-                    <p class="text-6xl font-bold mt-4">{{ houses.Slytherin }}</p>
+                <div about="{{ houses.Slytherin.id }}" typeof="hogwarts:House" class="banner slytherin text-center py-8 shadow-lg">
+                    <h3 property="hogwarts:hasHouseName" class="text-3xl font-bold">Slytherin</h3>
+                    <p property="hogwarts:hasTotalPoints" class="text-6xl font-bold mt-4">{{ houses.Slytherin.totalPoints }}</p>
                 </div>
             </div>
 
@@ -124,7 +124,7 @@
                         <h3 class="text-2xl font-semibold mb-3 leading-tight">Students</h3>
                         <div class="flex flex-row space-x-4">
                             <!-- Table 1 -->
-                            <div class="flex-1 rounded-lg overflow-hidden">
+                            <div about="{{houses.Gryffindor.id}}" typeof="hogwarts:House" class="flex-1 rounded-lg overflow-hidden">
                                 <table class="min-w-full leading-normal table-fixed">
                                     <thead>
                                         <tr>
@@ -144,7 +144,7 @@
                                 </table>
                             </div>
                             <!-- Table 2 -->
-                            <div class="flex-1 rounded-lg overflow-hidden">
+                            <div about="{{houses.Hufflepuff.id}}" typeof="hogwarts:House" class="flex-1 rounded-lg overflow-hidden">
                                 <table class="min-w-full leading-normal table-fixed">
                                     <thead>
                                         <tr>
@@ -164,7 +164,7 @@
                                 </table>
                             </div>
                             <!-- Table 3 -->
-                            <div class="flex-1 rounded-lg overflow-hidden">
+                            <div about="{{houses.Ravenclaw.id}}" typeof="hogwarts:House" class="flex-1 rounded-lg overflow-hidden">
                                 <table class="min-w-full leading-normal table-fixed">
                                     <thead>
                                         <tr>
@@ -184,7 +184,7 @@
                                 </table>
                             </div>
                             <!-- Table 4 -->
-                            <div class="flex-1 rounded-lg overflow-hidden">
+                            <div about="{{houses.Slytherin.id}}" typeof="hogwarts:House" class="flex-1 rounded-lg overflow-hidden">
                                 <table class="min-w-full leading-normal table-fixed">
                                     <thead>
                                         <tr>
@@ -248,14 +248,22 @@
                     5: '⭐⭐\n⭐⭐⭐'
                 };
                 var stars = stars_mapping[student.star] || 1;
-                var row = `<tr> 
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-center">${stars}</td>
-                    </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">${student.name}</p>
-                    </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">${points}</td>
-                </tr>`;
+                var row = `
+                        <tr rel="hogwarts:includesWizard" typeof="hogwarts:Wizard" resource="${student.id}">
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-center">
+                                <div typeof="hogwarts:Student" resource="${student.student_id}" rel="hogwarts:isAccountOf">
+                                    <span property="hogwarts:hasStarRating" content="${student.star}">${stars}</span>
+                                </div>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p property="hogwarts:hasName" class="text-gray-900 whitespace-no-wrap">${student.name}</p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <div property="hogwarts:hasTotalPoints" content="${points}">
+                                    ${points}
+                                </div>
+                            </td>
+                        </tr>`;
                 container.innerHTML += row;
             });
             // Set the height of the table dynamically

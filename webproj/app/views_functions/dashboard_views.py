@@ -107,6 +107,7 @@ def headmaster_dashboard(request):
         'courses': courses_in_list,
     })
 
+
 def update_wizard(request):
     wizard_id = request.POST.get('wizard_id')
     name = request.POST.get('name')

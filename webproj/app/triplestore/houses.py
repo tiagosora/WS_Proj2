@@ -10,7 +10,7 @@ def get_house_info():
 
     houses_info = {}
     for elem in results["results"]["bindings"]:
-        houses_info[elem["name"]["value"]] = elem["totalPoints"]["value"]
-        
+        houses_info[elem["name"]["value"]] = { "totalPoints": elem["totalPoints"]["value"], "id": elem["house"]["value"] }
+
     return houses_info
 
