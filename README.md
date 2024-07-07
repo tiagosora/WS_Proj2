@@ -9,7 +9,7 @@ To first be able to run the app you must install the requirements:
     ```bash
     python<version> -m venv <virtual-environment-name>
     # (preferably)
-    python -v venv venv
+    python -m venv venv
     ```
 
     or (alternatively):
@@ -23,7 +23,7 @@ To first be able to run the app you must install the requirements:
 
     ```bash
     source venv/bin/activate
-    # or
+    # or, for windows
     ./venv/scripts/activate
     ```
 
@@ -33,7 +33,13 @@ To first be able to run the app you must install the requirements:
     pip install -r requirements.txt
     ```
 
-4. Run the following commands:
+4. Go to the webproj directory:
+
+    ```
+    cd webproj
+    ```
+
+5. Run the following commands:
 
     ```bash
     python manage.py tailwind install
@@ -45,7 +51,7 @@ To first be able to run the app you must install the requirements:
 
 To run the application follow these steps:
 
-1. Have GraphDB running and the dataset `data/updated_ontology.owl` imported in a repository named `ws_repository`.
+1. Have GraphDB running. Import the dataset `data/completed_data.rdf` and the ontology `data/ontology.owl` imported in a repository named `ws_project`, with ruleset OWL2-RL (Optimized).
 
 2. Create a .env file inside the root folder with the following configuration:
 
@@ -75,6 +81,8 @@ To run the application follow these steps:
     |Headmaster|103453|Pass.Muito.Forte123|
 
 ## Converting the data
+
+Note: This step is not necessary, and simply serves as informative. These files are already created.
 
 To convert the data from the original CSV files from the original dataset, simply run the following commands:
 
