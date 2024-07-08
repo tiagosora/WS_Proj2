@@ -1,5 +1,7 @@
 # Web Semântica - Proj 2
 
+Later in the instruction, you have the possibility of running using a bash file.
+
 ## Installing the requirements
 
 To first be able to run the app you must install the requirements:
@@ -91,3 +93,36 @@ cd data/
 
 python data_converter.py
 ```
+
+# Alternative Run
+
+1. Create a .env file inside the root folder with the following configuration:
+
+    ```.env
+    REPO_URL=http://graphdb:7200/repositories/ws_project
+    REPO_URL_UPDATE=http://graphdb:7200/repositories/ws_project/statements
+    ```
+
+2. Run the following bash file:
+
+    ```sh
+    ./start_docker_compose
+    ```
+
+    **OR**
+
+    ```sh
+    chmod -x ./start_docker_compose.sh && ./start_docker_compose.sh
+    ```
+
+3. **Just in case** docker doens't have the required permissions:
+
+    ```sh
+    sudo chmod -R 755 path/to/.docker/buildx
+    ```
+
+    **On MacOS**
+
+    ```sh
+    sudo chmod -R 755 /Users/{user}/.docker/buildx
+    ```
