@@ -1,5 +1,4 @@
 #!/bin/sh
-# create_repository.sh
 
 # Wait for GraphDB to be ready
 until curl -f -H 'Accept: text/html' http://graphdb:7200; do

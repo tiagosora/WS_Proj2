@@ -1,23 +1,21 @@
 #!/bin/bash
 
-# Exit immediately if a command exits with a non-zero status
+REPO_DIR=$(basename "$(pwd)")
+REPO_DIR=$(echo "$REPO_DIR" | tr '[:upper:]' '[:lower:]')
+
 set -e
 
-# Define the Docker Compose file path
 COMPOSE_FILE="docker-compose.yml"
 
 echo "Removing Services"
 docker-compose -f $COMPOSE_FILE down
 
-# Build and start the Docker Compose services
 echo "Building and starting Docker Compose services..."
 docker-compose -f $COMPOSE_FILE up --build -d
 
-# Wait for services to become healthy
 echo "Waiting for services to become healthy..."
 docker-compose -f $COMPOSE_FILE ps
 
-# Function to check the health status of a service
 check_service_health() {
   service_name=$1
   max_attempts=20
@@ -38,18 +36,14 @@ check_service_health() {
   return 1
 }
 
-# Check the health of the graphdb service
-check_service_health "ws_proj2-graphdb-1"
+check_service_health "$REPO_DIR-graphdb-1"
 
-# Ensure that the GraphDB initialization is completed successfully
 docker-compose -f $COMPOSE_FILE logs graphdb-init | grep -q "Data added to the repository" && echo "GraphDB initialization completed successfully."
 
-# Check the health of the web service
-check_service_health "ws_proj2-web-1"
+check_service_health "$REPO_DIR-web-1"
 
 echo "All services are up and running."
 
-# Open the URLs in the default web browser
 if command -v xdg-open > /dev/null; then
   xdg-open http://localhost:7200
   xdg-open http://localhost:8000
